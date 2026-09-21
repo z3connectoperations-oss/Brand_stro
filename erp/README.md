@@ -1,6 +1,6 @@
 # Brandstro ERP — frontend
 
-Next.js 16 · React 19 · TypeScript · Tailwind CSS 4 · lucide-react. Frontend only: all data is in-memory mock data under `src/data/`, shaped like the entities in the Master Operating Guide (Chapter 12). No backend, no auth yet.
+Next.js 16 · React 19 · TypeScript · Tailwind CSS 4 · lucide-react. Frontend only, but stateful: the seed data in `src/data/` loads into a client-side store (`src/lib/store.ts`), every form and action updates it immutably, alerts and reports are computed from it (`src/lib/rules.ts`), and the result persists in `localStorage` so a demo survives reloads. No backend, no auth yet. **Settings → Reset demo data** returns to the seed.
 
 ## Run
 
@@ -43,6 +43,15 @@ The choice is kept in `localStorage`. Each role sees its own sidebar and dashboa
 | `/reviews`, `/reviews/scorecard` | CH | Handbook §07 weekly TL review, §45 scorecard |
 | `/settings` | Founder | Products, revision limits, rate table, SLAs, calendar |
 | `/hr/attendance`, `/hr/leave`, `/hr/employees`, `/hr/checklists` | HR | HR brief |
+| `/discovery`, `/discovery/[id]` | CRM | Handbook §27 briefing checklist with [CLIENT INPUT REQUIRED] flags → hands the brief to R&D |
+| `/revisions` | Founder, CH, CRM, TL | Handbook §25 revision management |
+| `/audit` | Founder, CH | Every action with actor and old → new value |
+
+## What actually works (state changes)
+
+Create project (from package template) · add lead / move lead stage · record payment (advance unblocks R&D queue; final unlocks files) · run discovery call → brief to R&D · R&D start / hand off · acknowledge handoff · sketch submit · assign work by load · designer submit to TL (self-check gate) · TL approve / rework · CRM submit to client · log feedback → classify (in scope / scope change / unclear) · Founder scope decision · client sign-off · reply to thread · log / advance complaint · send payment reminder. Each writes an audit entry.
+
+`npx tsx scripts/store-walkthrough.ts` runs the whole lifecycle through the store and asserts every stage gate.
 
 ## Structure
 
@@ -53,8 +62,10 @@ src/
     shell/        sidebar, topbar, app shell
     ui/           primitives (Kpi, Pill, Card, Table, Checklist…)
     dashboards/   one dashboard per role
-  data/           mock data: people, clients, projects, ops
-  lib/            types, nav config, role context, selectors, formatting
+  forms/        create project, log feedback, assign work, add lead, log complaint
+  data/           seed data: people, clients, projects, ops
+  lib/            types, nav, role context, store + actions, selectors, rules (alerts/reports), formatting
+scripts/          store lifecycle walkthrough
 ```
 
 ## Design

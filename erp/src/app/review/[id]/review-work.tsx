@@ -1,32 +1,41 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { CheckCircle2, Undo2, ArrowUpRight } from "lucide-react";
-import { PageHeader, Card, Pill, Facts, Callout, PriorityPill } from "@/components/ui/primitives";
+import { PageHeader, Card, Pill, Facts, Callout, PriorityPill, Empty } from "@/components/ui/primitives";
 import { Avatar } from "@/components/ui/avatar";
 import { Checklist } from "@/components/ui/checklist";
-import { deliverables, projectById } from "@/data/projects";
-import { clientById } from "@/data/clients";
+import { useDb } from "@/lib/use-db";
+import { useMe } from "@/lib/role-context";
 import { byId, productById } from "@/data/people";
 import { logoQc, packagingQc, creativeReview } from "@/data/ops";
-import { useMe } from "@/lib/role-context";
 import { stageTone } from "@/lib/selectors";
 import { relDays } from "@/lib/format";
 
 export function ReviewWork({ id }: { id: string }) {
   const { me } = useMe();
-  const d = deliverables.find((x) => x.id === id)!;
-  const p = projectById(d.projectId)!;
-  const client = clientById(p.clientId);
+  const { db, act } = useDb();
+  const router = useRouter();
+  const [allOk, setAllOk] = useState(false);
+  const [note, setNote] = useState("");
+  const d = db.deliverables.find((x) => x.id === id);
+  if (!d) return <Empty text="Deliverable not found." />;
+  const p = db.projects.find((x) => x.id === d.projectId)!;
+  const client = db.clients.find((c) => c.id === p.clientId)!;
   const product = productById(p.product);
   const designer = byId(d.assigneeId);
   const isHead = me.role === "creative-head";
   const items = isHead ? creativeReview : d.team === "logo" ? logoQc : packagingQc;
-  const [allOk, setAllOk] = useState(false);
-  const [decision, setDecision] = useState<"pass" | "rework" | null>(null);
   const clientCode = client.name.replace(/\s+/g, "");
   const file = `${clientCode}_${d.type.replace(/\s+/g, "")}_v${d.version}_2026-09-21`;
   const repeat = d.internalReworkCount >= 1;
+  const reviewable = d.stage === "TL review";
+
+  const decide = (decision: "pass" | "rework") => {
+    act.reviewDecision(d.id, decision, note);
+    router.push("/review");
+  };
 
   return (
     <>
@@ -36,6 +45,7 @@ export function ReviewWork({ id }: { id: string }) {
         subtitle={`${p.name} · submitted by ${designer?.name ?? "—"} · due ${relDays(d.dueDate)}`}
         badge={<><PriorityPill p={p.priority} /><Pill tone={stageTone(d.stage)}>{d.stage}</Pill></>}
       />
+      {!reviewable && <div className="mb-4"><Callout tone="slate">This deliverable is not in TL review right now (stage: {d.stage}). The checklist is shown for reference.</Callout></div>}
       <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_340px]">
         <div className="space-y-4">
           <Card title="Artboard preview" subtitle={file} padded={false}>
@@ -49,25 +59,17 @@ export function ReviewWork({ id }: { id: string }) {
           </Card>
           <Card title={isHead ? "7-point creative review" : d.team === "logo" ? "Logo QC checklist" : "Packaging QC / print-readiness checklist"} subtitle="Tick each item deliberately — not just glance and approve">
             <Checklist items={items} onAllChecked={setAllOk} />
-            <label className="mt-4 block">
-              <span className="label-sm">Review notes to designer</span>
-              <textarea className="input mt-1 h-20 py-2" placeholder="Specific, recent, observable: what to change and why." />
-            </label>
+            <label className="mt-4 block"><span className="label-sm">Review notes to designer</span><textarea className="input mt-1 h-20 py-2" value={note} onChange={(e) => setNote(e.target.value)} placeholder="Specific, recent, observable: what to change and why." /></label>
           </Card>
         </div>
         <div className="space-y-4">
           <Card title="Decision">
             <div className="grid gap-2">
-              <button onClick={() => setDecision("pass")} disabled={!allOk} className={`btn justify-center ${decision === "pass" ? "border-emerald-600 bg-emerald-600 text-white" : "border-emerald-200 bg-emerald-50 text-emerald-800 hover:bg-emerald-100"}`} title={allOk ? "" : "All checklist items must pass"}>
-                <CheckCircle2 size={14} /> Approve → {isHead ? "CRM presents to client" : "Ready for client"}
-              </button>
-              <button onClick={() => setDecision("rework")} className={`btn justify-center ${decision === "rework" ? "border-amber-600 bg-amber-600 text-white" : "border-amber-200 bg-amber-50 text-amber-800 hover:bg-amber-100"}`}>
-                <Undo2 size={14} /> Send back for rework
-              </button>
+              <button onClick={() => decide("pass")} disabled={!allOk || !reviewable} className="btn justify-center border-emerald-200 bg-emerald-50 text-emerald-800 hover:bg-emerald-100" title={allOk ? "" : "All checklist items must pass"}><CheckCircle2 size={14} /> Approve → Ready for client</button>
+              <button onClick={() => decide("rework")} disabled={!reviewable || (!note.trim() && !allOk)} className="btn justify-center border-amber-200 bg-amber-50 text-amber-800 hover:bg-amber-100" title={note.trim() ? "" : "Write a note so the designer knows what to fix"}><Undo2 size={14} /> Send back for rework</button>
               {!isHead && <button className="btn-secondary justify-center"><ArrowUpRight size={14} /> Flag to Creative Head (scope / new direction)</button>}
             </div>
-            {decision === "pass" && <Callout tone="green">Logged as first-review pass. Owner moves to CRM for submission.</Callout>}
-            {decision === "rework" && <Callout tone="amber">Rework count becomes {d.internalReworkCount + 1}. {repeat ? "This is a repeat on the same designer — escalate to the Creative Head if it happens again." : ""}</Callout>}
+            <p className="mt-2 text-[11.5px] text-slate-500">Approve logs a first-review pass and moves ownership to the CRM. Rework returns it to the designer and counts against first-review pass rate.</p>
           </Card>
           <Card title="Context">
             <Facts cols={2} items={[{ label: "Designer", value: <span className="flex items-center gap-1.5"><Avatar employee={designer} size="sm" />{designer?.name}</span> }, { label: "Product", value: product.name }, { label: "Client rounds", value: `${d.revisionCount} / ${product.includedRevisions}` }, { label: "Prior rework", value: d.internalReworkCount }]} />
@@ -75,10 +77,7 @@ export function ReviewWork({ id }: { id: string }) {
           </Card>
           <Card title="What good looks like">
             <ul className="space-y-1.5 text-[12px] text-slate-600">
-              <li>• Is there a real idea, or just decoration?</li>
-              <li>• Would it stand out next to five competitors?</li>
-              <li>• Does it hold up as a favicon and a shopfront sign?</li>
-              <li>• Would I put it in the portfolio <i>and</i> does it help this client&apos;s business?</li>
+              <li>• Is there a real idea, or just decoration?</li><li>• Would it stand out next to five competitors?</li><li>• Does it hold up as a favicon and a shopfront sign?</li><li>• Would I put it in the portfolio <i>and</i> does it help this client&apos;s business?</li>
             </ul>
           </Card>
         </div>

@@ -4,6 +4,7 @@ import {
   LayoutDashboard, Users, Building2, FolderKanban, KanbanSquare, Wallet, UsersRound, Coins,
   BadgeCheck, Bell, BarChart3, Settings, ClipboardCheck, MessageSquareWarning, Clock3,
   ListChecks, PenTool, FlaskConical, CalendarCheck, CalendarDays, UserCog, ListTodo, MessageSquareText, Briefcase,
+  PhoneCall, RotateCcw, ScrollText,
 } from "lucide-react";
 
 export interface NavItem {
@@ -21,17 +22,17 @@ const dash = (label = "Dashboard"): NavItem => ({ label, href: "/dashboard", ico
 export const navByRole: Record<Role, NavGroup[]> = {
   founder: [
     { title: "Main", items: [dash("Command Center"), { label: "Leads", href: "/leads", icon: Briefcase }, { label: "Clients", href: "/clients", icon: Building2 }, { label: "Projects", href: "/projects", icon: FolderKanban }, { label: "Production Board", href: "/board", icon: KanbanSquare }, { label: "Payments", href: "/payments", icon: Wallet }] },
-    { title: "Management", items: [{ label: "Approvals & Scope", href: "/approvals", icon: BadgeCheck }, { label: "Team & Workload", href: "/team", icon: UsersRound }, { label: "Incentives", href: "/incentives", icon: Coins }, { label: "Alerts", href: "/alerts", icon: Bell }, { label: "Reports", href: "/reports", icon: BarChart3 }, { label: "Settings", href: "/settings", icon: Settings }] },
+    { title: "Management", items: [{ label: "Approvals & Scope", href: "/approvals", icon: BadgeCheck }, { label: "Revision Queue", href: "/revisions", icon: RotateCcw }, { label: "Team & Workload", href: "/team", icon: UsersRound }, { label: "Incentives", href: "/incentives", icon: Coins }, { label: "Alerts", href: "/alerts", icon: Bell }, { label: "Reports", href: "/reports", icon: BarChart3 }, { label: "Audit Log", href: "/audit", icon: ScrollText }, { label: "Settings", href: "/settings", icon: Settings }] },
   ],
   "creative-head": [
-    { title: "Creative", items: [dash(), { label: "Production Board", href: "/board", icon: KanbanSquare }, { label: "Projects", href: "/projects", icon: FolderKanban }, { label: "Team Workload", href: "/team", icon: UsersRound }, { label: "Review Queue", href: "/review", icon: ClipboardCheck }, { label: "Escalations", href: "/alerts", icon: Bell }] },
-    { title: "Leadership", items: [{ label: "Weekly TL Review", href: "/reviews", icon: ListChecks }, { label: "Monthly Scorecard", href: "/reviews/scorecard", icon: BarChart3 }, { label: "Reports", href: "/reports", icon: BarChart3 }] },
+    { title: "Creative", items: [dash(), { label: "Production Board", href: "/board", icon: KanbanSquare }, { label: "Projects", href: "/projects", icon: FolderKanban }, { label: "Team Workload", href: "/team", icon: UsersRound }, { label: "Review Queue", href: "/review", icon: ClipboardCheck }, { label: "Revision Queue", href: "/revisions", icon: RotateCcw }, { label: "Escalations", href: "/alerts", icon: Bell }] },
+    { title: "Leadership", items: [{ label: "Weekly TL Review", href: "/reviews", icon: ListChecks }, { label: "Monthly Scorecard", href: "/reviews/scorecard", icon: BarChart3 }, { label: "Reports", href: "/reports", icon: BarChart3 }, { label: "Audit Log", href: "/audit", icon: ScrollText }] },
   ],
   crm: [
-    { title: "CRM Workspace", items: [dash(), { label: "Clients", href: "/clients", icon: Building2 }, { label: "Projects", href: "/projects", icon: FolderKanban }, { label: "Follow-ups & SLAs", href: "/follow-ups", icon: Clock3 }, { label: "Approvals & Feedback", href: "/approvals", icon: BadgeCheck }, { label: "Collections", href: "/payments", icon: Wallet }, { label: "Complaints", href: "/complaints", icon: MessageSquareWarning }] },
+    { title: "CRM Workspace", items: [dash(), { label: "Clients", href: "/clients", icon: Building2 }, { label: "Discovery Calls", href: "/discovery", icon: PhoneCall }, { label: "Projects", href: "/projects", icon: FolderKanban }, { label: "Follow-ups & SLAs", href: "/follow-ups", icon: Clock3 }, { label: "Approvals & Feedback", href: "/approvals", icon: BadgeCheck }, { label: "Revision Queue", href: "/revisions", icon: RotateCcw }, { label: "Collections", href: "/payments", icon: Wallet }, { label: "Complaints", href: "/complaints", icon: MessageSquareWarning }] },
   ],
   "team-leader": [
-    { title: "Team", items: [dash(), { label: "My Team", href: "/team", icon: UsersRound }, { label: "Team Projects", href: "/projects", icon: FolderKanban }, { label: "Production Board", href: "/board", icon: KanbanSquare }, { label: "Review Queue", href: "/review", icon: ClipboardCheck }, { label: "Team Incentives", href: "/incentives", icon: Coins }] },
+    { title: "Team", items: [dash(), { label: "My Team", href: "/team", icon: UsersRound }, { label: "Team Projects", href: "/projects", icon: FolderKanban }, { label: "Production Board", href: "/board", icon: KanbanSquare }, { label: "Review Queue", href: "/review", icon: ClipboardCheck }, { label: "Revision Queue", href: "/revisions", icon: RotateCcw }, { label: "Team Incentives", href: "/incentives", icon: Coins }] },
   ],
   designer: [
     { title: "My Work", items: [dash("My Dashboard"), { label: "My Tasks", href: "/tasks", icon: ListTodo }, { label: "Review Feedback", href: "/feedback", icon: MessageSquareText }, { label: "My Earnings", href: "/incentives", icon: Coins }] },

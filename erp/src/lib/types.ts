@@ -83,6 +83,20 @@ export interface Deliverable {
   dueDate: string;
 }
 
+/** Output of the CRM discovery call (Handbook §27 briefing checklist). Missing answers are flagged [CLIENT INPUT REQUIRED]. */
+export interface DiscoveryBrief {
+  brandInOneSentence: string;
+  targetAudience: string;
+  positioning: string;
+  businessObjective: string;
+  communicateAndAvoid: string;
+  competitors: string;
+  deliverablesAndDeadline: string;
+  expectsToSeeFirst: string;
+  referencesAndConstraints: string;
+  completedOn?: string;
+}
+
 export interface Project {
   id: string;
   code: string;
@@ -100,6 +114,31 @@ export interface Project {
   finalPaid: boolean;
   createdOn: string;
   scopeFlag?: string;
+  brief?: DiscoveryBrief;
+}
+
+/** Moving ownership to the next stage. Unacknowledged = not yet started. */
+export interface Handoff {
+  id: string;
+  projectId: string;
+  deliverableIds: string[];
+  fromId: string;
+  toId: string;
+  note: string;
+  sentAt: string;
+  acknowledgedAt?: string;
+}
+
+export interface AuditEntry {
+  id: string;
+  at: string;
+  actorId: string;
+  action: string;
+  entity: string;
+  entityId: string;
+  summary: string;
+  before?: string;
+  after?: string;
 }
 
 export interface Client {

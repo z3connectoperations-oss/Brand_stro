@@ -3,12 +3,14 @@
 import Link from "next/link";
 import { Bell, Search, Calendar } from "lucide-react";
 import { useMe } from "@/lib/role-context";
-import { alerts } from "@/data/ops";
+import { useDb } from "@/lib/use-db";
+import { computeAlerts } from "@/lib/rules";
 import { Avatar } from "@/components/ui/avatar";
 
 export function Topbar() {
   const { me } = useMe();
-  const count = alerts.filter((a) => a.owner === me.role && a.severity !== "info").length;
+  const { db } = useDb();
+  const count = computeAlerts(db).filter((a) => a.owner === me.role && a.severity !== "info").length;
   return (
     <header className="flex h-14 shrink-0 items-center gap-3 border-b border-slate-200 bg-white px-4 md:px-6">
       <div className="flex items-center gap-2 md:hidden">

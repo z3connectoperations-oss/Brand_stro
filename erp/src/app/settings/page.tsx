@@ -1,4 +1,7 @@
+"use client";
+
 import { PageHeader, Card, Table, Callout, Pill } from "@/components/ui/primitives";
+import { useDb } from "@/lib/use-db";
 import { products } from "@/data/people";
 import { inr } from "@/lib/format";
 
@@ -18,9 +21,10 @@ const TIERS = [
 ];
 
 export default function SettingsPage() {
+  const { db, reset } = useDb();
   return (
     <>
-      <PageHeader title="Settings & configuration" subtitle="Products, revision limits, incentive rates, SLAs and the work calendar. Nothing here is hard-coded in the workflow." />
+      <PageHeader title="Settings & configuration" subtitle="Products, revision limits, incentive rates, SLAs and the work calendar. Nothing here is hard-coded in the workflow." actions={<button className="btn-danger btn-sm" onClick={() => { if (window.confirm("Reset all demo data to the seed state? Your changes in this browser will be lost.")) reset(); }}>Reset demo data ({db.audit.length} audit entries)</button>} />
       <div className="grid gap-4 xl:grid-cols-2">
         <Card title="Products & packages" padded={false} actions={<button className="btn-secondary btn-sm">Edit</button>}>
           <Table head={["Product", "Price", "Monthly target", "Included revisions", "Route", "Deliverables"]}>

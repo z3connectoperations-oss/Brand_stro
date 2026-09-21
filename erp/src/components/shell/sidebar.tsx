@@ -7,7 +7,8 @@ import { ChevronsUpDown, Check } from "lucide-react";
 import { useMe } from "@/lib/role-context";
 import { navByRole, roleLabels, workspaceLabel } from "@/lib/nav";
 import { employees } from "@/data/people";
-import { alerts } from "@/data/ops";
+import { useDb } from "@/lib/use-db";
+import { computeAlerts } from "@/lib/rules";
 import { Avatar } from "@/components/ui/avatar";
 import type { Role } from "@/lib/types";
 
@@ -18,7 +19,8 @@ export function Sidebar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const groups = navByRole[me.role];
-  const myAlerts = alerts.filter((a) => a.owner === me.role).length;
+  const { db } = useDb();
+  const myAlerts = computeAlerts(db).filter((a) => a.owner === me.role && a.severity !== "info").length;
 
   return (
     <aside className="hidden w-[248px] shrink-0 flex-col justify-between border-r border-slate-200 bg-white md:flex">

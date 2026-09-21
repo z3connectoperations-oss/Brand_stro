@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { PageHeader, Kpi, KpiGrid, Card, Pill, Table, Callout } from "@/components/ui/primitives";
 import { Avatar } from "@/components/ui/avatar";
