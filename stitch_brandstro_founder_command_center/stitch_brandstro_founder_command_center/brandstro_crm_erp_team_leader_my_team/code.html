@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-lowest":"#ffffff","primary-fixed":"#e2dfff","error":"#ba1a1a","secondary-fixed":"#dae2fd","secondary-container":"#dae2fd","surface":"#f8f9ff","secondary-fixed-dim":"#bec6e0","on-tertiary-fixed":"#2a1700","surface-container-high":"#dce9ff","primary-fixed-dim":"#c3c0ff","on-tertiary-container":"#ffd4a4","on-secondary-container":"#5c647a","on-primary-fixed":"#0f0069","surface-container-highest":"#d3e4fe","inverse-surface":"#213145","on-primary":"#ffffff","outline":"#777587","inverse-primary":"#c3c0ff","tertiary":"#684000","tertiary-fixed":"#ffddb8","surface-variant":"#d3e4fe","on-secondary":"#ffffff","on-secondary-fixed-variant":"#3f465c","on-error":"#ffffff","tertiary-fixed-dim":"#ffb95f","tertiary-container":"#885500","background":"#f8f9ff","primary":"#3525cd","surface-container-low":"#eff4ff","on-tertiary-fixed-variant":"#653e00","on-error-container":"#93000a","on-background":"#0b1c30","primary-container":"#4f46e5","surface-bright":"#f8f9ff","on-primary-container":"#dad7ff","on-surface":"#0b1c30","on-primary-fixed-variant":"#3323cc","surface-container":"#e5eeff","surface-dim":"#cbdbf5","outline-variant":"#c7c4d8","surface-tint":"#4d44e3","inverse-on-surface":"#eaf1ff","on-surface-variant":"#464555","on-tertiary":"#ffffff","secondary":"#565e74","error-container":"#ffdad6","on-secondary-fixed":"#131b2e"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1rem","space-sm":"0.5rem","space-xl":"1.5rem","space-md":"0.75rem","gutter-desktop":"1.5rem","margin-desktop":"2rem","space-xs":"0.25rem","gutter":"1rem","margin":"1rem"},fontFamily:{"body-sm":["Inter"],"headline-sm":["Inter"],"label-sm":["Inter"],"label-md":["Inter"],"code-sm":["JetBrains Mono"],"code-xs":["JetBrains Mono"],"body-lg":["Inter"],"headline-md":["Inter"],"body-md":["Inter"],"headline-lg":["Inter"],"display-lg":["Inter"]},fontSize:{"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"code-sm":["11px",{"lineHeight":"14px","fontWeight":"500"}],"code-xs":["10px",{"lineHeight":"12px","fontWeight":"400"}],"body-lg":["15px",{"lineHeight":"22px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-60 bg-on-background z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 min-h-0"><div class="p-space-lg flex items-center justify-between"><div class="flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><div class="w-7 h-7 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">corporate_fare</span></div><span class="font-headline-sm text-headline-sm tracking-tight text-on-primary font-bold">BRANDSTRO</span></div><span class="font-label-sm text-label-sm uppercase bg-inverse-surface text-on-primary-container px-space-xs py-[2px] rounded w-fit tracking-wider">CRM &amp; ERP CORE</span></div></div><div class="px-space-md py-space-xs"><div class="flex items-center justify-between px-space-sm py-space-xs rounded bg-inverse-surface"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary-fixed"></span><span class="font-label-sm text-label-sm text-on-primary uppercase">LOGO TEAM</span></div><span class="material-symbols-outlined text-outline-variant text-[16px]">unfold_more</span></div></div><div class="px-space-md pt-space-md"><span class="font-label-sm text-label-sm uppercase text-outline-variant px-space-sm font-semibold tracking-wider">TEAM LEADER</span></div><nav class="flex-1 px-space-md pt-space-xs flex flex-col gap-space-xs overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-headline-sm rounded-lg shadow-[0_1px_3px_0_rgba(15,23,42,0.04)]"><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-outline-variant hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="dashboard" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-body-md text-body-md">Dashboard</span></div></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary font-headline-sm rounded-lg shadow-[0_1px_3px_0_rgba(15,23,42,0.04)]" data-path="my-team" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">groups</span><span class="font-body-md text-body-md">My Team</span></div></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-outline-variant hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="team-projects" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">folder_open</span><span class="font-body-md text-body-md">Team Projects</span></div></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-outline-variant hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="review-queue" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">rate_review</span><span class="font-body-md text-body-md">Review Queue</span></div><span class="font-label-sm text-label-sm px-space-xs py-[1px] rounded bg-tertiary-container text-on-tertiary-container font-semibold">4</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-outline-variant hover:bg-inverse-surface hover:text-on-primary transition-colors" data-path="team-workload" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">stacked_bar_chart</span><span class="font-body-md text-body-md">Team Workload</span></div></a></nav></div><div class="p-space-md flex flex-col gap-space-xs"><div class="flex items-center justify-between px-space-sm py-space-xs"><div class="flex items-center gap-space-sm"><a class="flex items-center text-outline-variant hover:text-on-primary" data-path="notifications" href="#"><span class="material-symbols-outlined text-[20px]">notifications</span></a><a class="flex items-center text-outline-variant hover:text-on-primary" data-path="help" href="#"><span class="material-symbols-outlined text-[20px]">help</span></a></div></div><div class="flex items-center gap-space-sm p-space-xs rounded-lg bg-inverse-surface"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-md text-label-md text-on-primary truncate font-semibold">Akhil</span><span class="font-code-xs text-code-xs text-outline-variant truncate">Logo Team Leader</span></div><span class="material-symbols-outlined text-outline-variant text-[16px]">more_vert</span></div></div></aside><div class="pl-60 min-h-screen flex flex-col"><header class="fixed top-0 left-60 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-gutter-desktop"><div class="h-16 flex items-center justify-between gap-space-lg"><div class="flex flex-col justify-center min-w-0"><div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm"><span>Team Leader</span><span class="material-symbols-outlined text-[14px]">chevron_right</span><span class="text-on-surface font-semibold">My Team</span></div><span class="font-body-sm text-body-sm text-secondary truncate">Manage workload, progress and performance for your team.</span></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-space-sm text-secondary text-[18px]">search</span><input class="h-9 w-64 bg-surface-container-lowest text-on-surface pl-9 pr-space-md rounded text-body-sm font-body-sm focus:outline-none focus:ring-1 focus:ring-primary shadow-[0_1px_3px_0_rgba(15,23,42,0.04)]" placeholder="Search squad members, projects, assets..." type="text"/></div><button class="w-9 h-9 flex items-center justify-center rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-[0_1px_3px_0_rgba(15,23,42,0.04)]"><span class="material-symbols-outlined text-[20px]">notifications</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 px-gutter-desktop flex-1"><div class="flex flex-col w-full pb-12 gap-space-lg">
+<!-- TOP KPI SUMMARY CARDS -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- KPI 1: Squad Members -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold tracking-wider">Team Members</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">5</span>
+<span class="font-label-sm text-label-sm text-secondary">/ 5 online</span>
+</div>
+<div class="flex items-center gap-1.5 mt-space-xs text-secondary font-body-sm text-body-sm">
+<span class="w-2 h-2 rounded-full bg-emerald-500 inline-block"></span>
+<span>All active · Logo Squad</span>
+</div>
+</div>
+</div>
+<!-- KPI 2: Active Tasks -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold tracking-wider">Active Tasks</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">18</span>
+<span class="font-code-xs text-code-xs text-secondary-fixed-variant bg-secondary-container px-1.5 py-0.5 rounded font-medium">+3 vs yesterday</span>
+</div>
+<p class="mt-space-xs text-secondary font-body-sm text-body-sm">12 in progress · 6 review/queued</p>
+</div>
+</div>
+<!-- KPI 3: Overdue (Critical) -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-error font-bold tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-error">warning</span> Overdue
+        </span>
+<div class="w-8 h-8 rounded-lg bg-error-container flex items-center justify-center text-error group-hover:bg-error group-hover:text-on-error transition-colors">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-error font-bold">2</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-semibold">Critical Bottleneck</span>
+</div>
+<p class="mt-space-xs text-error font-body-sm text-body-sm font-medium">Critical action required · 2 members affected</p>
+</div>
+</div>
+<!-- KPI 4: Pending Review -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col justify-between group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-primary font-semibold tracking-wider">Pending Review</span>
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">4</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-primary text-on-primary font-semibold">TL Queue</span>
+</div>
+<p class="mt-space-xs text-secondary font-body-sm text-body-sm">Awaiting your squad sign-off</p>
+</div>
+</div>
+</section>
+<!-- URGENT ALERT & REVIEW ACTION BANNER -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">rate_review</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">4 DESIGNS WAITING FOR YOUR REVIEW</h2>
+<span class="font-code-xs text-code-xs font-semibold px-2 py-0.5 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span> Priority Sign-off
+          </span>
+<span class="font-code-xs text-code-xs font-semibold px-2 py-0.5 rounded-full bg-error-container text-on-error-container flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> 2 Overdue in Squad
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary truncate mt-0.5">
+          ABC Brand Identity V3, Mahalaxmi Logo Mark V2, and 2 other high-priority client iterations await TL approval.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 self-end md:self-center">
+<button class="px-space-md h-9 bg-primary text-on-primary rounded-lg font-headline-sm text-body-sm flex items-center gap-1.5 hover:bg-primary-container shadow-sm transition-all">
+<span>Review Queue</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- TEAM CONTROLS & FILTER BAR -->
+<section class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-space-sm flex-1">
+<!-- Search Input with Kbd -->
+<div class="relative flex items-center min-w-[280px] max-w-sm flex-1">
+<span class="material-symbols-outlined absolute left-space-sm text-secondary text-[18px]">search</span>
+<input class="w-full h-9 pl-9 pr-14 bg-surface-container-low rounded-lg text-body-sm font-body-sm text-on-surface placeholder:text-secondary focus:outline-none focus:bg-surface-container-lowest shadow-inner transition-all" placeholder="Search team members (name, role, task)..." type="text"/>
+<span class="absolute right-space-sm font-code-xs text-code-xs text-secondary bg-surface-container-highest px-1.5 py-0.5 rounded font-semibold">⌘K</span>
+</div>
+<!-- Filters -->
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="h-9 px-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm rounded-lg flex items-center gap-1.5 transition-colors">
+<span class="text-secondary font-medium">Status:</span>
+<span class="font-semibold text-on-surface">All</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">expand_more</span>
+</button>
+<button class="h-9 px-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm rounded-lg flex items-center gap-1.5 transition-colors">
+<span class="text-secondary font-medium">Workload:</span>
+<span class="font-semibold text-on-surface">All Levels</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">expand_more</span>
+</button>
+<button class="h-9 px-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface font-body-sm text-body-sm rounded-lg flex items-center gap-1.5 transition-colors">
+<span class="text-secondary font-medium">Sort:</span>
+<span class="font-semibold text-on-surface">Workload (High → Low)</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">swap_vert</span>
+</button>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="flex items-center gap-space-sm justify-end">
+<button class="h-9 px-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md rounded-lg flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[18px] text-secondary">swap_horiz</span>
+<span>Reassign Work</span>
+</button>
+<button class="h-9 px-space-md bg-primary text-on-primary rounded-lg font-label-md text-label-md flex items-center gap-1 hover:bg-primary-container shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Assign Task</span>
+</button>
+</div>
+</section>
+<!-- SPLIT TWO-COLUMN WORKFLOW DESK -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT MAIN COLUMN: TEAM TABLE (68% width on 12-col grid => col-span-8) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- Table Header & Squad Metric Header -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="p-space-md flex items-center justify-between bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">Active Squad Roster</h3>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest text-secondary font-semibold">5 Members</span>
+</div>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm text-secondary">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> 5 Active Now</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-error"></span> 1 Overloaded</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/60 text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-md">Member</th>
+<th class="py-space-sm px-space-sm">Role</th>
+<th class="py-space-sm px-space-sm text-center">Active Tasks</th>
+<th class="py-space-sm px-space-sm">Due Today</th>
+<th class="py-space-sm px-space-sm text-center">Overdue</th>
+<th class="py-space-sm px-space-sm min-w-[150px]">Workload Capacity</th>
+<th class="py-space-sm px-space-sm text-center">Status</th>
+<th class="py-space-sm px-space-md text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low text-body-sm font-body-sm">
+<!-- ROW 1: AKHIL (Team Leader) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<div class="w-9 h-9 rounded-full bg-primary text-on-primary font-headline-sm text-label-md font-bold flex items-center justify-center ring-2 ring-primary/20">
+                        AK
+                      </div>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Akhil</span>
+<span class="font-code-xs text-code-xs px-1.5 py-0.5 rounded bg-primary text-on-primary font-bold">You · Lead</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary truncate">akhil@brandstro.co</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm font-medium text-on-surface-variant">Team Leader</td>
+<td class="py-space-md px-space-sm text-center font-code-sm text-code-sm font-bold text-on-surface">
+<span class="inline-block px-2 py-0.5 rounded bg-surface-container-low text-primary font-semibold">4</span>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">1 Sign-off</span>
+<span class="font-body-sm text-body-sm text-secondary truncate max-w-[140px]">Mahalaxmi Builders</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm text-center font-code-sm text-code-sm text-secondary">
+                  -
+                </td>
+<td class="py-space-md px-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-label-sm font-code-xs">
+<span class="text-on-surface font-semibold">78%</span>
+<span class="text-amber-700 font-medium">High</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-amber-500 h-1.5 rounded-full" style="width: 78%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span> Working
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="h-7 px-2.5 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm rounded font-semibold transition-colors">
+                      View
+                    </button>
+<button class="h-7 w-7 flex items-center justify-center text-secondary hover:text-on-surface rounded hover:bg-surface-container-low">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 2: SHIHAF (OVERLOADED & OVERDUE) -->
+<tr class="bg-error-container/20 hover:bg-error-container/30 transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<div class="w-9 h-9 rounded-full bg-amber-600 text-on-primary font-headline-sm text-label-md font-bold flex items-center justify-center ring-2 ring-error">
+                        SK
+                      </div>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Shihaf</span>
+<span class="font-code-xs text-code-xs px-1 py-0.5 rounded bg-error text-on-error font-bold tracking-tight uppercase">Bottleneck</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary truncate">shihaf@brandstro.co</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm font-medium text-on-surface-variant">Sr. Logo Designer</td>
+<td class="py-space-md px-space-sm text-center font-code-sm text-code-sm font-bold text-error">
+<span class="inline-block px-2 py-0.5 rounded bg-error-container text-on-error-container font-bold">5</span>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">2 Tasks Due</span>
+<span class="font-body-sm text-body-sm text-secondary truncate max-w-[140px]">ABC Brand Identity V3</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm text-center">
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded bg-error text-on-error font-code-xs text-code-xs font-bold shadow-xs">
+                    1d late
+                  </span>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-label-sm font-code-xs">
+<span class="text-error font-bold">94%</span>
+<span class="text-error font-bold uppercase tracking-wider">Overloaded</span>
+</div>
+<div class="w-full bg-error-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-error h-1.5 rounded-full" style="width: 94%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span> Working
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="h-7 px-2.5 bg-error text-on-error hover:bg-on-error-container font-label-sm text-label-sm rounded font-bold transition-colors shadow-xs">
+                      Rebalance
+                    </button>
+<button class="h-7 w-7 flex items-center justify-center text-secondary hover:text-on-surface rounded hover:bg-surface-container-low">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 3: PRABHA -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<div class="w-9 h-9 rounded-full bg-blue-600 text-on-primary font-headline-sm text-label-md font-bold flex items-center justify-center ring-2 ring-blue-500/20">
+                        PM
+                      </div>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Prabha</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">prabha@brandstro.co</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm font-medium text-on-surface-variant">Logo Designer</td>
+<td class="py-space-md px-space-sm text-center font-code-sm text-code-sm font-bold text-on-surface">
+<span class="inline-block px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-semibold">3</span>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">1 Task Due</span>
+<span class="font-body-sm text-body-sm text-secondary truncate max-w-[140px]">KPN Monogram Typography</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm text-center font-code-sm text-code-sm text-secondary">
+                  -
+                </td>
+<td class="py-space-md px-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-label-sm font-code-xs">
+<span class="text-on-surface font-semibold">58%</span>
+<span class="text-emerald-700 font-medium">Normal</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 58%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span> Working
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="h-7 px-2.5 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm rounded font-semibold transition-colors">
+                      View
+                    </button>
+<button class="h-7 w-7 flex items-center justify-center text-secondary hover:text-on-surface rounded hover:bg-surface-container-low">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 4: FATHIMA -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<div class="w-9 h-9 rounded-full bg-teal-600 text-on-primary font-headline-sm text-label-md font-bold flex items-center justify-center ring-2 ring-teal-500/20">
+                        FA
+                      </div>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Fathima</span>
+<span class="font-body-sm text-body-sm text-secondary truncate">fathima@brandstro.co</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm font-medium text-on-surface-variant">Logo &amp; 3D Designer</td>
+<td class="py-space-md px-space-sm text-center font-code-sm text-code-sm font-bold text-on-surface">
+<span class="inline-block px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-semibold">4</span>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">2 Tasks Due</span>
+<span class="font-body-sm text-body-sm text-secondary truncate max-w-[140px]">Iyengar Bakery Heritage Vector</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm text-center font-code-sm text-code-sm text-secondary">
+                  -
+                </td>
+<td class="py-space-md px-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-label-sm font-code-xs">
+<span class="text-on-surface font-semibold">62%</span>
+<span class="text-emerald-700 font-medium">Normal</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 62%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span> Working
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="h-7 px-2.5 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm rounded font-semibold transition-colors">
+                      View
+                    </button>
+<button class="h-7 w-7 flex items-center justify-center text-secondary hover:text-on-surface rounded hover:bg-surface-container-low">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 5: RAHUL (LOW CAPACITY / AVAILABLE) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<div class="w-9 h-9 rounded-full bg-secondary text-on-primary font-headline-sm text-label-md font-bold flex items-center justify-center ring-2 ring-secondary/20">
+                        RN
+                      </div>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Rahul</span>
+<span class="font-code-xs text-code-xs px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold">Available</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary truncate">rahul@brandstro.co</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm font-medium text-on-surface-variant">Jr. Logo Designer</td>
+<td class="py-space-md px-space-sm text-center font-code-sm text-code-sm font-bold text-on-surface">
+<span class="inline-block px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-semibold">2</span>
+</td>
+<td class="py-space-md px-space-sm">
+<span class="text-secondary italic">None due today</span>
+</td>
+<td class="py-space-md px-space-sm text-center">
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded bg-error-container text-on-error-container font-code-xs text-code-xs font-bold">
+                    1d late
+                  </span>
+</td>
+<td class="py-space-md px-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-label-sm font-code-xs">
+<span class="text-on-surface font-semibold">32%</span>
+<span class="text-emerald-700 font-semibold">Low (Free Slot)</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-emerald-500 h-1.5 rounded-full" style="width: 32%"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span> Working
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="h-7 px-2.5 bg-primary text-on-primary hover:bg-primary-container font-label-sm text-label-sm rounded font-semibold transition-colors shadow-xs">
+                      Assign Task
+                    </button>
+<button class="h-7 w-7 flex items-center justify-center text-secondary hover:text-on-surface rounded hover:bg-surface-container-low">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Quick Rebalancing Bar -->
+<div class="p-space-md bg-surface-container-low/40 flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-body-sm text-secondary">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">auto_fix_high</span>
+<span>Leveling Recommendation: <strong>Rahul has 68% buffer</strong> to absorb overdue deliverables from Shihaf.</span>
+</div>
+<button class="text-primary font-headline-sm text-label-md hover:underline flex items-center gap-1 font-semibold">
+            Execute Rebalancing Wizard →
+          </button>
+</div>
+</div>
+<!-- IN-FLIGHT SQUAD ACTIVE PIPELINE (Expanded Visibility) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">view_timeline</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Active Sprint Assignments (18 Live Tasks)</h4>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Ordered by urgency &amp; deadline</span>
+</div>
+<!-- Inline Compact Task Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<!-- Task 1 (Shihaf - Overdue) -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col justify-between gap-space-xs">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-code-xs text-code-xs font-bold px-1.5 py-0.2 rounded bg-error text-on-error">OVERDUE 1D</span>
+<span class="font-headline-sm text-body-md font-bold text-on-surface truncate">Orange Surgicals Packaging Mark</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-0.5">Assigned to: <strong>Shihaf</strong> · SVG/EPS print vector kit</span>
+</div>
+<button class="text-error hover:text-on-error-container text-body-sm font-semibold shrink-0">Reassign</button>
+</div>
+<div class="flex items-center justify-between font-code-xs text-code-xs text-secondary pt-1">
+<span>Deadline: Yesterday, 5:00 PM</span>
+<span class="text-error font-medium">Overloaded (94%)</span>
+</div>
+</div>
+<!-- Task 2 (Rahul - Overdue) -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col justify-between gap-space-xs">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-code-xs text-code-xs font-bold px-1.5 py-0.2 rounded bg-error-container text-on-error-container">OVERDUE 1D</span>
+<span class="font-headline-sm text-body-md font-bold text-on-surface truncate">Novel X Moodboard Cleanup</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-0.5">Assigned to: <strong>Rahul</strong> · Vector typography extraction</span>
+</div>
+<button class="text-primary hover:text-primary-container text-body-sm font-semibold shrink-0">Nudge</button>
+</div>
+<div class="flex items-center justify-between font-code-xs text-code-xs text-secondary pt-1">
+<span>Deadline: Yesterday, 6:00 PM</span>
+<span class="text-emerald-700 font-medium">Available (32%)</span>
+</div>
+</div>
+<!-- Task 3 (Prabha - In Review) -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col justify-between gap-space-xs">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-code-xs text-code-xs font-bold px-1.5 py-0.2 rounded bg-primary-fixed text-on-primary-fixed">READY FOR TL</span>
+<span class="font-headline-sm text-body-md font-bold text-on-surface truncate">KPN Restaurant Monogram hand-off</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-0.5">Assigned to: <strong>Prabha</strong> · Gold leaf foil iteration</span>
+</div>
+<button class="text-primary hover:text-primary-container text-body-sm font-semibold shrink-0">Review</button>
+</div>
+<div class="flex items-center justify-between font-code-xs text-code-xs text-secondary pt-1">
+<span>Due: Today, 5:30 PM</span>
+<span class="text-secondary">Progress: 100% (Subm.)</span>
+</div>
+</div>
+<!-- Task 4 (Shihaf - Due Today) -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col justify-between gap-space-xs">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-code-xs text-code-xs font-bold px-1.5 py-0.2 rounded bg-amber-100 text-amber-900">DUE TODAY</span>
+<span class="font-headline-sm text-body-md font-bold text-on-surface truncate">ABC Brand Identity Concept V3</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary mt-0.5">Assigned to: <strong>Shihaf</strong> · Client presentation deck lockup</span>
+</div>
+<button class="text-secondary hover:text-on-surface text-body-sm font-semibold shrink-0">Details</button>
+</div>
+<div class="flex items-center justify-between font-code-xs text-code-xs text-secondary pt-1">
+<span>Due: Today, 4:00 PM</span>
+<span class="text-amber-800 font-medium">Drafting Deck</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT INTELLIGENCE SIDEBAR (32% width on 12-col grid => col-span-4) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- PANEL 1: TEAM CAPACITY & ALLOCATION -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">pie_chart</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Team Capacity</h4>
+</div>
+<span class="font-code-xs text-code-xs px-2 py-0.5 bg-surface-container-low text-secondary rounded font-bold">78% AVG</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-secondary">
+<span>Workload Allocation</span>
+<span class="font-code-xs text-code-xs font-semibold text-on-surface">18 Active Tasks</span>
+</div>
+<!-- Multi-segmented Progress Bar -->
+<div class="w-full h-3 bg-surface-container-highest rounded-full overflow-hidden flex shadow-inner">
+<!-- In Progress (11 tasks - ~61%) -->
+<div class="bg-primary h-full" style="width: 61%" title="In Progress: 11 Tasks"></div>
+<!-- In Review (4 tasks - ~22%) -->
+<div class="bg-amber-400 h-full" style="width: 22%" title="Review Queue: 4 Tasks"></div>
+<!-- Overdue (2 tasks - ~11%) -->
+<div class="bg-error h-full" style="width: 11%" title="Overdue: 2 Tasks"></div>
+<!-- Blocked / Queued (1 task - ~6%) -->
+<div class="bg-secondary h-full" style="width: 6%" title="Blocked: 1 Task"></div>
+</div>
+<!-- Legend -->
+<div class="grid grid-cols-2 gap-2 mt-1 font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span>
+<span>In Progress (11)</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="w-2.5 h-2.5 rounded-full bg-amber-400 shrink-0"></span>
+<span>Pending TL (4)</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="w-2.5 h-2.5 rounded-full bg-error shrink-0"></span>
+<span>Overdue (2)</span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary shrink-0"></span>
+<span>Blocked (1)</span>
+</div>
+</div>
+</div>
+<!-- Leveling recommendation box -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center gap-1.5 text-tertiary">
+<span class="material-symbols-outlined text-[16px]">tips_and_updates</span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider">Leveling Suggestion</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+            Shihaf is at <strong>94% capacity</strong>. Reassign 1 packaging deliverable to Rahul (32% Low) to eliminate the overdue bottleneck.
+          </p>
+<button class="mt-1 w-full h-7 bg-primary text-on-primary hover:bg-primary-container rounded font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>1-Click Rebalance</span>
+</button>
+</div>
+</div>
+<!-- PANEL 2: TODAY'S DELIVERABLES -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">event_available</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Today's Deliverables</h4>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">4 Due</span>
+</div>
+<div class="flex flex-col divide-y divide-surface-container-low font-body-sm text-body-sm">
+<!-- Item 1: Shihaf -->
+<div class="py-space-xs flex items-center justify-between gap-space-xs">
+<div class="flex items-start gap-2 min-w-0">
+<div class="w-6 h-6 rounded-full bg-amber-600 text-on-primary text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">SK</div>
+<div class="flex flex-col min-w-0">
+<span class="font-semibold text-on-surface truncate">ABC Identity Concept V3</span>
+<span class="font-code-xs text-code-xs text-secondary">Shihaf · Due 4:00 PM</span>
+</div>
+</div>
+<button class="text-primary hover:text-primary-container font-label-sm text-label-sm font-bold shrink-0">View</button>
+</div>
+<!-- Item 2: Prabha -->
+<div class="py-space-xs flex items-center justify-between gap-space-xs">
+<div class="flex items-start gap-2 min-w-0">
+<div class="w-6 h-6 rounded-full bg-blue-600 text-on-primary text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">PM</div>
+<div class="flex flex-col min-w-0">
+<span class="font-semibold text-on-surface truncate">KPN Monogram Hand-off</span>
+<span class="font-code-xs text-code-xs text-secondary">Prabha · Due 5:30 PM</span>
+</div>
+</div>
+<button class="text-primary hover:text-primary-container font-label-sm text-label-sm font-bold shrink-0">View</button>
+</div>
+<!-- Item 3: Fathima -->
+<div class="py-space-xs flex items-center justify-between gap-space-xs">
+<div class="flex items-start gap-2 min-w-0">
+<div class="w-6 h-6 rounded-full bg-teal-600 text-on-primary text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">FA</div>
+<div class="flex flex-col min-w-0">
+<span class="font-semibold text-on-surface truncate">Iyengar Bakery Brand Vector</span>
+<span class="font-code-xs text-code-xs text-secondary">Fathima · Due 6:15 PM</span>
+</div>
+</div>
+<button class="text-primary hover:text-primary-container font-label-sm text-label-sm font-bold shrink-0">View</button>
+</div>
+<!-- Item 4: Rahul -->
+<div class="py-space-xs flex items-center justify-between gap-space-xs">
+<div class="flex items-start gap-2 min-w-0">
+<div class="w-6 h-6 rounded-full bg-secondary text-on-primary text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5">RN</div>
+<div class="flex flex-col min-w-0">
+<span class="text-secondary italic truncate">No deadline today</span>
+<span class="font-code-xs text-code-xs text-emerald-700 font-medium">Ready for dispatch</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-emerald-600 font-semibold shrink-0">Free</span>
+</div>
+</div>
+</div>
+<!-- PANEL 3: TEAM ATTENTION & ALERTS (Exceptions-Only) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[18px]">report_problem</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Team Attention</h4>
+</div>
+<span class="font-code-xs text-code-xs px-2 py-0.5 bg-error-container text-on-error-container rounded-full font-bold">4 Items</span>
+</div>
+<div class="flex flex-col gap-space-xs font-body-sm text-body-sm">
+<!-- Alert 1 -->
+<div class="p-space-xs rounded bg-error-container/25 flex items-start justify-between gap-space-xs">
+<div class="flex items-start gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-error shrink-0 mt-0.5">warning</span>
+<span class="text-on-surface font-medium truncate">Shihaf: Orange Surgicals logo export (1d late)</span>
+</div>
+<button class="text-error font-semibold hover:underline shrink-0 text-label-sm">Reassign</button>
+</div>
+<!-- Alert 2 -->
+<div class="p-space-xs rounded bg-error-container/25 flex items-start justify-between gap-space-xs">
+<div class="flex items-start gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-error shrink-0 mt-0.5">warning</span>
+<span class="text-on-surface font-medium truncate">Rahul: Novel X vector cleanup overdue by 1d</span>
+</div>
+<button class="text-primary font-semibold hover:underline shrink-0 text-label-sm">Nudge</button>
+</div>
+<!-- Alert 3 -->
+<div class="p-space-xs rounded bg-surface-container-low flex items-start justify-between gap-space-xs">
+<div class="flex items-start gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0 mt-0.5">hourglass_top</span>
+<span class="text-on-surface font-medium truncate">4 designs are waiting for Team Leader review</span>
+</div>
+<button class="text-primary font-semibold hover:underline shrink-0 text-label-sm">Review</button>
+</div>
+<!-- Alert 4 -->
+<div class="p-space-xs rounded bg-amber-50 flex items-start justify-between gap-space-xs">
+<div class="flex items-start gap-1.5 min-w-0">
+<span class="material-symbols-outlined text-[16px] text-amber-700 shrink-0 mt-0.5">block</span>
+<span class="text-on-surface font-medium truncate">Blocked: KPN collaterals waiting on color guide</span>
+</div>
+<button class="text-amber-800 font-semibold hover:underline shrink-0 text-label-sm">Unblock</button>
+</div>
+</div>
+</div>
+<!-- PANEL 4: SQUAD HELP REQUESTS -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">support_agent</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Squad Help Request</h4>
+</div>
+<span class="font-code-xs text-code-xs px-2 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed rounded font-bold">1 Active</span>
+</div>
+<!-- Help Card -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-amber-600 text-on-primary text-[9px] font-bold flex items-center justify-center">SK</span>
+<span class="font-bold text-on-surface font-body-sm text-body-sm">Shihaf</span>
+<span class="text-secondary font-code-xs text-code-xs">• ABC Brand Identity</span>
+</div>
+<span class="font-code-xs text-code-xs text-secondary">24m ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface bg-surface-container-lowest p-space-xs rounded shadow-xs">
+            "Need clarification on client's typography preference (saffron vs forest green contrast from CRM call notes)."
+          </p>
+<div class="flex items-center justify-end gap-space-xs pt-1">
+<button class="h-6 px-2 text-label-sm font-label-sm bg-surface-container hover:bg-surface-container-high rounded text-on-surface font-medium transition-colors">
+              Escalate to Head
+            </button>
+<button class="h-6 px-2 text-label-sm font-label-sm bg-primary text-on-primary hover:bg-primary-container rounded font-semibold transition-colors">
+              Reply Note
+            </button>
+</div>
+</div>
+</div>
+<!-- PANEL 5: OPERATIONAL SPRINT PERFORMANCE -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">insights</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">This Week's Output</h4>
+</div>
+<span class="font-code-xs text-code-xs text-secondary font-medium">Current Sprint</span>
+</div>
+<!-- Metrics 2x2 Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold">Tasks Completed</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">32</span>
+<span class="font-code-xs text-code-xs text-emerald-700 font-bold">+14%</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold">On-Time Delivery</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-md text-headline-md font-bold text-emerald-700">87.5%</span>
+<span class="font-code-xs text-code-xs text-secondary">28/32</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold">Overdue Closed</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">4</span>
+<span class="font-code-xs text-code-xs text-secondary">Resolved</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold">TL Review Velocity</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-md text-headline-md font-bold text-primary">1.8h</span>
+<span class="font-code-xs text-code-xs text-secondary">avg turnaround</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple micro-interaction for quick filter buttons
+  document.querySelectorAll('section button').forEach(button => {
+    button.addEventListener('mouseenter', () => {
+      button.style.transform = 'translateY(-1px)';
+    });
+    button.addEventListener('mouseleave', () => {
+      button.style.transform = 'translateY(0)';
+    });
+  });
+</script></main></div></body></html>

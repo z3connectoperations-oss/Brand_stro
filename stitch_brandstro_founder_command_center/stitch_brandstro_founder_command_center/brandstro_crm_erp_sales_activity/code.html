@@ -1,0 +1,765 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-surface":"#0b1c30","inverse-surface":"#213145","surface-container-low":"#eff4ff","primary-container":"#4f46e5","surface-bright":"#f8f9ff","on-background":"#0b1c30","on-tertiary-container":"#ffd4a4","on-primary-container":"#dad7ff","primary-fixed":"#e2dfff","outline":"#777587","on-tertiary":"#ffffff","on-primary-fixed-variant":"#3323cc","surface":"#f8f9ff","tertiary":"#684000","surface-container-lowest":"#ffffff","inverse-primary":"#c3c0ff","surface-variant":"#d3e4fe","on-tertiary-fixed-variant":"#653e00","on-error":"#ffffff","on-secondary-container":"#5c647a","error-container":"#ffdad6","surface-dim":"#cbdbf5","on-error-container":"#93000a","background":"#f8f9ff","error":"#ba1a1a","on-primary-fixed":"#0f0069","on-secondary-fixed":"#131b2e","secondary":"#565e74","on-surface-variant":"#464555","on-tertiary-fixed":"#2a1700","surface-tint":"#4d44e3","primary":"#3525cd","tertiary-fixed":"#ffddb8","on-secondary":"#ffffff","surface-container-high":"#dce9ff","surface-container":"#e5eeff","secondary-container":"#dae2fd","outline-variant":"#c7c4d8","tertiary-fixed-dim":"#ffb95f","primary-fixed-dim":"#c3c0ff","surface-container-highest":"#d3e4fe","secondary-fixed":"#dae2fd","tertiary-container":"#885500","on-primary":"#ffffff","secondary-fixed-dim":"#bec6e0","on-secondary-fixed-variant":"#3f465c","inverse-on-surface":"#eaf1ff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{margin:"1rem","space-md":"0.75rem","space-sm":"0.5rem","space-lg":"1rem",gutter:"1rem","gutter-desktop":"1.5rem","margin-desktop":"2rem","space-xl":"1.5rem","space-xs":"0.25rem"},fontFamily:{"body-lg":["Inter"],"body-md":["Inter"],"headline-lg":["Inter"],"display-lg":["Inter"],"headline-md":["Inter"],"label-md":["Inter"],"code-xs":["JetBrains Mono"],"code-sm":["JetBrains Mono"],"body-sm":["Inter"],"label-sm":["Inter"],"headline-sm":["Inter"]},fontSize:{"body-lg":["15px",{lineHeight:"22px",fontWeight:"400"}],"body-md":["13px",{lineHeight:"18px",fontWeight:"400"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"display-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"500"}],"code-xs":["10px",{lineHeight:"12px",fontWeight:"400"}],"code-sm":["11px",{lineHeight:"14px",fontWeight:"500"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-60 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="p-space-lg flex flex-col gap-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm tracking-tight text-surface-bright uppercase">Brandstro</span><span class="bg-primary-container text-on-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded-full uppercase tracking-wider">CRM</span></div></div><span class="font-label-sm text-label-sm text-outline-variant">Agency Operating System</span></div><div class="px-space-md pt-space-md"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline-variant px-space-sm block mb-space-xs">Sales Workspace</span><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-md rounded-lg"><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-inverse-on-surface hover:bg-surface-variant/10 hover:text-surface-bright transition-colors" data-path="dashboard" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-label-md text-label-md">Dashboard</span></div></a><a class="flex items-center justify-between px-space-sm py-space-xs transition-colors font-label-md rounded-lg text-inverse-on-surface hover:bg-surface-variant/10 hover:text-surface-bright" data-path="leads" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">person_search</span><span class="font-label-md text-label-md">Leads</span></div><span class="bg-primary-container text-on-primary font-label-sm text-label-sm px-1.5 py-0.5 rounded-full">18 new</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-inverse-on-surface hover:bg-surface-variant/10 hover:text-surface-bright transition-colors" data-path="pipeline" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">view_kanban</span><span class="font-label-md text-label-md">Pipeline</span></div><span class="font-code-xs text-code-xs text-secondary-fixed">₹4.85L</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-inverse-on-surface hover:bg-surface-variant/10 hover:text-surface-bright transition-colors" data-path="follow-ups" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">schedule</span><span class="font-label-md text-label-md">Follow-ups</span></div><span class="bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm px-1.5 py-0.5 rounded-full">12 due</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg bg-primary-container text-on-primary font-label-md transition-all shadow-sm" data-path="activity" href="#" aria-current="page"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">history</span><span class="font-label-md text-label-md">Activity</span></div><span class="w-2 h-2 rounded-full bg-surface-bright ring-2 ring-primary-container"></span></a></nav></div></div><div class="p-space-md flex flex-col gap-space-sm"><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-inverse-on-surface hover:bg-surface-variant/10 hover:text-surface-bright transition-colors" data-path="notifications" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="font-label-md text-label-md">Notifications</span></div><span class="w-2 h-2 rounded-full bg-error"></span></a><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-variant/10"><div class="flex items-center gap-space-sm"><div class="relative flex items-center justify-center"><div class="w-8 h-8 rounded-full bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center">AR</div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-primary ring-2 ring-inverse-surface"></span></div><div class="flex flex-col"><span class="font-label-md text-label-md text-surface-bright">Arun K.</span><span class="font-label-sm text-label-sm text-outline-variant">Sales Specialist</span></div></div><span class="material-symbols-outlined text-outline-variant text-[16px]">more_vert</span></div></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 z-40 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 w-full px-gutter-desktop flex items-center justify-between gap-space-lg"><div class="flex-1 max-w-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">search</span><input class="w-full h-9 pl-9 pr-4 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm shadow-[0_1px_8px_rgba(0,0,0,0.04)] placeholder:text-outline-variant focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="Search leads, contacts, projects... (⌘K)" type="text"></div></div><div class="flex items-center gap-space-lg"><div class="hidden md:flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-full"><span class="w-2 h-2 rounded-full bg-primary-container"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Q3 Target: 82%</span></div><div class="font-code-sm text-code-sm text-on-surface-variant">FY 2024-25</div></div><div class="flex items-center gap-space-sm"><button class="relative p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-14 px-gutter-desktop min-h-screen bg-surface"><div class="flex flex-col w-full pb-space-xl">
+<!-- Active Sidebar Link Injector Script to ensure Activity item is highlighted correctly in parent shell -->
+<script>
+    (function highlightActivityNav() {
+      const activeNav = document.querySelector('aside [data-path="activity"]');
+      if (activeNav) {
+        activeNav.className = 'flex items-center justify-between px-space-sm py-space-xs rounded-lg bg-primary-container text-on-primary font-label-md transition-all shadow-sm';
+        activeNav.setAttribute('aria-current', 'page');
+        const countBadge = document.createElement('span');
+        countBadge.className = 'w-2 h-2 rounded-full bg-surface-bright ring-2 ring-primary-container';
+        activeNav.appendChild(countBadge);
+      }
+    })();
+  </script>
+<!-- Top Context Header Bar (No double-brand header) -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md py-space-md">
+<div class="flex flex-col gap-0.5">
+<nav class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="">Agency OS</span>
+<span class="material-symbols-outlined text-[13px]">chevron_right</span>
+<span class="">Sales Operations</span>
+<span class="material-symbols-outlined text-[13px]">chevron_right</span>
+<span class="text-primary font-semibold">Sales Activity</span>
+</nav>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Sales Activity Log</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Audit trail of calls, direct conversations, pipeline follow-ups, and sales handoffs.
+      </p>
+</div>
+<!-- Top Action Bar -->
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[16px]">search</span>
+<input class="w-full h-8 pl-8 pr-3 text-body-sm font-body-sm bg-surface-container-lowest text-on-surface rounded-lg shadow-sm placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="Search lead, phone, notes... (⌘K)" type="text">
+</div>
+<button class="h-8 px-space-sm flex items-center gap-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md hover:bg-surface-container-low transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">file_download</span>
+<span class="">Export Log</span>
+</button>
+<button class="h-8 px-space-md flex items-center gap-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all shadow-sm active:scale-[0.98]" onclick="document.getElementById('logActivityModal').classList.toggle('hidden')">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span class="">+ Log Activity</span>
+</button>
+</div>
+</div>
+<!-- Summary KPI Section -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mt-space-xs mb-space-lg">
+<!-- Card 1: Today -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-all">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Today's Pulse</span>
+<div class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight mt-0.5">24 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">actions</span></div>
+</div>
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 mt-space-sm">
+<span class="inline-flex items-center gap-0.5 font-code-xs text-code-xs font-semibold px-1.5 py-0.5 rounded bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-[12px]">trending_up</span> +6 vs yesterday
+        </span>
+<span class="font-body-sm text-body-sm text-outline">High velocity</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-primary"></div>
+</div>
+<!-- Card 2: Calls -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Outbound Calls</span>
+<div class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight mt-0.5">12</div>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm mt-space-sm text-on-surface-variant">
+<span class="text-on-surface font-medium">8 Connected</span>
+<span class="text-outline">·</span>
+<span class="text-error font-medium">4 No Answer</span>
+<span class="font-code-xs text-code-xs text-outline font-semibold">66% conn.</span>
+</div>
+</div>
+<!-- Card 3: WhatsApp -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">WhatsApp Direct</span>
+<div class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight mt-0.5">8 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">conversations</span></div>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">forum</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 mt-space-sm text-body-sm font-body-sm text-on-surface-variant truncate">
+<span class="w-2 h-2 rounded-full bg-primary shrink-0"></span>
+<span class="truncate">Proposals shared &amp; requirements synced</span>
+</div>
+</div>
+<!-- Card 4: Meetings -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Sales Pitches</span>
+<div class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight mt-0.5">4 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">sessions</span></div>
+</div>
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">event_note</span>
+</div>
+</div>
+<div class="flex items-center gap-2 mt-space-sm text-body-sm font-body-sm">
+<span class="font-medium text-on-surface">2 Discovery</span>
+<span class="text-outline">/</span>
+<span class="font-semibold text-primary">2 Closing Won</span>
+</div>
+</div>
+</section>
+<!-- Filter & Control Bar -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm mb-space-lg flex flex-col xl:flex-row xl:items-center justify-between gap-space-sm">
+<!-- Left segment: Rep and quick dates -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="relative">
+<select class="appearance-none h-8 pl-8 pr-7 bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md rounded-lg focus:outline-none focus:ring-1 focus:ring-primary cursor-pointer transition-colors">
+<option>My Activity (Arun K.)</option>
+<option>All Agency Activities (Leaderboard)</option>
+<option>Rohit S. (Enterprise Specialist)</option>
+<option>Neha M. (Brand Strategist)</option>
+</select>
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-[16px] text-primary">person</span>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-[16px] text-outline pointer-events-none">expand_more</span>
+</div>
+<div class="h-4 w-[1px] bg-surface-container-highest hidden sm:block"></div>
+<!-- Quick Date Pills -->
+<div class="flex items-center gap-1 bg-surface-container-low p-0.5 rounded-lg">
+<button class="h-7 px-2.5 rounded-md bg-surface-container-lowest text-primary font-label-sm text-label-sm font-semibold shadow-sm">
+          Today (16 Sep)
+        </button>
+<button class="h-7 px-2.5 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors">
+          Yesterday
+        </button>
+<button class="h-7 px-2.5 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors hidden md:block">
+          This Week
+        </button>
+<button class="h-7 px-2.5 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors hidden lg:block">
+          Last 7 Days
+        </button>
+<button class="h-7 px-2 rounded-md text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="">Custom</span>
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+</button>
+</div>
+</div>
+<!-- Right segment: Deep filters -->
+<div class="flex flex-wrap items-center gap-space-sm justify-between xl:justify-end">
+<div class="flex items-center gap-space-xs flex-wrap">
+<!-- Activity Type Filter -->
+<select class="h-8 px-2.5 bg-surface-container-low text-on-surface font-label-sm text-label-sm rounded-lg focus:outline-none hover:bg-surface-container transition-colors">
+<option>All Types (Calls, WhatsApp, Meetings...)</option>
+<option>Calls Only</option>
+<option>WhatsApp Conversations</option>
+<option>Meetings &amp; Pitches</option>
+<option>Proposals &amp; Deals Won</option>
+</select>
+<!-- Account / Lead filter -->
+<select class="h-8 px-2.5 bg-surface-container-low text-on-surface font-label-sm text-label-sm rounded-lg focus:outline-none hover:bg-surface-container transition-colors">
+<option>All Accounts (Active Leads)</option>
+<option>ABC Foods Pvt. Ltd.</option>
+<option>KPN Restaurant</option>
+<option>Mahalaxmi Builders</option>
+<option>Deccan Roasters Coffee</option>
+</select>
+<!-- Outcome Filter -->
+<select class="h-8 px-2.5 bg-surface-container-low text-on-surface font-label-sm text-label-sm rounded-lg focus:outline-none hover:bg-surface-container transition-colors">
+<option>All Outcomes</option>
+<option>Connected / Hot</option>
+<option>Won / Closed</option>
+<option>Needs Immediate Retry</option>
+</select>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-1.5 text-on-surface-variant hover:text-error hover:bg-surface-container-low rounded-lg transition-colors" title="Reset Filters">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+</button>
+<span class="font-code-xs text-code-xs text-on-surface-variant bg-surface-container-low px-2 py-1 rounded">
+          18 activities logged
+        </span>
+</div>
+</div>
+</div>
+<!-- MAIN CHRONOLOGICAL TIMELINE (Agency Diary Layout) -->
+<div class="relative flex flex-col gap-space-lg">
+<!-- Continuous Vertical Connecting Guide -->
+<div class="absolute left-6 top-8 bottom-4 w-0.5 bg-surface-container-high hidden md:block"></div>
+<!-- ==================== GROUP 1: TODAY ==================== -->
+<div class="flex flex-col gap-space-md relative">
+<!-- Sticky Date Indicator Tag -->
+<div class="sticky top-14 z-20 flex items-center gap-space-sm py-1 bg-surface/90 backdrop-blur-sm">
+<div class="w-12 flex justify-center shrink-0">
+<span class="w-3 h-3 rounded-full bg-primary shadow-sm"></span>
+</div>
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold tracking-wide uppercase">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+<span class="">Today · 16 September 2026</span>
+<span class="text-on-primary-fixed-variant font-code-xs text-code-xs normal-case">(11 Activities Logged)</span>
+</div>
+</div>
+<!-- Item 1: Call - ABC Foods -->
+<div class="relative flex items-start gap-space-md group">
+<!-- Node icon -->
+<div class="w-12 flex justify-center shrink-0 pt-3 z-10">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[18px]">phone_in_talk</span>
+</div>
+</div>
+<!-- Content Card -->
+<div class="flex-1 bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-code-sm text-code-sm font-semibold text-primary">4:45 PM</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-primary font-semibold">CALL</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Connected
+              </span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-semibold">
+                🔥 Hot Lead
+              </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">badge</span> Rep: Arun K.
+            </span>
+</div>
+<!-- Account info -->
+<div class="flex flex-wrap items-center justify-between pt-1 gap-2">
+<div>
+<a class="font-headline-sm text-headline-sm text-on-surface hover:text-primary transition-colors" href="#">
+                ABC Foods Pvt. Ltd.
+              </a>
+<span class="text-on-surface-variant font-body-sm text-body-sm ml-2">
+                Brand Identity &amp; Packaging Dielines
+              </span>
+</div>
+<div class="font-code-sm text-code-sm font-semibold text-on-surface bg-surface-container-low px-2 py-0.5 rounded">
+              ₹85,000 Deal
+            </div>
+</div>
+<!-- Discussion Note -->
+<p class="font-body-md text-body-md text-on-surface-variant bg-surface-container-low/60 p-space-sm rounded-lg mt-1">
+            "Discussed packaging dielines &amp; advance commercial terms with Rahul (Founder). Client confirmed willingness to pay 50% advance for 3 snack SKU dielines before Dussehra kickoff."
+          </p>
+<!-- Next Action Bar & Diff Pill -->
+<div class="mt-space-xs pt-space-xs flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Next Action:</span>
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2 py-1 rounded text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-primary">schedule_send</span>
+<span class="">Send revised commercial invoice &amp; agreement</span>
+<span class="font-code-xs text-code-xs text-primary font-semibold bg-surface-container-highest px-1 rounded">Due Tomorrow, 11:00 AM</span>
+</div>
+</div>
+<!-- Action buttons -->
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded-md bg-surface-container-low text-on-surface hover:bg-surface-container hover:text-primary transition-colors">
+                View Lead LD-902
+              </button>
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded-md bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors">
+                Log Follow-up
+              </button>
+<button class="p-1 text-on-surface-variant hover:text-primary rounded transition-colors" title="Direct Dial">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2: WhatsApp - KPN Restaurant -->
+<div class="relative flex items-start gap-space-md group">
+<div class="w-12 flex justify-center shrink-0 pt-3 z-10">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</div>
+</div>
+<div class="flex-1 bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-code-sm text-code-sm font-semibold text-secondary">4:10 PM</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-primary font-semibold">WHATSAPP</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">done_all</span> Sent · Deck Opened (2x)
+              </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Arun K. via CRM Gateway</span>
+</div>
+<div class="flex flex-wrap items-center justify-between pt-1 gap-2">
+<div>
+<a class="font-headline-sm text-headline-sm text-on-surface hover:text-primary transition-colors" href="#">
+                KPN Restaurant (Branch Expansion)
+              </a>
+<span class="text-on-surface-variant font-body-sm text-body-sm ml-2">Logo &amp; Complete Brand Kit</span>
+</div>
+<div class="font-code-sm text-code-sm font-semibold text-on-surface bg-surface-container-low px-2 py-0.5 rounded">
+              ₹1,10,000 Deal
+            </div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant bg-surface-container-low/60 p-space-sm rounded-lg mt-1">
+            "Sent updated menu collateral samples and revised branding deck via WhatsApp direct tracked link. Client viewed deck 2 times from Bangalore office IP."
+          </p>
+<div class="mt-space-xs pt-space-xs flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Next Action:</span>
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2 py-1 rounded text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-primary">chat_bubble_outline</span>
+<span class="">Follow up on quotation feedback</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant font-medium">Tomorrow, 5:30 PM</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded-md bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors">
+                View Lead
+              </button>
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded-md bg-surface-container text-on-primary-container hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">send</span> Open Chat
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 3: Requirement Scoped - Mahalaxmi Builders -->
+<div class="relative flex items-start gap-space-md group">
+<div class="w-12 flex justify-center shrink-0 pt-3 z-10">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+</div>
+</div>
+<div class="flex-1 bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-code-sm text-code-sm font-semibold text-secondary">3:30 PM</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-fixed text-primary font-semibold">REQUIREMENT SCOPED</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-semibold">
+                Spec Approved
+              </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Arun K. · In-Person Discovery</span>
+</div>
+<div class="flex flex-wrap items-center justify-between pt-1 gap-2">
+<div>
+<a class="font-headline-sm text-headline-sm text-on-surface hover:text-primary transition-colors" href="#">
+                Mahalaxmi Builders (Commercial Tower)
+              </a>
+<span class="text-on-surface-variant font-body-sm text-body-sm ml-2">Real Estate Launch Signage</span>
+</div>
+<div class="font-code-sm text-code-sm font-semibold text-on-surface bg-surface-container-low px-2 py-0.5 rounded">
+              ₹1,20,000 Deal
+            </div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant bg-surface-container-low/60 p-space-sm rounded-lg mt-1">
+            "Deep dive with Director Shrikant on sales gallery launch collateral, hoarding templates, and typography guidelines. Scope approved without architectural 3D revisions."
+          </p>
+<div class="mt-space-xs pt-space-xs flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Next Action:</span>
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2 py-1 rounded text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-primary">description</span>
+<span class="">Prepare formal scope quotation &amp; milestone draft</span>
+<span class="font-code-xs text-code-xs text-primary font-semibold">Due Tomorrow, 2:00 PM</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded-md bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors">
+                View Lead
+              </button>
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded-md bg-primary text-on-primary hover:bg-primary-container transition-colors">
+                Create Quote
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 4: Call Overdue - Orange Surgicals -->
+<div class="relative flex items-start gap-space-md group">
+<div class="w-12 flex justify-center shrink-0 pt-3 z-10">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-error group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[18px]">phone_missed</span>
+</div>
+</div>
+<div class="flex-1 bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-code-sm text-code-sm font-semibold text-secondary">2:15 PM</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-secondary font-semibold">CALL</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-error-container text-on-error-container font-semibold">
+                No Answer · Voicemail
+              </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Arun K.</span>
+</div>
+<div class="flex flex-wrap items-center justify-between pt-1 gap-2">
+<div>
+<a class="font-headline-sm text-headline-sm text-on-surface hover:text-primary transition-colors" href="#">
+                Orange Surgicals
+              </a>
+<span class="text-on-surface-variant font-body-sm text-body-sm ml-2">Medical Equipment Box Redesign</span>
+</div>
+<div class="font-code-sm text-code-sm font-semibold text-on-surface bg-surface-container-low px-2 py-0.5 rounded">
+              ₹75,000 Deal
+            </div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant bg-surface-container-low/60 p-space-sm rounded-lg mt-1">
+            "Outbound follow-up on delayed quotation review. Call went directly to voicemail after 4 rings. Left brief automated IVR reminder."
+          </p>
+<div class="mt-space-xs pt-space-xs flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Next Action:</span>
+<div class="flex items-center gap-1.5 bg-error-container/30 px-2 py-1 rounded text-body-sm font-body-sm text-on-error-container">
+<span class="material-symbols-outlined text-[15px] text-error">warning</span>
+<span class="">Call Dr. Anand directly on mobile</span>
+<span class="font-code-xs text-code-xs font-bold text-error bg-error-container px-1 py-0.5 rounded">
+                  ⚠️ 1 Day Overdue
+                </span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded-md bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors">
+                Reschedule
+              </button>
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded-md bg-primary text-on-primary hover:bg-primary-container transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">call</span> Call Now
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 5: High Value WON / CONVERTED - Deccan Roasters Coffee -->
+<div class="relative flex items-start gap-space-md group">
+<div class="w-12 flex justify-center shrink-0 pt-3 z-10">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary shadow-md flex items-center justify-center group-hover:scale-125 transition-transform">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+</div>
+</div>
+<div class="flex-1 rounded-xl p-space-md shadow-md bg-gradient-to-br from-surface-container-lowest via-surface-container-lowest to-surface-container-low flex flex-col gap-space-xs relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 bg-primary/5 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-code-sm text-code-sm font-bold text-primary">1:15 PM</span>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-primary text-on-primary font-bold tracking-wide flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">verified</span> DEAL WON &amp; CONVERTED
+              </span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-primary font-semibold">
+                Closed Won (₹1,15,000)
+              </span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">auto_awesome</span> System Auto-Handoff
+            </span>
+</div>
+<div class="flex flex-wrap items-center justify-between pt-1 gap-2">
+<div>
+<a class="font-headline-sm text-headline-sm text-on-surface hover:text-primary transition-colors flex items-center gap-1.5" href="#">
+<span class="">Deccan Roasters Coffee</span>
+<span class="material-symbols-outlined text-[16px] text-primary">open_in_new</span>
+</a>
+<span class="text-on-surface-variant font-body-sm text-body-sm">Complete Packaging &amp; Brand Identity Launch</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-code-sm text-code-sm px-2 py-1 rounded bg-surface-container-high text-primary font-bold">
+                Advance: ₹57,500 (50%)
+              </span>
+</div>
+</div>
+<!-- Conversion Notice & System Trigger Logs -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/80 text-on-surface flex flex-col gap-1.5 mt-1 shadow-sm">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">task_alt</span>
+<p class="font-body-md text-body-md font-medium text-on-surface">
+                Lead successfully Won! Automatic ERP handoff executed: Created <strong class="text-primary">Client #CL-804</strong> &amp; initialized Production Project <strong class="text-primary">#PRJ-1028</strong> with 50% advance invoice dispatched to Founder's finance team.
+              </p>
+</div>
+<!-- Monospaced Diff pill audit -->
+<div class="flex items-center gap-2 pt-1 font-code-xs text-code-xs text-on-surface-variant">
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container line-through">Stage: Commercial Negotiation</span>
+<span class="text-outline">→</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-primary font-bold">Stage: Won &amp; In Production</span>
+</div>
+</div>
+<div class="mt-space-xs pt-space-xs flex flex-wrap items-center justify-between gap-space-sm">
+<span class="font-code-xs text-code-xs text-on-surface-variant">
+              Auto-synced to Client 360 &amp; Founder Financial Ledger
+            </span>
+<div class="flex items-center gap-1.5">
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded-md bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors">
+                View Client 360
+              </button>
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded-md bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors">
+                Project #PRJ-1028
+              </button>
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded-md bg-primary-container text-on-primary hover:bg-primary transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">receipt_long</span> Invoice PDF
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 6: Proposal Sent - Iyengar Bakery -->
+<div class="relative flex items-start gap-space-md group">
+<div class="w-12 flex justify-center shrink-0 pt-3 z-10">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[18px]">send_and_archive</span>
+</div>
+</div>
+<div class="flex-1 bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-code-sm text-code-sm font-semibold text-secondary">12:30 PM</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-primary font-semibold">PROPOSAL SENT</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-semibold">
+                Version 1.3 Dispatched
+              </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Arun K.</span>
+</div>
+<div class="flex flex-wrap items-center justify-between pt-1 gap-2">
+<div>
+<a class="font-headline-sm text-headline-sm text-on-surface hover:text-primary transition-colors" href="#">
+                Iyengar Bakery
+              </a>
+<span class="text-on-surface-variant font-body-sm text-body-sm ml-2">Heritage Rebrand &amp; Retail Packaging</span>
+</div>
+<div class="font-code-sm text-code-sm font-semibold text-on-surface bg-surface-container-low px-2 py-0.5 rounded">
+              ₹95,000 + GST
+            </div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant bg-surface-container-low/60 p-space-sm rounded-lg mt-1">
+            "Dispatched Brandstro Proposal v1.3 (Packaging + Retail Visual Identity) with 3 payment milestone structure directly to partnership board."
+          </p>
+<div class="mt-space-xs pt-space-xs flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Next Action:</span>
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2 py-1 rounded text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-primary">alarm</span>
+<span class="">Proposal feedback check-in call</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Due 18 Sep, 11:30 AM</span>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded-md bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">visibility</span> View PDF
+              </button>
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded-md bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors">
+                View Lead
+              </button>
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded-md bg-primary text-on-primary hover:bg-primary-container transition-colors">
+                Schedule Reminder
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ==================== GROUP 2: YESTERDAY ==================== -->
+<div class="flex flex-col gap-space-md relative mt-space-md">
+<!-- Date header -->
+<div class="sticky top-14 z-20 flex items-center gap-space-sm py-1 bg-surface/90 backdrop-blur-sm">
+<div class="w-12 flex justify-center shrink-0">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+</div>
+<div class="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold tracking-wide uppercase">
+<span class="material-symbols-outlined text-[14px]">history</span>
+<span class="">Yesterday · 15 September 2026</span>
+<span class="text-on-surface-variant font-code-xs text-code-xs normal-case">(8 Activities)</span>
+</div>
+</div>
+<!-- Item 7: Novel X Technologies -->
+<div class="relative flex items-start gap-space-md group opacity-90 hover:opacity-100 transition-opacity">
+<div class="w-12 flex justify-center shrink-0 pt-3 z-10">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</div>
+</div>
+<div class="flex-1 bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-sm text-code-sm font-semibold text-secondary">5:40 PM</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-primary font-semibold">CALL</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-low text-on-surface">Requirement Discussed</span>
+</div>
+<span class="font-code-sm text-code-sm font-semibold text-on-surface bg-surface-container-low px-2 py-0.5 rounded">₹45,000</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">Novel X Technologies</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Quotation Sent (Done)
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Spoke with co-founder Varun regarding micro-SaaS branding sprint. Clarified scope to 2 design directions with 3-day turnaround.
+          </p>
+</div>
+</div>
+<!-- Item 8: Fresh Basket -->
+<div class="relative flex items-start gap-space-md group opacity-90 hover:opacity-100 transition-opacity">
+<div class="w-12 flex justify-center shrink-0 pt-3 z-10">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</div>
+</div>
+<div class="flex-1 bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-sm text-code-sm font-semibold text-secondary">4:20 PM</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-primary font-semibold">WHATSAPP</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-low text-on-surface">Sample Moodboard Requested</span>
+</div>
+<span class="font-code-sm text-code-sm font-semibold text-on-surface bg-surface-container-low px-2 py-0.5 rounded">₹35,000</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">Fresh Basket</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Label Design</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Client requested FMCG organic food packaging references. Next action: Share creative team’s sustainable pouch board tomorrow.
+          </p>
+</div>
+</div>
+<!-- Item 9: Royal Bakers Meeting -->
+<div class="relative flex items-start gap-space-md group opacity-90 hover:opacity-100 transition-opacity">
+<div class="w-12 flex justify-center shrink-0 pt-3 z-10">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">groups</span>
+</div>
+</div>
+<div class="flex-1 bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-sm text-code-sm font-semibold text-secondary">11:15 AM</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-semibold">MEETING</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-semibold">45 min Session</span>
+</div>
+<span class="font-code-sm text-code-sm font-semibold text-on-surface bg-surface-container-low px-2 py-0.5 rounded">₹90,000</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">Royal Bakers</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Premium Box Packaging</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Met with Managing Director at Indiranagar office. Packaging dieline specifications finalized. Commercial quotation drafting assigned.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Accessible Modal Dialog: Log Activity (Toggled via button or state) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/40 backdrop-blur-sm p-4" id="logActivityModal">
+<div class="w-full max-w-xl bg-surface-container-lowest rounded-2xl shadow-xl overflow-hidden flex flex-col max-h-[90vh]">
+<!-- Modal Header -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">add_task</span>
+</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Log Sales Activity</h3>
+</div>
+<button class="p-1 rounded-md text-outline hover:text-on-surface hover:bg-surface-container transition-colors" onclick="document.getElementById('logActivityModal').classList.add('hidden')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<div class="p-space-lg overflow-y-auto flex flex-col gap-space-md">
+<!-- Lead Selector -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider">Account / Lead</label>
+<div class="relative">
+<select class="w-full h-9 pl-3 pr-8 rounded-lg bg-surface-container-lowest text-body-sm font-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary shadow-sm">
+<option>ABC Foods Pvt. Ltd. (Rahul Founder · ₹85k)</option>
+<option>KPN Restaurant (Branch Expansion · ₹1.1L)</option>
+<option>Mahalaxmi Builders (Commercial Tower · ₹1.2L)</option>
+<option>Orange Surgicals (Dr. Anand · ₹75k)</option>
+<option>Iyengar Bakery (₹95k)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-outline text-[16px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Activity Type Selector (Button grid) -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider">Activity Type</label>
+<div class="grid grid-cols-3 sm:grid-cols-6 gap-1.5" id="typeGroup">
+<button class="flex flex-col items-center justify-center p-2 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span class="">Call</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span class="">WhatsApp</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">groups</span>
+<span class="">Meeting</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+<span class="">Email</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">description</span>
+<span class="">Proposal</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span class="">Note</span>
+</button>
+</div>
+</div>
+<!-- Outcome Pills -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider">Outcome</label>
+<div class="flex flex-wrap gap-1.5">
+<button class="px-3 py-1 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm font-bold shadow-sm" type="button">
+              ✓ Connected
+            </button>
+<button class="px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" type="button">
+              No Answer
+            </button>
+<button class="px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" type="button">
+              Busy
+            </button>
+<button class="px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" type="button">
+              Callback Requested
+            </button>
+<button class="px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" type="button">
+              🔥 Highly Interested
+            </button>
+</div>
+</div>
+<!-- Notes Text Area -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider">Discussion Summary &amp; Notes</label>
+<textarea class="w-full p-2.5 rounded-lg bg-surface-container-lowest text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-sm resize-none" placeholder="Key points discussed, client blockers, commitments made..." rows="3"></textarea>
+</div>
+<!-- Next Action & Schedule -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider">Next Action</label>
+<input class="h-9 px-3 rounded-lg bg-surface-container-lowest text-body-sm font-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" placeholder="e.g. Send revised contract" type="text">
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider">Due Date &amp; Time</label>
+<input class="h-9 px-3 rounded-lg bg-surface-container-lowest text-body-sm font-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" type="datetime-local" value="2026-09-17T11:00">
+</div>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<button class="px-space-md py-1.5 rounded-lg text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors" onclick="document.getElementById('logActivityModal').classList.add('hidden')">
+          Cancel
+        </button>
+<button class="px-space-lg py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container shadow-sm transition-all font-semibold" onclick="document.getElementById('logActivityModal').classList.add('hidden')">
+          Save to Lead Timeline
+        </button>
+</div>
+</div>
+</div>
+</div></main></div>
+
+</body></html>

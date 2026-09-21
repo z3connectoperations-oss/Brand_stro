@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-lowest":"#ffffff","on-primary-fixed":"#0f0069","tertiary-container":"#885500","on-error-container":"#93000a","on-primary":"#ffffff","on-background":"#0b1c30","primary-fixed-dim":"#c3c0ff","on-tertiary-fixed":"#2a1700","error":"#ba1a1a","surface-container-highest":"#d3e4fe","tertiary-fixed":"#ffddb8","on-tertiary":"#ffffff","error-container":"#ffdad6","secondary":"#565e74","surface-container-low":"#eff4ff","primary":"#3525cd","on-surface-variant":"#464555","secondary-fixed-dim":"#bec6e0","inverse-on-surface":"#eaf1ff","surface-dim":"#cbdbf5","on-secondary-fixed":"#131b2e","outline-variant":"#c7c4d8","on-secondary":"#ffffff","secondary-container":"#dae2fd","primary-container":"#4f46e5","on-primary-container":"#dad7ff","on-tertiary-fixed-variant":"#653e00","surface-bright":"#f8f9ff","outline":"#777587","secondary-fixed":"#dae2fd","primary-fixed":"#e2dfff","surface-container-high":"#dce9ff","tertiary":"#684000","surface-container":"#e5eeff","on-primary-fixed-variant":"#3323cc","on-secondary-container":"#5c647a","surface-tint":"#4d44e3","surface-variant":"#d3e4fe","on-surface":"#0b1c30","on-tertiary-container":"#ffd4a4","inverse-primary":"#c3c0ff","background":"#f8f9ff","on-error":"#ffffff","inverse-surface":"#213145","on-secondary-fixed-variant":"#3f465c","tertiary-fixed-dim":"#ffb95f","surface":"#f8f9ff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1rem","space-sm":"0.5rem","gutter-desktop":"1.5rem","space-md":"0.75rem","space-xl":"1.5rem","space-xs":"0.25rem","gutter":"1rem","margin-desktop":"2rem","margin":"1rem"},"fontFamily":{"label-sm":["Inter"],"headline-lg":["Inter"],"label-md":["Inter"],"display-lg":["Inter"],"body-md":["Inter"],"body-lg":["Inter"],"headline-sm":["Inter"],"code-xs":["JetBrains Mono"],"code-sm":["JetBrains Mono"],"headline-md":["Inter"],"body-sm":["Inter"]},"fontSize":{"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"body-lg":["15px",{"lineHeight":"22px","fontWeight":"400"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"code-xs":["10px",{"lineHeight":"12px","fontWeight":"400"}],"code-sm":["11px",{"lineHeight":"14px","fontWeight":"500"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}]}}}}</script></head><body class="bg-surface text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-60 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="px-space-lg pt-space-lg pb-space-md flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary font-headline-sm text-headline-sm">B</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-surface-container-lowest tracking-tight">Brandstro</span><span class="font-code-xs text-code-xs text-secondary-fixed-dim uppercase tracking-wider">CRM + ERP CORE</span></div></div></div><div class="px-space-md mt-space-md"><div class="px-space-sm mb-space-xs font-label-sm text-label-sm text-secondary-fixed-dim uppercase tracking-wider">My Work</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-md rounded-lg"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-secondary-fixed-dim hover:bg-surface-container-highest/10 hover:text-surface-container-lowest transition-colors" data-path="rd-dashboard" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-body-sm text-body-sm">My Dashboard</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary font-label-md rounded-lg" data-path="research-tasks" href="#"><span class="material-symbols-outlined text-[18px]">science</span><span class="font-body-sm text-body-sm">Research Tasks</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-secondary-fixed-dim hover:bg-surface-container-highest/10 hover:text-surface-container-lowest transition-colors" data-path="my-projects" href="#"><span class="material-symbols-outlined text-[18px]">folder_special</span><span class="font-body-sm text-body-sm">My Projects</span></a></nav></div></div><div class="flex flex-col gap-space-sm px-space-md pb-space-lg"><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-md rounded-lg"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-secondary-fixed-dim hover:bg-surface-container-highest/10 hover:text-surface-container-lowest transition-colors" data-path="notifications" href="#"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="font-body-sm text-body-sm">Notifications</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-secondary-fixed-dim hover:bg-surface-container-highest/10 hover:text-surface-container-lowest transition-colors" data-path="help" href="#"><span class="material-symbols-outlined text-[18px]">help</span><span class="font-body-sm text-body-sm">Help</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-secondary-fixed-dim hover:bg-surface-container-highest/10 hover:text-surface-container-lowest transition-colors" data-path="profile-settings" href="#"><span class="material-symbols-outlined text-[18px]">account_circle</span><span class="font-body-sm text-body-sm">Profile</span></a></nav><div class="bg-surface-container-highest/10 rounded-xl p-space-sm flex items-center gap-space-sm"><div class="w-9 h-9 rounded-full bg-primary-container flex items-center justify-center text-on-primary font-label-md text-label-md">F</div><div class="flex flex-col overflow-hidden"><span class="font-label-md text-label-md text-surface-container-lowest truncate">Fathima</span><span class="font-code-xs text-code-xs text-secondary-fixed-dim truncate">R&amp;D Member</span><span class="font-code-xs text-code-xs text-surface-tint truncate">R&amp;D Squad</span></div></div></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-gutter-desktop flex items-center justify-between"><div class="flex flex-col justify-center"><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><span>R&amp;D</span><span class="material-symbols-outlined text-[14px]">chevron_right</span><span class="text-on-surface font-label-md text-label-md">Research Tasks</span></div><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm text-on-surface">Research Tasks</span><span class="hidden md:inline font-body-sm text-body-sm text-on-surface-variant">— Manage your assigned research work and deadlines.</span></div></div><div class="flex items-center gap-space-md"><div class="relative hidden sm:flex items-center"><span class="material-symbols-outlined absolute left-space-sm text-[18px] text-on-surface-variant">search</span><input class="h-9 w-64 bg-surface-container-lowest rounded-lg pl-8 pr-12 text-on-surface placeholder:text-outline font-body-sm text-body-sm outline-none shadow-[0_1px_8px_rgba(0,0,0,0.04)]" placeholder="Search tasks or projects..." type="text"/><kbd class="absolute right-space-sm px-1.5 py-0.5 rounded bg-surface-container font-code-xs text-code-xs text-on-surface-variant">⌘K</kbd></div><button aria-label="Notifications" class="relative w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container-lowest hover:bg-surface-container-high transition-colors text-on-surface-variant shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<div class="p-gutter-desktop space-y-gutter-desktop">
+<!-- TOP SUMMARY KPI CARDS -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- ALL TASKS -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer flex items-center justify-between group">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">All Tasks</span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-display-lg text-display-lg text-on-surface">8</span>
+<span class="font-code-xs text-code-xs text-secondary-fixed-dim">Total active scope</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Active &amp; archived research items</span>
+</div>
+<div class="w-11 h-11 rounded-xl bg-surface-container-low flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">assignment</span>
+</div>
+</div>
+<!-- IN PROGRESS -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer flex items-center justify-between group">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">In Progress</span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-display-lg text-display-lg text-on-surface">4</span>
+<span class="font-code-xs text-code-xs text-primary-container font-medium">50% capacity</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Active deep-dives across clients</span>
+</div>
+<div class="w-11 h-11 rounded-xl bg-secondary-container/50 flex items-center justify-center text-primary-container group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">pending_actions</span>
+</div>
+</div>
+<!-- DUE TODAY -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer flex items-center justify-between group">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Due Today</span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-display-lg text-display-lg text-on-surface">1</span>
+<span class="font-code-xs text-code-xs text-tertiary font-semibold">Priority Deliverable</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ABC Foods — Action Required</span>
+</div>
+<div class="w-11 h-11 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">schedule</span>
+</div>
+</div>
+<!-- OVERDUE -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow cursor-pointer flex items-center justify-between group">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Overdue</span>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-display-lg text-display-lg text-error">1</span>
+<span class="font-code-xs text-code-xs text-error font-medium">Critical Breach</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Orange Surgicals — 2 Days past SLA</span>
+</div>
+<div class="w-11 h-11 rounded-xl bg-error-container flex items-center justify-center text-error group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+</div>
+</div>
+</section>
+<!-- FILTER & SEARCH BAR -->
+<div class="flex flex-col gap-space-md bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<!-- Status Tabs Row -->
+<div class="flex items-center justify-between flex-wrap gap-space-sm">
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 sm:pb-0">
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md bg-primary text-on-primary shadow-sm flex items-center gap-space-xs">
+<span>All Tasks</span>
+<span class="bg-surface-container-lowest/20 px-1.5 py-0.2 rounded font-code-xs text-code-xs">8</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-space-xs">
+<span>In Progress</span>
+<span class="bg-surface-container px-1.5 py-0.2 rounded font-code-xs text-code-xs text-secondary">4</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-space-xs">
+<span>Due Today</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant px-1.5 py-0.2 rounded font-code-xs text-code-xs font-semibold">1</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-space-xs">
+<span>Overdue</span>
+<span class="bg-error-container text-on-error-container px-1.5 py-0.2 rounded font-code-xs text-code-xs font-semibold">1</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-space-xs">
+<span>Not Started</span>
+<span class="bg-surface-container px-1.5 py-0.2 rounded font-code-xs text-code-xs text-secondary">2</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-colors flex items-center gap-space-xs">
+<span>Completed</span>
+<span class="bg-surface-container px-1.5 py-0.2 rounded font-code-xs text-code-xs text-secondary">1</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-code-xs text-code-xs text-secondary uppercase">View Density:</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">table_rows</span>
+</button>
+<button class="w-8 h-8 rounded-lg text-secondary hover:bg-surface-container-high transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">view_kanban</span>
+</button>
+</div>
+</div>
+<!-- Controls & Multiselect Pills -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm items-center">
+<!-- Search Input -->
+<div class="relative md:col-span-4 flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[18px] text-outline">search</span>
+<input class="h-9 w-full bg-surface-container-low rounded-lg pl-9 pr-10 text-on-surface placeholder:text-outline font-body-sm text-body-sm outline-none shadow-sm focus:bg-surface-container-lowest transition-colors" placeholder="Search projects or research... (⌘K)" type="text"/>
+<kbd class="absolute right-2.5 px-1.5 py-0.5 rounded bg-surface-container font-code-xs text-code-xs text-on-surface-variant">⌘K</kbd>
+</div>
+<!-- Filter Dropdown Pills -->
+<div class="md:col-span-8 flex items-center gap-space-xs flex-wrap justify-start md:justify-end">
+<button class="h-9 px-space-sm bg-surface-container-low hover:bg-surface-container rounded-lg font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 shadow-sm transition-colors">
+<span class="font-code-xs text-code-xs text-secondary uppercase">Status:</span>
+<span class="font-medium text-on-surface">All Statuses (6)</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</button>
+<button class="h-9 px-space-sm bg-surface-container-low hover:bg-surface-container rounded-lg font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 shadow-sm transition-colors">
+<span class="font-code-xs text-code-xs text-secondary uppercase">Type:</span>
+<span class="font-medium text-on-surface">All Types</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</button>
+<button class="h-9 px-space-sm bg-surface-container-low hover:bg-surface-container rounded-lg font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 shadow-sm transition-colors">
+<span class="font-code-xs text-code-xs text-secondary uppercase">Priority:</span>
+<span class="font-medium text-on-surface">All Priorities</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</button>
+<button class="h-9 px-space-sm bg-surface-container-low hover:bg-surface-container rounded-lg font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 shadow-sm transition-colors">
+<span class="font-code-xs text-code-xs text-secondary uppercase">Sort:</span>
+<span class="font-medium text-primary flex items-center gap-0.5">
+<span>Deadline ↑</span>
+</span>
+<span class="material-symbols-outlined text-[16px] text-primary">swap_vert</span>
+</button>
+<button class="h-9 w-9 bg-surface-container-low hover:bg-surface-container rounded-lg flex items-center justify-center text-on-surface-variant shadow-sm transition-colors" title="Export Task Ledger">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+</div>
+<!-- MAIN SPLIT WORKSPACE: TABLE (~65%) & DRAWER (~35%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- LEFT SECTION: RESEARCH TASKS TABLE (8 cols on desktop) -->
+<div class="lg:col-span-7 xl:col-span-8 flex flex-col bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Table Toolbar -->
+<div class="px-space-lg py-space-sm bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Active Ledger</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest font-code-xs text-code-xs font-semibold text-primary">8 Records</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-code-xs text-code-xs text-secondary-fixed-dim">Showing 1-8 of 8</span>
+<button class="text-primary hover:underline font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span>Sync Status</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left text-on-surface">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm text-secondary uppercase tracking-wider">
+<th class="py-space-sm px-space-md">Research Task</th>
+<th class="py-space-sm px-space-md">Project / Client</th>
+<th class="py-space-sm px-space-md">Type</th>
+<th class="py-space-sm px-space-md">Priority</th>
+<th class="py-space-sm px-space-md">Deadline</th>
+<th class="py-space-sm px-space-md w-32">Progress</th>
+<th class="py-space-sm px-space-md">Status</th>
+<th class="py-space-sm px-space-md text-right">Action</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm">
+<!-- ROW 1 (SELECTED / ACTIVE DRAWER TARGET) -->
+<tr class="bg-surface-container-low/60 hover:bg-surface-container-high transition-colors relative cursor-pointer" onclick="selectRow(this)">
+<td class="py-space-md px-space-md font-medium text-on-surface flex items-center gap-space-xs">
+<div class="w-1.5 h-8 bg-primary-container rounded-full mr-1"></div>
+<div class="flex flex-col">
+<span class="font-semibold text-primary">Competitor &amp; Supermarket Shelf Research</span>
+<span class="font-code-xs text-code-xs text-secondary font-normal">REF: #RS-104 • Organic Retail Focus</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface truncate">ABC Brand Identity</span>
+<span class="font-code-xs text-code-xs text-secondary-fixed-dim">ABC Foods Ltd.</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-code-xs text-code-xs bg-secondary-container text-primary-container font-semibold">
+                    Competitor
+                  </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                    HIGH
+                  </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-tertiary font-code-xs text-code-xs">Today, 5:00 PM</span>
+<span class="font-code-xs text-code-xs text-secondary">3 hours left</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex justify-between font-code-xs text-code-xs">
+<span class="text-secondary">Pillars</span>
+<span class="font-semibold text-primary">70%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 70%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-code-xs text-code-xs bg-primary/10 text-primary font-semibold">
+                    IN PROGRESS
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm shadow-sm hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-colors">
+                    Active
+                  </button>
+</td>
+</tr>
+<!-- ROW 2: OVERDUE -->
+<tr class="hover:bg-surface-container-high/40 transition-colors cursor-pointer" onclick="selectRow(this)">
+<td class="py-space-md px-space-md font-medium text-on-surface">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Industry &amp; Regulatory Packaging Research</span>
+<span class="font-code-xs text-code-xs text-error font-normal">REF: #RS-098 • Medical device seal compliance</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface truncate">Orange Surgicals Packaging</span>
+<span class="font-code-xs text-code-xs text-secondary-fixed-dim">Orange Surgicals Corp.</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-code-xs text-code-xs bg-surface-container-highest text-on-secondary-fixed-variant font-semibold">
+                    Industry
+                  </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-sm text-label-sm bg-error-container text-on-error-container font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                    HIGH
+                  </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-semibold text-error font-code-xs text-code-xs">13 Sep 2026</span>
+<span class="font-code-xs text-code-xs text-error font-medium">2 days past SLA</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex justify-between font-code-xs text-code-xs">
+<span class="text-secondary">Pillars</span>
+<span class="font-semibold text-on-surface">60%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 60%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-code-xs text-code-xs bg-error-container text-on-error-container font-bold">
+<span class="material-symbols-outlined text-[12px]">alarm</span> OVERDUE
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">
+                    Open
+                  </button>
+</td>
+</tr>
+<!-- ROW 3 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors cursor-pointer" onclick="selectRow(this)">
+<td class="py-space-md px-space-md font-medium text-on-surface">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Visual Direction &amp; Heritage Symbolism</span>
+<span class="font-code-xs text-code-xs text-secondary font-normal">REF: #RS-102 • South-Indian brass architecture</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface truncate">KPN Restaurant Identity</span>
+<span class="font-code-xs text-code-xs text-secondary-fixed-dim">KPN Hospitality</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-code-xs text-code-xs bg-surface-container-high text-on-surface-variant font-semibold">
+                    Visual
+                  </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container text-secondary font-semibold">
+                    NORMAL
+                  </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-code-xs text-code-xs text-on-surface">16 Sep 2026</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex justify-between font-code-xs text-code-xs">
+<span class="text-secondary">Pillars</span>
+<span class="font-semibold text-on-surface">40%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 40%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-code-xs text-code-xs bg-primary/10 text-primary font-semibold">
+                    IN PROGRESS
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">
+                    Open
+                  </button>
+</td>
+</tr>
+<!-- ROW 4 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors cursor-pointer" onclick="selectRow(this)">
+<td class="py-space-md px-space-md font-medium text-on-surface">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Reference Research &amp; Heritage Typography</span>
+<span class="font-code-xs text-code-xs text-secondary font-normal">REF: #RS-107 • 1950s regional script studies</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface truncate">Iyengar Bakery Logo</span>
+<span class="font-code-xs text-code-xs text-secondary-fixed-dim">Iyengar Bakery Group</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-code-xs text-code-xs bg-secondary-container text-on-secondary-container font-semibold">
+                    Reference
+                  </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container text-secondary font-semibold">
+                    NORMAL
+                  </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-code-xs text-code-xs text-on-surface">18 Sep 2026</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex justify-between font-code-xs text-code-xs">
+<span class="text-secondary">Pillars</span>
+<span class="font-semibold text-on-surface">25%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 25%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-code-xs text-code-xs bg-primary/10 text-primary font-semibold">
+                    IN PROGRESS
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">
+                    Open
+                  </button>
+</td>
+</tr>
+<!-- ROW 5 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors cursor-pointer" onclick="selectRow(this)">
+<td class="py-space-md px-space-md font-medium text-on-surface">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Brand Positioning &amp; Real Estate Tier-1 Benchmarks</span>
+<span class="font-code-xs text-code-xs text-secondary font-normal">REF: #RS-109 • Luxury residential brochures</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface truncate">Mahalaxmi Builders Branding</span>
+<span class="font-code-xs text-code-xs text-secondary-fixed-dim">Mahalaxmi Builders</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-code-xs text-code-xs bg-surface-container-highest text-primary font-semibold">
+                    Brand
+                  </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container text-secondary font-semibold">
+                    NORMAL
+                  </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-code-xs text-code-xs text-on-surface">18 Sep 2026</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex justify-between font-code-xs text-code-xs">
+<span class="text-secondary">Pillars</span>
+<span class="text-outline">0%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-outline rounded-full" style="width: 0%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-code-xs text-code-xs bg-surface-container text-secondary font-medium">
+                    NOT STARTED
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">
+                    Open
+                  </button>
+</td>
+</tr>
+<!-- ROW 6 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors cursor-pointer" onclick="selectRow(this)">
+<td class="py-space-md px-space-md font-medium text-on-surface">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Global SaaS Competitor Matrix &amp; Color Psychology</span>
+<span class="font-code-xs text-code-xs text-secondary font-normal">REF: #RS-111 • B2B conversion heuristics</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface truncate">Novel X Technologies</span>
+<span class="font-code-xs text-code-xs text-secondary-fixed-dim">Novel X Corp.</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-code-xs text-code-xs bg-surface-container-highest text-primary font-semibold">
+                    Brand
+                  </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container text-secondary font-semibold">
+                    NORMAL
+                  </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-code-xs text-code-xs text-on-surface">20 Sep 2026</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex justify-between font-code-xs text-code-xs">
+<span class="text-secondary">Pillars</span>
+<span class="text-outline">0%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-outline rounded-full" style="width: 0%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-code-xs text-code-xs bg-surface-container text-secondary font-medium">
+                    NOT STARTED
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">
+                    Open
+                  </button>
+</td>
+</tr>
+<!-- ROW 7 -->
+<tr class="hover:bg-surface-container-high/40 transition-colors cursor-pointer" onclick="selectRow(this)">
+<td class="py-space-md px-space-md font-medium text-on-surface">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Quick Commerce Packaging Trends 2026</span>
+<span class="font-code-xs text-code-xs text-secondary font-normal">REF: #RS-114 • Thermal resistance &amp; spills</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface truncate">Zomato Hyperlocal Cloud Kitchen</span>
+<span class="font-code-xs text-code-xs text-secondary-fixed-dim">Brandstro Internal</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-code-xs text-code-xs bg-surface-container text-secondary font-semibold">
+                    Concept
+                  </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-low text-secondary font-normal">
+                    LOW
+                  </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-code-xs text-code-xs text-on-surface">24 Sep 2026</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex justify-between font-code-xs text-code-xs">
+<span class="text-secondary">Pillars</span>
+<span class="text-outline">0%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-outline rounded-full" style="width: 0%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-code-xs text-code-xs bg-surface-container text-secondary font-medium">
+                    NOT STARTED
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">
+                    Open
+                  </button>
+</td>
+</tr>
+<!-- ROW 8: COMPLETED -->
+<tr class="hover:bg-surface-container-high/40 transition-colors cursor-pointer" onclick="selectRow(this)">
+<td class="py-space-md px-space-md font-medium text-on-surface">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Initial Logo Benchmarks &amp; Market Aesthetic</span>
+<span class="font-code-xs text-code-xs text-secondary font-normal">REF: #RS-091 • Tier-2 consumer audits</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface truncate">ABC Foods Identity Kickoff</span>
+<span class="font-code-xs text-code-xs text-secondary-fixed-dim">ABC Foods Ltd.</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-code-xs text-code-xs bg-secondary-container text-primary-container font-semibold">
+                    Competitor
+                  </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                    HIGH
+                  </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-code-xs text-code-xs text-on-surface">12 Sep 2026</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col gap-1 w-28">
+<div class="flex justify-between font-code-xs text-code-xs">
+<span class="text-secondary">Pillars</span>
+<span class="font-semibold text-tertiary">100%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-code-xs text-code-xs bg-surface-container-high text-on-surface font-semibold">
+<span class="material-symbols-outlined text-[14px] text-tertiary">verified</span> COMPLETED
+                  </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors">
+                    View
+                  </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="px-space-lg py-space-sm bg-surface-container-low flex items-center justify-between text-secondary">
+<div class="font-body-sm text-body-sm flex items-center gap-space-xs">
+<span>Showing</span>
+<select class="h-7 bg-surface-container-lowest text-on-surface rounded font-code-xs text-code-xs px-2 outline-none">
+<option>8 per page</option>
+<option>15 per page</option>
+<option>25 per page</option>
+</select>
+<span>of 8 records</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-7 h-7 rounded bg-surface-container-lowest text-outline flex items-center justify-center cursor-not-allowed">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<span class="w-7 h-7 rounded bg-primary text-on-primary font-code-xs text-code-xs flex items-center justify-center font-bold">1</span>
+<button class="w-7 h-7 rounded bg-surface-container-lowest text-outline flex items-center justify-center cursor-not-allowed">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- RIGHT SECTION: TASK DETAIL DRAWER (~35% width, open state) -->
+<aside class="lg:col-span-5 xl:col-span-4 bg-surface-container-lowest rounded-xl shadow-md flex flex-col overflow-hidden sticky top-20">
+<!-- Drawer Header -->
+<div class="p-space-lg bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded font-code-xs text-code-xs bg-secondary-container text-primary-container font-semibold">
+                Competitor Research
+              </span>
+<span class="font-code-xs text-code-xs text-secondary-fixed-dim">#RS-104</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Pin / Dock view">
+<span class="material-symbols-outlined text-[18px]">push_pin</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant transition-colors" title="Close Drawer">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Competitor &amp; Supermarket Shelf Research</h2>
+<div class="flex items-center gap-space-xs mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="font-medium text-primary">ABC Brand Identity</span>
+<span>•</span>
+<span>ABC Foods Ltd.</span>
+</div>
+</div>
+<!-- Metadata Badges Grid -->
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<div class="bg-surface-container-lowest p-space-xs px-space-sm rounded-lg flex flex-col">
+<span class="font-code-xs text-code-xs text-secondary uppercase">Priority</span>
+<span class="font-label-md text-label-md text-tertiary flex items-center gap-1 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> HIGH SLA
+              </span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs px-space-sm rounded-lg flex flex-col">
+<span class="font-code-xs text-code-xs text-secondary uppercase">Deadline</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Today, 5:00 PM</span>
+</div>
+</div>
+<!-- Progress Update Controls -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col gap-space-xs shadow-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-secondary uppercase font-code-xs text-code-xs">Current Progress</span>
+<span class="font-bold text-primary font-code-sm text-code-sm" id="progress-val">70%</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full transition-all duration-300" id="progress-fill" style="width: 70%;"></div>
+</div>
+<div class="flex items-center justify-between gap-1 pt-1">
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-container-high rounded font-code-xs text-code-xs text-on-surface transition-colors" onclick="updateProgress(10)">+10%</button>
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-container-high rounded font-code-xs text-code-xs text-on-surface transition-colors" onclick="updateProgress(25)">+25%</button>
+<button class="px-2 py-1 bg-secondary-container hover:bg-surface-container-highest rounded font-code-xs text-code-xs text-primary-container font-semibold transition-colors" onclick="updateProgress(100)">Mark Complete</button>
+</div>
+</div>
+</div>
+<!-- Drawer Body Scrollable Content -->
+<div class="p-space-lg flex flex-col gap-space-lg overflow-y-auto max-h-[calc(100vh-280px)]">
+<!-- 1. RESEARCH OBJECTIVE -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">target</span>
+<h3 class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Research Objective</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed bg-surface-container-low/50 p-space-sm rounded-lg">
+              Identify three major competitors and study their positioning, visual identity, packaging, and market presentation with a focus on North &amp; South India organic food retail.
+            </p>
+</div>
+<!-- 2. EXPECTED OUTPUT (CHECKLIST) -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">checklist</span>
+<h3 class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Expected Output (3/4 Done)</h3>
+</div>
+<span class="font-code-xs text-code-xs text-primary font-semibold">75%</span>
+</div>
+<div class="flex flex-col gap-1.5 font-body-sm text-body-sm">
+<label class="flex items-start gap-space-sm p-space-xs rounded hover:bg-surface-container-low transition-colors cursor-pointer">
+<input checked="" class="mt-0.5 rounded text-primary focus:ring-0" type="checkbox"/>
+<span class="text-on-surface line-through opacity-70">Competitor list (Organic India, 24 Mantra, Conscious Food)</span>
+</label>
+<label class="flex items-start gap-space-sm p-space-xs rounded hover:bg-surface-container-low transition-colors cursor-pointer">
+<input checked="" class="mt-0.5 rounded text-primary focus:ring-0" type="checkbox"/>
+<span class="text-on-surface line-through opacity-70">Visual references &amp; shelf packaging photos</span>
+</label>
+<label class="flex items-start gap-space-sm p-space-xs rounded hover:bg-surface-container-low transition-colors cursor-pointer">
+<input checked="" class="mt-0.5 rounded text-primary focus:ring-0" type="checkbox"/>
+<span class="text-on-surface line-through opacity-70">Key observations on window cutouts and dielines</span>
+</label>
+<label class="flex items-start gap-space-sm p-space-xs rounded bg-tertiary-fixed/30 text-on-tertiary-fixed-variant transition-colors cursor-pointer">
+<input class="mt-0.5 rounded text-primary focus:ring-0" type="checkbox"/>
+<span class="font-medium">⏳ Opportunities &amp; recommendations report</span>
+</label>
+</div>
+</div>
+<!-- 3. REFERENCE FILES -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">attach_file</span>
+<h3 class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Reference Files (3)</h3>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:underline flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">upload</span>
+<span>+ Upload Reference</span>
+</button>
+</div>
+<div class="flex flex-col gap-1.5">
+<!-- File 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded bg-error-container text-on-error-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">Brief_ABC_Foods_Knowledge_Call.pdf</span>
+<span class="font-code-xs text-code-xs text-secondary-fixed-dim">2.4 MB • Client brief deck</span>
+</div>
+</div>
+<div class="flex items-center gap-1 flex-shrink-0">
+<button class="p-1 rounded hover:bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-colors" title="Download">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-colors" title="View">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- File 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded bg-secondary-container text-on-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">folder_zip</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">Retail_Shelf_Benchmarks_Photos.zip</span>
+<span class="font-code-xs text-code-xs text-secondary-fixed-dim">14.2 MB • High-res supermarket scans</span>
+</div>
+</div>
+<div class="flex items-center gap-1 flex-shrink-0">
+<button class="p-1 rounded hover:bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-colors" title="Download">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<!-- File 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded bg-error-container text-on-error-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate">Competitor_Packaging_Audit_V1.pdf</span>
+<span class="font-code-xs text-code-xs text-secondary-fixed-dim">3.8 MB • Draft slide outline</span>
+</div>
+</div>
+<div class="flex items-center gap-1 flex-shrink-0">
+<button class="p-1 rounded hover:bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-colors" title="Download">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-lowest text-on-surface-variant hover:text-primary transition-colors" title="View">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. RESEARCH NOTES -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">edit_note</span>
+<h3 class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Working Notes &amp; Observations</h3>
+</div>
+<span class="font-code-xs text-code-xs text-secondary-fixed-dim">Last edited 18 mins ago</span>
+</div>
+<textarea class="w-full bg-surface-container-low p-space-sm rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline outline-none focus:bg-surface-container-lowest transition-colors shadow-inner resize-none" rows="4">Identified strong yellow-ochre dominance in 24 Mantra. Saffron and leaf green balance in ABC Foods will provide 24% higher visual contrast on modern supermarket shelf lighting. Need to finalize dieline window notes.</textarea>
+<div class="flex items-center justify-end gap-space-xs">
+<button class="px-space-sm py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm transition-colors">Clear</button>
+<button class="px-space-md py-1 rounded bg-secondary-container hover:bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold transition-colors">Save Notes</button>
+</div>
+</div>
+<!-- 5. SUBMISSION & EXECUTION CONTROLS -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<!-- Primary Submit Action -->
+<button class="w-full py-2.5 px-space-md bg-primary-container hover:bg-primary text-on-primary rounded-lg font-label-md text-label-md flex flex-col items-center justify-center shadow-md transition-all">
+<span class="flex items-center gap-1.5 font-bold">
+<span class="material-symbols-outlined text-[18px]">send</span>
+                Submit Research Deck &amp; Findings
+              </span>
+<span class="font-code-xs text-code-xs text-on-primary-container opacity-90">
+                Notifies Creative Team Head (Vikram S.) for QA review
+              </span>
+</button>
+<!-- Secondary Actions -->
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="py-2 px-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-tertiary">pan_tool</span>
+<span>Ask Vikram (TL)</span>
+</button>
+<button class="py-2 px-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-secondary">pause_circle</span>
+<span>Pause Research</span>
+</button>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</div>
+<script>
+  function selectRow(rowElement) {
+    // Highlight table row visually
+    const rows = rowElement.closest('tbody').querySelectorAll('tr');
+    rows.forEach(r => {
+      r.classList.remove('bg-surface-container-low/60');
+    });
+    rowElement.classList.add('bg-surface-container-low/60');
+  }
+
+  function updateProgress(val) {
+    const fill = document.getElementById('progress-fill');
+    const label = document.getElementById('progress-val');
+    let current = parseInt(label.innerText);
+    let target = val === 100 ? 100 : Math.min(100, current + val);
+    
+    fill.style.width = target + '%';
+    label.innerText = target + '%';
+  }
+</script></main></div></body></html>

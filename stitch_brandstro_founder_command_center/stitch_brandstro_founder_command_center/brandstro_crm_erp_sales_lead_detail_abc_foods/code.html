@@ -1,0 +1,631 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-surface":"#0b1c30","inverse-surface":"#213145","surface-container-low":"#eff4ff","primary-container":"#4f46e5","surface-bright":"#f8f9ff","on-background":"#0b1c30","on-tertiary-container":"#ffd4a4","on-primary-container":"#dad7ff","primary-fixed":"#e2dfff","outline":"#777587","on-tertiary":"#ffffff","on-primary-fixed-variant":"#3323cc","surface":"#f8f9ff","tertiary":"#684000","surface-container-lowest":"#ffffff","inverse-primary":"#c3c0ff","surface-variant":"#d3e4fe","on-tertiary-fixed-variant":"#653e00","on-error":"#ffffff","on-secondary-container":"#5c647a","error-container":"#ffdad6","surface-dim":"#cbdbf5","on-error-container":"#93000a","background":"#f8f9ff","error":"#ba1a1a","on-primary-fixed":"#0f0069","on-secondary-fixed":"#131b2e","secondary":"#565e74","on-surface-variant":"#464555","on-tertiary-fixed":"#2a1700","surface-tint":"#4d44e3","primary":"#3525cd","tertiary-fixed":"#ffddb8","on-secondary":"#ffffff","surface-container-high":"#dce9ff","surface-container":"#e5eeff","secondary-container":"#dae2fd","outline-variant":"#c7c4d8","tertiary-fixed-dim":"#ffb95f","primary-fixed-dim":"#c3c0ff","surface-container-highest":"#d3e4fe","secondary-fixed":"#dae2fd","tertiary-container":"#885500","on-primary":"#ffffff","secondary-fixed-dim":"#bec6e0","on-secondary-fixed-variant":"#3f465c","inverse-on-surface":"#eaf1ff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{margin:"1rem","space-md":"0.75rem","space-sm":"0.5rem","space-lg":"1rem",gutter:"1rem","gutter-desktop":"1.5rem","margin-desktop":"2rem","space-xl":"1.5rem","space-xs":"0.25rem"},fontFamily:{"body-lg":["Inter"],"body-md":["Inter"],"headline-lg":["Inter"],"display-lg":["Inter"],"headline-md":["Inter"],"label-md":["Inter"],"code-xs":["JetBrains Mono"],"code-sm":["JetBrains Mono"],"body-sm":["Inter"],"label-sm":["Inter"],"headline-sm":["Inter"]},fontSize:{"body-lg":["15px",{lineHeight:"22px",fontWeight:"400"}],"body-md":["13px",{lineHeight:"18px",fontWeight:"400"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"display-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"500"}],"code-xs":["10px",{lineHeight:"12px",fontWeight:"400"}],"code-sm":["11px",{lineHeight:"14px",fontWeight:"500"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"600"}],"headline-sm":["16px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-60 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="p-space-lg flex flex-col gap-space-xs"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm tracking-tight text-surface-bright uppercase">Brandstro</span><span class="bg-primary-container text-on-primary font-label-sm text-label-sm px-space-xs py-0.5 rounded-full uppercase tracking-wider">CRM</span></div></div><span class="font-label-sm text-label-sm text-outline-variant">Agency Operating System</span></div><div class="px-space-md pt-space-md"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline-variant px-space-sm block mb-space-xs">Sales Workspace</span><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-md rounded-lg"><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-inverse-on-surface hover:bg-surface-variant/10 hover:text-surface-bright transition-colors" data-path="dashboard" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-label-md text-label-md">Dashboard</span></div></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary font-label-md rounded-lg" data-path="leads" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">person_search</span><span class="font-label-md text-label-md">Leads</span></div><span class="bg-primary-container text-on-primary font-label-sm text-label-sm px-1.5 py-0.5 rounded-full">18 new</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-inverse-on-surface hover:bg-surface-variant/10 hover:text-surface-bright transition-colors" data-path="pipeline" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">view_kanban</span><span class="font-label-md text-label-md">Pipeline</span></div><span class="font-code-xs text-code-xs text-secondary-fixed">₹4.85L</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-inverse-on-surface hover:bg-surface-variant/10 hover:text-surface-bright transition-colors" data-path="follow-ups" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">schedule</span><span class="font-label-md text-label-md">Follow-ups</span></div><span class="bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm px-1.5 py-0.5 rounded-full">12 due</span></a><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-inverse-on-surface hover:bg-surface-variant/10 hover:text-surface-bright transition-colors" data-path="activity" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">history</span><span class="font-label-md text-label-md">Activity</span></div></a></nav></div></div><div class="p-space-md flex flex-col gap-space-sm"><a class="flex items-center justify-between px-space-sm py-space-xs rounded-lg text-inverse-on-surface hover:bg-surface-variant/10 hover:text-surface-bright transition-colors" data-path="notifications" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="font-label-md text-label-md">Notifications</span></div><span class="w-2 h-2 rounded-full bg-error"></span></a><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-variant/10"><div class="flex items-center gap-space-sm"><div class="relative flex items-center justify-center"><div class="w-8 h-8 rounded-full bg-primary-container text-on-primary font-label-md text-label-md flex items-center justify-center">AR</div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-primary ring-2 ring-inverse-surface"></span></div><div class="flex flex-col"><span class="font-label-md text-label-md text-surface-bright">Arun K.</span><span class="font-label-sm text-label-sm text-outline-variant">Sales Specialist</span></div></div><span class="material-symbols-outlined text-outline-variant text-[16px]">more_vert</span></div></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 z-40 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 w-full px-gutter-desktop flex items-center justify-between gap-space-lg"><div class="flex-1 max-w-lg"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">search</span><input class="w-full h-9 pl-9 pr-4 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm shadow-[0_1px_8px_rgba(0,0,0,0.04)] placeholder:text-outline-variant focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="Search leads, contacts, projects... (⌘K)" type="text"></div></div><div class="flex items-center gap-space-lg"><div class="hidden md:flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-1 rounded-full"><span class="w-2 h-2 rounded-full bg-primary-container"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Q3 Target: 82%</span></div><div class="font-code-sm text-code-sm text-on-surface-variant">FY 2024-25</div></div><div class="flex items-center gap-space-sm"><button class="relative p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-14 px-gutter-desktop min-h-screen bg-surface"><div class="flex flex-col w-full pb-margin-desktop">
+<!-- BREADCRUMBS & TOP TITLE HEADER -->
+<div class="flex flex-col gap-space-sm pt-space-md mb-space-lg">
+<!-- Breadcrumb Nav -->
+<nav class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<a class="hover:text-primary-container transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">groups</span>
+<span>Leads</span>
+</a>
+<span class="material-symbols-outlined text-[14px] text-outline-variant">chevron_right</span>
+<span class="text-on-surface font-headline-sm text-[13px] font-semibold">ABC Foods</span>
+<span class="text-outline-variant font-code-xs text-code-xs ml-space-xs bg-surface-container px-space-xs py-0.5 rounded">LD-902</span>
+</nav>
+<!-- Header Content & Action Cluster -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md mt-space-xs">
+<div class="flex items-start gap-space-md">
+<!-- Lead Monogram / Avatar -->
+<div class="w-12 h-12 rounded-xl bg-primary-fixed text-primary font-headline-md text-headline-md flex items-center justify-center font-bold tracking-tight shadow-sm flex-shrink-0">
+          AF
+        </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">ABC Foods Pvt. Ltd.</h1>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="text-[12px]">🔥</span> HOT LEAD
+            </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-container/10 text-primary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+              STAGE 5: FOLLOW-UP
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Potential Brand Identity Client · Inbound via Instagram DM · Commercial Pipeline Q3 FY25
+          </p>
+</div>
+</div>
+<!-- Action Cluster -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<!-- 1-Click Call -->
+<button class="h-9 px-3 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-low font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px] text-[#059669]">call</span>
+<span>Call Rahul</span>
+</button>
+<!-- WhatsApp Quick -->
+<button class="h-9 px-3 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-low font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px] text-[#059669]">chat</span>
+<span>WhatsApp</span>
+</button>
+<!-- Add Follow-up -->
+<button class="h-9 px-3 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-low font-label-md text-label-md flex items-center gap-1.5 shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px] text-primary-container">calendar_add_on</span>
+<span>+ Follow-up</span>
+</button>
+<!-- More Dropdown -->
+<div class="relative inline-block text-left">
+<button class="h-9 px-2.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md text-label-md flex items-center gap-1 shadow-sm transition-all" id="moreActionsBtn" onclick="toggleDropdown()">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+<div class="hidden absolute right-0 mt-1 w-44 rounded-lg bg-surface-container-lowest shadow-md z-30 py-1 font-body-sm text-body-sm text-on-surface" id="moreActionsMenu">
+<a class="flex items-center gap-2 px-3 py-1.5 hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">edit</span> Edit Lead Details
+            </a>
+<a class="flex items-center gap-2 px-3 py-1.5 hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">person_search</span> Reassign Owner
+            </a>
+<a class="flex items-center gap-2 px-3 py-1.5 hover:bg-surface-container transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">ios_share</span> Export Lead Dossier
+            </a>
+<div class="my-1 h-px bg-surface-container"></div>
+<a class="flex items-center gap-2 px-3 py-1.5 text-error hover:bg-error-container/30 transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px]">close</span> Mark as Lost
+            </a>
+</div>
+</div>
+<!-- Primary CTA: Convert to Client -->
+<button class="h-9 px-3.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md flex items-center gap-2 shadow-sm transition-all group">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Convert to Client</span>
+<span class="font-code-xs text-code-xs opacity-80 bg-white/20 px-1 py-0.5 rounded">₹85k</span>
+</button>
+</div>
+</div>
+</div>
+<!-- COMPACT STATUS & ATTRIBUTES STRIP -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-md mb-space-lg">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-space-md text-left">
+<!-- Status -->
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Status</span>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Follow-up</span>
+</div>
+</div>
+<!-- Priority -->
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Priority</span>
+<div class="flex items-center gap-1 mt-1">
+<span class="font-label-md text-label-md font-semibold text-tertiary">🔥 High Intent</span>
+</div>
+</div>
+<!-- Deal Value -->
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Estimated Value</span>
+<span class="font-code-sm text-headline-sm font-bold text-on-surface mt-0.5">₹85,000</span>
+</div>
+<!-- Channel Source -->
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Acquisition Source</span>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px] text-primary">photo_camera</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Instagram DM</span>
+</div>
+</div>
+<!-- Assigned Rep -->
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Sales Specialist</span>
+<div class="flex items-center gap-1.5 mt-1">
+<div class="w-4 h-4 rounded-full bg-primary text-on-primary text-[9px] flex items-center justify-center font-bold">AK</div>
+<span class="font-label-md text-label-md text-on-surface truncate">Arun K.</span>
+</div>
+</div>
+<!-- Age -->
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Lead Created</span>
+<span class="font-body-sm text-body-sm text-on-surface mt-1">12 Sep (4d ago)</span>
+</div>
+<!-- Last Touch -->
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Last Contact</span>
+<span class="font-body-sm text-body-sm text-on-surface mt-1">Yesterday, 4:30 PM</span>
+</div>
+<!-- Next Action Due -->
+<div class="flex flex-col bg-surface-container-high/60 px-2 py-1 rounded-lg">
+<span class="font-label-sm text-label-sm text-primary-container font-semibold uppercase tracking-wider">Next Action</span>
+<span class="font-label-md text-label-md font-bold text-error mt-0.5 truncate">Today, 4:00 PM</span>
+</div>
+</div>
+</div>
+<!-- TWO-COLUMN WORKSPACE: LEFT 68%, RIGHT 32% -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT MAIN COLUMN (~68% = col-span-8) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- SECTION 1: CONTACT INFORMATION CARD -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary-container">contact_page</span>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Contact Information</h2>
+</div>
+<button class="font-label-sm text-label-sm text-primary-container hover:text-primary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">edit</span> Edit Details
+          </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Person -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg bg-surface">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Primary Decision Maker</span>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-[15px] font-semibold text-on-surface">Rahul Kumar</span>
+<span class="font-code-xs text-code-xs bg-surface-container px-1.5 py-0.5 rounded text-on-surface-variant">Founder &amp; MD</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Final sign-off authority for agency engagement</span>
+</div>
+<!-- Entity -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg bg-surface">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Business Entity &amp; Registration</span>
+<span class="font-headline-sm text-[15px] font-semibold text-on-surface">ABC Foods Pvt. Ltd.</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sector: Organic FMCG &amp; Artisanal Confectionery</span>
+</div>
+<!-- Direct Phone -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg bg-surface">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Direct Mobile / WhatsApp</span>
+<div class="flex items-center justify-between">
+<span class="font-code-sm text-code-sm font-semibold text-on-surface">+91 98765 43210</span>
+<div class="flex items-center gap-1">
+<button class="px-2 py-0.5 text-[11px] font-label-sm bg-surface-container-high hover:bg-surface-variant rounded text-on-surface transition-colors">Call</button>
+<button class="px-2 py-0.5 text-[11px] font-label-sm bg-surface-container-high hover:bg-surface-variant rounded text-on-surface transition-colors" onclick="navigator.clipboard.writeText('+919876543210')">Copy</button>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Active on WhatsApp · Preferred for quick queries</span>
+</div>
+<!-- Email -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg bg-surface">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Official Work Email</span>
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">rahul@abcfoods.example</span>
+<a class="px-2 py-0.5 text-[11px] font-label-sm bg-surface-container-high hover:bg-surface-variant rounded text-on-surface transition-colors" href="mailto:rahul@abcfoods.example">Compose</a>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Proposals and invoices cc'd to accounts</span>
+</div>
+<!-- Location -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg bg-surface">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Facility / Factory Location</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">location_on</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Kanyakumari, Tamil Nadu, India</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Processing facility &amp; brand HQ</span>
+</div>
+<!-- Preferences -->
+<div class="flex flex-col gap-1 p-space-sm rounded-lg bg-surface">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Communication Window &amp; Gate</span>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">WhatsApp &amp; Phone (10 AM - 6 PM IST)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Prefers concise voice notes or WhatsApp bullet points</span>
+</div>
+</div>
+</div>
+<!-- SECTION 2: PROJECT INTEREST & SCOPE SUMMARY -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary-container">design_services</span>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Project Interest &amp; Scope</h2>
+</div>
+<a class="font-label-sm text-label-sm text-primary-container hover:text-primary font-medium flex items-center gap-1" href="#">
+            View / Edit Requirements Brief <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mb-space-md">
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Service Package</span>
+<p class="font-headline-sm text-[14px] font-bold text-on-surface mt-1">Brand Identity &amp; Packaging Launch</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Proposed Budget</span>
+<p class="font-headline-sm text-[14px] font-bold text-on-surface mt-1">₹85,000 + GST</p>
+<span class="font-code-xs text-[10px] text-secondary">50% Advance / 50% Delivery</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Estimated Kickoff</span>
+<p class="font-headline-sm text-[14px] font-bold text-on-surface mt-1">1st Week, October 2026</p>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface text-on-surface">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block mb-1">Executive Scope Summary</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            Complete corporate brand identity, primary logo mark, typography system, brand guide, and <strong>3 packaging SKU dielines</strong> for a new premium organic south-Indian snack line. Decision maker requires sample deck before board sign-off. High emphasis on export-compliant typography and sustainable tactile pouch textures.
+          </p>
+<div class="flex items-center gap-space-sm mt-3 pt-2">
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded font-code-xs text-code-xs">SKU: Banana Chips</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded font-code-xs text-code-xs">SKU: Jackfruit Crisps</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant rounded font-code-xs text-code-xs">SKU: Cassava Crunch</span>
+<span class="font-label-sm text-label-sm text-primary-container font-semibold ml-auto flex items-center gap-1 cursor-pointer">
+<span class="material-symbols-outlined text-[14px]">attachment</span> 1 Attachment (Deck_v1.pdf)
+            </span>
+</div>
+</div>
+</div>
+<!-- SECTION 3: SALES TIMELINE & AUDIT TRAIL -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-sm mb-space-md gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary-container">timeline</span>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Sales Activity Timeline</h2>
+</div>
+<!-- Filter pills -->
+<div class="flex items-center gap-1 bg-surface p-0.5 rounded-lg">
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded bg-surface-container-lowest text-primary font-semibold shadow-xs">All (6)</button>
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded text-on-surface-variant hover:text-on-surface">Calls</button>
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded text-on-surface-variant hover:text-on-surface">Proposals</button>
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded text-on-surface-variant hover:text-on-surface">Notes</button>
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded text-on-surface-variant hover:text-on-surface">Audit</button>
+</div>
+</div>
+<!-- Timeline Items Stack -->
+<div class="relative pl-6 space-y-6 before:content-[''] before:absolute before:left-2 before:top-2 before:bottom-2 before:w-[2px] before:bg-surface-container">
+<!-- Item 1: TODAY -->
+<div class="relative group">
+<div class="absolute -left-6 top-1 w-4 h-4 rounded-full bg-primary-container flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest"></div>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary-container uppercase tracking-wider">Today, 16 Sep · 09:15 AM</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant bg-surface px-1.5 py-0.5 rounded">System Task Automation</span>
+</div>
+<div class="mt-1 bg-surface-container-low p-space-sm rounded-lg">
+<p class="font-body-md text-body-md text-on-surface font-medium">Automated Reminder: Follow-up call scheduled for 4:00 PM today.</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Objective: Confirm commercial agreement &amp; clarify advance milestone billing terms with Rahul.</p>
+</div>
+</div>
+<!-- Item 2: 15 Sep -->
+<div class="relative group">
+<div class="absolute -left-6 top-1 w-4 h-4 rounded-full bg-[#059669] flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-surface-container-lowest font-bold">chat</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface-variant">15 Sep · 04:30 PM</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Logged by Arun K.</span>
+</div>
+<div class="mt-1 bg-surface p-space-sm rounded-lg">
+<p class="font-body-md text-body-md text-on-surface"><strong>WhatsApp Discussion:</strong> Sent revised commercial quote breakdown for 3 SKU packaging dielines. Rahul confirmed informal budget approval after review with co-founder Priya.</p>
+<div class="mt-1 flex items-center gap-2">
+<span class="font-code-xs text-code-xs bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">Status updated: Follow-up</span>
+</div>
+</div>
+</div>
+<!-- Item 3: 14 Sep -->
+<div class="relative group">
+<div class="absolute -left-6 top-1 w-4 h-4 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-surface-container-lowest font-bold">description</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface-variant">14 Sep · 11:20 AM</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Logged by Arun K.</span>
+</div>
+<div class="mt-1 bg-surface p-space-sm rounded-lg">
+<p class="font-body-md text-body-md text-on-surface"><strong>Formal Proposal Dispatched:</strong> Brandstro Proposal PDF v1.2 (₹85,000) sent via email &amp; client WhatsApp direct link.</p>
+<div class="mt-2 flex items-center gap-2">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-primary">
+<span class="material-symbols-outlined text-[12px]">download</span> Proposal_ABC_v1.2.pdf
+                </span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Viewed 3 times by client</span>
+</div>
+</div>
+</div>
+<!-- Item 4: 13 Sep -->
+<div class="relative group">
+<div class="absolute -left-6 top-1 w-4 h-4 rounded-full bg-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-surface-container-lowest font-bold">call</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface-variant">13 Sep · 03:45 PM</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Logged by Arun K.</span>
+</div>
+<div class="mt-1 bg-surface p-space-sm rounded-lg">
+<p class="font-body-md text-body-md text-on-surface"><strong>Requirement Discovery Call (28 mins):</strong> Detailed phone discussion with Rahul. Outlined need for clean modern heritage typography and export-compliant packaging dielines for organic snacks.</p>
+</div>
+</div>
+<!-- Item 5: 12 Sep -->
+<div class="relative group">
+<div class="absolute -left-6 top-1 w-4 h-4 rounded-full bg-[#059669] flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-surface-container-lowest font-bold">chat</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface-variant">12 Sep · 05:10 PM</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Logged by Arun K.</span>
+</div>
+<div class="mt-1 bg-surface p-space-sm rounded-lg">
+<p class="font-body-md text-body-md text-on-surface"><strong>Initial Inbound Contact:</strong> Arun initiated outbound WhatsApp introduction following Instagram inquiry. Client responded immediately with product photos. Lead qualified as HOT.</p>
+</div>
+</div>
+<!-- Item 6: Audit Record -->
+<div class="relative group">
+<div class="absolute -left-6 top-1 w-4 h-4 rounded-full bg-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-surface-container-lowest">sync</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface-variant">12 Sep · 04:45 PM</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Audit Pipeline Event</span>
+</div>
+<div class="mt-1 bg-surface p-space-sm rounded-lg">
+<p class="font-body-sm text-body-sm text-on-surface-variant">Lead Created: Inbound form capture via Instagram campaign 'Modern Brands 2026'. Auto-assigned to Arun K. via round-robin allocation engine.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 4: COLLABORATIVE SALES NOTES -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary-container">note_alt</span>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Sales Notes &amp; Observations</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1 Pinned Note</span>
+</div>
+<!-- Interactive Quick Note Box -->
+<div class="mb-space-lg bg-surface p-space-sm rounded-lg">
+<textarea class="w-full bg-surface-container-lowest p-2.5 rounded-lg text-body-sm font-body-sm text-on-surface placeholder:text-outline-variant focus:outline-none focus:ring-1 focus:ring-primary-container resize-none" id="salesNoteInput" placeholder="Type a quick note, discovery highlight, or meeting summary..." rows="2"></textarea>
+<div class="flex items-center justify-between mt-2 pt-1">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<button class="p-1 hover:text-on-surface transition-colors rounded"><span class="material-symbols-outlined text-[16px]">attach_file</span></button>
+<button class="p-1 hover:text-on-surface transition-colors rounded"><span class="material-symbols-outlined text-[16px]">alternate_email</span></button>
+<button class="p-1 hover:text-on-surface transition-colors rounded"><span class="material-symbols-outlined text-[16px]">push_pin</span></button>
+</div>
+<button class="h-8 px-3 rounded-md bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-colors flex items-center gap-1" onclick="postNoteAction()">
+<span>Post Note</span>
+</button>
+</div>
+</div>
+<!-- Pinned Note Card -->
+<div class="p-space-md rounded-lg bg-surface-container-low relative">
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">push_pin</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">CRITICAL DEAL INTELLIGENCE</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">· Pinned by Arun K.</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">13 Sep, 4:10 PM</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed mt-1">
+            Client is launching a premium snacks brand competing with artisanal FMCG lines. Very sensitive to timeline (wants Diwali launch). Decision maker is <strong>Rahul (Founder)</strong>; co-founder <strong>Priya</strong> handles packaging sign-off. 
+          </p>
+<div class="mt-2 p-2 rounded bg-surface-container-lowest font-body-sm text-body-sm text-on-surface">
+<span class="font-semibold text-primary">Negotiation Guidance:</span> Do not discount base design package of ₹85k; offer complimentary visiting card design or stationery tokens if commercial pushback occurs.
+          </div>
+</div>
+</div>
+<!-- SECTION 5: FOLLOW-UP CADENCE HISTORY -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary-container">event_upcoming</span>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Scheduled &amp; Past Follow-ups</h2>
+</div>
+<button class="font-label-sm text-label-sm text-primary-container hover:text-primary font-medium">View Cadence Rules</button>
+</div>
+<div class="space-y-space-sm">
+<!-- Active Follow up -->
+<div class="p-space-md rounded-lg bg-surface-container-high flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary-container text-[20px] mt-0.5">notification_important</span>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-[14px] font-bold text-on-surface">Proposal Feedback &amp; Payment Term Clearance</span>
+<span class="px-2 py-0.5 bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold rounded-full">Due Today</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Due: Today, 16 Sep 2026 · 04:00 PM | Owner: Arun K.</p>
+</div>
+</div>
+<div class="flex items-center gap-2 flex-shrink-0">
+<button class="h-8 px-2.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm hover:bg-primary transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span> Complete
+              </button>
+<button class="h-8 px-2.5 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm hover:bg-surface transition-colors">Reschedule</button>
+</div>
+</div>
+<!-- Completed Item 1 -->
+<div class="p-space-sm rounded-lg bg-surface flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[#059669] text-[18px]">check_circle</span>
+<div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Send Revised Proposal Deck v1.2</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Completed on 14 Sep, 11:20 AM by Arun K.</span>
+</div>
+</div>
+<span class="font-code-xs text-code-xs text-[#059669] bg-surface-container-low px-2 py-1 rounded">Done on schedule</span>
+</div>
+<!-- Completed Item 2 -->
+<div class="p-space-sm rounded-lg bg-surface flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[#059669] text-[18px]">check_circle</span>
+<div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Initial Discovery Call &amp; Requirement Mapping</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Completed on 13 Sep, 4:15 PM by Arun K.</span>
+</div>
+</div>
+<span class="font-code-xs text-code-xs text-[#059669] bg-surface-container-low px-2 py-1 rounded">Done on schedule</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT SIDEBAR COLUMN (~32% = col-span-4) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- SECTION 1: URGENT NEXT ACTION HERO CARD -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-md relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-container via-tertiary to-primary-container"></div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm font-bold text-error uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span> Urgent Next Action
+          </span>
+<span class="font-code-xs text-code-xs font-semibold bg-error-container text-on-error-container px-2 py-0.5 rounded-full">Due in 1 hr 45 min</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">Call Client: Commercial Closure</h3>
+<p class="font-label-sm text-label-sm text-primary-container font-semibold mt-0.5">Today · 04:00 PM IST</p>
+<div class="mt-space-md p-space-sm rounded-lg bg-surface text-on-surface font-body-sm text-body-sm">
+<span class="font-semibold block text-on-surface mb-0.5">Agenda &amp; Objectives:</span>
+          Review proposal terms, confirm 50% advance invoice readiness (₹42,500), and answer questions on the 3 packaging SKU dieline specifications.
+        </div>
+<!-- Big CTA Buttons -->
+<div class="mt-space-lg flex flex-col gap-space-xs">
+<button class="w-full h-10 rounded-lg bg-[#059669] text-on-tertiary hover:bg-[#047857] font-label-md text-label-md font-semibold flex items-center justify-center gap-2 shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px]">phone_in_talk</span>
+<span>Call Rahul Now (+91 98765 43210)</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs mt-1">
+<button class="h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-[#059669]">check</span> Complete Action
+            </button>
+<button class="h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">schedule</span> Reschedule
+            </button>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-1.5 text-on-surface-variant font-code-xs text-code-xs">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+<span>Brandstro Rule: Active leads must maintain an active Next Action.</span>
+</div>
+</div>
+<!-- SECTION 2: PIPELINE STAGE POSITION -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Pipeline Stage</h3>
+<span class="font-label-sm text-label-sm font-bold text-primary-container">Stage 5 of 7</span>
+</div>
+<!-- Horizontal Stepper Bar -->
+<div class="space-y-2">
+<div class="grid grid-cols-7 gap-1">
+<div class="h-2 rounded-full bg-[#059669]" title="1. New Lead"></div>
+<div class="h-2 rounded-full bg-[#059669]" title="2. Contacted"></div>
+<div class="h-2 rounded-full bg-[#059669]" title="3. Requirement"></div>
+<div class="h-2 rounded-full bg-[#059669]" title="4. Proposal Sent"></div>
+<div class="h-2 rounded-full bg-primary-container" title="5. Follow-up (Active)"></div>
+<div class="h-2 rounded-full bg-surface-container" title="6. Negotiation"></div>
+<div class="h-2 rounded-full bg-surface-container" title="7. Won"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Inbound</span>
+<span class="font-bold text-primary-container">Follow-up</span>
+<span>Won</span>
+</div>
+</div>
+<!-- Stage progression controls -->
+<div class="mt-space-md flex items-center gap-2">
+<select class="flex-1 h-8 px-2 bg-surface text-on-surface rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary-container">
+<option>Move to: Negotiation</option>
+<option>Move to: Proposal Revision</option>
+<option>Mark as Won</option>
+<option>Mark as Lost</option>
+</select>
+<button class="h-8 px-3 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm rounded-lg transition-colors font-medium">
+            Update
+          </button>
+</div>
+</div>
+<!-- SECTION 3: QUICK SALES ACTION BAR -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface mb-space-sm">Quick Sales Actions</h3>
+<div class="grid grid-cols-2 gap-2">
+<button class="h-9 px-2 rounded-lg bg-surface hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px] text-[#059669]">call</span>
+<span>Log Call</span>
+</button>
+<button class="h-9 px-2 rounded-lg bg-surface hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px] text-[#059669]">chat</span>
+<span>Send WhatsApp</span>
+</button>
+<button class="h-9 px-2 rounded-lg bg-surface hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px] text-primary-container">event</span>
+<span>Schedule Task</span>
+</button>
+<button class="h-9 px-2 rounded-lg bg-surface hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">post_add</span>
+<span>Add Note</span>
+</button>
+<button class="h-9 px-2 rounded-lg bg-surface hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px] text-primary-container">send</span>
+<span>Send Proposal</span>
+</button>
+<button class="h-9 px-2 rounded-lg bg-surface hover:bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px] text-tertiary">attach_money</span>
+<span>Add Discount</span>
+</button>
+</div>
+</div>
+<!-- SECTION 4: CONVERSION READINESS & ERP HANDOFF GATE -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center gap-2 mb-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary">hub</span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Ready to Convert?</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Once Rahul approves the commercial quote, marking this lead as WON unlocks 1-click ERP client creation.
+        </p>
+<!-- Sync Preview Info Box -->
+<div class="p-space-sm rounded-lg bg-surface-container-low mb-space-md text-on-surface">
+<span class="font-label-sm text-label-sm font-bold block text-primary-container mb-1">Seamless ERP Sync Preview:</span>
+<ul class="font-body-sm text-[12px] space-y-1 text-on-surface-variant">
+<li class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-[#059669]">check</span>
+<span>Direct push into <strong>Client 360 (ABC Foods Pvt Ltd)</strong></span>
+</li>
+<li class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-[#059669]">check</span>
+<span>Drafts Project <strong>PRJ-1024</strong> (₹85,000 value pre-filled)</span>
+</li>
+<li class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-[#059669]">check</span>
+<span>Auto-generates 50% Advance Invoice draft for accounts</span>
+</li>
+</ul>
+</div>
+<button class="w-full h-10 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-2 shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Mark WON &amp; Convert to Client</span>
+</button>
+</div>
+<!-- SECTION 5: SALES REP CADENCE & SLA BADGE -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shadow-xs flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">speed</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-[13px] font-bold text-on-surface">Cadence Score: 100%</span>
+<span class="px-1.5 py-0.2 bg-[#059669]/10 text-[#059669] font-code-xs text-[10px] font-bold rounded">EXCELLENT</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-0.5">
+            Zero overdue actions. Average lead response time: 25 mins on this account.
+          </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function toggleDropdown() {
+    const menu = document.getElementById('moreActionsMenu');
+    if (menu) {
+      menu.classList.toggle('hidden');
+    }
+  }
+
+  function postNoteAction() {
+    const input = document.getElementById('salesNoteInput');
+    if (input && input.value.trim() !== '') {
+      alert('Note saved to Sales Timeline: ' + input.value);
+      input.value = '';
+    }
+  }
+
+  // Close dropdown on click outside
+  document.addEventListener('click', function(event) {
+    const btn = document.getElementById('moreActionsBtn');
+    const menu = document.getElementById('moreActionsMenu');
+    if (btn && menu && !btn.contains(event.target) && !menu.contains(event.target)) {
+      menu.classList.add('hidden');
+    }
+  });
+</script></main></div></body></html>

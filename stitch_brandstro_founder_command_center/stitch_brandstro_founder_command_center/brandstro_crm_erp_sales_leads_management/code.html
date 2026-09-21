@@ -1,0 +1,1273 @@
+<!DOCTYPE html><html lang="en" class="h-full bg-slate-50"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brandstro CRM + ERP - Sales Leads Management</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              900: '#1e1b4b',
+            },
+            accent: {
+              yellow: '#eab308',
+              amber: '#f59e0b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11'; }
+    .custom-scrollbar::-webkit-scrollbar {
+      height: 6px;
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="h-full flex overflow-hidden text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900">
+
+  <!-- ================= LEFT SIDEBAR (240px FIXED) ================= -->
+  <aside class="w-60 bg-[#0f172a] text-slate-300 flex flex-col flex-shrink-0 z-20 border-r border-slate-800 select-none">
+    <!-- Brand Identity Header -->
+    <div class="h-16 flex items-center justify-between px-5 border-b border-slate-800/80">
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-indigo-700 text-white font-bold flex items-center justify-center text-base shadow-sm shadow-indigo-500/30">
+          B
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center space-x-1.5">
+            <span class="font-bold text-white tracking-tight text-sm">BRANDSTRO</span>
+            <span class="px-1.5 py-0.5 rounded text-[10px] font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 leading-none">CRM</span>
+          </div>
+          <span class="text-[10px] text-slate-400 font-medium tracking-tight">Sales Workspace</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <div class="flex-1 py-4 px-3 space-y-6 overflow-y-auto custom-scrollbar">
+      <div>
+        <div class="px-2 pb-2 text-[10px] font-bold uppercase tracking-wider text-slate-400">Sales Workspace</div>
+        <nav class="space-y-1">
+          <!-- Dashboard Link -->
+          <a href="#" class="flex items-center justify-between px-3 py-2 text-xs font-medium rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center space-x-2.5">
+              <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+              </svg>
+              <span>Dashboard</span>
+            </div>
+          </a>
+
+          <!-- Leads Link (ACTIVE HIGHLIGHT) -->
+          <a href="#" class="flex items-center justify-between px-3 py-2 text-xs font-semibold rounded-lg bg-indigo-600 text-white shadow-sm shadow-indigo-600/30">
+            <div class="flex items-center space-x-2.5">
+              <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+              <span>Leads</span>
+            </div>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigo-800/80 text-white border border-indigo-400/30">18 new</span>
+          </a>
+
+          <!-- Pipeline Link -->
+          <a href="#" class="flex items-center justify-between px-3 py-2 text-xs font-medium rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center space-x-2.5">
+              <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              </svg>
+              <span>Pipeline</span>
+            </div>
+            <span class="text-[11px] font-medium text-slate-400">₹4.85L</span>
+          </a>
+
+          <!-- Follow-ups Link -->
+          <a href="#" class="flex items-center justify-between px-3 py-2 text-xs font-medium rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center space-x-2.5">
+              <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span>Follow-ups</span>
+            </div>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">12 due</span>
+          </a>
+
+          <!-- Activity Link -->
+          <a href="#" class="flex items-center justify-between px-3 py-2 text-xs font-medium rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center space-x-2.5">
+              <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+              <span>Activity</span>
+            </div>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Quick Discipline Mini Banner -->
+      <div class="p-3 rounded-lg bg-slate-800/50 border border-slate-700/60">
+        <div class="flex items-center space-x-2 mb-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span class="text-[11px] font-semibold text-slate-200">Daily Sales Rule</span>
+        </div>
+        <p class="text-[11px] text-slate-400 leading-relaxed">
+          Every active lead must have a scheduled next action before end of day.
+        </p>
+        <div class="mt-2.5 flex items-center justify-between text-[10px] text-slate-300">
+          <span>Action Rate:</span>
+          <span class="font-bold text-emerald-400">94.2%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Profile & Notifications -->
+    <div class="p-3 border-t border-slate-800/80 bg-slate-900/60 space-y-2">
+      <!-- Quick Notification Indicator -->
+      <a href="#" class="flex items-center justify-between px-2.5 py-1.5 rounded-md text-xs text-slate-400 hover:bg-slate-800/60 hover:text-slate-200 transition-colors">
+        <div class="flex items-center space-x-2">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+          </svg>
+          <span>Notifications</span>
+        </div>
+        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+      </a>
+
+      <!-- User Profile (Sales Rep) -->
+      <div class="flex items-center justify-between p-2 rounded-lg bg-slate-800/70 border border-slate-700/50">
+        <div class="flex items-center space-x-2.5">
+          <div class="relative">
+            <div class="w-8 h-8 rounded-full bg-indigo-600 text-white font-semibold flex items-center justify-center text-xs">
+              AR
+            </div>
+            <span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-slate-900"></span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xs font-semibold text-white">Arun K.</span>
+            <span class="text-[10px] text-slate-400">Sales Specialist</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN CONTENT AREA ================= -->
+  <main class="flex-1 flex flex-col h-full overflow-hidden bg-slate-50 min-w-0">
+    
+    <!-- TOP HEADER -->
+    <header class="h-16 bg-white border-b border-slate-200 px-6 flex items-center justify-between flex-shrink-0 z-10">
+      <div>
+        <div class="flex items-center space-x-2.5">
+          <h1 class="text-lg font-bold text-slate-900 tracking-tight">Leads</h1>
+          <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-600 border border-slate-200">Sales Queue</span>
+        </div>
+        <p class="text-xs text-slate-500">Manage, contact and convert your sales opportunities.</p>
+      </div>
+
+      <div class="flex items-center space-x-3">
+        <!-- Google Sheets Secondary Import Button -->
+        <button class="inline-flex items-center space-x-1.5 px-3 py-2 text-xs font-semibold text-slate-700 bg-white border border-slate-300 rounded-lg hover:bg-slate-50 hover:border-slate-400 shadow-sm transition-all">
+          <svg class="w-3.5 h-3.5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
+          </svg>
+          <span>Import Leads</span>
+        </button>
+
+        <!-- Primary + Add Lead Button -->
+        <button onclick="document.getElementById('addLeadModal').classList.remove('hidden')" class="inline-flex items-center space-x-1.5 px-3.5 py-2 text-xs font-semibold text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 shadow-sm shadow-indigo-600/20 active:translate-y-0.5 transition-all">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+          </svg>
+          <span>+ Add Lead</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Operational Discipline Notification Bar -->
+    <div class="bg-amber-50/80 border-b border-amber-200/70 px-6 py-2 flex items-center justify-between text-xs text-amber-900 flex-shrink-0">
+      <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-1.5">
+          <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+          <span class="font-semibold text-rose-700">5 follow-ups are overdue</span>
+          <span class="text-slate-400">·</span>
+          <a href="#" class="font-medium text-rose-700 underline hover:text-rose-900">View Overdue</a>
+        </div>
+        <div class="h-3 w-px bg-amber-300/80"></div>
+        <div class="flex items-center space-x-1.5">
+          <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+          <span class="font-semibold text-amber-800">7 leads need a next action</span>
+          <span class="text-slate-400">·</span>
+          <a href="#" class="font-medium text-amber-900 underline hover:text-amber-950">Schedule Now</a>
+        </div>
+      </div>
+      <span class="text-[11px] text-amber-700 font-medium">Auto-synced with inbound channels</span>
+    </div>
+
+    <!-- Scrollable Workspace Container -->
+    <div class="flex-1 overflow-y-auto p-6 space-y-5 custom-scrollbar">
+
+      <!-- ================= 5 COMPACT SUMMARY KPI CARDS (CLICKABLE) ================= -->
+      <div class="grid grid-cols-5 gap-4">
+        <!-- ALL LEADS -->
+        <button class="flex flex-col text-left p-3.5 bg-white rounded-xl border-2 border-indigo-500/80 shadow-sm hover:border-indigo-600 transition-all group relative overflow-hidden bg-gradient-to-br from-white to-indigo-50/30">
+          <div class="flex items-center justify-between w-full mb-1">
+            <span class="text-[11px] font-bold tracking-wide uppercase text-indigo-700">ALL LEADS</span>
+            <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+          </div>
+          <div class="flex items-baseline space-x-2">
+            <span class="text-2xl font-bold text-slate-900">312</span>
+            <span class="text-[11px] font-medium text-slate-500">total in CRM</span>
+          </div>
+          <span class="text-[10px] text-indigo-600 font-medium mt-1 group-hover:underline">Showing all assigned</span>
+        </button>
+
+        <!-- NEW TODAY -->
+        <button class="flex flex-col text-left p-3.5 bg-white rounded-xl border border-slate-200 shadow-sm hover:border-indigo-300 hover:shadow transition-all group">
+          <div class="flex items-center justify-between w-full mb-1">
+            <span class="text-[11px] font-bold tracking-wide uppercase text-slate-600">NEW TODAY</span>
+            <span class="px-1.5 py-0.2 rounded text-[10px] font-bold bg-emerald-50 text-emerald-600 border border-emerald-200">+4 hr</span>
+          </div>
+          <div class="flex items-baseline space-x-2">
+            <span class="text-2xl font-bold text-slate-900">18</span>
+            <span class="text-[11px] font-medium text-emerald-600">ready for triage</span>
+          </div>
+          <span class="text-[10px] text-slate-400 mt-1 group-hover:text-indigo-600">Click to filter</span>
+        </button>
+
+        <!-- FOLLOW-UP TODAY -->
+        <button class="flex flex-col text-left p-3.5 bg-white rounded-xl border border-slate-200 shadow-sm hover:border-indigo-300 hover:shadow transition-all group">
+          <div class="flex items-center justify-between w-full mb-1">
+            <span class="text-[11px] font-bold tracking-wide uppercase text-slate-600">FOLLOW-UP TODAY</span>
+            <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+          </div>
+          <div class="flex items-baseline space-x-2">
+            <span class="text-2xl font-bold text-slate-900">12</span>
+            <span class="text-[11px] font-medium text-amber-600">4 calls done</span>
+          </div>
+          <span class="text-[10px] text-slate-400 mt-1 group-hover:text-indigo-600">Click to filter</span>
+        </button>
+
+        <!-- OVERDUE -->
+        <button class="flex flex-col text-left p-3.5 bg-white rounded-xl border border-rose-200/90 shadow-sm hover:border-rose-400 hover:shadow transition-all group bg-rose-50/20">
+          <div class="flex items-center justify-between w-full mb-1">
+            <span class="text-[11px] font-bold tracking-wide uppercase text-rose-600">OVERDUE</span>
+            <span class="px-1.5 py-0.2 rounded text-[10px] font-bold bg-rose-100 text-rose-700 border border-rose-200">SLA Breach</span>
+          </div>
+          <div class="flex items-baseline space-x-2">
+            <span class="text-2xl font-bold text-rose-600">5</span>
+            <span class="text-[11px] font-medium text-rose-500">needs reschedule</span>
+          </div>
+          <span class="text-[10px] text-rose-600 mt-1 group-hover:underline font-medium">Click to filter overdue</span>
+        </button>
+
+        <!-- HOT LEADS -->
+        <button class="flex flex-col text-left p-3.5 bg-white rounded-xl border border-amber-200/80 shadow-sm hover:border-amber-400 hover:shadow transition-all group bg-amber-50/20">
+          <div class="flex items-center justify-between w-full mb-1">
+            <span class="text-[11px] font-bold tracking-wide uppercase text-amber-700 flex items-center space-x-1">
+              <span>HOT</span>
+              <span>🔥</span>
+            </span>
+            <span class="text-[10px] font-semibold text-amber-700">Close stage</span>
+          </div>
+          <div class="flex items-baseline space-x-2">
+            <span class="text-2xl font-bold text-slate-900">7</span>
+            <span class="text-[11px] font-medium text-amber-700">high intent</span>
+          </div>
+          <span class="text-[10px] text-slate-400 mt-1 group-hover:text-amber-700">Click to filter hot</span>
+        </button>
+      </div>
+
+      <!-- ================= SEARCH + FILTER CONTROLS ================= -->
+      <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm space-y-3">
+        
+        <!-- Large Search Bar -->
+        <div class="relative">
+          <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
+          <input type="text" placeholder="Search leads by name, brand/business, phone, email, or Lead ID (e.g., 'ABC', '98450', 'LD-902')..." class="w-full pl-10 pr-24 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs placeholder-slate-400 text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all">
+          <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+            <span class="text-[11px] text-slate-400 font-mono bg-white px-1.5 py-0.5 rounded border border-slate-200">⌘K</span>
+          </div>
+        </div>
+
+        <!-- Clean, Non-Overloaded Filter Bar -->
+        <div class="flex items-center justify-between pt-1 flex-wrap gap-2 text-xs">
+          <div class="flex items-center space-x-2 flex-wrap gap-y-2">
+            <!-- Status Dropdown -->
+            <div class="relative">
+              <select class="appearance-none bg-white border border-slate-300 hover:border-slate-400 rounded-lg px-3 py-1.5 pr-8 text-xs font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer">
+                <option>Status: All (10 Stages)</option>
+                <option>New Lead (18)</option>
+                <option>Contact Pending (24)</option>
+                <option>Contacted (15)</option>
+                <option>Requirement Discussed (22)</option>
+                <option>Quote / Proposal Sent (11)</option>
+                <option>Follow-up (12)</option>
+                <option>Negotiation (6)</option>
+                <option>Won (MTD 4)</option>
+                <option>Lost (8)</option>
+                <option>On Hold (3)</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-500">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Priority Dropdown -->
+            <div class="relative">
+              <select class="appearance-none bg-white border border-slate-300 hover:border-slate-400 rounded-lg px-3 py-1.5 pr-8 text-xs font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer">
+                <option>Priority: All</option>
+                <option>🔥 Hot (7)</option>
+                <option>Warm (19)</option>
+                <option>Cold (12)</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-500">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Source Dropdown -->
+            <div class="relative">
+              <select class="appearance-none bg-white border border-slate-300 hover:border-slate-400 rounded-lg px-3 py-1.5 pr-8 text-xs font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer">
+                <option>Source: All Channels</option>
+                <option>Instagram DM / Ads</option>
+                <option>WhatsApp Direct</option>
+                <option>Facebook Ads</option>
+                <option>Client Referral</option>
+                <option>Website Inquiry</option>
+                <option>Phone Inbound</option>
+                <option>Manual Entry</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-500">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Service Dropdown -->
+            <div class="relative">
+              <select class="appearance-none bg-white border border-slate-300 hover:border-slate-400 rounded-lg px-3 py-1.5 pr-8 text-xs font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer">
+                <option>Service: All Offerings</option>
+                <option>Logo Design</option>
+                <option>Brand Identity</option>
+                <option>Branding Package</option>
+                <option>Packaging Design</option>
+                <option>Label Design</option>
+                <option>Stationery &amp; Cards</option>
+                <option>Custom Design</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-500">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Follow-up Date Filter -->
+            <div class="relative">
+              <select class="appearance-none bg-white border border-slate-300 hover:border-slate-400 rounded-lg px-3 py-1.5 pr-8 text-xs font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer">
+                <option>Follow-up: All Time</option>
+                <option>Due Today (12)</option>
+                <option>Overdue (5)</option>
+                <option>Tomorrow (8)</option>
+                <option>This Week (24)</option>
+                <option>No Follow-up Scheduled (7)</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-500">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Clear Filters -->
+            <button class="text-xs text-slate-500 hover:text-slate-800 font-medium px-2 py-1 transition-colors">
+              Clear Filters
+            </button>
+          </div>
+
+          <!-- Active Sales View / Quick Stats -->
+          <div class="flex items-center space-x-2 text-slate-500 text-xs">
+            <span>Assigned to: <strong class="text-slate-800 font-semibold">Arun K. (You)</strong></span>
+            <span class="text-slate-300">|</span>
+            <span class="text-indigo-600 font-semibold cursor-pointer hover:underline">Switch to Squad View</span>
+          </div>
+        </div>
+
+        <!-- ================= BULK ACTIONS TOOLBAR (Appears when rows selected) ================= -->
+        <div id="bulkActionBar" class="flex items-center justify-between px-3 py-2 bg-indigo-50/90 border border-indigo-200 rounded-lg text-xs text-indigo-900 transition-all">
+          <div class="flex items-center space-x-2.5">
+            <span class="inline-flex items-center justify-center w-5 h-5 bg-indigo-600 text-white rounded font-bold text-[11px]">2</span>
+            <span class="font-semibold text-slate-800">leads selected</span>
+            <span class="text-slate-300">·</span>
+            <span class="text-slate-500">Bulk Operational Controls:</span>
+          </div>
+
+          <div class="flex items-center space-x-2">
+            <button class="px-2.5 py-1 bg-white border border-slate-300 rounded text-slate-700 hover:bg-slate-50 font-medium shadow-xs">
+              Assign
+            </button>
+            <button class="px-2.5 py-1 bg-white border border-slate-300 rounded text-slate-700 hover:bg-slate-50 font-medium shadow-xs">
+              Change Status
+            </button>
+            <button class="px-2.5 py-1 bg-white border border-slate-300 rounded text-slate-700 hover:bg-slate-50 font-medium shadow-xs">
+              Change Priority
+            </button>
+            <button class="px-2.5 py-1 bg-white border border-slate-300 rounded text-slate-700 hover:bg-slate-50 font-medium shadow-xs">
+              Set Follow-up
+            </button>
+            <button class="px-2.5 py-1 bg-white border border-slate-300 rounded text-slate-700 hover:bg-slate-50 font-medium shadow-xs">
+              Export Selected
+            </button>
+            <button onclick="document.getElementById('bulkActionBar').classList.add('hidden')" class="text-slate-400 hover:text-slate-600 ml-1">
+              ✕
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= MAIN PROFESSIONAL LEAD TABLE ================= -->
+      <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
+        <div class="overflow-x-auto custom-scrollbar">
+          <table class="w-full text-left text-xs border-collapse">
+            <thead>
+              <tr class="bg-slate-50/90 border-b border-slate-200 text-slate-600 font-semibold select-none">
+                <th class="py-3 px-3 w-10 text-center">
+                  <input type="checkbox" checked="" class="w-3.5 h-3.5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                </th>
+                <th class="py-3 px-3 font-semibold text-slate-700">LEAD</th>
+                <th class="py-3 px-3 font-semibold text-slate-700">SERVICE</th>
+                <th class="py-3 px-3 font-semibold text-slate-700">SOURCE</th>
+                <th class="py-3 px-3 font-semibold text-slate-700">STATUS</th>
+                <th class="py-3 px-3 font-semibold text-slate-700">PRIORITY</th>
+                <th class="py-3 px-3 font-semibold text-slate-700">ASSIGNED TO</th>
+                <th class="py-3 px-3 font-semibold text-slate-700">NEXT ACTION</th>
+                <th class="py-3 px-3 font-semibold text-slate-700">FOLLOW-UP</th>
+                <th class="py-3 px-3 font-semibold text-slate-700">LAST CONTACT</th>
+                <th class="py-3 px-3 text-right font-semibold text-slate-700 pr-4">ACTIONS</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200/80">
+
+              <!-- ROW 1: ABC Foods (Selected, HOT, Today follow-up, Won Conversion Ready) -->
+              <tr class="hover:bg-slate-50/80 bg-indigo-50/20 transition-colors group">
+                <td class="py-3.5 px-3 text-center">
+                  <input type="checkbox" checked="" class="w-3.5 h-3.5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                </td>
+                <td class="py-3.5 px-3">
+                  <div class="flex items-center space-x-2.5">
+                    <div class="w-7 h-7 rounded-md bg-indigo-100 text-indigo-700 font-bold flex items-center justify-center text-xs flex-shrink-0">
+                      AF
+                    </div>
+                    <div>
+                      <div class="font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">ABC Foods</div>
+                      <div class="text-[11px] text-slate-400">Sunil M. · +91 98450 12890</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-3.5 px-3 font-medium text-slate-700 whitespace-nowrap">
+                  Brand Identity
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center space-x-1 text-slate-600">
+                    <span class="w-1.5 h-1.5 rounded-full bg-pink-500"></span>
+                    <span>Instagram</span>
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-amber-50 text-amber-700 border border-amber-200">
+                    Follow-up
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500 text-white shadow-xs">
+                    🔥 HOT
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <div class="flex items-center space-x-1.5">
+                    <div class="w-5 h-5 rounded-full bg-slate-200 text-slate-700 text-[10px] font-semibold flex items-center justify-center">AR</div>
+                    <span class="text-slate-700">Arun</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="font-medium text-slate-800 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">
+                    Call Client
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center space-x-1 px-2 py-0.5 rounded text-[11px] font-bold bg-amber-100 text-amber-800 border border-amber-300">
+                    <span>TODAY</span>
+                    <span class="text-[10px] font-normal text-amber-700">· 10:30 AM</span>
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 text-slate-500 whitespace-nowrap">
+                  Yesterday
+                </td>
+                <td class="py-3.5 px-3 text-right pr-4 whitespace-nowrap">
+                  <div class="flex items-center justify-end space-x-1.5">
+                    <!-- Quick Call Action -->
+                    <button class="px-2 py-1 rounded text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 font-semibold transition-colors">
+                      Call
+                    </button>
+                    <!-- Quick WhatsApp -->
+                    <button class="px-2 py-1 rounded text-slate-700 bg-white hover:bg-slate-100 border border-slate-300 font-medium transition-colors">
+                      WhatsApp
+                    </button>
+                    <!-- View / Open Lead Detail -->
+                    <a href="#" class="px-2 py-1 rounded text-indigo-700 bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 font-semibold transition-colors">
+                      View
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- ROW 2: KPN Restaurant (Selected, HOT, Tomorrow follow-up, Proposal Sent) -->
+              <tr class="hover:bg-slate-50/80 bg-indigo-50/20 transition-colors group">
+                <td class="py-3.5 px-3 text-center">
+                  <input type="checkbox" checked="" class="w-3.5 h-3.5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                </td>
+                <td class="py-3.5 px-3">
+                  <div class="flex items-center space-x-2.5">
+                    <div class="w-7 h-7 rounded-md bg-amber-100 text-amber-800 font-bold flex items-center justify-center text-xs flex-shrink-0">
+                      KP
+                    </div>
+                    <div>
+                      <div class="font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">KPN Restaurant</div>
+                      <div class="text-[11px] text-slate-400">Raghu V. · +91 97411 55220</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-3.5 px-3 font-medium text-slate-700 whitespace-nowrap">
+                  Logo Design
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center space-x-1 text-slate-600">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                    <span>WhatsApp</span>
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-blue-50 text-blue-700 border border-blue-200">
+                    Quote / Proposal Sent
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500 text-white shadow-xs">
+                    🔥 HOT
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <div class="flex items-center space-x-1.5">
+                    <div class="w-5 h-5 rounded-full bg-slate-200 text-slate-700 text-[10px] font-semibold flex items-center justify-center">AR</div>
+                    <span class="text-slate-700">Arun</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="font-medium text-slate-800 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">
+                    Follow-up
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-700 border border-slate-200">
+                    Tomorrow
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 text-slate-500 whitespace-nowrap">
+                  12 Sep
+                </td>
+                <td class="py-3.5 px-3 text-right pr-4 whitespace-nowrap">
+                  <div class="flex items-center justify-end space-x-1.5">
+                    <button class="px-2 py-1 rounded text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 font-semibold transition-colors">
+                      Call
+                    </button>
+                    <button class="px-2 py-1 rounded text-slate-700 bg-white hover:bg-slate-100 border border-slate-300 font-medium transition-colors">
+                      WhatsApp
+                    </button>
+                    <a href="#" class="px-2 py-1 rounded text-indigo-700 bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 font-semibold transition-colors">
+                      View
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- ROW 3: Mahalaxmi Builders (WARM, Today follow-up, Referral) -->
+              <tr class="hover:bg-slate-50/80 transition-colors group">
+                <td class="py-3.5 px-3 text-center">
+                  <input type="checkbox" class="w-3.5 h-3.5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                </td>
+                <td class="py-3.5 px-3">
+                  <div class="flex items-center space-x-2.5">
+                    <div class="w-7 h-7 rounded-md bg-blue-100 text-blue-800 font-bold flex items-center justify-center text-xs flex-shrink-0">
+                      MB
+                    </div>
+                    <div>
+                      <div class="font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">Mahalaxmi Builders</div>
+                      <div class="text-[11px] text-slate-400">Vikram S. · +91 99800 44310</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-3.5 px-3 font-medium text-slate-700 whitespace-nowrap">
+                  Branding Package
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center space-x-1 text-slate-600">
+                    <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+                    <span>Referral</span>
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-700 border border-slate-200">
+                    Requirement Discussed
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-amber-50 text-amber-800 border border-amber-200">
+                    WARM
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <div class="flex items-center space-x-1.5">
+                    <div class="w-5 h-5 rounded-full bg-slate-200 text-slate-700 text-[10px] font-semibold flex items-center justify-center">AR</div>
+                    <span class="text-slate-700">Arun</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="font-medium text-slate-800 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">
+                    Send Quote
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-amber-100 text-amber-800 border border-amber-300">
+                    TODAY
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 text-slate-500 whitespace-nowrap">
+                  13 Sep
+                </td>
+                <td class="py-3.5 px-3 text-right pr-4 whitespace-nowrap">
+                  <div class="flex items-center justify-end space-x-1.5">
+                    <button class="px-2 py-1 rounded text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 font-semibold transition-colors">
+                      Call
+                    </button>
+                    <button class="px-2 py-1 rounded text-slate-700 bg-white hover:bg-slate-100 border border-slate-300 font-medium transition-colors">
+                      WhatsApp
+                    </button>
+                    <a href="#" class="px-2 py-1 rounded text-indigo-700 bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 font-semibold transition-colors">
+                      View
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- ROW 4: Orange Surgicals (WARM, 16 Sep, Contacted) -->
+              <tr class="hover:bg-slate-50/80 transition-colors group">
+                <td class="py-3.5 px-3 text-center">
+                  <input type="checkbox" class="w-3.5 h-3.5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                </td>
+                <td class="py-3.5 px-3">
+                  <div class="flex items-center space-x-2.5">
+                    <div class="w-7 h-7 rounded-md bg-orange-100 text-orange-800 font-bold flex items-center justify-center text-xs flex-shrink-0">
+                      OS
+                    </div>
+                    <div>
+                      <div class="font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">Orange Surgicals</div>
+                      <div class="text-[11px] text-slate-400">Dr. Anand · +91 94480 33119</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-3.5 px-3 font-medium text-slate-700 whitespace-nowrap">
+                  Packaging Design
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center space-x-1 text-slate-600">
+                    <span class="w-1.5 h-1.5 rounded-full bg-pink-500"></span>
+                    <span>Instagram</span>
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-700 border border-slate-200">
+                    Contacted
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-amber-50 text-amber-800 border border-amber-200">
+                    WARM
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <div class="flex items-center space-x-1.5">
+                    <div class="w-5 h-5 rounded-full bg-slate-200 text-slate-700 text-[10px] font-semibold flex items-center justify-center">AR</div>
+                    <span class="text-slate-700">Arun</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="font-medium text-slate-800 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">
+                    Call Client
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-700 border border-slate-200">
+                    16 Sep
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 text-slate-500 whitespace-nowrap">
+                  14 Sep
+                </td>
+                <td class="py-3.5 px-3 text-right pr-4 whitespace-nowrap">
+                  <div class="flex items-center justify-end space-x-1.5">
+                    <button class="px-2 py-1 rounded text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 font-semibold transition-colors">
+                      Call
+                    </button>
+                    <button class="px-2 py-1 rounded text-slate-700 bg-white hover:bg-slate-100 border border-slate-300 font-medium transition-colors">
+                      WhatsApp
+                    </button>
+                    <a href="#" class="px-2 py-1 rounded text-indigo-700 bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 font-semibold transition-colors">
+                      View
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- ROW 5: Novel X Technologies (COLD, Facebook, New Lead) -->
+              <tr class="hover:bg-slate-50/80 transition-colors group">
+                <td class="py-3.5 px-3 text-center">
+                  <input type="checkbox" class="w-3.5 h-3.5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                </td>
+                <td class="py-3.5 px-3">
+                  <div class="flex items-center space-x-2.5">
+                    <div class="w-7 h-7 rounded-md bg-slate-200 text-slate-700 font-bold flex items-center justify-center text-xs flex-shrink-0">
+                      NX
+                    </div>
+                    <div>
+                      <div class="font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">Novel X Technologies</div>
+                      <div class="text-[11px] text-slate-400">Pooja N. · +91 98860 11200</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-3.5 px-3 font-medium text-slate-700 whitespace-nowrap">
+                  Logo Design
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center space-x-1 text-slate-600">
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                    <span>Facebook</span>
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                    New Lead
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-600 border border-slate-200">
+                    COLD
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <div class="flex items-center space-x-1.5">
+                    <div class="w-5 h-5 rounded-full bg-slate-200 text-slate-700 text-[10px] font-semibold flex items-center justify-center">AR</div>
+                    <span class="text-slate-700">Arun</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="font-medium text-slate-800 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">
+                    Contact
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-amber-100 text-amber-800 border border-amber-300">
+                    TODAY
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 text-slate-400 whitespace-nowrap">
+                  —
+                </td>
+                <td class="py-3.5 px-3 text-right pr-4 whitespace-nowrap">
+                  <div class="flex items-center justify-end space-x-1.5">
+                    <button class="px-2 py-1 rounded text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 font-semibold transition-colors">
+                      Call
+                    </button>
+                    <button class="px-2 py-1 rounded text-slate-700 bg-white hover:bg-slate-100 border border-slate-300 font-medium transition-colors">
+                      WhatsApp
+                    </button>
+                    <a href="#" class="px-2 py-1 rounded text-indigo-700 bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 font-semibold transition-colors">
+                      View
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- ROW 6: Fresh Basket (HOT, Instagram, Contact Pending) -->
+              <tr class="hover:bg-slate-50/80 transition-colors group">
+                <td class="py-3.5 px-3 text-center">
+                  <input type="checkbox" class="w-3.5 h-3.5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                </td>
+                <td class="py-3.5 px-3">
+                  <div class="flex items-center space-x-2.5">
+                    <div class="w-7 h-7 rounded-md bg-emerald-100 text-emerald-800 font-bold flex items-center justify-center text-xs flex-shrink-0">
+                      FB
+                    </div>
+                    <div>
+                      <div class="font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">Fresh Basket</div>
+                      <div class="text-[11px] text-slate-400">Kavita R. · +91 99011 88432</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-3.5 px-3 font-medium text-slate-700 whitespace-nowrap">
+                  Label Design
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center space-x-1 text-slate-600">
+                    <span class="w-1.5 h-1.5 rounded-full bg-pink-500"></span>
+                    <span>Instagram</span>
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-amber-50 text-amber-800 border border-amber-200">
+                    Contact Pending
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500 text-white shadow-xs">
+                    🔥 HOT
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <div class="flex items-center space-x-1.5">
+                    <div class="w-5 h-5 rounded-full bg-slate-200 text-slate-700 text-[10px] font-semibold flex items-center justify-center">AR</div>
+                    <span class="text-slate-700">Arun</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="font-medium text-slate-800 bg-slate-100 px-2 py-0.5 rounded border border-slate-200">
+                    Call
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-amber-100 text-amber-800 border border-amber-300">
+                    TODAY
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 text-slate-400 whitespace-nowrap">
+                  —
+                </td>
+                <td class="py-3.5 px-3 text-right pr-4 whitespace-nowrap">
+                  <div class="flex items-center justify-end space-x-1.5">
+                    <button class="px-2 py-1 rounded text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 font-semibold transition-colors">
+                      Call
+                    </button>
+                    <button class="px-2 py-1 rounded text-slate-700 bg-white hover:bg-slate-100 border border-slate-300 font-medium transition-colors">
+                      WhatsApp
+                    </button>
+                    <a href="#" class="px-2 py-1 rounded text-indigo-700 bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 font-semibold transition-colors">
+                      View
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- ROW 7: Fathima Ali (OVERDUE 2 DAYS Demonstration) -->
+              <tr class="hover:bg-rose-50/50 bg-rose-50/20 transition-colors group">
+                <td class="py-3.5 px-3 text-center">
+                  <input type="checkbox" class="w-3.5 h-3.5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                </td>
+                <td class="py-3.5 px-3">
+                  <div class="flex items-center space-x-2.5">
+                    <div class="w-7 h-7 rounded-md bg-rose-100 text-rose-700 font-bold flex items-center justify-center text-xs flex-shrink-0">
+                      FA
+                    </div>
+                    <div>
+                      <div class="font-semibold text-slate-900 group-hover:text-rose-600 transition-colors">Fathima Ali (Organic Skincare)</div>
+                      <div class="text-[11px] text-slate-400">Fathima A. · +91 98841 90212</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-3.5 px-3 font-medium text-slate-700 whitespace-nowrap">
+                  Packaging Design
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center space-x-1 text-slate-600">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                    <span>WhatsApp</span>
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-rose-50 text-rose-700 border border-rose-200">
+                    Negotiation
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500 text-white shadow-xs">
+                    🔥 HOT
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <div class="flex items-center space-x-1.5">
+                    <div class="w-5 h-5 rounded-full bg-slate-200 text-slate-700 text-[10px] font-semibold flex items-center justify-center">AR</div>
+                    <span class="text-slate-700">Arun</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="font-medium text-rose-800 bg-rose-100/80 px-2 py-0.5 rounded border border-rose-200">
+                    Call Client
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-rose-600 text-white shadow-xs animate-pulse">
+                    OVERDUE · 2 DAYS
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 text-slate-500 whitespace-nowrap">
+                  11 Sep
+                </td>
+                <td class="py-3.5 px-3 text-right pr-4 whitespace-nowrap">
+                  <div class="flex items-center justify-end space-x-1.5">
+                    <button class="px-2 py-1 rounded text-white bg-rose-600 hover:bg-rose-700 font-semibold transition-colors shadow-xs">
+                      Reschedule
+                    </button>
+                    <button class="px-2 py-1 rounded text-slate-700 bg-white hover:bg-slate-100 border border-slate-300 font-medium transition-colors">
+                      Call
+                    </button>
+                    <a href="#" class="px-2 py-1 rounded text-indigo-700 bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 font-semibold transition-colors">
+                      View
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- ROW 8: Zenith Apparel (NO NEXT ACTION Attention Warning) -->
+              <tr class="hover:bg-amber-50/50 bg-amber-50/20 transition-colors group">
+                <td class="py-3.5 px-3 text-center">
+                  <input type="checkbox" class="w-3.5 h-3.5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                </td>
+                <td class="py-3.5 px-3">
+                  <div class="flex items-center space-x-2.5">
+                    <div class="w-7 h-7 rounded-md bg-purple-100 text-purple-700 font-bold flex items-center justify-center text-xs flex-shrink-0">
+                      ZA
+                    </div>
+                    <div>
+                      <div class="font-semibold text-slate-900 group-hover:text-indigo-600 transition-colors">Zenith Apparel</div>
+                      <div class="text-[11px] text-slate-400">Rohan D. · +91 98440 77123</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-3.5 px-3 font-medium text-slate-700 whitespace-nowrap">
+                  T-Shirt Design
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center space-x-1 text-slate-600">
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                    <span>Website</span>
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-slate-100 text-slate-700 border border-slate-200">
+                    Contacted
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-amber-50 text-amber-800 border border-amber-200">
+                    WARM
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <div class="flex items-center space-x-1.5">
+                    <div class="w-5 h-5 rounded-full bg-slate-200 text-slate-700 text-[10px] font-semibold flex items-center justify-center">AR</div>
+                    <span class="text-slate-700">Arun</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <!-- Strict Brandstro Rule: Attention Warning for Missing Next Action -->
+                  <span class="inline-flex items-center space-x-1 px-2 py-0.5 rounded text-[10px] font-bold bg-amber-200 text-amber-950 border border-amber-400 shadow-xs">
+                    <span>⚠️ NO NEXT ACTION</span>
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold text-slate-400 bg-slate-100 border border-slate-200">
+                    NO FOLLOW-UP
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 text-slate-500 whitespace-nowrap">
+                  10 Sep
+                </td>
+                <td class="py-3.5 px-3 text-right pr-4 whitespace-nowrap">
+                  <div class="flex items-center justify-end space-x-1.5">
+                    <button class="px-2 py-1 rounded text-amber-900 bg-amber-100 hover:bg-amber-200 border border-amber-300 font-semibold transition-colors">
+                      + Next Action
+                    </button>
+                    <a href="#" class="px-2 py-1 rounded text-indigo-700 bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 font-semibold transition-colors">
+                      View
+                    </a>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- ROW 9: ABC Interiors (WON & Convert to Client Demonstration) -->
+              <tr class="hover:bg-emerald-50/40 bg-emerald-50/15 transition-colors group">
+                <td class="py-3.5 px-3 text-center">
+                  <input type="checkbox" class="w-3.5 h-3.5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                </td>
+                <td class="py-3.5 px-3">
+                  <div class="flex items-center space-x-2.5">
+                    <div class="w-7 h-7 rounded-md bg-emerald-100 text-emerald-800 font-bold flex items-center justify-center text-xs flex-shrink-0">
+                      AI
+                    </div>
+                    <div>
+                      <div class="font-semibold text-slate-900 group-hover:text-emerald-700 transition-colors">ABC Interiors</div>
+                      <div class="text-[11px] text-slate-400">Farhan K. · +91 98800 12090</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-3.5 px-3 font-medium text-slate-700 whitespace-nowrap">
+                  Logo &amp; Identity
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center space-x-1 text-slate-600">
+                    <span class="w-1.5 h-1.5 rounded-full bg-pink-500"></span>
+                    <span>Instagram</span>
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-600 text-white shadow-xs">
+                    ✓ WON
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500 text-white shadow-xs">
+                    🔥 HOT
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <div class="flex items-center space-x-1.5">
+                    <div class="w-5 h-5 rounded-full bg-slate-200 text-slate-700 text-[10px] font-semibold flex items-center justify-center">AR</div>
+                    <span class="text-slate-700">Arun</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="font-semibold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded border border-emerald-200">
+                    Handoff to CRM
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 whitespace-nowrap">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200">
+                    Converted
+                  </span>
+                </td>
+                <td class="py-3.5 px-3 text-slate-500 whitespace-nowrap">
+                  Today, 08:56 AM
+                </td>
+                <td class="py-3.5 px-3 text-right pr-4 whitespace-nowrap">
+                  <div class="flex items-center justify-end space-x-1.5">
+                    <!-- Brandstro Quick Conversion Trigger -->
+                    <button class="px-2.5 py-1 rounded text-white bg-emerald-600 hover:bg-emerald-700 font-bold shadow-xs transition-all flex items-center space-x-1">
+                      <span>Convert to Client</span>
+                      <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <!-- ================= PAGINATION & VIEW CONTROLS ================= -->
+        <div class="px-4 py-3 bg-white border-t border-slate-200 flex items-center justify-between text-xs text-slate-500 select-none">
+          <div class="flex items-center space-x-3">
+            <span>Showing <strong class="font-semibold text-slate-800">1–25</strong> of <strong class="font-semibold text-slate-800">312</strong> leads</span>
+            <span class="text-slate-300">|</span>
+            <div class="flex items-center space-x-1.5">
+              <span>Show per page:</span>
+              <select class="bg-slate-50 border border-slate-300 rounded px-1.5 py-0.5 text-xs text-slate-700 font-medium">
+                <option>25</option>
+                <option>50</option>
+                <option>100</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="flex items-center space-x-1">
+            <button class="px-2.5 py-1 rounded border border-slate-300 bg-white text-slate-400 cursor-not-allowed font-medium">
+              Previous
+            </button>
+            <button class="px-2.5 py-1 rounded border border-indigo-600 bg-indigo-600 text-white font-bold">
+              1
+            </button>
+            <button class="px-2.5 py-1 rounded border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 font-medium">
+              2
+            </button>
+            <button class="px-2.5 py-1 rounded border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 font-medium">
+              3
+            </button>
+            <button class="px-2.5 py-1 rounded border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 font-medium">
+              4
+            </button>
+            <span class="px-1 text-slate-400">...</span>
+            <button class="px-2.5 py-1 rounded border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 font-medium">
+              13
+            </button>
+            <button class="px-2.5 py-1 rounded border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 font-medium">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= ADD LEAD MODAL (Practical, Compact 10-field Modal) ================= -->
+  <div id="addLeadModal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-xl shadow-2xl border border-slate-200 w-full max-w-lg overflow-hidden animate-in fade-in duration-150">
+      
+      <!-- Modal Header -->
+      <div class="px-6 py-4 border-b border-slate-200 flex items-center justify-between bg-slate-50">
+        <div>
+          <h3 class="text-sm font-bold text-slate-900">Add New Lead</h3>
+          <p class="text-xs text-slate-500">Fast entry into Brandstro Sales CRM triage queue.</p>
+        </div>
+        <button onclick="document.getElementById('addLeadModal').classList.add('hidden')" class="text-slate-400 hover:text-slate-600">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Modal Body (Form Fields) -->
+      <form class="p-6 space-y-4 text-xs">
+        <div class="grid grid-cols-2 gap-3.5">
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Contact Name *</label>
+            <input type="text" placeholder="e.g. Sunil Mehta" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:outline-none">
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Business / Brand Name *</label>
+            <input type="text" placeholder="e.g. ABC Foods" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:outline-none">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3.5">
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Phone Number *</label>
+            <input type="tel" placeholder="+91 98450 12890" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:outline-none">
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Email Address</label>
+            <input type="email" placeholder="sunil@abcfoods.in" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:outline-none">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3.5">
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Service Interested *</label>
+            <select class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:outline-none">
+              <option>Brand Identity</option>
+              <option>Logo Design</option>
+              <option>Branding Package</option>
+              <option>Packaging Design</option>
+              <option>Label Design</option>
+              <option>Visiting Card</option>
+              <option>Stationery</option>
+              <option>T-Shirt Design</option>
+              <option>Custom Design</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Lead Source *</label>
+            <select class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:outline-none">
+              <option>Instagram</option>
+              <option>Facebook</option>
+              <option>WhatsApp</option>
+              <option>Phone</option>
+              <option>Referral</option>
+              <option>Existing Client</option>
+              <option>Website</option>
+              <option>Manual</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3.5">
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Priority Rating</label>
+            <select class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:outline-none font-semibold text-amber-700">
+              <option>🔥 HOT (High Intent)</option>
+              <option selected="">WARM (Discovery)</option>
+              <option>COLD (Inbound general)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Assigned Salesperson</label>
+            <select class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:outline-none">
+              <option selected="">Arun K. (Sales Specialist)</option>
+              <option>Ayesha (Sales Lead)</option>
+              <option>Unassigned (Queue)</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Next Follow-up &amp; Time</label>
+          <div class="grid grid-cols-2 gap-2">
+            <input type="date" value="2026-09-14" class="px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:outline-none">
+            <input type="time" value="11:00" class="px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:outline-none">
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Initial Discovery Notes</label>
+          <textarea rows="2" placeholder="Brief requirements, expected timeline, or budget discussed..." class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:outline-none resize-none"></textarea>
+        </div>
+
+        <!-- Modal Actions -->
+        <div class="pt-3 border-t border-slate-200 flex items-center justify-end space-x-2.5">
+          <button type="button" onclick="document.getElementById('addLeadModal').classList.add('hidden')" class="px-4 py-2 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-50 font-semibold transition-colors">
+            Cancel
+          </button>
+          <button type="button" onclick="document.getElementById('addLeadModal').classList.add('hidden')" class="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold shadow-sm shadow-indigo-600/30 transition-all">
+            Create Lead
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+</body></html>

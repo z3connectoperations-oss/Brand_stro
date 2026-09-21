@@ -1,0 +1,570 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-dim":"#cbdbf5","on-error-container":"#93000a","inverse-on-surface":"#eaf1ff","tertiary-container":"#885500","outline-variant":"#c7c4d8","surface-tint":"#4d44e3","primary-fixed":"#e2dfff","on-secondary":"#ffffff","on-error":"#ffffff","error-container":"#ffdad6","on-tertiary-fixed-variant":"#653e00","tertiary":"#684000","background":"#f8f9ff","primary":"#3525cd","inverse-surface":"#213145","on-surface":"#0b1c30","surface-variant":"#d3e4fe","on-tertiary":"#ffffff","on-tertiary-container":"#ffd4a4","secondary-container":"#dae2fd","on-secondary-container":"#5c647a","on-secondary-fixed":"#131b2e","surface-container-low":"#eff4ff","secondary":"#565e74","error":"#ba1a1a","on-background":"#0b1c30","inverse-primary":"#c3c0ff","surface-container-lowest":"#ffffff","surface-bright":"#f8f9ff","on-primary-fixed-variant":"#3323cc","on-primary":"#ffffff","surface-container-high":"#dce9ff","surface-container-highest":"#d3e4fe","outline":"#777587","surface-container":"#e5eeff","on-tertiary-fixed":"#2a1700","primary-container":"#4f46e5","secondary-fixed-dim":"#bec6e0","on-surface-variant":"#464555","tertiary-fixed-dim":"#ffb95f","on-primary-fixed":"#0f0069","on-primary-container":"#dad7ff","surface":"#f8f9ff","primary-fixed-dim":"#c3c0ff","tertiary-fixed":"#ffddb8","secondary-fixed":"#dae2fd","on-secondary-fixed-variant":"#3f465c"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter-desktop":"1.5rem","margin":"1rem","space-xl":"1.5rem","space-md":"0.75rem","margin-desktop":"2rem","space-lg":"1rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter":"1rem"},"fontFamily":{"body-sm":["Inter"],"display-lg":["Inter"],"headline-md":["Inter"],"headline-sm":["Inter"],"headline-lg":["Inter"],"body-md":["Inter"],"body-lg":["Inter"],"label-md":["Inter"],"code-xs":["JetBrains Mono"],"code-sm":["JetBrains Mono"],"label-sm":["Inter"]},"fontSize":{"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"body-lg":["15px",{"lineHeight":"22px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"code-xs":["10px",{"lineHeight":"12px","fontWeight":"400"}],"code-sm":["11px",{"lineHeight":"14px","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-xl flex items-center justify-between bg-surface-container-lowest"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary font-headline-sm text-headline-sm font-bold">B</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface leading-none">Brandstro</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">CRM + ERP Core</span></div></div><div class="w-2 h-2 rounded-full bg-tertiary-fixed-dim" title="System Active"></div></div><div class="px-space-md pt-space-lg"><div class="px-space-md mb-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">MY WORK</div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-md"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="my-dashboard" href="#"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span class="font-label-md text-label-md">My Dashboard</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="my-tasks" href="#"><span class="material-symbols-outlined text-[20px]">task_alt</span><span class="font-label-md text-label-md">My Tasks</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="my-projects" href="#"><span class="material-symbols-outlined text-[20px]">folder_special</span><span class="font-label-md text-label-md">My Projects</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary font-label-md" data-path="review-feedback" href="#"><span class="material-symbols-outlined text-[20px]">rate_review</span><span class="font-label-md text-label-md">Review Feedback</span></a></nav></div></div><div class="p-space-md flex flex-col gap-space-sm bg-surface-container-lowest"><div class="flex flex-col gap-space-xs"><a class="flex items-center justify-between px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="notifications" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="font-body-md text-body-md">Notifications</span></div><span class="px-space-xs rounded bg-surface-container-high font-code-xs text-code-xs text-on-surface">3</span></a><a class="flex items-center gap-space-sm px-space-md py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="help-support" href="#"><span class="material-symbols-outlined text-[18px]">help</span><span class="font-body-md text-body-md">Help &amp; Support</span></a></div><div class="p-space-sm rounded-lg bg-surface-container-low flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center flex-shrink-0 text-on-primary font-headline-sm text-headline-sm font-semibold">SK</div><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center justify-between gap-space-xs"><span class="font-label-md text-label-md font-semibold text-on-surface truncate">Shihaf K.</span><span class="font-code-xs text-code-xs px-1.5 py-0.5 rounded bg-surface-container-highest text-on-secondary-container flex-shrink-0">Logo</span></div><span class="font-body-sm text-body-sm text-secondary truncate">Sr. Logo Designer</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter-desktop"><div class="flex items-center gap-space-sm"><span class="font-body-md text-body-md text-secondary">My Work</span><span class="font-body-sm text-body-sm text-outline-variant">/</span><span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Review Feedback</span></div><div class="flex items-center gap-space-lg"><div class="relative flex items-center w-72"><span class="material-symbols-outlined absolute left-space-md text-[18px] text-secondary pointer-events-none">search</span><input class="w-full h-9 pl-9 pr-space-md rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest shadow-[0_1px_3px_0_rgba(15,23,42,0.04)] transition-all" placeholder="Search projects, assets, tickets..." type="text"></div><div class="flex items-center gap-space-md"><button aria-label="Notifications" class="relative p-space-xs rounded-lg text-secondary hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-background min-h-screen w-full px-gutter-desktop py-space-xl"><div class="flex flex-col w-full gap-space-lg">
+<!-- TOP CONTEXT BANNER & ACTIONS -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-secondary font-label-sm uppercase tracking-wider">
+<span class="">Team Member Portal</span>
+<span class="">•</span>
+<span class="text-primary font-code-sm">TL-QA FEEDBACK CONSOLE</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Review Feedback</h1>
+<p class="font-body-md text-body-md text-secondary">Critiques, actionable revisions, and creative head approvals on submitted deliverables.</p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="">Squad: <strong class="font-semibold">Brand Identity &amp; Logo</strong></span>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container-low transition-colors font-label-md" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">filter_alt</span>
+<span class="">Filter by Squad</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary text-on-primary shadow-sm hover:opacity-95 transition-opacity font-label-md" type="button">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span class="">Mark All Understood</span>
+</button>
+</div>
+</div>
+<!-- SUMMARY METRIC CARDS (HIGH DENSITY INTERACTIVE TILES) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- CARD 1: NEW FEEDBACK -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-pointer group" role="button">
+<div class="flex items-center justify-between">
+<span class="font-label-sm uppercase tracking-wider text-secondary">Unread Critiques</span>
+<span class="w-7 h-7 rounded-lg bg-secondary-container text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">mark_email_unread</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-sm mt-space-sm">
+<span class="font-display-lg text-display-lg text-on-surface">3</span>
+<span class="font-label-sm text-primary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">bolt</span> New inbound
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary truncate mt-space-xs">KPN, ABC Brand, Orange Surgicals</p>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-space-md overflow-hidden">
+<div class="bg-primary h-full w-3/5"></div>
+</div>
+</div>
+<!-- CARD 2: CHANGES REQUESTED (CRITICAL) -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-pointer ring-2 ring-error/20 group" role="button">
+<div class="flex items-center justify-between">
+<span class="font-label-sm uppercase tracking-wider text-error">Changes Requested</span>
+<span class="w-7 h-7 rounded-lg bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">error</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-sm mt-space-sm">
+<span class="font-display-lg text-display-lg text-error">2</span>
+<span class="font-code-xs text-code-xs px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-semibold">URGENT ACTION</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate mt-space-xs">Immediate revision required for QA gate</p>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-space-md overflow-hidden">
+<div class="bg-error h-full w-4/5"></div>
+</div>
+</div>
+<!-- CARD 3: AWAITING REVIEW -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-pointer group" role="button">
+<div class="flex items-center justify-between">
+<span class="font-label-sm uppercase tracking-wider text-secondary">Awaiting Review</span>
+<span class="w-7 h-7 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">pending_actions</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-sm mt-space-sm">
+<span class="font-display-lg text-display-lg text-on-surface">2</span>
+<span class="font-label-sm text-tertiary flex items-center gap-0.5">TL Queue</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary truncate mt-space-xs">Submissions in Vikram &amp; Akhil review</p>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-space-md overflow-hidden">
+<div class="bg-tertiary h-full w-2/5"></div>
+</div>
+</div>
+<!-- CARD 4: RESOLVED -->
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-pointer group" role="button">
+<div class="flex items-center justify-between">
+<span class="font-label-sm uppercase tracking-wider text-secondary">Resolved &amp; Cleared</span>
+<span class="w-7 h-7 rounded-lg bg-surface-container-highest text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-sm mt-space-sm">
+<span class="font-display-lg text-display-lg text-on-surface">8</span>
+<span class="font-label-sm text-secondary">This sprint</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary truncate mt-space-xs">Sign-offs &amp; completed feedback loops</p>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-space-md overflow-hidden">
+<div class="bg-secondary h-full w-full"></div>
+</div>
+</div>
+</div>
+<!-- WORKSPACE SPLIT VIEW: LEFT MASTER TABLE (~65%) | RIGHT DETAIL DRAWER (~35%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: TABLE & FILTERS (SPAN 7/12 on large screens) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- FILTER TOOLBAR -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<!-- Tab Bar -->
+<div class="flex items-center justify-between border-b border-surface-container-low pb-space-xs overflow-x-auto">
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary font-label-md flex items-center gap-space-xs">
+<span class="">All</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-lowest/20 font-code-xs text-code-xs">15</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg text-secondary hover:bg-surface-container-low font-label-md flex items-center gap-space-xs transition-colors">
+<span class="">New</span>
+<span class="px-1.5 py-0.2 rounded-full bg-secondary-container text-on-secondary-container font-code-xs text-code-xs">3</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg text-error hover:bg-error-container/40 font-label-md flex items-center gap-space-xs transition-colors">
+<span class="">Changes Requested</span>
+<span class="px-1.5 py-0.2 rounded-full bg-error-container text-on-error-container font-code-xs text-code-xs">2</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg text-secondary hover:bg-surface-container-low font-label-md flex items-center gap-space-xs transition-colors">
+<span class="">Awaiting Review</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container font-code-xs text-code-xs text-secondary">2</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg text-secondary hover:bg-surface-container-low font-label-md flex items-center gap-space-xs transition-colors">
+<span class="">Resolved</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container font-code-xs text-code-xs text-secondary">8</span>
+</button>
+</div>
+<span class="font-code-xs text-code-xs text-secondary hidden sm:inline-block">Updated: Just now</span>
+</div>
+<!-- Filter Controls Line -->
+<div class="grid grid-cols-1 sm:grid-cols-12 gap-space-xs pt-space-xs">
+<div class="sm:col-span-6 relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-sm text-[16px] text-secondary pointer-events-none">search</span>
+<input class="w-full h-8 pl-8 pr-space-sm rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest shadow-sm transition-all" placeholder="Search project, deliverable or notes... (⌘K)" type="text">
+</div>
+<div class="sm:col-span-3">
+<select class="w-full h-8 px-space-sm rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none cursor-pointer">
+<option>Status: All</option>
+<option>Changes Requested</option>
+<option>New Unread</option>
+<option>Approved</option>
+</select>
+</div>
+<div class="sm:col-span-3">
+<select class="w-full h-8 px-space-sm rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm outline-none cursor-pointer">
+<option>Reviewer: All</option>
+<option>Akhil (TL)</option>
+<option>Vikram S. (Creative Head)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- FEEDBACK DATA LIST / TABLE -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden flex flex-col">
+<!-- Table Header -->
+<div class="grid grid-cols-12 gap-space-xs px-space-md py-space-sm bg-surface-container-low text-secondary font-label-sm uppercase tracking-wider">
+<div class="col-span-4">Project &amp; Deliverable</div>
+<div class="col-span-2">Reviewer</div>
+<div class="col-span-3">Feedback Snippet</div>
+<div class="col-span-2">Status</div>
+<div class="col-span-1 text-right">Action</div>
+</div>
+<!-- ROW 1: ACTIVE / SELECTED ROW -->
+<div class="grid grid-cols-12 gap-space-xs items-center px-space-md py-space-md bg-surface-container-low/60 ring-2 ring-primary/40 transition-all cursor-pointer">
+<div class="col-span-4 flex items-start gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-bold text-[12px] flex-shrink-0">
+              ABC
+            </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">ABC Brand Identity</span>
+<span class="font-code-xs text-code-xs px-1 rounded bg-surface-container-high text-secondary">#PRJ-1024</span>
+</div>
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-secondary">
+<span class="text-on-surface font-medium">Logo Concept 03</span>
+<span class="">•</span>
+<span class="font-code-xs text-code-xs bg-primary-fixed text-primary px-1 py-0.2 rounded font-semibold">V2</span>
+</div>
+</div>
+</div>
+<div class="col-span-2 flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface font-label-sm flex items-center justify-center font-semibold text-[10px]">
+              AP
+            </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Akhil P.</span>
+<span class="font-code-xs text-code-xs text-secondary truncate">Team Lead</span>
+</div>
+</div>
+<div class="col-span-3 flex flex-col">
+<p class="font-body-sm text-body-sm text-on-surface line-clamp-2 italic">
+              “Explore a cleaner symbol and improve spacing between mark &amp; wordmark...”
+            </p>
+<span class="font-code-xs text-code-xs text-secondary mt-0.5">Today, 11:20 AM</span>
+</div>
+<div class="col-span-2 flex flex-col">
+<span class="inline-flex items-center gap-1 w-max px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+              Changes Req.
+            </span>
+</div>
+<div class="col-span-1 text-right">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-primary text-on-primary">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</span>
+</div>
+</div>
+<!-- ROW 2: CHANGES REQUESTED (Orange Surgicals) -->
+<div class="grid grid-cols-12 gap-space-xs items-center px-space-md py-space-md hover:bg-surface-container-low transition-colors cursor-pointer border-t border-surface-container-low">
+<div class="col-span-4 flex items-start gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold text-[12px] flex-shrink-0">
+              OS
+            </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Orange Surgicals</span>
+<span class="font-code-xs text-code-xs px-1 rounded bg-surface-container-high text-secondary">#PRJ-1008</span>
+</div>
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-secondary">
+<span class="text-on-surface font-medium">Front Label Design</span>
+<span class="">•</span>
+<span class="font-code-xs text-code-xs bg-surface-container-high text-secondary px-1 py-0.2 rounded">V3</span>
+</div>
+</div>
+</div>
+<div class="col-span-2 flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface font-label-sm flex items-center justify-center font-semibold text-[10px]">
+              VS
+            </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Vikram S.</span>
+<span class="font-code-xs text-code-xs text-secondary truncate">Creative Head</span>
+</div>
+</div>
+<div class="col-span-3 flex flex-col">
+<p class="font-body-sm text-body-sm text-on-surface line-clamp-2">
+              “Please revise the hierarchy of the product name and medical warning info...”
+            </p>
+<span class="font-code-xs text-code-xs text-secondary mt-0.5">Today, 9:40 AM</span>
+</div>
+<div class="col-span-2 flex flex-col">
+<span class="inline-flex items-center gap-1 w-max px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+              Changes Req.
+            </span>
+</div>
+<div class="col-span-1 text-right">
+<button class="inline-flex items-center justify-center w-7 h-7 rounded-lg text-secondary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- ROW 3: NEW FEEDBACK (KPN Restaurant) -->
+<div class="grid grid-cols-12 gap-space-xs items-center px-space-md py-space-md hover:bg-surface-container-low transition-colors cursor-pointer border-t border-surface-container-low">
+<div class="col-span-4 flex items-start gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-[12px] flex-shrink-0">
+              KPN
+            </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">KPN Restaurant Identity</span>
+<span class="font-code-xs text-code-xs px-1 rounded bg-surface-container-high text-secondary">#PRJ-1021</span>
+</div>
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-secondary">
+<span class="text-on-surface font-medium">Logo Concept 02</span>
+<span class="">•</span>
+<span class="font-code-xs text-code-xs bg-surface-container-high text-secondary px-1 py-0.2 rounded">V1</span>
+</div>
+</div>
+</div>
+<div class="col-span-2 flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface font-label-sm flex items-center justify-center font-semibold text-[10px]">
+              AP
+            </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Akhil P.</span>
+<span class="font-code-xs text-code-xs text-secondary truncate">Team Lead</span>
+</div>
+</div>
+<div class="col-span-3 flex flex-col">
+<p class="font-body-sm text-body-sm text-on-surface line-clamp-2">
+              “Good direction. Please refine the secondary font kerning before final submission.”
+            </p>
+<span class="font-code-xs text-code-xs text-secondary mt-0.5">Yesterday, 4:15 PM</span>
+</div>
+<div class="col-span-2 flex flex-col">
+<span class="inline-flex items-center gap-1 w-max px-2 py-0.5 rounded-full bg-primary-fixed text-primary font-label-sm text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+              New Unread
+            </span>
+</div>
+<div class="col-span-1 text-right">
+<button class="inline-flex items-center justify-center w-7 h-7 rounded-lg text-secondary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- ROW 4: APPROVED (Mahalaxmi Builders) -->
+<div class="grid grid-cols-12 gap-space-xs items-center px-space-md py-space-md hover:bg-surface-container-low transition-colors cursor-pointer border-t border-surface-container-low">
+<div class="col-span-4 flex items-start gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-[12px] flex-shrink-0">
+              MB
+            </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Mahalaxmi Builders</span>
+<span class="font-code-xs text-code-xs px-1 rounded bg-surface-container-high text-secondary">#PRJ-1012</span>
+</div>
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-secondary">
+<span class="text-on-surface font-medium">Logo Variations</span>
+<span class="">•</span>
+<span class="font-code-xs text-code-xs bg-surface-container-high text-secondary px-1 py-0.2 rounded">V4 FINAL</span>
+</div>
+</div>
+</div>
+<div class="col-span-2 flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface font-label-sm flex items-center justify-center font-semibold text-[10px]">
+              VS
+            </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Vikram S.</span>
+<span class="font-code-xs text-code-xs text-secondary truncate">Creative Head</span>
+</div>
+</div>
+<div class="col-span-3 flex flex-col">
+<p class="font-body-sm text-body-sm text-on-surface line-clamp-2">
+              “Approved for executive client presentation deck tomorrow morning.”
+            </p>
+<span class="font-code-xs text-code-xs text-secondary mt-0.5">Yesterday, 11:00 AM</span>
+</div>
+<div class="col-span-2 flex flex-col">
+<span class="inline-flex items-center gap-1 w-max px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[10px] font-semibold">
+<span class="material-symbols-outlined text-[12px] text-tertiary">check_circle</span>
+              Approved
+            </span>
+</div>
+<div class="col-span-1 text-right">
+<button class="inline-flex items-center justify-center w-7 h-7 rounded-lg text-secondary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- ROW 5: RESOLVED (ABC Foods) -->
+<div class="grid grid-cols-12 gap-space-xs items-center px-space-md py-space-md hover:bg-surface-container-low transition-colors cursor-pointer border-t border-surface-container-low">
+<div class="col-span-4 flex items-start gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center font-bold text-[12px] flex-shrink-0">
+              AF
+            </div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">ABC Foods Research</span>
+<span class="font-code-xs text-code-xs px-1 rounded bg-surface-container-high text-secondary">#PRJ-1024</span>
+</div>
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-secondary">
+<span class="text-on-surface font-medium">Initial Logo Benchmarks</span>
+<span class="">•</span>
+<span class="font-code-xs text-code-xs bg-surface-container-high text-secondary px-1 py-0.2 rounded">V1</span>
+</div>
+</div>
+</div>
+<div class="col-span-2 flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface font-label-sm flex items-center justify-center font-semibold text-[10px]">
+              AP
+            </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Akhil P.</span>
+<span class="font-code-xs text-code-xs text-secondary truncate">Team Lead</span>
+</div>
+</div>
+<div class="col-span-3 flex flex-col">
+<p class="font-body-sm text-body-sm text-secondary line-clamp-2">
+              “Competitive study accepted. Proceed with concept exploration phase.”
+            </p>
+<span class="font-code-xs text-code-xs text-secondary mt-0.5">12 Sep, 2:30 PM</span>
+</div>
+<div class="col-span-2 flex flex-col">
+<span class="inline-flex items-center gap-1 w-max px-2 py-0.5 rounded-full bg-surface-container text-secondary font-label-sm text-[10px]">
+<span class="material-symbols-outlined text-[12px]">done</span>
+              Resolved
+            </span>
+</div>
+<div class="col-span-1 text-right">
+<button class="inline-flex items-center justify-center w-7 h-7 rounded-lg text-secondary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<!-- FOOTER PAGINATION & STATS -->
+<div class="flex items-center justify-between px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-secondary font-body-sm text-body-sm shadow-sm">
+<span class="">Showing <strong class="text-on-surface">5</strong> of 15 Deliverables with Feedback</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded bg-surface-container-low text-on-surface disabled:opacity-40" disabled="">Previous</button>
+<button class="px-2 py-1 rounded bg-primary text-on-primary font-code-xs text-code-xs">1</button>
+<button class="px-2 py-1 rounded hover:bg-surface-container-low font-code-xs text-code-xs">2</button>
+<button class="px-space-sm py-1 rounded bg-surface-container-low text-on-surface hover:bg-surface-container">Next</button>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: FEEDBACK DETAIL DRAWER (~35% SPAN 5/12) -->
+<div class="lg:col-span-5 flex flex-col rounded-xl bg-surface-container-lowest shadow-md overflow-hidden sticky top-20">
+<!-- DRAWER HEADER -->
+<div class="p-space-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5 font-code-xs text-code-xs text-secondary flex-wrap">
+<span class="text-primary font-semibold">ABC Brand Identity</span>
+<span class="">&gt;</span>
+<span class="">Concept 03</span>
+<span class="">&gt;</span>
+<span class="bg-primary-fixed px-1 rounded text-primary font-bold">V2</span>
+</div>
+<button class="w-7 h-7 rounded-lg text-secondary hover:bg-surface-container flex items-center justify-center transition-colors" title="Collapse Panel">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex items-center justify-between mt-space-xs">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface">Logo Concept 03</h2>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+              Changes Requested
+            </span>
+</div>
+<span class="font-code-xs text-code-xs px-1.5 py-0.5 rounded bg-surface-container-high text-secondary">
+            Rev 1 of 3
+          </span>
+</div>
+</div>
+<!-- REVIEWER INFO CARD -->
+<div class="p-space-lg flex items-center justify-between bg-surface-container-lowest border-b border-surface-container-low">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-xl bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-semibold">
+            AP
+          </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Akhil P.</span>
+<span class="font-code-xs text-code-xs px-1.5 py-0.2 rounded bg-secondary-container text-on-secondary-container font-medium">Team Leader</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Reviewed: Today, 14 Sep 2026 · 11:20 AM (35m ago)</span>
+</div>
+</div>
+<div class="text-right flex flex-col items-end">
+<span class="font-code-xs text-code-xs text-tertiary bg-tertiary-fixed px-1.5 py-0.5 rounded font-semibold">SLA: 2h Turnaround</span>
+</div>
+</div>
+<!-- FEEDBACK DIRECTIVE (QUOTE BLOCK) -->
+<div class="p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm uppercase tracking-wider text-secondary">Reviewer Directives &amp; Feedback</span>
+<span class="font-code-xs text-code-xs text-secondary">Priority: HIGH</span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low/70 border-l-4 border-error flex flex-col gap-space-sm">
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed italic">
+            “Explore a cleaner symbol and improve spacing between the mark and wordmark. The organic saffron tone is approved, but the dieline lockup feels slightly crowded on the left margin. Check the CRM client brief note regarding supermarket shelf contrast.”
+          </p>
+<div class="flex items-center gap-space-sm text-secondary font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lightbulb</span>
+<span class="">Recommended fix: Shift typography 8pt rightwards &amp; sharpen vector anchor points.</span>
+</div>
+</div>
+<!-- DIFFERENTIAL AUDIT PILL (OLD VS NEW AUDIT) -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low font-code-xs text-code-xs">
+<span class="text-secondary">Tracking Status:</span>
+<div class="flex items-center gap-space-xs">
+<span class="bg-error-container text-on-error-container px-2 py-0.5 rounded line-through">V1: Unaligned Monogram</span>
+<span class="text-secondary">→</span>
+<span class="bg-surface-container-highest text-on-secondary-container px-2 py-0.5 rounded font-bold">V2: Saffron Lockup (Current)</span>
+</div>
+</div>
+<!-- REFERENCE FILES / MARKUP ATTACHMENTS -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm uppercase tracking-wider text-secondary">Feedback Attachments (2 Files)</span>
+<!-- ATTACHMENT 1: Redline Visual Preview -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded bg-surface-container-highest overflow-hidden flex-shrink-0 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Close-up crop of a vector logo icon concept showing red pen markup annotations, circular ruler guidelines, and spacing corrections on an ivory corporate branding grid." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrWB3R7mZsDgFioLms3zew3lJSM4DyCIYA-nHLf4erAUBndPz813Mfa1cmhMU-z_BTs-Ho5SavaxPvNfM4mG01tkVyJN2h_E4iTEhAy-USUQkGlUKgojf97wt_dD4ZN4OnnAZO-F_J3nqd6e0TELiPpkC7KmT3w36_TV9LN1-KefNThX0EjxHBB8Aw9PrCWvbX5LLXMI6QJdkZMmQvh8ZRkpjo5UzpT8wLqSBi3iONeOQJoVhZjIiCIw">
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">ABC_Logo_Concept_V2_Akhil_Markup.png</span>
+<span class="font-code-xs text-code-xs text-secondary">Visual Redline Annotations · 1.4 MB</span>
+</div>
+</div>
+<button class="p-1 rounded text-secondary hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+<!-- ATTACHMENT 2: CRM Brief Reference -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded bg-error-container/40 text-error flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">CRM_Client_Brief_Notes_Typography.pdf</span>
+<span class="font-code-xs text-code-xs text-secondary">Client Styleguard Directive · 142 KB</span>
+</div>
+</div>
+<button class="p-1 rounded text-secondary hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<!-- AUDIT TIMELINE LOG / ITERATION HISTORY -->
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<span class="font-label-sm uppercase tracking-wider text-secondary">Submission Version History</span>
+<div class="relative pl-6 flex flex-col gap-space-md py-space-xs">
+<!-- Vertical connecting line -->
+<div class="absolute left-2.5 top-2 bottom-2 w-0.5 bg-surface-container-high"></div>
+<!-- V1 Step -->
+<div class="relative flex flex-col">
+<div class="absolute -left-6 top-1 w-2 h-2 rounded-full bg-secondary"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">V1 Submissions</span>
+<span class="font-code-xs text-code-xs text-secondary">11 Sep · 3:20 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Initial 4 concepts submitted to TL queue.</p>
+</div>
+<!-- V2 Step (Active) -->
+<div class="relative flex flex-col">
+<div class="absolute -left-6 top-1 w-2 h-2 rounded-full bg-error"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-error font-semibold">V2 Changes Requested</span>
+<span class="font-code-xs text-code-xs text-error font-semibold">14 Sep · 11:20 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">Feedback: Symbol simplification &amp; kerning check.</p>
+</div>
+<!-- V3 Next Step (Pending) -->
+<div class="relative flex flex-col">
+<div class="absolute -left-6 top-1 w-2 h-2 rounded-full bg-primary-fixed-dim"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary">V3 In Progress (Your Desk)</span>
+<span class="font-code-xs text-code-xs text-primary font-semibold">DRAFTING</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Shihaf K. currently drafting revision.</p>
+</div>
+</div>
+</div>
+<!-- QUICK CLARIFICATION NOTE -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<label class="font-label-sm uppercase tracking-wider text-secondary">Quick Note to Akhil (Team Lead)</label>
+<div class="relative flex items-center">
+<input class="w-full h-9 pl-space-md pr-16 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm outline-none focus:bg-surface-container-lowest shadow-sm transition-all" placeholder="Add a quick clarification or turnaround ETA..." type="text">
+<button class="absolute right-1 px-space-sm py-1 rounded bg-surface-container-high text-on-surface font-label-sm hover:bg-surface-container transition-colors">
+              Send
+            </button>
+</div>
+</div>
+</div>
+<!-- DRAWER ACTION FOOTER -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center gap-space-sm">
+<button class="w-full sm:w-1/2 flex items-center justify-center gap-space-xs h-10 px-space-md rounded-lg bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container font-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check</span>
+<span class="">Mark as Understood</span>
+</button>
+<button class="w-full sm:w-1/2 flex items-center justify-center gap-space-xs h-10 px-space-md rounded-lg bg-primary-container text-on-primary shadow-sm hover:opacity-95 font-label-md transition-opacity" type="button">
+<span class="">Open Task Workspace</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div></main></div>
+
+</body></html>

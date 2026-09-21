@@ -1,0 +1,1196 @@
+<!DOCTYPE html><html class="h-full bg-slate-50" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Brandstro CRM + ERP - Founder Projects Management</title>
+<!-- Tailwind CSS v3 CDN with forms and container queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration to match Brandstro visual language -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              200: '#c7d2fe',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              800: '#3730a3',
+              900: '#312e81',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'SF Pro Text', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Style Definitions -->
+<style data-purpose="custom-scrollbars">
+    /* Subtle horizontal and vertical scrollbars */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+<style data-purpose="table-layout">
+    /* Specific table layout styling for ultra-crisp agency ERP density */
+    .erp-table th {
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.125rem 0.5rem;
+      border-radius: 9999px;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      line-height: 1rem;
+    }
+  </style>
+<!-- END: Custom Style Definitions -->
+</head>
+<body class="h-full font-sans text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-700">
+<div class="flex h-screen overflow-hidden">
+<!-- BEGIN: LeftSidebar -->
+<aside class="w-60 flex-shrink-0 bg-white border-r border-slate-200 flex flex-col justify-between select-none" data-purpose="primary-sidebar">
+<!-- Top Brand & Navigation -->
+<div class="flex flex-col flex-1 overflow-y-auto">
+<!-- Brandstro App Header -->
+<div class="h-16 flex items-center px-4 border-b border-slate-100 gap-3">
+<div class="w-9 h-9 rounded-lg bg-slate-950 flex items-center justify-center text-white font-bold text-lg shadow-sm">
+            B
+          </div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-bold tracking-tight text-slate-900 text-sm">BRANDSTRO</span>
+<span class="text-[10px] font-semibold tracking-wider bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">ERP</span>
+</div>
+<p class="text-[11px] text-slate-400 font-medium">Agency Operating System</p>
+</div>
+</div>
+<!-- Navigation Menu -->
+<nav class="p-3 space-y-6">
+<!-- MAIN Section -->
+<div>
+<span class="text-[10px] uppercase font-bold tracking-wider text-slate-400 px-3">MAIN</span>
+<ul class="mt-2 space-y-1">
+<li>
+<a class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors" href="#">
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<rect height="7" rx="1" width="7" x="3" y="3"></rect>
+<rect height="7" rx="1" width="7" x="14" y="3"></rect>
+<rect height="7" rx="1" width="7" x="14" y="14"></rect>
+<rect height="7" rx="1" width="7" x="3" y="14"></rect>
+</svg>
+<span>Command Center</span>
+</div>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors" href="#">
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Leads</span>
+</div>
+<span class="text-[10px] font-semibold text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded-full">18</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors" href="#">
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Clients</span>
+</div>
+</a>
+</li>
+<!-- Active Projects Link -->
+<li>
+<a aria-current="page" class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-semibold text-indigo-700 bg-indigo-50 border border-indigo-100 shadow-sm" href="#">
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Projects</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-[10px] font-bold text-rose-700 bg-rose-100 px-1.5 py-0.5 rounded-full">5 late</span>
+<span class="text-[10px] font-bold text-indigo-700 bg-indigo-100 px-1.5 py-0.5 rounded-full">38</span>
+</div>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors" href="#">
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Payments</span>
+</div>
+<span class="text-[10px] font-semibold text-amber-700 bg-amber-50 border border-amber-200 px-1.5 py-0.5 rounded">₹2.84L</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors" href="#">
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Team</span>
+</div>
+<span class="text-[10px] font-medium text-slate-400">18/35</span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors" href="#">
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Reports</span>
+</div>
+</a>
+</li>
+</ul>
+</div>
+<!-- MANAGEMENT Section -->
+<div>
+<span class="text-[10px] uppercase font-bold tracking-wider text-slate-400 px-3">MANAGEMENT</span>
+<ul class="mt-2 space-y-1">
+<li>
+<a class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors" href="#">
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Incentives</span>
+</div>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors" href="#">
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Alerts</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-rose-500"></span>
+</a>
+</li>
+<li>
+<a class="flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors" href="#">
+<div class="flex items-center gap-2.5">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Activity</span>
+</div>
+</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+<!-- Bottom User & Settings Area -->
+<div class="p-3 border-t border-slate-100 space-y-2">
+<a class="flex items-center gap-2.5 px-3 py-2 text-xs font-medium text-slate-600 hover:bg-slate-50 rounded-lg transition-colors" href="#">
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Settings &amp; Config</span>
+</a>
+<!-- Founder Profile Card -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-slate-50 border border-slate-200/80">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-full bg-slate-900 text-amber-200 flex items-center justify-center font-bold text-xs flex-shrink-0">
+              FD
+            </div>
+<div class="truncate">
+<div class="text-xs font-semibold text-slate-900 truncate">Pranav S.</div>
+<div class="text-[10px] text-slate-500 font-medium truncate">Founder &amp; CEO</div>
+</div>
+</div>
+<svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M8 9l4-4 4 4m0 6l-4 4-4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+</aside>
+<!-- END: LeftSidebar -->
+<!-- BEGIN: MainContentArea -->
+<div class="flex-1 flex flex-col min-w-0 overflow-y-auto bg-[#F8FAFC]">
+<!-- BEGIN: TopHeader -->
+<header class="bg-white border-b border-slate-200 px-6 py-4 sticky top-0 z-20 flex-shrink-0">
+<div class="flex items-center justify-between gap-4">
+<!-- Title and Live Summary -->
+<div>
+<div class="flex items-center gap-2.5">
+<h1 class="text-lg font-bold text-slate-900 tracking-tight">Projects</h1>
+<span class="inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                38 Active in Production
+              </span>
+</div>
+<p class="text-xs text-slate-500 mt-0.5">
+              Monitor production, deadlines, ownership and project health across 18 agency specialists.
+            </p>
+</div>
+<!-- Header Right Actions & Search -->
+<div class="flex items-center gap-2.5">
+<!-- Search Input -->
+<div class="relative w-72">
+<svg class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<input class="w-full pl-9 pr-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-lg text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500" placeholder="Search project, client, ID... ⌘K" type="text">
+</div>
+<!-- Notification Bell -->
+<button class="relative p-2 rounded-lg text-slate-500 hover:bg-slate-100 transition-colors" title="Notifications">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="absolute top-1 right-1 w-4 h-4 bg-rose-500 text-white rounded-full text-[9px] font-bold flex items-center justify-center">8</span>
+</button>
+<!-- Secondary Action: Export -->
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 bg-white text-xs font-semibold text-slate-700 hover:bg-slate-50 shadow-sm transition">
+<svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Export</span>
+</button>
+<!-- Primary Action: + Create Project -->
+<button class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold shadow-sm transition shadow-indigo-600/20">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+<path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>+ Create Project</span>
+</button>
+</div>
+</div>
+</header>
+<!-- END: TopHeader -->
+<!-- Main Scrollable Dashboard Content -->
+<main class="p-6 space-y-5 flex-1">
+<!-- BEGIN: ProjectKpiGrid -->
+<!-- 6 Compact Founder KPI metric cards -->
+<section class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5" data-purpose="kpi-cards">
+<!-- Card 1: Active Projects -->
+<div class="bg-white rounded-xl border border-slate-200/90 p-3.5 shadow-sm hover:shadow transition">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-semibold tracking-wider text-slate-500 uppercase">ACTIVE PROJECTS</span>
+<span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="text-2xl font-bold text-slate-900">38</span>
+</div>
+<div class="mt-1 flex items-center text-[11px] text-slate-400 font-medium">
+              Currently in production
+            </div>
+</div>
+<!-- Card 2: Due Today -->
+<div class="bg-white rounded-xl border border-slate-200/90 p-3.5 shadow-sm hover:shadow transition">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-semibold tracking-wider text-slate-500 uppercase">DUE TODAY</span>
+<span class="w-2 h-2 rounded-full bg-amber-500"></span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="text-2xl font-bold text-slate-900">4</span>
+</div>
+<div class="mt-1 flex items-center text-[11px] text-amber-600 font-medium">
+              Requires attention
+            </div>
+</div>
+<!-- Card 3: Due This Week -->
+<div class="bg-white rounded-xl border border-slate-200/90 p-3.5 shadow-sm hover:shadow transition">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-semibold tracking-wider text-slate-500 uppercase">DUE THIS WEEK</span>
+<span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="text-2xl font-bold text-slate-900">12</span>
+</div>
+<div class="mt-1 flex items-center text-[11px] text-slate-500 font-medium">
+              Upcoming deadlines
+            </div>
+</div>
+<!-- Card 4: Overdue -->
+<div class="bg-white rounded-xl border border-rose-200 bg-rose-50/20 p-3.5 shadow-sm hover:shadow transition">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-semibold tracking-wider text-rose-700 uppercase">OVERDUE</span>
+<span class="w-2 h-2 rounded-full bg-rose-500"></span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="text-2xl font-bold text-rose-700">5</span>
+</div>
+<div class="mt-1 flex items-center text-[11px] text-rose-600 font-medium">
+              Needs escalation
+            </div>
+</div>
+<!-- Card 5: Client Review -->
+<div class="bg-white rounded-xl border border-slate-200/90 p-3.5 shadow-sm hover:shadow transition">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-semibold tracking-wider text-slate-500 uppercase">CLIENT REVIEW</span>
+<span class="w-2 h-2 rounded-full bg-amber-400"></span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="text-2xl font-bold text-slate-900">7</span>
+</div>
+<div class="mt-1 flex items-center text-[11px] text-slate-500 font-medium">
+              Waiting for client
+            </div>
+</div>
+<!-- Card 6: Payment Blocked -->
+<div class="bg-white rounded-xl border border-rose-200 bg-rose-50/30 p-3.5 shadow-sm hover:shadow transition">
+<div class="flex items-center justify-between">
+<span class="text-[11px] font-semibold tracking-wider text-rose-700 uppercase">PAYMENT BLOCKED</span>
+<span class="w-2 h-2 rounded-full bg-rose-500"></span>
+</div>
+<div class="mt-2 flex items-baseline gap-2">
+<span class="text-2xl font-bold text-rose-700">3</span>
+</div>
+<div class="mt-1 flex items-center text-[11px] text-rose-600 font-medium">
+              Balance pending
+            </div>
+</div>
+</section>
+<!-- END: ProjectKpiGrid -->
+<!-- BEGIN: ProjectPipelineSummaryBar -->
+<section class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm" data-purpose="pipeline-stages-bar">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-3">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-slate-900">PROJECT PIPELINE</span>
+<span class="text-xs text-slate-400 ml-2">Click any stage to filter projects table</span>
+</div>
+<!-- Quick Health Chips -->
+<div class="flex items-center gap-3 text-xs font-medium">
+<span class="inline-flex items-center gap-1.5 text-emerald-700">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span> 26 On Track
+              </span>
+<span class="inline-flex items-center gap-1.5 text-rose-600">
+<span class="w-2 h-2 rounded-full bg-rose-500"></span> 5 Overdue
+              </span>
+<span class="inline-flex items-center gap-1.5 text-amber-600">
+<span class="w-2 h-2 rounded-full bg-amber-500"></span> 4 At Risk
+              </span>
+<span class="inline-flex items-center gap-1.5 text-rose-800">
+<span class="w-2 h-2 rounded-full bg-rose-700"></span> 3 Payment Blocked
+              </span>
+</div>
+</div>
+<!-- Horizontal Stage Segments -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
+<!-- Stage: NOT STARTED -->
+<button class="text-left p-2.5 rounded-lg border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition bg-slate-50/50">
+<div class="flex items-center justify-between text-xs text-slate-500 font-medium">
+<span>1. NOT STARTED</span>
+<span class="font-bold text-slate-800">3</span>
+</div>
+<div class="w-full bg-slate-200 h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-slate-400 h-1.5 rounded-full" style="width: 8%"></div>
+</div>
+<span class="text-[10px] text-slate-400 mt-1 block">Briefing &amp; Kickoff</span>
+</button>
+<!-- Stage: IN PROGRESS (Active) -->
+<button class="text-left p-2.5 rounded-lg border-2 border-indigo-500 bg-indigo-50/30 transition">
+<div class="flex items-center justify-between text-xs text-indigo-900 font-bold">
+<span>2. IN PROGRESS</span>
+<span class="font-bold text-indigo-700">18</span>
+</div>
+<div class="w-full bg-indigo-100 h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-indigo-600 h-1.5 rounded-full" style="width: 47%"></div>
+</div>
+<span class="text-[10px] text-indigo-600 font-medium mt-1 block">Active studio execution</span>
+</button>
+<!-- Stage: INTERNAL REVIEW -->
+<button class="text-left p-2.5 rounded-lg border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition bg-slate-50/50">
+<div class="flex items-center justify-between text-xs text-slate-600 font-medium">
+<span>3. INTERNAL REVIEW</span>
+<span class="font-bold text-slate-800">4</span>
+</div>
+<div class="w-full bg-slate-200 h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-indigo-400 h-1.5 rounded-full" style="width: 11%"></div>
+</div>
+<span class="text-[10px] text-slate-400 mt-1 block">Creative Head signoff</span>
+</button>
+<!-- Stage: CLIENT REVIEW -->
+<button class="text-left p-2.5 rounded-lg border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition bg-slate-50/50">
+<div class="flex items-center justify-between text-xs text-slate-600 font-medium">
+<span>4. CLIENT REVIEW</span>
+<span class="font-bold text-slate-800">7</span>
+</div>
+<div class="w-full bg-slate-200 h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-amber-400 h-1.5 rounded-full" style="width: 18%"></div>
+</div>
+<span class="text-[10px] text-slate-400 mt-1 block">Awaiting client feedback</span>
+</button>
+<!-- Stage: REVISION -->
+<button class="text-left p-2.5 rounded-lg border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition bg-slate-50/50">
+<div class="flex items-center justify-between text-xs text-slate-600 font-medium">
+<span>5. REVISION</span>
+<span class="font-bold text-slate-800">3</span>
+</div>
+<div class="w-full bg-slate-200 h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-rose-400 h-1.5 rounded-full" style="width: 8%"></div>
+</div>
+<span class="text-[10px] text-slate-400 mt-1 block">Rounds 2+ updates</span>
+</button>
+<!-- Stage: COMPLETED -->
+<button class="text-left p-2.5 rounded-lg border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition bg-slate-50/50">
+<div class="flex items-center justify-between text-xs text-slate-600 font-medium">
+<span>6. COMPLETED</span>
+<span class="font-bold text-slate-800">42</span>
+</div>
+<div class="w-full bg-slate-200 h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-emerald-500 h-1.5 rounded-full" style="width: 100%"></div>
+</div>
+<span class="text-[10px] text-slate-400 mt-1 block">Archived &amp; Delivered</span>
+</button>
+</div>
+</section>
+<!-- END: ProjectPipelineSummaryBar -->
+<!-- BEGIN: AtRiskAlertBanner -->
+<section class="rounded-xl border border-rose-200 bg-rose-50/60 p-4 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4" data-purpose="exception-alert-bar">
+<div class="flex items-start gap-3">
+<div class="w-7 h-7 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+<path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="text-xs font-bold text-rose-900 uppercase tracking-wide">AT-RISK &amp; BLOCKED PROJECTS</h2>
+<span class="bg-rose-200 text-rose-800 text-[10px] font-bold px-1.5 py-0.5 rounded">5 Founder Interventions Required</span>
+</div>
+<!-- Quick Exception mini pills -->
+<div class="mt-2 flex flex-wrap items-center gap-2 text-xs">
+<span class="inline-flex items-center gap-1.5 bg-white border border-rose-200 text-rose-800 px-2.5 py-1 rounded-md text-[11px] font-medium shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-600"></span>
+<strong>ABC Foods (PRJ-1024):</strong> Overdue by 2 days · Logo Team (Akhil)
+                </span>
+<span class="inline-flex items-center gap-1.5 bg-white border border-rose-200 text-rose-800 px-2.5 py-1 rounded-md text-[11px] font-medium shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-rose-600"></span>
+<strong>Orange Surgicals (PRJ-1028):</strong> ₹65k payment blocked before files release
+                </span>
+<span class="inline-flex items-center gap-1.5 bg-white border border-rose-200 text-rose-800 px-2.5 py-1 rounded-md text-[11px] font-medium shadow-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+<strong>KPN Restaurant (PRJ-1021):</strong> Revision round 3/2 · Urgent
+                </span>
+</div>
+</div>
+</div>
+<!-- Alert Actions -->
+<div class="flex items-center gap-2 flex-shrink-0 self-end md:self-center">
+<button class="px-3 py-1.5 bg-rose-600 hover:bg-rose-700 text-white rounded-lg text-xs font-semibold shadow-sm transition">
+              View At-Risk
+            </button>
+<button class="px-2.5 py-1.5 text-slate-500 hover:text-slate-700 hover:bg-rose-100/50 rounded-lg text-xs font-medium transition">
+              Dismiss
+            </button>
+</div>
+</section>
+<!-- END: AtRiskAlertBanner -->
+<!-- BEGIN: FilterAndBulkContainer -->
+<div class="space-y-3">
+<!-- Filter Toolbar -->
+<div class="bg-white rounded-xl border border-slate-200 p-3 shadow-sm flex flex-wrap items-center justify-between gap-3" data-purpose="table-filter-bar">
+<!-- Left Filters -->
+<div class="flex flex-wrap items-center gap-2 text-xs">
+<!-- Search within list -->
+<div class="relative w-56">
+<svg class="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<input class="w-full pl-8 pr-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-lg text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-indigo-500" placeholder="Filter by name, ID, service..." type="text">
+</div>
+<!-- Status Dropdown -->
+<div class="relative">
+<select class="appearance-none bg-slate-50 border border-slate-200 rounded-lg pl-2.5 pr-7 py-1.5 text-xs font-medium text-slate-700 focus:outline-none focus:ring-1 focus:ring-indigo-500">
+<option>Status: All Active</option>
+<option>In Progress</option>
+<option>Internal Review</option>
+<option>Client Review</option>
+<option>Revision</option>
+<option>Completed</option>
+</select>
+<svg class="w-3 h-3 text-slate-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<!-- Priority Dropdown -->
+<div class="relative">
+<select class="appearance-none bg-slate-50 border border-slate-200 rounded-lg pl-2.5 pr-7 py-1.5 text-xs font-medium text-slate-700 focus:outline-none focus:ring-1 focus:ring-indigo-500">
+<option>Priority: All</option>
+<option>Urgent</option>
+<option>High</option>
+<option>Normal</option>
+<option>Low</option>
+</select>
+<svg class="w-3 h-3 text-slate-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<!-- Team Dropdown -->
+<div class="relative">
+<select class="appearance-none bg-slate-50 border border-slate-200 rounded-lg pl-2.5 pr-7 py-1.5 text-xs font-medium text-slate-700 focus:outline-none focus:ring-1 focus:ring-indigo-500">
+<option>Team: All Teams (5)</option>
+<option>Logo Team</option>
+<option>Packaging Team</option>
+<option>R&amp;D Research</option>
+<option>Sketching</option>
+<option>Content &amp; Naming</option>
+</select>
+<svg class="w-3 h-3 text-slate-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<!-- Owner Dropdown -->
+<div class="relative">
+<select class="appearance-none bg-slate-50 border border-slate-200 rounded-lg pl-2.5 pr-7 py-1.5 text-xs font-medium text-slate-700 focus:outline-none focus:ring-1 focus:ring-indigo-500">
+<option>Owner: All Owners</option>
+<option>Akhil (Lead)</option>
+<option>Shalin</option>
+<option>Shihaf</option>
+<option>Rasith</option>
+<option>Unassigned</option>
+</select>
+<svg class="w-3 h-3 text-slate-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<!-- Payment Dropdown -->
+<div class="relative">
+<select class="appearance-none bg-slate-50 border border-slate-200 rounded-lg pl-2.5 pr-7 py-1.5 text-xs font-medium text-slate-700 focus:outline-none focus:ring-1 focus:ring-indigo-500">
+<option>Payment: All</option>
+<option>Paid</option>
+<option>Milestone Pending</option>
+<option>Payment Blocked</option>
+</select>
+<svg class="w-3 h-3 text-slate-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<button class="text-xs font-semibold text-indigo-600 hover:text-indigo-800 px-2 py-1">Reset</button>
+</div>
+<!-- Right Controls: Sort & Table/Board Toggle -->
+<div class="flex items-center gap-3">
+<div class="relative">
+<select class="appearance-none bg-white border border-slate-200 rounded-lg pl-2.5 pr-7 py-1.5 text-xs font-medium text-slate-600 focus:outline-none">
+<option>Sort: Deadline</option>
+<option>Sort: Priority</option>
+<option>Sort: Highest Value</option>
+<option>Sort: Health Status</option>
+</select>
+<svg class="w-3 h-3 text-slate-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div class="flex items-center bg-slate-100 p-0.5 rounded-lg border border-slate-200">
+<button class="px-2.5 py-1 text-xs font-semibold bg-white text-slate-800 rounded shadow-xs flex items-center gap-1.5">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Table</span>
+</button>
+<button class="px-2.5 py-1 text-xs font-medium text-slate-500 hover:text-slate-800 rounded flex items-center gap-1.5">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Board</span>
+</button>
+</div>
+</div>
+</div>
+<!-- BEGIN: BulkActionToolbar -->
+<!-- Active when items are checked (e.g. 2 projects selected) -->
+<div class="bg-slate-900 text-white rounded-xl px-4 py-2.5 shadow-md flex flex-wrap items-center justify-between gap-3 text-xs" data-purpose="founder-bulk-actions">
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span class="font-bold">2 projects selected</span>
+</div>
+<span class="text-slate-400">|</span>
+<span class="text-slate-300 font-medium">Quick bulk Founder actions:</span>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<button class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium border border-slate-700 flex items-center gap-1.5 transition">
+<span>Assign Team</span>
+<svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<button class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium border border-slate-700 flex items-center gap-1.5 transition">
+<span>Assign Team Leader</span>
+<svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<button class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium border border-slate-700 flex items-center gap-1.5 transition">
+<span>Change Priority</span>
+<svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<button class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium border border-slate-700 transition">
+                Change Deadline
+              </button>
+<button class="px-3 py-1 rounded bg-indigo-600 hover:bg-indigo-500 text-white font-semibold transition shadow-xs">
+                Export Selected
+              </button>
+</div>
+</div>
+<!-- END: BulkActionToolbar -->
+</div>
+<!-- END: FilterAndBulkContainer -->
+<!-- BEGIN: MainProjectsTable -->
+<div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden" data-purpose="projects-data-table">
+<div class="overflow-x-auto">
+<table class="erp-table w-full text-left border-collapse text-xs">
+<!-- Table Header -->
+<thead>
+<tr class="border-b border-slate-200 bg-slate-50/75 text-slate-500 text-[11px] font-bold">
+<th class="py-3 px-3 w-8 text-center" scope="col">
+<input checked="" class="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer" type="checkbox">
+</th>
+<th class="py-3 px-3" scope="col">PROJECT</th>
+<th class="py-3 px-3" scope="col">CLIENT</th>
+<th class="py-3 px-3" scope="col">SERVICE</th>
+<th class="py-3 px-3" scope="col">TEAM</th>
+<th class="py-3 px-3" scope="col">OWNER</th>
+<th class="py-3 px-3" scope="col">STATUS</th>
+<th class="py-3 px-3" scope="col">DEADLINE</th>
+<th class="py-3 px-3" scope="col">PRIORITY</th>
+<th class="py-3 px-3" scope="col">PAYMENT</th>
+<th class="py-3 px-3" scope="col">HEALTH</th>
+<th class="py-3 px-3 text-right" scope="col">ACTION</th>
+</tr>
+</thead>
+<!-- Table Body -->
+<tbody class="divide-y divide-slate-100 text-slate-700">
+<!-- ROW 1 (Selected) -->
+<tr class="hover:bg-indigo-50/30 transition-colors bg-indigo-50/20">
+<td class="py-3.5 px-3 text-center">
+<input checked="" class="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer" type="checkbox">
+</td>
+<td class="py-3.5 px-3">
+<div class="font-bold text-slate-900">ABC Foods — Logo &amp; Brand Identity</div>
+<div class="text-[10px] font-mono text-slate-400 mt-0.5">PRJ-1024</div>
+</td>
+<td class="py-3.5 px-3 font-medium">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 font-bold text-[9px] flex items-center justify-center">AF</span>
+<span>ABC Foods</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-slate-600">Logo + Branding</td>
+<td class="py-3.5 px-3">
+<span class="px-2 py-0.5 rounded bg-purple-50 text-purple-700 border border-purple-200 text-[10px] font-semibold">Logo Team</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-slate-800 text-white font-bold text-[9px] flex items-center justify-center">AK</span>
+<span class="font-medium text-slate-800">Akhil</span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="status-badge bg-amber-50 text-amber-700 border border-amber-200">
+                      Client Review
+                    </span>
+</td>
+<td class="py-3.5 px-3 font-semibold text-slate-700">
+<div>25 Sep</div>
+<span class="text-[10px] text-amber-600 font-normal">In 2 days</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="status-badge bg-amber-100 text-amber-800">High</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="font-semibold text-amber-700">₹22,500</span>
+<span class="text-[10px] text-slate-400 block font-normal">Milestone Pending</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="status-badge bg-amber-100 text-amber-800 font-bold tracking-tight">AT RISK</span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="font-semibold text-indigo-600 hover:text-indigo-800 transition">Manage →</button>
+<button class="text-slate-400 hover:text-slate-600 p-1">⋮</button>
+</div>
+</td>
+</tr>
+<!-- ROW 2 (Selected) -->
+<tr class="hover:bg-indigo-50/30 transition-colors bg-indigo-50/20">
+<td class="py-3.5 px-3 text-center">
+<input checked="" class="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer" type="checkbox">
+</td>
+<td class="py-3.5 px-3">
+<div class="font-bold text-slate-900">KPN Restaurant — Complete Brand Identity</div>
+<div class="text-[10px] font-mono text-slate-400 mt-0.5">PRJ-1021</div>
+</td>
+<td class="py-3.5 px-3 font-medium">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-rose-100 text-rose-700 font-bold text-[9px] flex items-center justify-center">KP</span>
+<span>KPN Restaurant</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-slate-600">Brand Identity</td>
+<td class="py-3.5 px-3">
+<span class="px-2 py-0.5 rounded bg-purple-50 text-purple-700 border border-purple-200 text-[10px] font-semibold">Logo Team</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-slate-800 text-white font-bold text-[9px] flex items-center justify-center">AK</span>
+<span class="font-medium text-slate-800">Akhil</span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="status-badge bg-rose-50 text-rose-700 border border-rose-200">
+                      Revision (3/2)
+                    </span>
+</td>
+<td class="py-3.5 px-3 font-semibold text-rose-600">
+<div>OVERDUE</div>
+<span class="text-[10px] font-bold">2 days late</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="status-badge bg-rose-100 text-rose-800">Urgent</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="font-semibold text-emerald-700">PAID</span>
+<span class="text-[10px] text-slate-400 block font-normal">₹1,20,000</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="status-badge bg-rose-100 text-rose-800 font-bold tracking-tight">OVERDUE</span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="font-semibold text-rose-600 hover:text-rose-800 transition">Intervene →</button>
+<button class="text-slate-400 hover:text-slate-600 p-1">⋮</button>
+</div>
+</td>
+</tr>
+<!-- ROW 3 -->
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="py-3.5 px-3 text-center">
+<input class="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer" type="checkbox">
+</td>
+<td class="py-3.5 px-3">
+<div class="font-bold text-slate-900">Iyengar Bakery — Packaging Design (3 SKUs)</div>
+<div class="text-[10px] font-mono text-slate-400 mt-0.5">PRJ-1018</div>
+</td>
+<td class="py-3.5 px-3 font-medium">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-amber-100 text-amber-800 font-bold text-[9px] flex items-center justify-center">IB</span>
+<span>Iyengar Bakery</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-slate-600">Packaging</td>
+<td class="py-3.5 px-3">
+<span class="px-2 py-0.5 rounded bg-blue-50 text-blue-700 border border-blue-200 text-[10px] font-semibold">Packaging Team</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-slate-700 text-white font-bold text-[9px] flex items-center justify-center">SH</span>
+<span class="font-medium text-slate-800">Shalin</span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="status-badge bg-indigo-50 text-indigo-700 border border-indigo-200">
+                      Internal Review
+                    </span>
+</td>
+<td class="py-3.5 px-3 font-semibold text-slate-700">
+<div>20 Sep</div>
+<span class="text-[10px] text-amber-600 font-normal">Tomorrow</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="status-badge bg-slate-100 text-slate-700">Normal</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="font-semibold text-emerald-700">PAID</span>
+<span class="text-[10px] text-slate-400 block font-normal">Full Clear</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="status-badge bg-emerald-100 text-emerald-800 font-bold tracking-tight">ON TRACK</span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="font-semibold text-indigo-600 hover:text-indigo-800 transition">Manage →</button>
+<button class="text-slate-400 hover:text-slate-600 p-1">⋮</button>
+</div>
+</td>
+</tr>
+<!-- ROW 4 -->
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="py-3.5 px-3 text-center">
+<input class="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer" type="checkbox">
+</td>
+<td class="py-3.5 px-3">
+<div class="font-bold text-slate-900">Orange Surgicals — Medical Identity Kit</div>
+<div class="text-[10px] font-mono text-slate-400 mt-0.5">PRJ-1028</div>
+</td>
+<td class="py-3.5 px-3 font-medium">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-orange-100 text-orange-700 font-bold text-[9px] flex items-center justify-center">OS</span>
+<span>Orange Surgicals</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-slate-600">Identity + Stationary</td>
+<td class="py-3.5 px-3">
+<span class="px-2 py-0.5 rounded bg-purple-50 text-purple-700 border border-purple-200 text-[10px] font-semibold">Logo Team</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-slate-800 text-white font-bold text-[9px] flex items-center justify-center">AK</span>
+<span class="font-medium text-slate-800">Akhil</span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="status-badge bg-rose-50 text-rose-700 border border-rose-200">
+                      Payment Pending
+                    </span>
+</td>
+<td class="py-3.5 px-3 font-semibold text-slate-700">
+<div>27 Sep</div>
+<span class="text-[10px] text-slate-400 font-normal">In 4 days</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="status-badge bg-amber-100 text-amber-800">High</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="font-semibold text-rose-700">PAYMENT BLOCKED</span>
+<span class="text-[10px] text-rose-600 block font-semibold">₹65,000 Due</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="status-badge bg-rose-100 text-rose-800 font-bold tracking-tight">PAYMENT BLOCKED</span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="font-semibold text-rose-600 hover:text-rose-800 transition">Collect →</button>
+<button class="text-slate-400 hover:text-slate-600 p-1">⋮</button>
+</div>
+</td>
+</tr>
+<!-- ROW 5 -->
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="py-3.5 px-3 text-center">
+<input class="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer" type="checkbox">
+</td>
+<td class="py-3.5 px-3">
+<div class="font-bold text-slate-900">Novel X Technologies — SaaS Logo &amp; Brand Book</div>
+<div class="text-[10px] font-mono text-slate-400 mt-0.5">PRJ-1030</div>
+</td>
+<td class="py-3.5 px-3 font-medium">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-cyan-100 text-cyan-800 font-bold text-[9px] flex items-center justify-center">NX</span>
+<span>Novel X Tech</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-slate-600">Logo &amp; Brand Book</td>
+<td class="py-3.5 px-3">
+<span class="px-2 py-0.5 rounded bg-purple-50 text-purple-700 border border-purple-200 text-[10px] font-semibold">Logo Team</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-slate-700 text-white font-bold text-[9px] flex items-center justify-center">SF</span>
+<span class="font-medium text-slate-800">Shihaf</span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="status-badge bg-indigo-50 text-indigo-700 border border-indigo-200">
+                      In Progress
+                    </span>
+</td>
+<td class="py-3.5 px-3 font-semibold text-slate-700">
+<div>29 Sep</div>
+<span class="text-[10px] text-slate-400 font-normal">In 6 days</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="status-badge bg-slate-100 text-slate-700">Normal</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="font-semibold text-emerald-700">PAID</span>
+<span class="text-[10px] text-slate-400 block font-normal">(₹0 due)</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="status-badge bg-emerald-100 text-emerald-800 font-bold tracking-tight">ON TRACK</span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="font-semibold text-indigo-600 hover:text-indigo-800 transition">Manage →</button>
+<button class="text-slate-400 hover:text-slate-600 p-1">⋮</button>
+</div>
+</td>
+</tr>
+<!-- ROW 6 -->
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="py-3.5 px-3 text-center">
+<input class="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer" type="checkbox">
+</td>
+<td class="py-3.5 px-3">
+<div class="font-bold text-slate-900">Mahalaxmi Builders — Cement Packaging &amp; Bags</div>
+<div class="text-[10px] font-mono text-slate-400 mt-0.5">PRJ-1012</div>
+</td>
+<td class="py-3.5 px-3 font-medium">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-slate-200 text-slate-800 font-bold text-[9px] flex items-center justify-center">MB</span>
+<span>Mahalaxmi</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-slate-600">Label Design</td>
+<td class="py-3.5 px-3">
+<span class="px-2 py-0.5 rounded bg-blue-50 text-blue-700 border border-blue-200 text-[10px] font-semibold">Packaging Team</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-slate-700 text-white font-bold text-[9px] flex items-center justify-center">RA</span>
+<span class="font-medium text-slate-800">Rasith</span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="status-badge bg-indigo-50 text-indigo-700 border border-indigo-200">
+                      In Progress
+                    </span>
+</td>
+<td class="py-3.5 px-3 font-semibold text-amber-600">
+<div>TODAY</div>
+<span class="text-[10px] font-semibold">6:00 PM</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="status-badge bg-amber-100 text-amber-800">High</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="font-semibold text-emerald-700">PAID</span>
+<span class="text-[10px] text-slate-400 block font-normal">Milestone 2 Clear</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="status-badge bg-amber-100 text-amber-800 font-bold tracking-tight">AT RISK</span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="font-semibold text-indigo-600 hover:text-indigo-800 transition">Manage →</button>
+<button class="text-slate-400 hover:text-slate-600 p-1">⋮</button>
+</div>
+</td>
+</tr>
+<!-- ROW 7 (Unassigned Warning) -->
+<tr class="hover:bg-slate-50 transition-colors">
+<td class="py-3.5 px-3 text-center">
+<input class="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer" type="checkbox">
+</td>
+<td class="py-3.5 px-3">
+<div class="font-bold text-slate-900">Zenith Apparel — T-Shirt Graphics &amp; Tags</div>
+<div class="text-[10px] font-mono text-slate-400 mt-0.5">PRJ-1034</div>
+</td>
+<td class="py-3.5 px-3 font-medium">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-800 font-bold text-[9px] flex items-center justify-center">ZA</span>
+<span>Zenith Apparel</span>
+</div>
+</td>
+<td class="py-3.5 px-3 text-slate-600">Graphic Design</td>
+<td class="py-3.5 px-3">
+<span class="px-2 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200 text-[10px] font-semibold">Content &amp; Sketch</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="px-2 py-0.5 rounded bg-rose-50 text-rose-700 border border-rose-200 text-[10px] font-bold">UNASSIGNED</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="status-badge bg-slate-100 text-slate-600 border border-slate-200">
+                      Not Started
+                    </span>
+</td>
+<td class="py-3.5 px-3 font-medium text-slate-600">
+<div>02 Oct</div>
+<span class="text-[10px] text-slate-400 font-normal">Next week</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="status-badge bg-slate-100 text-slate-700">Normal</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="font-semibold text-emerald-700">Advance Paid</span>
+<span class="text-[10px] text-slate-400 block font-normal">₹40,000</span>
+</td>
+<td class="py-3.5 px-3">
+<span class="status-badge bg-emerald-100 text-emerald-800 font-bold tracking-tight">ON TRACK</span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="font-semibold text-indigo-600 hover:text-indigo-800 transition">Assign →</button>
+<button class="text-slate-400 hover:text-slate-600 p-1">⋮</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- BEGIN: TableFooterAndPagination -->
+<div class="px-4 py-3 border-t border-slate-200 bg-slate-50/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-slate-600" data-purpose="table-pagination">
+<div class="flex items-center gap-3">
+<span>Showing <strong>1–25</strong> of <strong>38</strong> projects</span>
+<span class="text-slate-300">|</span>
+<div class="flex items-center gap-1.5">
+<span>Per page:</span>
+<select class="bg-white border border-slate-200 rounded px-1.5 py-0.5 text-xs text-slate-700 focus:outline-none">
+<option>25</option>
+<option>50</option>
+<option>100</option>
+</select>
+</div>
+</div>
+<!-- Page Buttons -->
+<div class="flex items-center gap-1 self-end sm:self-auto">
+<button class="px-2.5 py-1 rounded border border-slate-200 bg-white text-slate-400 cursor-not-allowed text-xs font-medium">Previous</button>
+<button class="w-7 h-7 rounded bg-indigo-600 text-white font-semibold text-xs flex items-center justify-center">1</button>
+<button class="w-7 h-7 rounded border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-semibold text-xs flex items-center justify-center">2</button>
+<button class="px-2.5 py-1 rounded border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-medium">Next</button>
+</div>
+</div>
+<!-- END: TableFooterAndPagination -->
+</div>
+<!-- END: MainProjectsTable -->
+<!-- BEGIN: SecondaryERPStatusFootnote -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1 pb-6" data-purpose="erp-system-sync-status">
+<!-- ERP Ledger Sync -->
+<div class="bg-white border border-slate-200 rounded-xl p-3.5 flex items-center justify-between shadow-xs">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div>
+<div class="text-xs font-bold text-slate-800">ERP Ledger Auto-Reconciliation</div>
+<div class="text-[11px] text-slate-500">Milestone payments auto-update agency cashflow without manual double-entry.</div>
+</div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+              Live Sync Active
+            </span>
+</div>
+<!-- Offline / System Engine -->
+<div class="bg-white border border-slate-200 rounded-xl p-3.5 flex items-center justify-between shadow-xs">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center flex-shrink-0">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div>
+<div class="text-xs font-bold text-slate-800">Workload Rebalance Engine</div>
+<div class="text-[11px] text-slate-500">Auto-routes incoming revisions to specialists with &lt;80% active queue load.</div>
+</div>
+</div>
+<button class="text-xs font-semibold text-slate-600 hover:text-slate-900 border border-slate-200 px-2.5 py-1 rounded-lg hover:bg-slate-50 transition">
+              Optimize Now
+            </button>
+</div>
+</div>
+<!-- END: SecondaryERPStatusFootnote -->
+</main>
+</div>
+<!-- END: MainContentArea -->
+<!-- BEGIN: QuickCreateProjectModal -->
+<!-- Positioned sleekly in bottom-right overlay or modal drawer for rapid founder actions -->
+<div class="fixed bottom-5 right-6 w-96 bg-white rounded-xl shadow-2xl border border-slate-200 z-50 overflow-hidden flex flex-col" data-purpose="quick-create-project-drawer">
+<!-- Modal Header -->
+<div class="px-4 py-3 border-b border-slate-100 flex items-center justify-between bg-slate-900 text-white">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<h3 class="text-xs font-bold tracking-wide">Create New Project</h3>
+</div>
+<button class="text-slate-400 hover:text-white transition text-base leading-none">×</button>
+</div>
+<!-- Modal Body / Form Fields -->
+<div class="p-4 space-y-3 bg-white text-xs">
+<div>
+<label class="block text-[11px] font-semibold text-slate-600 mb-1">Client Account</label>
+<div class="relative">
+<select class="w-full text-xs bg-slate-50 border border-slate-200 rounded-lg p-2 font-medium text-slate-800 focus:ring-1 focus:ring-indigo-500">
+<option>ABC Foods (CLI-00482)</option>
+<option>KPN Restaurant (CLI-00319)</option>
+<option>Iyengar Bakery (CLI-00104)</option>
+<option>Novel X Technologies (CLI-00511)</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block text-[11px] font-semibold text-slate-600 mb-1">Project Name</label>
+<input class="w-full text-xs bg-slate-50 border border-slate-200 rounded-lg p-2 font-medium text-slate-800 focus:ring-1 focus:ring-indigo-500" type="text" value="ABC Foods — Festive Packaging Series">
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div>
+<label class="block text-[11px] font-semibold text-slate-600 mb-1">Service Type</label>
+<select class="w-full text-xs bg-slate-50 border border-slate-200 rounded-lg p-2 font-medium text-slate-800 focus:ring-1 focus:ring-indigo-500">
+<option>Packaging Design</option>
+<option>Logo + Branding</option>
+<option>Brand Identity</option>
+<option>Graphic Design</option>
+</select>
+</div>
+<div>
+<label class="block text-[11px] font-semibold text-slate-600 mb-1">Project Value</label>
+<input class="w-full text-xs bg-slate-50 border border-slate-200 rounded-lg p-2 font-semibold text-slate-800 focus:ring-1 focus:ring-indigo-500" type="text" value="₹65,000">
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div>
+<label class="block text-[11px] font-semibold text-slate-600 mb-1">Assigned Team</label>
+<select class="w-full text-xs bg-slate-50 border border-slate-200 rounded-lg p-2 font-medium text-slate-800 focus:ring-1 focus:ring-indigo-500">
+<option>Packaging Team</option>
+<option>Logo Team</option>
+<option>Content &amp; Naming</option>
+</select>
+</div>
+<div>
+<label class="block text-[11px] font-semibold text-slate-600 mb-1">Team Leader / Owner</label>
+<select class="w-full text-xs bg-slate-50 border border-slate-200 rounded-lg p-2 font-medium text-slate-800 focus:ring-1 focus:ring-indigo-500">
+<option>Shalin (Packaging)</option>
+<option>Akhil (Creative Lead)</option>
+<option>Rasith (Specialist)</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div>
+<label class="block text-[11px] font-semibold text-slate-600 mb-1">Target Deadline</label>
+<input class="w-full text-xs bg-slate-50 border border-slate-200 rounded-lg p-2 text-slate-800 focus:ring-1 focus:ring-indigo-500" type="text" value="30 Sep 2026">
+</div>
+<div>
+<label class="block text-[11px] font-semibold text-slate-600 mb-1">Priority</label>
+<select class="w-full text-xs bg-slate-50 border border-slate-200 rounded-lg p-2 font-medium text-slate-800 focus:ring-1 focus:ring-indigo-500">
+<option>High</option>
+<option>Urgent</option>
+<option>Normal</option>
+<option>Low</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="p-3 bg-slate-50 border-t border-slate-100 flex items-center justify-end gap-2">
+<button class="px-3 py-1.5 text-xs font-semibold text-slate-600 hover:text-slate-900 rounded-lg hover:bg-slate-200/50 transition">
+          Dismiss
+        </button>
+<button class="px-3.5 py-1.5 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg shadow-sm transition shadow-indigo-500/20">
+          Create Project
+        </button>
+</div>
+</div>
+<!-- END: QuickCreateProjectModal -->
+</div>
+</body></html>

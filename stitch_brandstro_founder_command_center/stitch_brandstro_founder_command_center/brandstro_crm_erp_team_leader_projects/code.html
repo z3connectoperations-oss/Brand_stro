@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary": "#684000", "secondary-fixed": "#dae2fd", "surface-container-low": "#eff4ff", "primary-fixed": "#e2dfff", "surface-variant": "#d3e4fe", "error": "#ba1a1a", "on-primary-container": "#dad7ff", "on-tertiary-fixed-variant": "#653e00", "error-container": "#ffdad6", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#2a1700", "tertiary-fixed": "#ffddb8", "secondary-container": "#dae2fd", "on-error": "#ffffff", "surface-container-high": "#dce9ff", "on-secondary-container": "#5c647a", "background": "#f8f9ff", "on-secondary": "#ffffff", "surface": "#f8f9ff", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#3323cc", "secondary": "#565e74", "surface-container-highest": "#d3e4fe", "on-background": "#0b1c30", "outline": "#777587", "primary": "#3525cd", "on-secondary-fixed-variant": "#3f465c", "primary-container": "#4f46e5", "on-secondary-fixed": "#131b2e", "surface-tint": "#4d44e3", "on-primary": "#ffffff", "on-error-container": "#93000a", "on-surface-variant": "#464555", "inverse-primary": "#c3c0ff", "tertiary-container": "#885500", "inverse-on-surface": "#eaf1ff", "outline-variant": "#c7c4d8", "primary-fixed-dim": "#c3c0ff", "on-tertiary-container": "#ffd4a4", "on-surface": "#0b1c30", "secondary-fixed-dim": "#bec6e0", "surface-bright": "#f8f9ff", "surface-dim": "#cbdbf5", "surface-container": "#e5eeff", "tertiary-fixed-dim": "#ffb95f", "inverse-surface": "#213145", "on-primary-fixed": "#0f0069" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "1.5rem", "space-sm": "0.5rem", "space-md": "0.75rem", "space-xs": "0.25rem", "margin-desktop": "2rem", "gutter-desktop": "1.5rem", "gutter": "1rem", "space-lg": "1rem", "margin": "1rem" }, "fontFamily": { "headline-md": ["Inter"], "body-sm": ["Inter"], "code-sm": ["JetBrains Mono"], "headline-lg": ["Inter"], "display-lg": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"], "code-xs": ["JetBrains Mono"], "headline-sm": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"] }, "fontSize": { "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "code-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "code-xs": ["10px", { "lineHeight": "12px", "fontWeight": "400" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-screen w-60 bg-inverse-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col w-full"><div class="h-16 px-space-md flex items-center gap-space-sm bg-inverse-surface"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary font-headline-sm text-headline-sm">B</div><div class="flex flex-col"><span class="text-inverse-on-surface font-headline-sm text-headline-sm leading-tight tracking-tight">BRANDSTRO</span><span class="text-outline-variant font-code-xs text-code-xs tracking-wider uppercase">CRM &amp; ERP CORE</span></div></div><div class="px-space-md pt-space-md pb-space-xs"><span class="text-outline-variant font-label-sm text-label-sm uppercase tracking-wider">Team</span></div><nav class="flex flex-col gap-space-xs px-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-md"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-container-highest hover:text-on-surface transition-colors font-body-md text-body-md" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-container-highest hover:text-on-surface transition-colors font-body-md text-body-md" data-path="my-team" href="#"><span class="material-symbols-outlined text-[18px]">groups</span><span>My Team</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary font-label-md" data-path="team-workload" href="#"><span class="material-symbols-outlined text-[18px]">stacked_bar_chart</span><span>Team Workload</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-container-highest hover:text-on-surface transition-colors font-body-md text-body-md" data-path="team-projects" href="#"><span class="material-symbols-outlined text-[18px]">folder_managed</span><span>Team Projects</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-container-highest hover:text-on-surface transition-colors font-body-md text-body-md" data-path="review-queue" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">rate_review</span><span>Review Queue</span></div><span class="px-space-xs py-[2px] bg-secondary-container text-on-secondary-fixed rounded font-code-xs text-code-xs font-semibold">3</span></a></nav><div class="mt-space-md px-space-xs"><div class="mx-space-xs p-space-sm rounded-lg bg-surface-container-highest flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span><div class="flex flex-col"><span class="text-on-surface font-label-sm text-label-sm font-semibold uppercase tracking-wider">Squad</span><span class="text-on-surface font-body-sm text-body-sm">LOGO TEAM</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div></div><div class="flex flex-col p-space-sm gap-space-xs"><div class="flex items-center justify-between px-space-sm py-space-xs rounded-lg bg-surface-container-low"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-on-surface-variant text-[16px]">notifications_active</span><span class="font-label-sm text-label-sm text-on-surface-variant">System Alerts</span></div><span class="font-code-xs text-code-xs font-semibold text-on-surface-variant">Normal</span></div><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="text-on-surface font-label-md text-label-md leading-tight">Akhil</span><span class="text-on-surface-variant font-code-xs text-code-xs">Logo Team Leader</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[16px]">more_vert</span></div></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-xl flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm"><span class="text-on-surface-variant">Logo Team</span><span class="text-outline">/</span><span class="text-on-surface font-medium">Team Workload</span></div><div class="hidden xl:flex items-center bg-surface-container-lowest px-space-sm py-space-xs rounded-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)] w-64"><span class="material-symbols-outlined text-outline text-[18px] mr-space-xs">search</span><input class="bg-transparent text-on-surface placeholder:text-outline text-body-sm font-body-sm focus:outline-none w-full" placeholder="Search tasks, members..." type="text"/></div></div><div class="flex items-center gap-space-sm"><button class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-lowest rounded-lg text-on-surface font-label-md text-label-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_today</span><span>This Week</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_drop_down</span></button><button class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-lowest rounded-lg text-on-surface font-label-md text-label-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">tune</span><span>Filter</span></button><button class="flex items-center gap-space-xs px-space-md py-space-xs bg-primary-container rounded-lg text-on-primary font-label-md text-label-md hover:bg-primary transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">add</span><span>Assign Task</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface-container-low min-h-screen"><div class="w-full max-w-[1680px] mx-auto p-space-xl"><div class="mb-space-xl flex flex-col gap-space-xs"><h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Team Workload</h1><p class="font-body-md text-body-md text-on-surface-variant">Balance your team's workload and keep deadlines on track.</p></div><div class="flex flex-col w-full">
+<script>
+    /* Synchronize shell navigation and header state to Team Projects */
+    (function syncShell() {
+      const navLinks = document.querySelectorAll('aside nav a');
+      navLinks.forEach(link => {
+        const path = link.getAttribute('data-path');
+        if (path === 'team-projects') {
+          link.className = 'flex items-center gap-space-sm px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary font-label-md transition-colors';
+          const icon = link.querySelector('.material-symbols-outlined');
+          if (icon) icon.className = 'material-symbols-outlined text-[18px] text-on-primary';
+        } else {
+          link.className = 'flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-container-highest hover:text-on-surface transition-colors font-body-md text-body-md';
+        }
+      });
+      const headerBreadcrumbs = document.querySelector('header .text-on-surface-variant.font-body-sm');
+      if (headerBreadcrumbs) {
+        headerBreadcrumbs.innerHTML = '<span class="text-on-surface-variant">Logo Team</span><span class="text-outline">/</span><span class="text-on-surface font-medium">Team Projects</span>';
+      }
+      const headerTitle = document.querySelector('main h1');
+      if (headerTitle) headerTitle.textContent = 'Team Projects';
+      const headerSub = document.querySelector('main p');
+      if (headerSub) headerSub.textContent = 'Track, unblock, and calibrate every brand workflow handled by your squad.';
+    })();
+  </script>
+<!-- Control & View Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-md mb-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="inline-flex p-[3px] bg-surface-container-lowest rounded-lg shadow-sm border border-outline-variant/30">
+<button class="flex items-center gap-space-xs px-space-md py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm shadow-xs transition-all" id="btn-view-list" type="button">
+<span class="material-symbols-outlined text-[15px]">view_list</span>
+<span>LIST</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-1 rounded text-secondary hover:text-on-surface font-label-sm text-label-sm transition-all" id="btn-view-board" type="button">
+<span class="material-symbols-outlined text-[15px]">grid_view</span>
+<span>BOARD</span>
+</button>
+</div>
+<div class="hidden sm:flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-lowest rounded-lg shadow-sm text-secondary font-code-xs text-code-xs border border-outline-variant/30">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+<span>SQUAD ENGINE: SYNCED (3m ago)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-space-xs px-space-sm py-1.5 bg-surface-container-lowest rounded-lg text-on-surface font-label-sm text-label-sm shadow-sm hover:bg-surface-container-low transition-colors border border-outline-variant/30" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">tune</span>
+<span>Configure Columns</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-sm py-1.5 bg-surface-container-lowest rounded-lg text-on-surface font-label-sm text-label-sm shadow-sm hover:bg-surface-container-low transition-colors border border-outline-variant/30" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">file_download</span>
+<span>Export Squad View</span>
+</button>
+</div>
+</div>
+<!-- Summary Metric Cards (4 Compact Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Card 1: Active Projects -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm border border-outline-variant/25 hover:border-primary/40 cursor-pointer transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between mb-space-xs">
+<span class="text-secondary font-label-sm text-label-sm uppercase tracking-wider">Active Projects</span>
+<div class="w-7 h-7 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">folder</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-xs my-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface font-bold leading-none tracking-tight">8</span>
+<span class="text-secondary font-code-xs text-code-xs">/ 10 cap</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t border-outline-variant/15 text-secondary font-body-sm text-body-sm">
+<span class="truncate">Logo Squad · 4 active · 4 review</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 2: Due This Week -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm border border-outline-variant/25 hover:border-primary/40 cursor-pointer transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between mb-space-xs">
+<span class="text-secondary font-label-sm text-label-sm uppercase tracking-wider">Due This Week</span>
+<span class="px-space-xs py-[2px] rounded bg-secondary-container text-on-secondary-fixed font-code-xs text-code-xs font-semibold">Priority</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface font-bold leading-none tracking-tight">4</span>
+<span class="text-tertiary-container font-code-xs text-code-xs font-medium">50% of volume</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t border-outline-variant/15 text-secondary font-body-sm text-body-sm">
+<span class="truncate">2 due today · 2 upcoming</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">calendar_clock</span>
+</div>
+</div>
+<!-- Card 3: Overdue (Critical) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm border border-error/40 bg-error-container/10 hover:border-error cursor-pointer transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between mb-space-xs">
+<span class="text-error font-label-sm text-label-sm uppercase tracking-wider font-semibold">Overdue</span>
+<span class="px-space-xs py-[2px] rounded bg-error text-on-error font-code-xs text-code-xs font-bold uppercase tracking-wider">Critical</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-space-xs">
+<span class="font-display-lg text-display-lg text-error font-bold leading-none tracking-tight">1</span>
+<span class="text-error font-code-xs text-code-xs font-medium">SLA Violated</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t border-error/20 text-error font-body-sm text-body-sm">
+<span class="truncate font-medium">Orange Surgicals · 2d overdue</span>
+<span class="material-symbols-outlined text-[16px] text-error">warning</span>
+</div>
+</div>
+<!-- Card 4: Waiting for Review -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm border border-outline-variant/25 hover:border-primary/40 cursor-pointer transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between mb-space-xs">
+<span class="text-secondary font-label-sm text-label-sm uppercase tracking-wider">Waiting Review</span>
+<span class="px-space-xs py-[2px] rounded bg-surface-container-highest text-on-surface font-code-xs text-code-xs font-semibold">Action Req</span>
+</div>
+<div class="flex items-baseline gap-space-xs my-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface font-bold leading-none tracking-tight">2</span>
+<span class="text-primary font-code-xs text-code-xs font-medium">Ready for TL</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t border-outline-variant/15 text-secondary font-body-sm text-body-sm">
+<span class="truncate">1 Internal · 1 Client Review</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">rate_review</span>
+</div>
+</div>
+</div>
+<!-- Exception / Bottleneck Banner -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm border-l-4 border-l-error border-y border-r border-outline-variant/25 mb-space-lg flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md max-w-4xl">
+<div class="w-9 h-9 rounded-lg bg-error-container text-error flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">report_problem</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-sm text-headline-sm text-error font-semibold tracking-tight">BOTTLENECK DETECTED: Orange Surgicals Packaging (#PRJ-1008)</span>
+<span class="px-1.5 py-0.5 rounded bg-error text-on-error font-code-xs text-code-xs font-semibold">4/3 Quota Exceeded</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+          Project is 2 days overdue (15 Sep SLA) &amp; designer Rasith S. is at 100% capacity. Client requested an unbilled 4th carton variation. Immediate TL decision &amp; CRM scope override required.
+        </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 self-end lg:self-center">
+<button class="px-space-md py-1.5 bg-surface-container-low text-on-surface font-label-md text-label-md rounded-lg hover:bg-surface-container hover:text-primary transition-colors flex items-center gap-1 border border-outline-variant/30" type="button">
+<span class="material-symbols-outlined text-[15px]">send_time_extension</span>
+<span>Nudge Rasith</span>
+</button>
+<button class="px-space-md py-1.5 bg-error text-on-error font-label-md text-label-md rounded-lg hover:bg-red-700 transition-colors shadow-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[15px]">handyman</span>
+<span>Resolve Bottleneck</span>
+</button>
+</div>
+</div>
+<!-- Filter & Search Toolbar -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm border border-outline-variant/25 mb-space-md flex flex-col gap-space-sm">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-sm">
+<!-- Search Input -->
+<div class="relative flex-1 max-w-xl">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full bg-surface-container-low pl-9 pr-12 py-2 rounded-lg text-body-sm font-body-sm text-on-surface placeholder:text-outline border border-outline-variant/40 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/30 transition-all" placeholder="Search projects, clients, or owners... (Press ⌘K)" type="text"/>
+<span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-code-xs text-code-xs text-outline px-1.5 py-0.5 rounded bg-surface-container-lowest border border-outline-variant/40">⌘K</span>
+</div>
+<!-- Quick Filter Dropdowns -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="flex items-center gap-1 px-space-sm py-1.5 bg-surface-container-low rounded-lg text-on-surface font-label-sm text-label-sm border border-outline-variant/30 hover:bg-surface-container transition-colors" type="button">
+<span class="text-secondary font-normal">Status:</span>
+<span class="font-medium">All Statuses (8)</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+<button class="flex items-center gap-1 px-space-sm py-1.5 bg-surface-container-low rounded-lg text-on-surface font-label-sm text-label-sm border border-outline-variant/30 hover:bg-surface-container transition-colors" type="button">
+<span class="text-secondary font-normal">Priority:</span>
+<span class="font-medium">All</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+<button class="flex items-center gap-1 px-space-sm py-1.5 bg-surface-container-low rounded-lg text-on-surface font-label-sm text-label-sm border border-outline-variant/30 hover:bg-surface-container transition-colors" type="button">
+<span class="text-secondary font-normal">Owner:</span>
+<span class="font-medium">All Members</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+<button class="flex items-center gap-1 px-space-sm py-1.5 bg-surface-container-low rounded-lg text-on-surface font-label-sm text-label-sm border border-outline-variant/30 hover:bg-surface-container transition-colors" type="button">
+<span class="text-secondary font-normal">Quota:</span>
+<span class="font-medium">All Quotas</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+<button class="flex items-center gap-1 px-space-sm py-1.5 bg-surface-container-low rounded-lg text-on-surface font-label-sm text-label-sm border border-outline-variant/30 hover:bg-surface-container transition-colors" type="button">
+<span class="text-secondary font-normal">Service:</span>
+<span class="font-medium">Identity / Logo</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+<button class="px-space-sm py-1.5 text-secondary hover:text-primary font-label-sm text-label-sm underline transition-colors ml-1" type="button">
+          Clear Filters
+        </button>
+</div>
+</div>
+<!-- Bulk Action Indicator Strip -->
+<div class="flex items-center justify-between px-space-sm py-1.5 bg-surface-container-low rounded-lg border border-primary/20">
+<div class="flex items-center gap-space-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface"><span class="font-bold text-primary">1</span> project selected for squad action</span>
+<span class="font-code-xs text-code-xs text-secondary">[#PRJ-1008 Orange Surgicals]</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-xs py-1 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm hover:bg-surface shadow-xs border border-outline-variant/30" type="button">
+          Change Priority
+        </button>
+<button class="px-space-xs py-1 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm hover:bg-surface shadow-xs border border-outline-variant/30" type="button">
+          Reassign Designer
+        </button>
+<button class="px-space-xs py-1 rounded bg-surface-container-lowest text-on-surface font-label-sm text-label-sm hover:bg-surface shadow-xs border border-outline-variant/30 text-primary font-medium" type="button">
+          Extend SLA (+48h)
+        </button>
+</div>
+</div>
+</div>
+<!-- Main Projects Table Container -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/25 overflow-hidden mb-space-lg">
+<!-- Tab Status Header -->
+<div class="flex items-center justify-between px-space-md border-b border-outline-variant/25 bg-surface-container-lowest overflow-x-auto">
+<div class="flex items-center gap-space-md">
+<button class="py-space-md border-b-2 border-primary text-primary font-label-md text-label-md flex items-center gap-1.5 whitespace-nowrap" type="button">
+<span>All Projects</span>
+<span class="px-1.5 py-0.5 rounded-full bg-primary-container text-on-primary font-code-xs text-code-xs">8</span>
+</button>
+<button class="py-space-md border-b-2 border-transparent text-secondary hover:text-on-surface font-label-md text-label-md flex items-center gap-1.5 whitespace-nowrap" type="button">
+<span>In Progress</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-low text-secondary font-code-xs text-code-xs">3</span>
+</button>
+<button class="py-space-md border-b-2 border-transparent text-secondary hover:text-on-surface font-label-md text-label-md flex items-center gap-1.5 whitespace-nowrap" type="button">
+<span>Under Review</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-low text-secondary font-code-xs text-code-xs">2</span>
+</button>
+<button class="py-space-md border-b-2 border-transparent text-secondary hover:text-on-surface font-label-md text-label-md flex items-center gap-1.5 whitespace-nowrap" type="button">
+<span>Revisions</span>
+<span class="px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container font-code-xs text-code-xs font-bold">2</span>
+</button>
+<button class="py-space-md border-b-2 border-transparent text-secondary hover:text-on-surface font-label-md text-label-md flex items-center gap-1.5 whitespace-nowrap" type="button">
+<span>Completed</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-low text-secondary font-code-xs text-code-xs">1</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm">
+<span>Displaying 6 of 8 total tasks</span>
+</div>
+</div>
+<!-- Data Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[1100px]">
+<thead>
+<tr class="bg-surface-container-low/70 border-b border-outline-variant/25 text-secondary font-label-sm text-label-sm">
+<th class="py-space-sm pl-space-md pr-space-xs w-10">
+<input class="rounded text-primary focus:ring-0 border-outline-variant/60 w-3.5 h-3.5" type="checkbox"/>
+</th>
+<th class="py-space-sm px-space-sm font-semibold tracking-wider uppercase">Project &amp; Client</th>
+<th class="py-space-sm px-space-sm font-semibold tracking-wider uppercase">Owner / Assignee</th>
+<th class="py-space-sm px-space-sm font-semibold tracking-wider uppercase">Workflow Status</th>
+<th class="py-space-sm px-space-sm font-semibold tracking-wider uppercase">Deadline &amp; SLA</th>
+<th class="py-space-sm px-space-sm font-semibold tracking-wider uppercase">Priority</th>
+<th class="py-space-sm px-space-sm font-semibold tracking-wider uppercase">Revision Quota</th>
+<th class="py-space-sm px-space-sm font-semibold tracking-wider uppercase">Progress</th>
+<th class="py-space-sm px-space-sm font-semibold tracking-wider uppercase text-right pr-space-md">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20 font-body-sm text-body-sm text-on-surface">
+<!-- Row 1: ABC Brand Identity -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-space-md pl-space-md pr-space-xs align-middle">
+<input class="rounded text-primary focus:ring-0 border-outline-variant/60 w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold hover:text-primary cursor-pointer">ABC Brand Identity</span>
+<span class="font-code-xs text-code-xs text-secondary bg-surface-container-low px-1 rounded">#PRJ-1024</span>
+</div>
+<span class="text-secondary font-body-sm text-body-sm mt-0.5">ABC Foods (Comprehensive Identity System)</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex items-center gap-space-xs">
+<div class="relative">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm font-bold flex items-center justify-center">
+                    SK
+                  </div>
+<span class="absolute -bottom-0.5 -right-0.5 w-2 h-2 rounded-full bg-amber-500 ring-2 ring-surface-container-lowest" title="85% Busy"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Shihaf K.</span>
+<span class="font-code-xs text-code-xs text-secondary">85% Busy</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-primary-container/10 text-primary font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>In Progress</span>
+</span>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm font-bold text-tertiary-container">Today, 4:00 PM</span>
+<span class="px-1 py-[1px] bg-tertiary-fixed text-on-tertiary-fixed font-code-xs text-code-xs rounded font-semibold">Due Today</span>
+</div>
+<span class="font-code-xs text-code-xs text-secondary">SLA: On schedule (3h left)</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface font-code-xs text-code-xs font-semibold uppercase">High</span>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex flex-col gap-1 w-24">
+<div class="flex items-center justify-between font-code-xs text-code-xs">
+<span class="font-medium text-on-surface">1 / 3 used</span>
+<span class="text-secondary">2 left</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="w-1/3 bg-primary rounded-full"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex items-center gap-space-xs w-28">
+<div class="flex-1 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 65%;"></div>
+</div>
+<span class="font-code-xs text-code-xs text-secondary font-medium">65%</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle text-right pr-space-md">
+<div class="flex items-center justify-end gap-1">
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest border border-outline-variant/30 text-on-surface hover:text-primary hover:border-primary font-label-sm text-label-sm transition-colors shadow-xs" type="button">
+                  View 360
+                </button>
+<button class="p-1 rounded text-secondary hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: KPN Restaurant Identity -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-space-md pl-space-md pr-space-xs align-middle">
+<input class="rounded text-primary focus:ring-0 border-outline-variant/60 w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold hover:text-primary cursor-pointer">KPN Restaurant Identity</span>
+<span class="font-code-xs text-code-xs text-secondary bg-surface-container-low px-1 rounded">#PRJ-1021</span>
+</div>
+<span class="text-secondary font-body-sm text-body-sm mt-0.5">KPN Hospitality (Monogram &amp; Brand Collateral)</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex items-center gap-space-xs">
+<div class="relative">
+<div class="w-7 h-7 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold flex items-center justify-center">
+                    PM
+                  </div>
+<span class="absolute -bottom-0.5 -right-0.5 w-2 h-2 rounded-full bg-blue-500 ring-2 ring-surface-container-lowest" title="60% Normal"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Prabha M.</span>
+<span class="font-code-xs text-code-xs text-secondary">60% Normal</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-blue-100 text-blue-800 font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+<span>Client Review</span>
+</span>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm font-medium text-on-surface">Tomorrow, 11:30 AM</span>
+<span class="px-1 py-[1px] bg-secondary-container text-on-secondary-fixed font-code-xs text-code-xs rounded">Due Soon</span>
+</div>
+<span class="font-code-xs text-code-xs text-secondary">Sent: 14 Sep 5:20 PM</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-low text-secondary font-code-xs text-code-xs uppercase">Normal</span>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex flex-col gap-1 w-24">
+<div class="flex items-center justify-between font-code-xs text-code-xs">
+<span class="font-medium text-on-surface">1 / 2 used</span>
+<span class="text-secondary">1 left</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="w-1/2 bg-blue-600 rounded-full"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex items-center gap-space-xs w-28">
+<div class="flex-1 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-blue-600 rounded-full" style="width: 80%;"></div>
+</div>
+<span class="font-code-xs text-code-xs text-secondary font-medium">80%</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle text-right pr-space-md">
+<div class="flex items-center justify-end gap-1">
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest border border-outline-variant/30 text-on-surface hover:text-primary hover:border-primary font-label-sm text-label-sm transition-colors shadow-xs" type="button">
+                  View 360
+                </button>
+<button class="p-1 rounded text-secondary hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Mahalaxmi Builders Logo (Internal Review - Highlighted) -->
+<tr class="bg-primary/5 hover:bg-primary/10 transition-colors">
+<td class="py-space-md pl-space-md pr-space-xs align-middle">
+<input class="rounded text-primary focus:ring-0 border-outline-variant/60 w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold hover:text-primary cursor-pointer">Mahalaxmi Builders Logo</span>
+<span class="font-code-xs text-code-xs text-secondary bg-surface-container-low px-1 rounded">#PRJ-1012</span>
+</div>
+<span class="text-secondary font-body-sm text-body-sm mt-0.5">Mahalaxmi Builders (Primary Symbol &amp; Lockups)</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex items-center gap-space-xs">
+<div class="relative">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold flex items-center justify-center">
+                    A
+                  </div>
+<span class="absolute -bottom-0.5 -right-0.5 w-2 h-2 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest" title="40% Available"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Akhil (You)</span>
+<span class="font-code-xs text-code-xs text-emerald-700 font-medium">40% Available</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-amber-100 text-amber-900 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600 animate-ping"></span>
+<span>Internal Review</span>
+</span>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">16 Sep (Wednesday)</span>
+<span class="font-code-xs text-code-xs text-secondary">Scheduled: Stage 2 Sign-off</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface font-code-xs text-code-xs font-semibold uppercase">High</span>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex flex-col gap-1 w-24">
+<div class="flex items-center justify-between font-code-xs text-code-xs">
+<span class="font-medium text-on-surface">1 / 3 used</span>
+<span class="text-secondary">2 left</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="w-1/3 bg-amber-600 rounded-full"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex items-center gap-space-xs w-28">
+<div class="flex-1 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-amber-600 rounded-full" style="width: 75%;"></div>
+</div>
+<span class="font-code-xs text-code-xs text-secondary font-medium">75%</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle text-right pr-space-md">
+<div class="flex items-center justify-end gap-1">
+<button class="px-space-sm py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm hover:bg-primary transition-colors shadow-sm flex items-center gap-1 font-semibold" type="button">
+<span class="material-symbols-outlined text-[14px]">checklist</span>
+<span>Review Now</span>
+</button>
+<button class="p-1 rounded text-secondary hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Orange Surgicals Packaging (CRITICAL EXCEPTION) -->
+<tr class="bg-error-container/15 hover:bg-error-container/25 transition-colors">
+<td class="py-space-md pl-space-md pr-space-xs align-middle">
+<input checked="" class="rounded text-error focus:ring-0 border-error w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-error font-bold hover:underline cursor-pointer">Orange Surgicals Packaging</span>
+<span class="font-code-xs text-code-xs text-error bg-error/10 px-1 rounded font-semibold">#PRJ-1008</span>
+</div>
+<span class="text-on-surface-variant font-body-sm text-body-sm mt-0.5">Orange Surgicals (Blister Pack &amp; Carton Design)</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex items-center gap-space-xs">
+<div class="relative">
+<div class="w-7 h-7 rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold flex items-center justify-center">
+                    RS
+                  </div>
+<span class="absolute -bottom-0.5 -right-0.5 w-2 h-2 rounded-full bg-red-600 ring-2 ring-surface-container-lowest animate-ping" title="100% Overloaded"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Rasith S.</span>
+<span class="font-code-xs text-code-xs text-error font-bold">100% Overloaded</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold uppercase tracking-wide">
+<span class="material-symbols-outlined text-[12px]">block</span>
+<span>Revision (Blocked)</span>
+</span>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-label-sm text-label-sm font-bold text-error">15 Sep · OVERDUE</span>
+<span class="px-1 py-[1px] bg-error text-on-error font-code-xs text-code-xs rounded font-bold">2d Late</span>
+</div>
+<span class="font-code-xs text-code-xs text-error font-medium">SLA Violated: 48h elapsed</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<span class="px-space-xs py-0.5 rounded bg-error text-on-error font-code-xs text-code-xs font-bold uppercase">Urgent</span>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex flex-col gap-1 w-24">
+<div class="flex items-center justify-between font-code-xs text-code-xs">
+<span class="font-bold text-error">4 / 3 EXCEEDED</span>
+</div>
+<div class="w-full h-1.5 bg-error/30 rounded-full overflow-hidden flex">
+<div class="w-full bg-error rounded-full"></div>
+</div>
+<span class="text-[9px] text-error font-semibold uppercase leading-none">+1 Extra Round</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex items-center gap-space-xs w-28">
+<div class="flex-1 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 98%;"></div>
+</div>
+<span class="font-code-xs text-code-xs text-error font-bold">98%</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle text-right pr-space-md">
+<div class="flex items-center justify-end gap-1">
+<button class="px-space-sm py-1 rounded bg-error text-on-error hover:bg-red-700 font-label-sm text-label-sm transition-colors shadow-sm font-bold flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">error</span>
+<span>Attention Required</span>
+</button>
+<button class="p-1 rounded text-secondary hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Iyengar Bakery Logo & Packaging -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-space-md pl-space-md pr-space-xs align-middle">
+<input class="rounded text-primary focus:ring-0 border-outline-variant/60 w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold hover:text-primary cursor-pointer">Iyengar Bakery Logo &amp; Packaging</span>
+<span class="font-code-xs text-code-xs text-secondary bg-surface-container-low px-1 rounded">#PRJ-1018</span>
+</div>
+<span class="text-secondary font-body-sm text-body-sm mt-0.5">Iyengar Bakery (Artisan Heritage Logo)</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex items-center gap-space-xs">
+<div class="relative">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold flex items-center justify-center">
+                    FA
+                  </div>
+<span class="absolute -bottom-0.5 -right-0.5 w-2 h-2 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest" title="35% Available"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium">Fathima A.</span>
+<span class="font-code-xs text-code-xs text-emerald-700 font-medium">35% Available</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-primary-container/10 text-primary font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>In Progress</span>
+</span>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-medium text-on-surface">21 Sep (Monday)</span>
+<span class="font-code-xs text-code-xs text-secondary">Phase 1: Concepting</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-low text-secondary font-code-xs text-code-xs uppercase">Normal</span>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex flex-col gap-1 w-24">
+<div class="flex items-center justify-between font-code-xs text-code-xs">
+<span class="font-medium text-on-surface">0 / 3 used</span>
+<span class="text-secondary">3 left</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="w-0 bg-primary rounded-full"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex items-center gap-space-xs w-28">
+<div class="flex-1 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 40%;"></div>
+</div>
+<span class="font-code-xs text-code-xs text-secondary font-medium">40%</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle text-right pr-space-md">
+<div class="flex items-center justify-end gap-1">
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest border border-outline-variant/30 text-on-surface hover:text-primary hover:border-primary font-label-sm text-label-sm transition-colors shadow-xs" type="button">
+                  View 360
+                </button>
+<button class="p-1 rounded text-secondary hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Novel X Technologies (Unassigned) -->
+<tr class="hover:bg-surface-container-low/40 transition-colors">
+<td class="py-space-md pl-space-md pr-space-xs align-middle">
+<input class="rounded text-primary focus:ring-0 border-outline-variant/60 w-3.5 h-3.5" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold hover:text-primary cursor-pointer">Novel X Technologies</span>
+<span class="font-code-xs text-code-xs text-secondary bg-surface-container-low px-1 rounded">#PRJ-1030</span>
+</div>
+<span class="text-secondary font-body-sm text-body-sm mt-0.5">Novel X Tech (SaaS Identity &amp; Design System)</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full border-2 border-dashed border-outline text-secondary font-label-sm text-label-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">person_add</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-secondary italic">Unassigned</span>
+<span class="font-code-xs text-code-xs text-primary font-medium">Pending TL Assign</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-surface-container-highest text-secondary font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Not Started</span>
+</span>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-medium text-on-surface">25 Sep (Scheduled)</span>
+<span class="font-code-xs text-code-xs text-secondary">Kickoff call held</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-low text-secondary font-code-xs text-code-xs uppercase">Normal</span>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex flex-col gap-1 w-24">
+<div class="flex items-center justify-between font-code-xs text-code-xs">
+<span class="font-medium text-on-surface">0 / 3 used</span>
+<span class="text-secondary">3 left</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="w-0 bg-primary rounded-full"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle">
+<div class="flex items-center gap-space-xs w-28">
+<div class="flex-1 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 10%;"></div>
+</div>
+<span class="font-code-xs text-code-xs text-secondary font-medium">10%</span>
+</div>
+</td>
+<td class="py-space-md px-space-sm align-middle text-right pr-space-md">
+<div class="flex items-center justify-end gap-1">
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest border border-primary text-primary hover:bg-primary hover:text-on-primary font-label-sm text-label-sm transition-colors shadow-xs font-semibold" type="button">
+                  Assign Member
+                </button>
+<button class="p-1 rounded text-secondary hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="flex items-center justify-between px-space-md py-space-sm bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="flex items-center gap-space-sm text-secondary font-code-xs text-code-xs">
+<span>Rows per page: <strong>10</strong></span>
+<span class="text-outline">|</span>
+<span>Showing 1-6 of 8 total</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-1 rounded text-outline-variant cursor-not-allowed" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-code-xs text-code-xs font-bold">1</span>
+<button class="px-2 py-0.5 rounded text-on-surface hover:bg-surface-container-low font-code-xs text-code-xs" type="button">2</button>
+<button class="p-1 rounded text-secondary hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Operational Panels (3 Columns Side-by-Side) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md mb-space-lg">
+<!-- Panel 1: Squad Member Live Load -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm border border-outline-variant/25 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/20 mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">speed</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Squad Member Live Load</h2>
+</div>
+<span class="px-space-xs py-[2px] rounded bg-surface-container-low text-secondary font-code-xs text-code-xs">5 Members</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Member 1: Fathima A. -->
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold flex items-center justify-center">FA</div>
+<span class="font-medium text-on-surface">Fathima A.</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-20 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-emerald-500 rounded-full" style="width: 35%;"></div>
+</div>
+<span class="font-code-xs text-code-xs text-emerald-700 font-semibold w-16 text-right">35% Available</span>
+</div>
+</div>
+<!-- Member 2: Akhil (TL) -->
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary text-[10px] font-bold flex items-center justify-center">A</div>
+<span class="font-bold text-on-surface">Akhil (TL)</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-20 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-emerald-500 rounded-full" style="width: 40%;"></div>
+</div>
+<span class="font-code-xs text-code-xs text-emerald-700 font-semibold w-16 text-right">40% Available</span>
+</div>
+</div>
+<!-- Member 3: Prabha M. -->
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed text-[10px] font-bold flex items-center justify-center">PM</div>
+<span class="font-medium text-on-surface">Prabha M.</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-20 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-blue-500 rounded-full" style="width: 60%;"></div>
+</div>
+<span class="font-code-xs text-code-xs text-blue-700 font-semibold w-16 text-right">60% Normal</span>
+</div>
+</div>
+<!-- Member 4: Shihaf K. -->
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-fixed text-[10px] font-bold flex items-center justify-center">SK</div>
+<span class="font-medium text-on-surface">Shihaf K.</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-20 h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-amber-500 rounded-full" style="width: 85%;"></div>
+</div>
+<span class="font-code-xs text-code-xs text-amber-700 font-semibold w-16 text-right">85% Busy</span>
+</div>
+</div>
+<!-- Member 5: Rasith S. (Overloaded) -->
+<div class="flex items-center justify-between text-body-sm font-body-sm p-1 rounded bg-error-container/20">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-error text-on-error text-[10px] font-bold flex items-center justify-center">RS</div>
+<span class="font-bold text-error">Rasith S.</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-20 h-1.5 bg-error/30 rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 100%;"></div>
+</div>
+<span class="font-code-xs text-code-xs text-error font-bold w-16 text-right">100% Locked</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-sm border-t border-outline-variant/20 mt-space-md flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-secondary">Fathima can absorb Novel X</span>
+<a class="font-label-sm text-label-sm text-primary font-bold hover:underline flex items-center gap-1" href="#">
+<span>Rebalance Squad Workload</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Panel 2: Revision Quota Tracker -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm border border-outline-variant/25 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/20 mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-container text-[18px]">published_with_changes</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Revision Quota Tracker</h2>
+</div>
+<span class="px-space-xs py-[2px] rounded bg-error-container text-error font-code-xs text-code-xs font-bold">1 Alert</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Critical Quota Item -->
+<div class="p-space-xs rounded-lg bg-error-container/15 border border-error/20 flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-error font-bold">Orange Surgicals (#PRJ-1008)</span>
+<span class="px-1 py-0.5 rounded bg-error text-on-error font-code-xs text-code-xs font-bold">4 / 3 Rounds</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              Client requested extra packaging flap variant. Requires billing addendum or TL waiver.
+            </p>
+<div class="flex items-center gap-space-xs mt-1">
+<button class="px-2 py-0.5 rounded bg-surface-container-lowest text-error font-label-sm text-label-sm border border-error/40 hover:bg-error-container/30" type="button">
+                Waive Fee
+              </button>
+<button class="px-2 py-0.5 rounded bg-error text-on-error font-label-sm text-label-sm hover:bg-red-700" type="button">
+                Invoice Extra Round (+₹4,500)
+              </button>
+</div>
+</div>
+<!-- Normal Item -->
+<div class="flex items-center justify-between py-1 border-b border-outline-variant/15 text-body-sm font-body-sm">
+<span class="font-medium text-on-surface">ABC Brand Identity (#PRJ-1024)</span>
+<span class="font-code-xs text-code-xs text-secondary font-semibold">2 / 3 Rounds Used</span>
+</div>
+<!-- Normal Item -->
+<div class="flex items-center justify-between py-1 text-body-sm font-body-sm">
+<span class="font-medium text-on-surface">KPN Restaurant Identity (#PRJ-1021)</span>
+<span class="font-code-xs text-code-xs text-secondary font-semibold">1 / 2 Rounds Used</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm border-t border-outline-variant/20 mt-space-md flex items-center justify-between font-code-xs text-code-xs text-secondary">
+<span>Team Average: <strong>1.8 / project</strong></span>
+<span class="font-semibold text-primary">Policy Limit: 3 Rounds</span>
+</div>
+</div>
+<!-- Panel 3: TL Quick Actions -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm border border-outline-variant/25 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs border-b border-outline-variant/20 mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">bolt</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">TL Quick Actions</h2>
+</div>
+<span class="px-space-xs py-[2px] rounded bg-emerald-100 text-emerald-800 font-code-xs text-code-xs font-semibold">Ready</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<button class="w-full flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-left transition-colors group" type="button">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">fact_check</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary">Batch Approve Logo Concepts</span>
+<span class="font-code-xs text-code-xs text-secondary">2 items ready for final client dispatch</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[16px]">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-left transition-colors group" type="button">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-container text-[18px]">history_toggle_off</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary">Request Client SLA Extension</span>
+<span class="font-code-xs text-code-xs text-secondary">Pre-fill extension memo for Orange Surgicals</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[16px]">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-left transition-colors group" type="button">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">analytics</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold group-hover:text-primary">Export Squad Project Metrics</span>
+<span class="font-code-xs text-code-xs text-secondary">Generate Weekly Director Dossier (PDF / CSV)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[16px]">download</span>
+</button>
+</div>
+</div>
+<div class="pt-space-sm border-t border-outline-variant/20 mt-space-md flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[15px]">timer</span>
+<span>Squad Daily Sync: <strong>5:30 PM</strong></span>
+</div>
+<span class="font-code-xs text-code-xs text-tertiary-container font-semibold bg-tertiary-fixed px-1.5 py-0.5 rounded">In 1h 15m</span>
+</div>
+</div>
+</div>
+<!-- Inline Micro-Interactions Script -->
+<script>
+    (function initInteractions() {
+      const btnList = document.getElementById('btn-view-list');
+      const btnBoard = document.getElementById('btn-view-board');
+
+      if (btnList && btnBoard) {
+        btnBoard.addEventListener('click', () => {
+          btnBoard.className = 'flex items-center gap-space-xs px-space-md py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm shadow-xs transition-all';
+          btnList.className = 'flex items-center gap-space-xs px-space-md py-1 rounded text-secondary hover:text-on-surface font-label-sm text-label-sm transition-all';
+        });
+
+        btnList.addEventListener('click', () => {
+          btnList.className = 'flex items-center gap-space-xs px-space-md py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm shadow-xs transition-all';
+          btnBoard.className = 'flex items-center gap-space-xs px-space-md py-1 rounded text-secondary hover:text-on-surface font-label-sm text-label-sm transition-all';
+        });
+      }
+    })();
+  </script>
+</div></div></main></div></body></html>

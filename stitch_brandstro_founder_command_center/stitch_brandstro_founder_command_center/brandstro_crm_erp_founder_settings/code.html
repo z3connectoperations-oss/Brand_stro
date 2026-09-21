@@ -1,0 +1,1135 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1440, initial-scale=1.0">
+  <title>Brandstro CRM + ERP - Founder Settings</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#4f46e5',
+              600: '#4338ca',
+              700: '#3730a3',
+              dark: '#0f1422',
+              card: '#161c2e',
+            },
+            accent: {
+              yellow: '#f59e0b',
+              amber: '#d97706',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #f4f6fb;
+      color: #0f172a;
+      -webkit-font-smoothing: antialiased;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(241, 245, 249, 0.6);
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    .toggle-checkbox:checked {
+      right: 0;
+      border-color: #4f46e5;
+    }
+    .toggle-checkbox:checked + .toggle-label {
+      background-color: #4f46e5;
+    }
+  </style>
+</head>
+<body class="w-[1440px] h-[900px] overflow-hidden flex bg-[#f5f7fb] text-slate-800 antialiased selection:bg-indigo-500 selection:text-white">
+
+  <!-- ========================================================================= -->
+  <!-- LEFT SIDEBAR (Fixed ~240px - Standard Brandstro Operating System Theme) -->
+  <!-- ========================================================================= -->
+  <aside class="w-[240px] flex-shrink-0 bg-[#0c101d] text-slate-400 flex flex-col justify-between border-r border-slate-800/80 select-none z-20">
+    <div>
+      <!-- Brand Logo Header -->
+      <div class="h-16 px-5 flex items-center gap-3 border-b border-slate-800/80 bg-[#090d18]">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-600 via-indigo-500 to-amber-400 flex items-center justify-center shadow-lg shadow-indigo-600/30 text-white font-black text-base tracking-wider">
+          B
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-white font-extrabold text-[15px] tracking-tight">BRANDSTRO</span>
+          <span class="text-[9px] font-bold bg-indigo-950/80 text-indigo-400 border border-indigo-700/50 px-1.5 py-0.5 rounded tracking-wide font-mono">ERP</span>
+        </div>
+      </div>
+
+      <!-- OS Subtitle -->
+      <div class="px-5 pt-3.5 pb-2">
+        <p class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Agency Operating System</p>
+      </div>
+
+      <!-- Main Navigation -->
+      <nav class="px-3 space-y-0.5 text-xs font-medium">
+        <div class="px-2 pt-2 pb-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">Main</div>
+        
+        <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/40 transition-colors">
+          <div class="flex items-center gap-2.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+            <span>Command Center</span>
+          </div>
+        </a>
+
+        <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/40 transition-colors">
+          <div class="flex items-center gap-2.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+            <span>Leads</span>
+          </div>
+          <span class="text-[10px] font-bold bg-slate-800/80 text-slate-300 px-1.5 py-0.5 rounded font-mono">18</span>
+        </a>
+
+        <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/40 transition-colors">
+          <div class="flex items-center gap-2.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+            <span>Clients</span>
+          </div>
+        </a>
+
+        <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/40 transition-colors">
+          <div class="flex items-center gap-2.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+            <span>Projects</span>
+          </div>
+          <div class="flex items-center gap-1">
+            <span class="text-[9px] font-bold bg-rose-500/20 text-rose-300 px-1 py-0.5 rounded">5 late</span>
+            <span class="text-[10px] font-bold bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded font-mono">38</span>
+          </div>
+        </a>
+
+        <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/40 transition-colors">
+          <div class="flex items-center gap-2.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <span>Payments</span>
+          </div>
+          <span class="text-[9px] font-bold text-amber-300 bg-amber-950/50 border border-amber-800/40 px-1.5 py-0.5 rounded font-mono">₹3.42L</span>
+        </a>
+
+        <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/40 transition-colors">
+          <div class="flex items-center gap-2.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+            <span>Team &amp; Workload</span>
+          </div>
+          <span class="text-[10px] font-bold bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded font-mono">18/35</span>
+        </a>
+
+        <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/40 transition-colors">
+          <div class="flex items-center gap-2.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+            <span>Reports</span>
+          </div>
+        </a>
+
+        <!-- Management Group -->
+        <div class="px-2 pt-4 pb-1 text-[10px] font-bold uppercase tracking-wider text-slate-400">Management</div>
+
+        <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/40 transition-colors">
+          <div class="flex items-center gap-2.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path></svg>
+            <span>Incentives</span>
+          </div>
+          <span class="text-[9px] font-bold bg-amber-950/80 text-amber-300 border border-amber-700/50 px-1.5 py-0.5 rounded">6 Pending</span>
+        </a>
+
+        <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/40 transition-colors">
+          <div class="flex items-center gap-2.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+            <span>Alerts</span>
+          </div>
+          <span class="text-[9px] font-bold bg-rose-950/80 text-rose-300 border border-rose-800/60 px-1.5 py-0.5 rounded-full">12</span>
+        </a>
+
+        <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/40 transition-colors">
+          <div class="flex items-center gap-2.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <span>Activity</span>
+          </div>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Bottom: Settings & Profile (SETTINGS ACTIVE HIGHLIGHT) -->
+    <div class="p-3 border-t border-slate-800/80 bg-[#090d18] space-y-2">
+      <!-- Active Settings Link -->
+      <div class="flex items-center justify-between px-3 py-2.5 rounded-lg bg-indigo-600 text-white font-medium text-xs shadow-md shadow-indigo-600/30">
+        <div class="flex items-center gap-2.5">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          <span class="font-semibold tracking-wide">Settings</span>
+        </div>
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+      </div>
+
+      <!-- Founder Profile Pill -->
+      <div class="flex items-center justify-between p-2 rounded-lg bg-slate-900/60 border border-slate-800/80">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-700 text-white font-bold text-xs flex items-center justify-center border border-indigo-400/40">
+            FD
+          </div>
+          <div>
+            <div class="text-[12px] font-semibold text-slate-200 leading-tight">Pranav S.</div>
+            <div class="text-[10px] text-slate-400 leading-tight">Founder &amp; CEO</div>
+          </div>
+        </div>
+        <svg class="w-3.5 h-3.5 text-slate-400 hover:text-slate-200 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"></path></svg>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================= -->
+  <!-- MAIN WORKSPACE -->
+  <!-- ========================================================================= -->
+  <main class="flex-1 flex flex-col min-w-0 bg-[#f8fafc] overflow-hidden">
+    
+    <!-- TOP HEADER -->
+    <header class="h-16 flex-shrink-0 bg-white border-b border-slate-200/80 px-8 flex items-center justify-between z-10">
+      <div class="flex items-center gap-3">
+        <div>
+          <div class="flex items-center gap-2.5">
+            <h1 class="text-xl font-bold text-slate-900 tracking-tight">Settings</h1>
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-indigo-50 text-indigo-700 border border-indigo-100">
+              Agency Config
+            </span>
+          </div>
+          <p class="text-xs text-slate-400">Manage Brandstro's business rules, workflow parameters, and operational gates.</p>
+        </div>
+      </div>
+
+      <!-- Right Header Actions -->
+      <div class="flex items-center gap-3">
+        <!-- Global Search -->
+        <div class="relative w-64">
+          <svg class="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          <input type="text" placeholder="Search preferences, rules... ⌘K" class="w-full bg-slate-50 border border-slate-200 rounded-lg pl-8 pr-3 py-1.5 text-xs text-slate-700 placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:bg-white transition-all font-medium">
+        </div>
+
+        <!-- Notification Bell -->
+        <button class="relative p-2 rounded-lg border border-slate-200 text-slate-500 hover:text-slate-800 hover:bg-slate-50 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+          <span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-amber-500 ring-2 ring-white"></span>
+        </button>
+
+        <div class="h-5 w-px bg-slate-200"></div>
+
+        <!-- Changes Indicator / State Notice -->
+        <div class="flex items-center gap-2 text-xs font-medium text-slate-400 bg-slate-50 px-2.5 py-1.5 rounded-lg border border-slate-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          <span>All preferences synced</span>
+        </div>
+
+        <!-- Save Changes Button (Active State Demo with visual prominence) -->
+        <button id="saveBtn" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-semibold text-xs shadow-sm shadow-indigo-500/25 transition-all">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          <span>Save Changes</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- SETTINGS TWO-COLUMN CANVAS -->
+    <div class="flex-1 flex overflow-hidden">
+      
+      <!-- ========================================================================= -->
+      <!-- LEFT SETTINGS NAVIGATION (240px wide) -->
+      <!-- ========================================================================= -->
+      <div class="w-[240px] flex-shrink-0 bg-white border-r border-slate-200/80 p-4 flex flex-col justify-between overflow-y-auto custom-scrollbar select-none">
+        <div class="space-y-1">
+          <div class="px-3 pb-2 text-[10px] font-bold uppercase tracking-wider text-slate-400">Settings Modules</div>
+          
+          <!-- Navigation item: GENERAL -->
+          <a href="#general" class="group flex items-center justify-between px-3 py-2.5 rounded-lg text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-100 transition-colors">
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+              <span>General</span>
+            </div>
+            <span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>
+          </a>
+
+          <!-- Navigation item: WORKFLOW -->
+          <a href="#workflow" class="group flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-slate-400 group-hover:text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1v-2zM4 21a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1v-2z"></path></svg>
+              <span>Workflow</span>
+            </div>
+            <span class="text-[10px] text-slate-400 font-mono">6 rules</span>
+          </a>
+
+          <!-- Navigation item: SALES -->
+          <a href="#sales" class="group flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-slate-400 group-hover:text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+              <span>Sales &amp; Inbound</span>
+            </div>
+          </a>
+
+          <!-- Navigation item: PROJECTS -->
+          <a href="#projects" class="group flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-slate-400 group-hover:text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+              <span>Projects</span>
+            </div>
+            <span class="text-[9px] font-bold bg-amber-100 text-amber-800 px-1 py-0.5 rounded">Gate</span>
+          </a>
+
+          <!-- Navigation item: PAYMENTS -->
+          <a href="#payments" class="group flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-slate-400 group-hover:text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+              <span>Payments &amp; Gate</span>
+            </div>
+          </a>
+
+          <!-- Navigation item: NOTIFICATIONS -->
+          <a href="#notifications" class="group flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-slate-400 group-hover:text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+              <span>Notification Matrix</span>
+            </div>
+          </a>
+
+          <!-- Navigation item: TEAMS & ROLES -->
+          <a href="#teams" class="group flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-slate-400 group-hover:text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+              <span>Teams &amp; Roles</span>
+            </div>
+            <span class="text-[10px] text-slate-400 font-mono">5 teams</span>
+          </a>
+
+          <!-- Navigation item: INCENTIVES -->
+          <a href="#incentives" class="group flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-colors">
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-slate-400 group-hover:text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+              <span>Incentive Policy</span>
+            </div>
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          </a>
+
+          <!-- Navigation item: DANGER ZONE -->
+          <a href="#danger" class="group flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium text-slate-500 hover:bg-rose-50/50 hover:text-rose-700 transition-colors pt-3">
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-slate-400 group-hover:text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+              <span>Danger Zone</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Founder Operational Philosophy Note -->
+        <div class="mt-6 p-3 rounded-xl bg-slate-50 border border-slate-200/80">
+          <div class="flex items-center gap-1.5 text-indigo-700 text-[11px] font-bold mb-1">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <span>Founder Principle</span>
+          </div>
+          <p class="text-[11px] text-slate-500 leading-relaxed">
+            Configure how Brandstro operates without engineering support. Changes apply instantly across ERP pipelines.
+          </p>
+        </div>
+      </div>
+
+      <!-- ========================================================================= -->
+      <!-- RIGHT SETTINGS CONTENT (Scrollable, Organized White Cards) -->
+      <!-- ========================================================================= -->
+      <div class="flex-1 overflow-y-auto custom-scrollbar p-8 space-y-6">
+
+        <!-- 1. GENERAL & BRAND INFORMATION -->
+        <div id="general" class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 space-y-5">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+            <div>
+              <h2 class="text-sm font-bold text-slate-900 tracking-tight flex items-center gap-2">
+                <span>General Agency Information</span>
+                <span class="text-[10px] font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">Active Entity</span>
+              </h2>
+              <p class="text-xs text-slate-500 mt-0.5">Primary organization profile, operating region, and calendar parameters.</p>
+            </div>
+            <button class="text-xs font-semibold text-indigo-600 hover:text-indigo-700 flex items-center gap-1">
+              <span>View Organization ID: BRD-IND-902</span>
+            </button>
+          </div>
+
+          <!-- Brand Logo & Identity Block -->
+          <div class="flex items-center gap-5 p-4 rounded-lg bg-slate-50/80 border border-slate-200/70">
+            <div class="relative">
+              <div class="w-16 h-16 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-amber-400 flex items-center justify-center text-white font-black text-2xl shadow-md border-2 border-white">
+                B
+              </div>
+              <span class="absolute -bottom-1 -right-1 bg-white p-1 rounded-full shadow border border-slate-200 text-slate-600">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              </span>
+            </div>
+            <div class="space-y-1">
+              <div class="flex items-center gap-2">
+                <h3 class="text-sm font-bold text-slate-800">Brandstro</h3>
+                <span class="text-[10px] font-bold bg-amber-100 text-amber-900 px-2 py-0.5 rounded">Branding &amp; Packaging Agency</span>
+              </div>
+              <p class="text-xs text-slate-500">Logo renders across client milestone presentations, quotes, invoices, and the client approval portal.</p>
+              <div class="flex items-center gap-3 pt-1">
+                <button class="text-xs font-semibold text-indigo-600 hover:text-indigo-700">Update Logo</button>
+                <span class="text-slate-300">•</span>
+                <span class="text-[11px] text-slate-400">Recommended: 512×512px SVG or PNG (Transparent)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form Fields Grid -->
+          <div class="grid grid-cols-3 gap-5 text-xs">
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1.5">Company Legal Name</label>
+              <input type="text" value="Brandstro Creative Agency Pvt. Ltd." class="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg text-slate-800 font-medium focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500">
+            </div>
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1.5">Company Type</label>
+              <select class="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg text-slate-800 font-medium focus:border-indigo-500 focus:outline-none">
+                <option selected="">Branding &amp; Design Agency</option>
+                <option>FMCG Packaging Studio</option>
+                <option>Digital Product Agency</option>
+              </select>
+            </div>
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1.5">Default Currency</label>
+              <div class="flex">
+                <span class="inline-flex items-center px-3 rounded-l-lg border border-r-0 border-slate-200 bg-slate-50 text-slate-500 font-mono font-bold">₹</span>
+                <input type="text" value="INR (Indian Rupee)" readonly="" class="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-r-lg text-slate-800 font-medium focus:outline-none">
+              </div>
+            </div>
+
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1.5">Timezone</label>
+              <select class="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg text-slate-800 font-medium focus:border-indigo-500 focus:outline-none">
+                <option selected="">(GMT+05:30) India Standard Time (IST)</option>
+                <option>(GMT+04:00) Gulf Standard Time (Dubai)</option>
+                <option>(GMT+00:00) UTC / London</option>
+              </select>
+            </div>
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1.5">Working Days</label>
+              <select class="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg text-slate-800 font-medium focus:border-indigo-500 focus:outline-none">
+                <option selected="">Monday – Saturday (6-Day Studio)</option>
+                <option>Monday – Friday (5-Day Studio)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1.5">Working Hours &amp; Date Format</label>
+              <div class="grid grid-cols-2 gap-2">
+                <input type="text" value="10:00 AM – 7:00 PM" class="w-full px-2.5 py-2 bg-white border border-slate-200 rounded-lg text-slate-800 font-medium">
+                <input type="text" value="DD/MM/YYYY" readonly="" class="w-full px-2.5 py-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-600 font-mono text-center">
+              </div>
+            </div>
+
+            <!-- Optional Contact Fields -->
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1.5">Billing Email</label>
+              <input type="email" value="billing@brandstro.studio" class="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg text-slate-800 font-medium">
+            </div>
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1.5">Operational Phone</label>
+              <input type="text" value="+91 98450 12890" class="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg text-slate-800 font-medium">
+            </div>
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1.5">Registered Studio Address</label>
+              <input type="text" value="Design Quarter, Indiranagar, Bengaluru 560038" class="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg text-slate-800 font-medium">
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. DEFAULT WORKFLOW SETTINGS -->
+        <div id="workflow" class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 space-y-5">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+            <div>
+              <h2 class="text-sm font-bold text-slate-900 tracking-tight flex items-center gap-2">
+                <span>Default Workflow Parameters</span>
+                <span class="text-[10px] font-semibold text-indigo-700 bg-indigo-50 border border-indigo-200 px-2 py-0.5 rounded">Core Logic</span>
+              </h2>
+              <p class="text-xs text-slate-500 mt-0.5">Automated baselines applied whenever new leads, tasks, or creative projects are initiated.</p>
+            </div>
+            <span class="text-xs text-slate-400 font-medium">Controls project instantiation defaults</span>
+          </div>
+
+          <div class="grid grid-cols-3 gap-5 text-xs">
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1.5">Default Project Priority</label>
+              <select class="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg text-slate-800 font-medium focus:border-indigo-500">
+                <option>Low</option>
+                <option selected="">Normal (Standard SLA)</option>
+                <option>High (Expedited 7-Day)</option>
+                <option>Urgent / Critical</option>
+              </select>
+              <p class="text-[11px] text-slate-400 mt-1">Applied to newly converted client projects.</p>
+            </div>
+
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1.5">Default Lead Priority</label>
+              <select class="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg text-slate-800 font-medium focus:border-indigo-500">
+                <option>Cold Inbound</option>
+                <option selected="">Warm (Website &amp; Referrals)</option>
+                <option>Hot (Direct Brand Inquiries)</option>
+              </select>
+              <p class="text-[11px] text-slate-400 mt-1">Initial rating before sales triage.</p>
+            </div>
+
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1.5">Default Revision Limit</label>
+              <div class="flex items-center gap-2">
+                <input type="number" value="3" class="w-24 px-3 py-2 bg-white border border-slate-200 rounded-lg text-slate-800 font-bold text-center focus:border-indigo-500">
+                <span class="text-slate-600 font-medium">rounds included in base contract</span>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">Extra rounds trigger approval &amp; fee alert.</p>
+            </div>
+
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1.5">Default Payment Structure</label>
+              <select class="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg text-slate-800 font-medium focus:border-indigo-500">
+                <option selected="">50% Advance / 50% Balance</option>
+                <option>40% Advance / 40% Milestone / 20% Balance</option>
+                <option>100% Upfront (Retainers / Small Tasks)</option>
+              </select>
+              <p class="text-[11px] text-slate-400 mt-1">Default milestone schedule in contract quotes.</p>
+            </div>
+
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1.5">Default Project Status on Creation</label>
+              <div class="flex items-center gap-2 px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 font-medium">
+                <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+                <span>Not Started (Pending Kickoff)</span>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">Moves to In Progress once advance clears.</p>
+            </div>
+
+            <div>
+              <label class="block font-semibold text-slate-700 mb-1.5">Default Task Status</label>
+              <div class="flex items-center gap-2 px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 font-medium">
+                <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+                <span>Not Started (Queued in Squad)</span>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1">Requires specialist manual start trigger.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. SALES & INBOUND SETTINGS -->
+        <div id="sales" class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 space-y-5">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+            <div>
+              <h2 class="text-sm font-bold text-slate-900 tracking-tight flex items-center gap-2">
+                <span>Sales &amp; Lead Preferences</span>
+                <span class="text-[10px] font-semibold text-slate-700 bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">Triage &amp; Follow-up</span>
+              </h2>
+              <p class="text-xs text-slate-500 mt-0.5">Automated follow-up pacing and stale inquiry alerting rules for the sales pipeline.</p>
+            </div>
+            <span class="text-xs font-semibold text-indigo-600">Sales Lead: Ayesha</span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-5 text-xs">
+            <!-- Setting 1 -->
+            <div class="flex items-start justify-between p-4 rounded-xl border border-slate-200 bg-white hover:border-slate-300 transition-colors">
+              <div class="space-y-1 max-w-[340px]">
+                <div class="font-bold text-slate-800 text-[13px] flex items-center gap-2">
+                  <span>Lead Follow-up Reminder</span>
+                  <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                </div>
+                <p class="text-slate-500 text-[11px] leading-relaxed">Sends automated task alerts to assigned salesperson on the scheduled follow-up due date.</p>
+                <div class="pt-2 flex items-center gap-2">
+                  <span class="text-slate-400">Trigger:</span>
+                  <select class="px-2 py-1 bg-slate-50 border border-slate-200 rounded text-slate-700 font-medium text-[11px]">
+                    <option selected="">On due date at 09:30 AM</option>
+                    <option>1 day before due date</option>
+                  </select>
+                </div>
+              </div>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" checked="" class="sr-only peer">
+                <div class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-indigo-600"></div>
+              </label>
+            </div>
+
+            <!-- Setting 2 -->
+            <div class="flex items-start justify-between p-4 rounded-xl border border-slate-200 bg-white hover:border-slate-300 transition-colors">
+              <div class="space-y-1 max-w-[340px]">
+                <div class="font-bold text-slate-800 text-[13px] flex items-center gap-2">
+                  <span>Untouched Lead Alert</span>
+                  <span class="text-[9px] font-bold bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">Founder Alert</span>
+                </div>
+                <p class="text-slate-500 text-[11px] leading-relaxed">Escalates leads to Founder Alerts &amp; Exceptions if no outreach is recorded within SLA window.</p>
+                <div class="pt-2 flex items-center gap-2">
+                  <span class="text-slate-400">Threshold:</span>
+                  <select class="px-2 py-1 bg-slate-50 border border-slate-200 rounded text-slate-700 font-medium text-[11px]">
+                    <option selected="">24 hours of inactivity</option>
+                    <option>48 hours of inactivity</option>
+                    <option>72 hours of inactivity</option>
+                  </select>
+                </div>
+              </div>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" checked="" class="sr-only peer">
+                <div class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-indigo-600"></div>
+              </label>
+            </div>
+
+            <!-- Setting 3 -->
+            <div class="flex items-start justify-between p-4 rounded-xl border border-slate-200 bg-white hover:border-slate-300 transition-colors">
+              <div class="space-y-1 max-w-[340px]">
+                <div class="font-bold text-slate-800 text-[13px] flex items-center gap-2">
+                  <span>Hot Lead Instant Notification</span>
+                  <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                </div>
+                <p class="text-slate-500 text-[11px] leading-relaxed">Inbound requests marked "Hot" (e.g., enterprise branding &gt;₹50K) notify Founder and Sales Lead immediately.</p>
+              </div>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" checked="" class="sr-only peer">
+                <div class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-indigo-600"></div>
+              </label>
+            </div>
+
+            <!-- Setting 4 -->
+            <div class="flex items-start justify-between p-4 rounded-xl border border-slate-200 bg-white hover:border-slate-300 transition-colors">
+              <div class="space-y-1 max-w-[340px]">
+                <div class="font-bold text-slate-800 text-[13px] flex items-center gap-2">
+                  <span>Proposal Follow-up Auto-Reminder</span>
+                  <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                </div>
+                <p class="text-slate-500 text-[11px] leading-relaxed">Prompts sales to check proposal viewing analytics 48 hours after PDF/proposal link dispatch.</p>
+              </div>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" checked="" class="sr-only peer">
+                <div class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-indigo-600"></div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. PROJECT & DELIVERY QUALITY SETTINGS (Includes Payment Gate Highlight) -->
+        <div id="projects" class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 space-y-5">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+            <div>
+              <h2 class="text-sm font-bold text-slate-900 tracking-tight flex items-center gap-2">
+                <span>Project Delivery &amp; Quality Controls</span>
+                <span class="text-[10px] font-semibold text-rose-700 bg-rose-50 border border-rose-200 px-2 py-0.5 rounded">Critical Gates</span>
+              </h2>
+              <p class="text-xs text-slate-500 mt-0.5">Define review requirements, milestone signoff gates, and overdue warning thresholds.</p>
+            </div>
+            <span class="text-xs text-slate-400 font-mono">Governs all 38 active projects</span>
+          </div>
+
+          <!-- THE BRANDSTRO PAYMENT GATE BANNER (Visually emphasized) -->
+          <div class="p-4 rounded-xl bg-gradient-to-r from-amber-500/10 via-indigo-500/10 to-indigo-500/5 border-2 border-amber-400/80 flex items-start justify-between gap-4">
+            <div class="flex items-start gap-3.5">
+              <div class="w-9 h-9 rounded-lg bg-amber-500 text-white flex items-center justify-center flex-shrink-0 shadow-md">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+              </div>
+              <div class="space-y-1">
+                <div class="flex items-center gap-2">
+                  <span class="text-sm font-extrabold text-slate-900">Payment Gate Before Final Deliverable Release</span>
+                  <span class="text-[10px] font-black uppercase bg-amber-500 text-slate-950 px-2 py-0.5 rounded tracking-wide">FOUNDER BUSINESS RULE</span>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed max-w-[650px]">
+                  Production packages (vector source files, print dielines, font packages) are <strong>automatically withheld</strong> by Brandstro ERP until the client signs off on Stage 2/3 AND the remaining balance payment (typically 50%) is verified in the accounting ledger. Only the Founder can authorize a temporary 48-hour gate bypass.
+                </p>
+                <div class="flex items-center gap-3 pt-1 text-[11px] font-semibold text-indigo-700">
+                  <span>✓ Strict Enforcement</span>
+                  <span>•</span>
+                  <span>Prevents unpaid asset handoffs</span>
+                  <span>•</span>
+                  <span class="text-amber-800">Currently gating 4 projects (₹1.26L protected)</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col items-end gap-1.5 flex-shrink-0">
+              <span class="text-[11px] font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">GATE ACTIVE</span>
+              <label class="relative inline-flex items-center cursor-pointer mt-1">
+                <input type="checkbox" checked="" class="sr-only peer">
+                <div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-amber-500"></div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Project Settings Matrix -->
+          <div class="grid grid-cols-3 gap-4 text-xs">
+            <div class="p-3.5 rounded-lg border border-slate-200 bg-slate-50/50 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-800">Overdue Project Alert</span>
+                <input type="checkbox" checked="" class="rounded text-indigo-600 focus:ring-indigo-500">
+              </div>
+              <p class="text-[11px] text-slate-500">Triggers Founder alert as soon as client milestone deadline passes without signoff.</p>
+            </div>
+
+            <div class="p-3.5 rounded-lg border border-slate-200 bg-slate-50/50 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-800">Deadline Warning</span>
+                <select class="px-2 py-0.5 bg-white border border-slate-200 rounded text-slate-700 font-medium text-[11px]">
+                  <option selected="">2 days before deadline</option>
+                  <option>3 days before deadline</option>
+                  <option>24 hours before</option>
+                </select>
+              </div>
+              <p class="text-[11px] text-slate-500">Notifies Team Leader and creative assignees to review sprint pace.</p>
+            </div>
+
+            <div class="p-3.5 rounded-lg border border-slate-200 bg-slate-50/50 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-800">Internal Review Required</span>
+                <input type="checkbox" checked="" class="rounded text-indigo-600 focus:ring-indigo-500">
+              </div>
+              <p class="text-[11px] text-slate-500">Designs cannot be sent to clients until Creative Head (Akhil) approves in studio deck.</p>
+            </div>
+
+            <div class="p-3.5 rounded-lg border border-slate-200 bg-slate-50/50 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-800">Client Approval Required</span>
+                <input type="checkbox" checked="" class="rounded text-indigo-600 focus:ring-indigo-500">
+              </div>
+              <p class="text-[11px] text-slate-500">Milestone progression requires recorded client signoff (portal signature or email confirmation).</p>
+            </div>
+
+            <div class="p-3.5 rounded-lg border border-slate-200 bg-slate-50/50 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-800">Revision Limit Strict Warning</span>
+                <input type="checkbox" checked="" class="rounded text-indigo-600 focus:ring-indigo-500">
+              </div>
+              <p class="text-[11px] text-slate-500">Automatically creates revision invoice draft when client requests Round 4+.</p>
+            </div>
+
+            <div class="p-3.5 rounded-lg border border-slate-200 bg-slate-50/50 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-800">Workload Threshold Alert</span>
+                <select class="px-2 py-0.5 bg-white border border-slate-200 rounded text-slate-700 font-medium text-[11px]">
+                  <option selected="">≥ 90% peak capacity</option>
+                  <option>≥ 85% capacity</option>
+                  <option>≥ 95% capacity</option>
+                </select>
+              </div>
+              <p class="text-[11px] text-slate-500">Flags team members with overload risk to Founder Workload board.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. PAYMENT & COLLECTIONS SETTINGS -->
+        <div id="payments" class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 space-y-5">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+            <div>
+              <h2 class="text-sm font-bold text-slate-900 tracking-tight flex items-center gap-2">
+                <span>Payment &amp; Billing Rules</span>
+                <span class="text-[10px] font-semibold text-amber-800 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded">Financial Health</span>
+              </h2>
+              <p class="text-xs text-slate-500 mt-0.5">Set payment milestone splits, reminder intervals, and automated delivery blockades.</p>
+            </div>
+            <span class="text-xs font-semibold text-slate-500">Currency: ₹ INR</span>
+          </div>
+
+          <div class="grid grid-cols-3 gap-5 text-xs">
+            <div class="p-4 rounded-xl border border-slate-200 bg-white space-y-2">
+              <span class="font-bold text-slate-800 block text-[13px]">Standard Milestone Split</span>
+              <div class="flex items-center gap-2 pt-1">
+                <div class="flex-1">
+                  <span class="text-[10px] text-slate-400 font-medium block">Advance %</span>
+                  <input type="number" value="50" class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-800 font-bold text-center">
+                </div>
+                <span class="text-slate-400 font-bold mt-3">/</span>
+                <div class="flex-1">
+                  <span class="text-[10px] text-slate-400 font-medium block">Balance %</span>
+                  <input type="number" value="50" class="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-slate-800 font-bold text-center">
+                </div>
+              </div>
+              <p class="text-[11px] text-slate-400">Advance unlocks kickoff; balance unlocks source files.</p>
+            </div>
+
+            <div class="p-4 rounded-xl border border-slate-200 bg-white space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-800 block text-[13px]">Automated Collection Reminder</span>
+                <label class="relative inline-flex items-center cursor-pointer">
+                  <input type="checkbox" checked="" class="sr-only peer">
+                  <div class="w-8 h-4 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-indigo-600"></div>
+                </label>
+              </div>
+              <p class="text-[11px] text-slate-500 leading-relaxed">Sends gentle email reminders to client finance teams on milestone invoice due date.</p>
+              <div class="pt-1 flex items-center gap-2">
+                <span class="text-[11px] text-slate-400">Frequency:</span>
+                <span class="text-[11px] font-semibold text-slate-700 bg-slate-100 px-2 py-0.5 rounded">Due date + Every 3 days</span>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl border border-slate-200 bg-white space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-slate-800 block text-[13px]">Payment Overdue Escalation</span>
+                <span class="text-[9px] font-bold bg-rose-100 text-rose-800 px-1.5 py-0.5 rounded">Alert Level 2</span>
+              </div>
+              <p class="text-[11px] text-slate-500 leading-relaxed">Escalates invoice to Founder Alerts when balance is unpaid past due date.</p>
+              <div class="pt-1 flex items-center gap-2">
+                <span class="text-[11px] text-slate-400">Alert Trigger:</span>
+                <select class="px-2 py-1 bg-slate-50 border border-slate-200 rounded text-slate-700 font-medium text-[11px]">
+                  <option selected="">After 1 day overdue</option>
+                  <option>After 2 days overdue</option>
+                  <option>After 5 days overdue</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. NOTIFICATION MATRIX TABLE -->
+        <div id="notifications" class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 space-y-5">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+            <div>
+              <h2 class="text-sm font-bold text-slate-900 tracking-tight flex items-center gap-2">
+                <span>Notification &amp; Escalation Matrix</span>
+                <span class="text-[10px] font-semibold text-indigo-700 bg-indigo-50 border border-indigo-200 px-2 py-0.5 rounded">Role Routing</span>
+              </h2>
+              <p class="text-xs text-slate-500 mt-0.5">Control which team roles receive operational alerts to keep inboxes quiet and signal high.</p>
+            </div>
+            <span class="text-xs font-semibold text-slate-400">6 Key Trigger Rules</span>
+          </div>
+
+          <!-- Clean Role Matrix Table -->
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs">
+              <thead>
+                <tr class="bg-slate-50/80 border-y border-slate-200/80 text-slate-500 font-bold uppercase tracking-wider text-[10px]">
+                  <th class="py-2.5 px-4">Notification Event</th>
+                  <th class="py-2.5 px-3 text-center w-24 text-indigo-900">Founder</th>
+                  <th class="py-2.5 px-3 text-center w-24">CRM</th>
+                  <th class="py-2.5 px-3 text-center w-24">Sales</th>
+                  <th class="py-2.5 px-3 text-center w-24">Creative Head</th>
+                  <th class="py-2.5 px-3 text-center w-24">Team Leader</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 font-medium text-slate-700">
+                <!-- Row 1 -->
+                <tr class="hover:bg-slate-50/60 transition-colors">
+                  <td class="py-3 px-4">
+                    <div class="font-bold text-slate-800">Project Overdue / SLA Breach</div>
+                    <div class="text-[11px] text-slate-400">Deadline exceeded without client milestone signoff</div>
+                  </td>
+                  <td class="py-3 px-3 text-center">
+                    <input type="checkbox" checked="" class="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                  </td>
+                  <td class="py-3 px-3 text-center">
+                    <input type="checkbox" checked="" class="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                  </td>
+                  <td class="py-3 px-3 text-center text-slate-300 font-bold">—</td>
+                  <td class="py-3 px-3 text-center">
+                    <input type="checkbox" checked="" class="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                  </td>
+                  <td class="py-3 px-3 text-center">
+                    <input type="checkbox" checked="" class="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                  </td>
+                </tr>
+
+                <!-- Row 2 -->
+                <tr class="hover:bg-slate-50/60 transition-colors">
+                  <td class="py-3 px-4">
+                    <div class="font-bold text-slate-800">Client Approval Pending (&gt;48h)</div>
+                    <div class="text-[11px] text-slate-400">Concepts waiting in client portal review queue</div>
+                  </td>
+                  <td class="py-3 px-3 text-center">
+                    <input type="checkbox" checked="" class="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                  </td>
+                  <td class="py-3 px-3 text-center">
+                    <input type="checkbox" checked="" class="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                  </td>
+                  <td class="py-3 px-3 text-center text-slate-300 font-bold">—</td>
+                  <td class="py-3 px-3 text-center text-slate-300 font-bold">—</td>
+                  <td class="py-3 px-3 text-center text-slate-300 font-bold">—</td>
+                </tr>
+
+                <!-- Row 3 -->
+                <tr class="hover:bg-slate-50/60 transition-colors">
+                  <td class="py-3 px-4">
+                    <div class="font-bold text-slate-800">Payment Overdue / Final Gate Block</div>
+                    <div class="text-[11px] text-slate-400">Balance withheld past delivery readiness</div>
+                  </td>
+                  <td class="py-3 px-3 text-center">
+                    <input type="checkbox" checked="" class="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                  </td>
+                  <td class="py-3 px-3 text-center">
+                    <input type="checkbox" checked="" class="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                  </td>
+                  <td class="py-3 px-3 text-center text-slate-300 font-bold">—</td>
+                  <td class="py-3 px-3 text-center text-slate-300 font-bold">—</td>
+                  <td class="py-3 px-3 text-center text-slate-300 font-bold">—</td>
+                </tr>
+
+                <!-- Row 4 -->
+                <tr class="hover:bg-slate-50/60 transition-colors">
+                  <td class="py-3 px-4">
+                    <div class="font-bold text-slate-800">Lead Follow-up Overdue / Untouched</div>
+                    <div class="text-[11px] text-slate-400">Inbound inquiry unassigned or cold in CRM queue</div>
+                  </td>
+                  <td class="py-3 px-3 text-center">
+                    <input type="checkbox" checked="" class="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                  </td>
+                  <td class="py-3 px-3 text-center text-slate-300 font-bold">—</td>
+                  <td class="py-3 px-3 text-center">
+                    <input type="checkbox" checked="" class="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                  </td>
+                  <td class="py-3 px-3 text-center text-slate-300 font-bold">—</td>
+                  <td class="py-3 px-3 text-center text-slate-300 font-bold">—</td>
+                </tr>
+
+                <!-- Row 5 -->
+                <tr class="hover:bg-slate-50/60 transition-colors">
+                  <td class="py-3 px-4">
+                    <div class="font-bold text-slate-800">Creative Task Overdue (&gt;24h)</div>
+                    <div class="text-[11px] text-slate-400">Individual sprint task overdue in squad board</div>
+                  </td>
+                  <td class="py-3 px-3 text-center text-slate-300 font-bold">—</td>
+                  <td class="py-3 px-3 text-center text-slate-300 font-bold">—</td>
+                  <td class="py-3 px-3 text-center text-slate-300 font-bold">—</td>
+                  <td class="py-3 px-3 text-center">
+                    <input type="checkbox" checked="" class="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                  </td>
+                  <td class="py-3 px-3 text-center">
+                    <input type="checkbox" checked="" class="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                  </td>
+                </tr>
+
+                <!-- Row 6 -->
+                <tr class="hover:bg-slate-50/60 transition-colors">
+                  <td class="py-3 px-4">
+                    <div class="font-bold text-slate-800">New Task Assigned / Squad Leveling</div>
+                    <div class="text-[11px] text-slate-400">Workload rebalanced or task assigned to designer</div>
+                  </td>
+                  <td class="py-3 px-3 text-center text-slate-300 font-bold">—</td>
+                  <td class="py-3 px-3 text-center text-slate-300 font-bold">—</td>
+                  <td class="py-3 px-3 text-center text-slate-300 font-bold">—</td>
+                  <td class="py-3 px-3 text-center text-slate-300 font-bold">—</td>
+                  <td class="py-3 px-3 text-center">
+                    <input type="checkbox" checked="" class="w-4 h-4 rounded text-indigo-600 focus:ring-indigo-500 cursor-pointer">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 7. TEAMS & ROLES SUMMARY -->
+        <div id="teams" class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 space-y-5">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+            <div>
+              <h2 class="text-sm font-bold text-slate-900 tracking-tight flex items-center gap-2">
+                <span>Teams &amp; Organizational Structure</span>
+                <span class="text-[10px] font-semibold text-slate-700 bg-slate-100 border border-slate-200 px-2 py-0.5 rounded">4 Departments</span>
+              </h2>
+              <p class="text-xs text-slate-500 mt-0.5">High-level view of studio creative squads, management structure, and operational permissions.</p>
+            </div>
+            
+            <div class="flex items-center gap-2">
+              <button class="px-3 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-xs font-semibold text-slate-700 transition-colors flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                <span>Manage Teams →</span>
+              </button>
+              <button class="px-3 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-xs font-semibold text-slate-700 transition-colors flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                <span>Manage Roles →</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-5 text-xs">
+            <!-- Left: Department Overview -->
+            <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 space-y-3">
+              <span class="font-bold text-slate-800 text-[13px] block">Departments (4 Active)</span>
+              <div class="space-y-2">
+                <div class="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+                    <span class="font-semibold text-slate-800">Creative Production</span>
+                  </div>
+                  <span class="text-slate-500 font-mono text-[11px]">12 Specialists</span>
+                </div>
+                <div class="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                    <span class="font-semibold text-slate-800">Sales &amp; Business Development</span>
+                  </div>
+                  <span class="text-slate-500 font-mono text-[11px]">2 Reps</span>
+                </div>
+                <div class="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-amber-600"></span>
+                    <span class="font-semibold text-slate-800">Client Relationship (CRM)</span>
+                  </div>
+                  <span class="text-slate-500 font-mono text-[11px]">2 Managers</span>
+                </div>
+                <div class="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-slate-600"></span>
+                    <span class="font-semibold text-slate-800">HR, Finance &amp; Admin</span>
+                  </div>
+                  <span class="text-slate-500 font-mono text-[11px]">2 Staff</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Creative Squads Overview -->
+            <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 space-y-3">
+              <span class="font-bold text-slate-800 text-[13px] block">Active Creative Squads (5 Teams)</span>
+              <div class="space-y-2">
+                <div class="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80">
+                  <span class="font-semibold text-slate-800">Logo &amp; Brand Identity Squad</span>
+                  <span class="text-[11px] font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded">5 members (Lead: Akhil)</span>
+                </div>
+                <div class="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80">
+                  <span class="font-semibold text-slate-800">Packaging Design Squad</span>
+                  <span class="text-[11px] font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded">4 members (Lead: Shalin)</span>
+                </div>
+                <div class="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80">
+                  <span class="font-semibold text-slate-800">R&amp;D &amp; Material Research</span>
+                  <span class="text-[11px] text-slate-600">1 specialist (Gautam V.)</span>
+                </div>
+                <div class="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80">
+                  <span class="font-semibold text-slate-800">Sketch &amp; Concept Squad</span>
+                  <span class="text-[11px] text-slate-600">1 specialist (Fathima)</span>
+                </div>
+                <div class="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80">
+                  <span class="font-semibold text-slate-800">Content &amp; Brand Strategy</span>
+                  <span class="text-[11px] text-slate-600">1 specialist</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. INCENTIVE POLICY SETTINGS -->
+        <div id="incentives" class="bg-white rounded-xl border border-slate-200 shadow-sm p-6 space-y-5">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+            <div>
+              <h2 class="text-sm font-bold text-slate-900 tracking-tight flex items-center gap-2">
+                <span>Incentive Policy &amp; Disbursement Gates</span>
+                <span class="text-[10px] font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">ERP Delivery Linked</span>
+              </h2>
+              <p class="text-xs text-slate-500 mt-0.5">Define automated calculation frequency and founder signoff requirements before HR payment.</p>
+            </div>
+            <button class="px-3 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-xs font-semibold text-slate-700 transition-colors">
+              Manage Incentive Rules (3 Active) →
+            </button>
+          </div>
+
+          <div class="grid grid-cols-4 gap-4 text-xs">
+            <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50/50 space-y-1.5">
+              <span class="text-[11px] font-semibold text-slate-500">Incentive Engine</span>
+              <div class="flex items-center justify-between pt-1">
+                <span class="font-bold text-slate-900 text-sm">Automated</span>
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              </div>
+              <p class="text-[11px] text-slate-400">Calculates strictly from delivery logs without subjective scores.</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50/50 space-y-1.5">
+              <span class="text-[11px] font-semibold text-slate-500">Calculation Cycle</span>
+              <div class="pt-1 font-bold text-slate-900 text-sm">Monthly (Last Day)</div>
+              <p class="text-[11px] text-slate-400">Next evaluation runs on 30 Sep 2026.</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50/50 space-y-1.5">
+              <span class="text-[11px] font-semibold text-slate-500">Approval Requirement</span>
+              <div class="pt-1 font-bold text-indigo-700 text-sm">Founder Signoff</div>
+              <p class="text-[11px] text-slate-400">HR cannot disburse until Founder explicitly approves.</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50/50 space-y-1.5">
+              <span class="text-[11px] font-semibold text-slate-500">Payment Status Logic</span>
+              <div class="pt-1 font-bold text-slate-900 text-sm">Manual Confirmation</div>
+              <p class="text-[11px] text-slate-400">Incentives are marked Paid only after UPI/NEFT transfer log.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. DANGER ZONE (Subtle separation, bottom, professional confirmation) -->
+        <div id="danger" class="bg-white rounded-xl border border-rose-200/80 shadow-sm p-6 space-y-4">
+          <div class="flex items-center justify-between border-b border-rose-100 pb-3">
+            <div class="flex items-center gap-2">
+              <div class="w-6 h-6 rounded-md bg-rose-100 text-rose-700 flex items-center justify-center">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+              </div>
+              <h2 class="text-sm font-bold text-slate-900 tracking-tight">Danger Zone</h2>
+            </div>
+            <span class="text-[11px] text-rose-600 font-semibold">Founder Only Access</span>
+          </div>
+
+          <p class="text-xs text-slate-500 leading-relaxed">
+            Destructive maintenance actions for company archives and staging environments. All actions require two-factor authentication and record a permanent audit entry in the activity log.
+          </p>
+
+          <div class="flex items-center justify-between pt-2">
+            <div class="space-y-0.5">
+              <div class="text-xs font-bold text-slate-800">Archive Company Production Data</div>
+              <div class="text-[11px] text-slate-400">Generate encrypted offsite snapshot of all client milestones and financial ledgers.</div>
+            </div>
+            <button class="px-3.5 py-1.5 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-50 font-semibold text-xs transition-colors">
+              Archive Data
+            </button>
+          </div>
+
+          <div class="flex items-center justify-between pt-2 border-t border-slate-100">
+            <div class="space-y-0.5">
+              <div class="text-xs font-bold text-slate-800">Reset Demonstration Data</div>
+              <div class="text-[11px] text-slate-400">Clears fictional sample records and resets all pipelines to fresh studio defaults.</div>
+            </div>
+            <button class="px-3.5 py-1.5 rounded-lg border border-rose-200 text-rose-600 hover:bg-rose-50 font-semibold text-xs transition-colors">
+              Reset Demo Data...
+            </button>
+          </div>
+        </div>
+
+        <!-- System Version Footer -->
+        <div class="flex items-center justify-between text-[11px] text-slate-400 pt-2 pb-6 px-1">
+          <div>Brandstro Agency Operating System • V2.4 Enterprise Production</div>
+          <div class="flex items-center gap-3">
+            <span>Permissions: Founder (Full Access)</span>
+            <span>•</span>
+            <span class="text-emerald-600 font-medium">SSL Encrypted Session</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Visual feedback for save button
+    const saveBtn = document.getElementById('saveBtn');
+    if (saveBtn) {
+      saveBtn.addEventListener('click', () => {
+        saveBtn.innerHTML = `
+          <svg class="w-3.5 h-3.5 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg>
+          <span>Saving...</span>
+        `;
+        setTimeout(() => {
+          saveBtn.className = "flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-600 text-white font-semibold text-xs shadow-sm transition-all";
+          saveBtn.innerHTML = `
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span>Saved Successfully</span>
+          `;
+          setTimeout(() => {
+            saveBtn.className = "flex items-center gap-2 px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs shadow-sm shadow-indigo-500/25 transition-all";
+            saveBtn.innerHTML = `
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Save Changes</span>
+            `;
+          }, 2000);
+        }, 600);
+      });
+    }
+  </script>
+
+
+</body></html>

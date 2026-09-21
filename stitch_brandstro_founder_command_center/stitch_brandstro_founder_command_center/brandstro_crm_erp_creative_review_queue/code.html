@@ -1,0 +1,687 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><title>Brandstro CRM + ERP</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-low":"#eff4ff","secondary-fixed":"#dae2fd","on-primary-fixed":"#0f0069","secondary-fixed-dim":"#bec6e0","on-error":"#ffffff","on-background":"#0b1c30","on-secondary":"#ffffff","on-surface-variant":"#464555","tertiary-container":"#885500","on-surface":"#0b1c30","tertiary-fixed":"#ffddb8","error-container":"#ffdad6","primary-container":"#4f46e5","surface-variant":"#d3e4fe","on-secondary-fixed":"#131b2e","background":"#f8f9ff","surface-bright":"#f8f9ff","on-primary-fixed-variant":"#3323cc","outline-variant":"#c7c4d8","on-secondary-fixed-variant":"#3f465c","surface-container-lowest":"#ffffff","on-primary":"#ffffff","on-secondary-container":"#5c647a","outline":"#777587","on-tertiary-fixed":"#2a1700","surface-tint":"#4d44e3","on-tertiary":"#ffffff","on-tertiary-fixed-variant":"#653e00","on-error-container":"#93000a","on-tertiary-container":"#ffd4a4","secondary-container":"#dae2fd","surface-container-highest":"#d3e4fe","primary-fixed":"#e2dfff","secondary":"#565e74","surface-container-high":"#dce9ff","surface-dim":"#cbdbf5","error":"#ba1a1a","primary-fixed-dim":"#c3c0ff","tertiary-fixed-dim":"#ffb95f","tertiary":"#684000","inverse-on-surface":"#eaf1ff","surface":"#f8f9ff","primary":"#3525cd","on-primary-container":"#dad7ff","inverse-primary":"#c3c0ff","surface-container":"#e5eeff","inverse-surface":"#213145"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1rem","space-xl":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter":"1rem","margin":"1rem","gutter-desktop":"1.5rem","space-md":"0.75rem","margin-desktop":"2rem"},fontFamily:{"body-sm":["Inter"],"code-sm":["JetBrains Mono"],"body-md":["Inter"],"headline-lg":["Inter"],"display-lg":["Inter"],"label-sm":["Inter"],"headline-sm":["Inter"],"code-xs":["JetBrains Mono"],"headline-md":["Inter"],"label-md":["Inter"],"body-lg":["Inter"]},fontSize:{"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"code-sm":["11px",{"lineHeight":"14px","fontWeight":"500"}],"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-sm":["16px",{"lineHeight":"24px","letterSpacing":"-0.005em","fontWeight":"600"}],"code-xs":["10px",{"lineHeight":"12px","fontWeight":"400"}],"headline-md":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"body-lg":["15px",{"lineHeight":"22px","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen"><aside class="fixed left-0 top-0 h-full w-60 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center gap-space-sm bg-inverse-surface"><div class="w-8 h-8 rounded bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">token</span></div><div class="flex flex-col"><span class="font-label-md text-label-md text-inverse-on-surface tracking-tight uppercase font-semibold">Brandstro</span><span class="font-code-xs text-code-xs text-outline-variant uppercase tracking-wider">CRM &amp; ERP Core</span></div></div><div class="px-space-md py-space-sm"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline-variant font-semibold">Creative</span></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-container/10 hover:text-inverse-on-surface transition-colors" data-path="dashboard" href="#"><span class="font-body-md text-body-md">Dashboard</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-container/10 hover:text-inverse-on-surface transition-colors" data-path="production-board" href="#"><span class="font-body-md text-body-md">Production Board</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-container/10 hover:text-inverse-on-surface transition-colors" data-path="projects" href="#"><span class="font-body-md text-body-md">Projects</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-container/10 hover:text-inverse-on-surface transition-colors" data-path="team-workload" href="#"><span class="font-body-md text-body-md">Team Workload</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary font-semibold" data-path="review-queue" href="#"><span class="font-body-md text-body-md">Review Queue</span><span class="px-space-xs py-0.5 rounded font-code-xs text-code-xs bg-tertiary-container text-on-tertiary-container font-medium">5</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-inverse-on-surface/80 hover:bg-surface-container/10 hover:text-inverse-on-surface transition-colors" data-path="revision-queue" href="#"><span class="font-body-md text-body-md">Revision Queue</span><span class="px-space-xs py-0.5 rounded font-code-xs text-code-xs bg-secondary text-on-secondary font-medium">2</span></a></nav></div><div class="p-space-md flex flex-col gap-space-sm"><div class="flex items-center justify-between px-space-sm py-space-xs text-inverse-on-surface/70"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="font-label-sm text-label-sm">System Alerts</span></div><span class="w-2 h-2 rounded-full bg-tertiary-fixed"></span></div><div class="flex items-center gap-space-md p-space-sm rounded-xl bg-inverse-surface/60"><div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center"><span class="font-label-md text-label-md text-on-primary font-semibold">VS</span></div><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-inverse-on-surface font-semibold truncate">Vikram S.</span><span class="font-code-xs text-code-xs text-outline-variant truncate">Creative Team Head</span></div></div></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] px-space-gutter-desktop"><div class="h-full w-full max-w-[1680px] mx-auto flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant"><span class="hover:text-on-surface transition-colors cursor-pointer">Creative</span><span>/</span><span class="text-on-surface font-semibold">Review Queue</span></div></div><div class="flex items-center gap-space-lg"><button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container hover:text-on-primary transition-all shadow-[0_1px_3px_0_rgba(15,23,42,0.04)]" type="button"><span class="material-symbols-outlined text-[16px]">add</span><span>Assign Work</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 w-full px-space-gutter-desktop min-h-screen bg-surface"><div class="max-w-[1680px] mx-auto py-space-lg"><div class="flex flex-col w-full">
+<!-- Top Command & Sub-Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-lg">
+<div>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant mb-1">
+<span class="hover:text-on-surface cursor-pointer">Creative</span>
+<span class="text-outline">/</span>
+<span class="text-on-surface font-semibold">Review Queue</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Review Queue</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Creative work waiting for internal approval.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<!-- Quick Search Input with ⌘K Badge -->
+<div class="relative w-72">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[18px]">search</span>
+<input class="w-full h-9 pl-9 pr-12 rounded-lg bg-surface-container-lowest text-body-sm font-body-sm text-on-surface placeholder:text-outline shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Quick search across queue..." type="text">
+<span class="absolute right-2.5 top-2 px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-code-xs text-code-xs font-semibold">⌘K</span>
+</div>
+<!-- Active Filters Trigger -->
+<button class="relative inline-flex items-center gap-space-xs h-9 px-space-md rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors shadow-sm font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">tune</span>
+<span>Filters</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</button>
+</div>
+</div>
+<!-- Summary KPI Cards Grid (4 Compact Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Card 1: Needs Review -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-start justify-between relative overflow-hidden">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Needs Review</span>
+<span class="font-display-lg text-display-lg text-on-surface mt-1">5</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Awaiting Head sign-off</span>
+</div>
+<div class="w-9 h-9 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[20px]">rate_review</span>
+</div>
+<div class="absolute left-0 bottom-0 top-0 w-1 bg-primary-container"></div>
+</div>
+<!-- Card 2: Due Today -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-start justify-between relative overflow-hidden">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Due Today</span>
+<span class="font-display-lg text-display-lg text-on-surface mt-1">2</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Critical delivery path</span>
+</div>
+<div class="w-9 h-9 rounded-lg bg-tertiary-fixed/40 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">event_upcoming</span>
+</div>
+<div class="absolute left-0 bottom-0 top-0 w-1 bg-tertiary-fixed-dim"></div>
+</div>
+<!-- Card 3: Overdue -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-start justify-between relative overflow-hidden">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-error font-semibold">Overdue</span>
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+</div>
+<span class="font-display-lg text-display-lg text-error mt-1">1</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Orange Surgicals · 1d late</span>
+</div>
+<div class="w-9 h-9 rounded-lg bg-error-container/60 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+<div class="absolute left-0 bottom-0 top-0 w-1 bg-error"></div>
+</div>
+<!-- Card 4: High Priority -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-start justify-between relative overflow-hidden">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">High Priority</span>
+<span class="font-display-lg text-display-lg text-on-surface mt-1">2</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">ABC Foods &amp; Mahalaxmi</span>
+</div>
+<div class="w-9 h-9 rounded-lg bg-secondary-container/50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">priority_high</span>
+</div>
+<div class="absolute left-0 bottom-0 top-0 w-1 bg-primary"></div>
+</div>
+</div>
+<!-- Workspace Shell: Main Table (62%) + Focused Review Panel (38%) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT PANE: Filter Bar & Master Review Table (7 cols / ~60%) -->
+<div class="xl:col-span-7 flex flex-col gap-space-md">
+<!-- Review Tabs & Filters Segment -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md">
+<!-- Review Type Tabs -->
+<div class="flex items-center justify-between overflow-x-auto pb-1">
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm">
+<span>All</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-lowest/20 font-code-xs text-code-xs">5</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md text-label-md flex items-center gap-1.5 transition-colors">
+<span>New Concepts</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-code-xs text-code-xs text-on-surface-variant">2</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md text-label-md flex items-center gap-1.5 transition-colors">
+<span>Revisions</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-code-xs text-code-xs text-on-surface-variant">2</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md text-label-md flex items-center gap-1.5 transition-colors">
+<span>Final Review</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container font-code-xs text-code-xs text-on-surface-variant">1</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low font-label-md text-label-md flex items-center gap-1.5 transition-colors">
+<span class="text-error font-medium">Urgent</span>
+<span class="px-1.5 py-0.2 rounded bg-error-container text-on-error-container font-code-xs text-code-xs font-semibold">1</span>
+</button>
+</div>
+<button class="text-on-surface-variant hover:text-primary font-label-sm text-label-sm underline transition-colors whitespace-nowrap ml-2">
+            Clear Filters
+          </button>
+</div>
+<!-- Filter Sub-Row -->
+<div class="grid grid-cols-2 md:grid-cols-5 gap-space-xs pt-space-xs">
+<!-- Filter: Search -->
+<div class="col-span-2 relative">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-outline text-[16px]">filter_list</span>
+<input class="w-full h-8 pl-8 pr-3 rounded bg-surface-container-low text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none" placeholder="Search project, client, designer..." type="text">
+</div>
+<!-- Dropdown: Team -->
+<div class="relative">
+<select class="w-full h-8 px-2 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface appearance-none pr-6 cursor-pointer focus:outline-none">
+<option>Team: All</option>
+<option>Logo Team</option>
+<option>Packaging</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-2 text-outline text-[16px] pointer-events-none">arrow_drop_down</span>
+</div>
+<!-- Dropdown: Priority -->
+<div class="relative">
+<select class="w-full h-8 px-2 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface appearance-none pr-6 cursor-pointer focus:outline-none">
+<option>Priority: All</option>
+<option>Urgent</option>
+<option>High</option>
+<option>Normal</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-2 text-outline text-[16px] pointer-events-none">arrow_drop_down</span>
+</div>
+<!-- Dropdown: Due Date -->
+<div class="relative">
+<select class="w-full h-8 px-2 rounded bg-surface-container-low font-label-sm text-label-sm text-on-surface appearance-none pr-6 cursor-pointer focus:outline-none">
+<option>Due: Any</option>
+<option>Today</option>
+<option>Tomorrow</option>
+<option>This Week</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-2 text-outline text-[16px] pointer-events-none">arrow_drop_down</span>
+</div>
+</div>
+</div>
+<!-- Main Operational Review Data Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/70 h-10">
+<th class="px-space-md font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Project &amp; Client</th>
+<th class="px-space-sm font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Submitted By</th>
+<th class="px-space-sm font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Ver</th>
+<th class="px-space-sm font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Submitted / Due</th>
+<th class="px-space-sm font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Priority</th>
+<th class="px-space-sm font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Status</th>
+<th class="px-space-md font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase text-right">Action</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm">
+<!-- ROW 1 (ACTIVE / CURRENTLY INSPECTED IN DRAWER) -->
+<tr class="bg-primary-container/5 hover:bg-primary-container/10 transition-colors cursor-pointer relative">
+<td class="px-space-md py-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-2 h-8 rounded-full bg-primary-container"></div>
+<div class="w-7 h-7 rounded bg-primary text-on-primary font-code-sm text-code-sm flex items-center justify-center font-bold">
+                      AB
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">ABC Brand Identity</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant truncate">ABC Foods · #PRJ-1024</span>
+</div>
+</div>
+</td>
+<td class="px-space-sm py-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center font-code-xs text-code-xs font-semibold">
+                      SH
+                    </div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Shihaf</span>
+<span class="font-code-xs text-code-xs text-outline">Logo Team</span>
+</div>
+</div>
+</td>
+<td class="px-space-sm py-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-code-xs text-code-xs font-bold">V3</span>
+</td>
+<td class="px-space-sm py-space-sm">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Today 10:30 AM</span>
+<span class="text-tertiary font-medium">Due 4:00 PM</span>
+</div>
+</td>
+<td class="px-space-sm py-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">HIGH</span>
+</td>
+<td class="px-space-sm py-space-sm">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                    New Review
+                  </span>
+</td>
+<td class="px-space-md py-space-sm text-right">
+<div class="inline-flex items-center gap-1">
+<button class="px-2.5 py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+<span>Reviewing</span>
+</button>
+<button class="w-7 h-7 rounded hover:bg-surface-container flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[16px]">more_horiz</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 2: KPN Restaurant -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-space-md py-space-sm">
+<div class="flex items-center gap-space-sm pl-3">
+<div class="w-7 h-7 rounded bg-secondary text-on-secondary font-code-sm text-code-sm flex items-center justify-center font-bold">
+                      KP
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">KPN Restaurant Identity</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant truncate">KPN Hospitality · #PRJ-1021</span>
+</div>
+</div>
+</td>
+<td class="px-space-sm py-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center font-code-xs text-code-xs font-semibold">
+                      PR
+                    </div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Prabha</span>
+<span class="font-code-xs text-code-xs text-outline">Logo Team</span>
+</div>
+</div>
+</td>
+<td class="px-space-sm py-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-code-xs text-code-xs font-medium">V2</span>
+</td>
+<td class="px-space-sm py-space-sm">
+<div class="flex flex-col">
+<span class="text-on-surface">Today 9:15 AM</span>
+<span class="text-on-surface-variant">Due Tomorrow</span>
+</div>
+</td>
+<td class="px-space-sm py-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">NORMAL</span>
+</td>
+<td class="px-space-sm py-space-sm">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Revision
+                  </span>
+</td>
+<td class="px-space-md py-space-sm text-right">
+<div class="inline-flex items-center gap-1">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold transition-colors">
+                      Review
+                    </button>
+<button class="w-7 h-7 rounded hover:bg-surface-container flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[16px]">more_horiz</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 3: Orange Surgicals (OVERDUE / URGENT) -->
+<tr class="hover:bg-error-container/20 transition-colors bg-error-container/5">
+<td class="px-space-md py-space-sm">
+<div class="flex items-center gap-space-sm pl-3">
+<div class="w-7 h-7 rounded bg-error text-on-error font-code-sm text-code-sm flex items-center justify-center font-bold">
+                      OS
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Orange Surgicals Packaging</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant truncate">Orange Surgicals · #PRJ-1008</span>
+</div>
+</div>
+</td>
+<td class="px-space-sm py-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-surface-variant text-on-surface-variant flex items-center justify-center font-code-xs text-code-xs font-semibold">
+                      RA
+                    </div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Rasith</span>
+<span class="font-code-xs text-code-xs text-outline">Packaging</span>
+</div>
+</div>
+</td>
+<td class="px-space-sm py-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-code-xs text-code-xs font-medium">V4</span>
+</td>
+<td class="px-space-sm py-space-sm">
+<div class="flex flex-col">
+<span class="text-on-surface">Yesterday</span>
+<span class="text-error font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">alarm</span>
+                      Late 4h
+                    </span>
+</div>
+</td>
+<td class="px-space-sm py-space-sm">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container text-error font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[12px]">error</span>
+                    URGENT
+                  </span>
+</td>
+<td class="px-space-sm py-space-sm">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container/60 text-on-error-container font-label-sm text-label-sm font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                    Overdue Review
+                  </span>
+</td>
+<td class="px-space-md py-space-sm text-right">
+<div class="inline-flex items-center gap-1">
+<button class="px-2.5 py-1 rounded bg-error text-on-error font-label-sm text-label-sm font-semibold shadow-sm hover:opacity-90 transition-opacity">
+                      Review
+                    </button>
+<button class="w-7 h-7 rounded hover:bg-surface-container flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[16px]">more_horiz</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 4: Mahalaxmi Builders -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-space-md py-space-sm">
+<div class="flex items-center gap-space-sm pl-3">
+<div class="w-7 h-7 rounded bg-inverse-surface text-inverse-on-surface font-code-sm text-code-sm flex items-center justify-center font-bold">
+                      MB
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Mahalaxmi Builders Logo</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant truncate">Mahalaxmi · #PRJ-1012</span>
+</div>
+</div>
+</td>
+<td class="px-space-sm py-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-code-xs text-code-xs font-semibold">
+                      AK
+                    </div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Akhil</span>
+<span class="font-code-xs text-code-xs text-primary font-semibold">Lead · Logo</span>
+</div>
+</div>
+</td>
+<td class="px-space-sm py-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-code-xs text-code-xs font-medium">V2</span>
+</td>
+<td class="px-space-sm py-space-sm">
+<div class="flex flex-col">
+<span class="text-on-surface">13 Sep</span>
+<span class="text-on-surface-variant">Due 17 Sep</span>
+</div>
+</td>
+<td class="px-space-sm py-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">HIGH</span>
+</td>
+<td class="px-space-sm py-space-sm">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Revision
+                  </span>
+</td>
+<td class="px-space-md py-space-sm text-right">
+<div class="inline-flex items-center gap-1">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold transition-colors">
+                      Review
+                    </button>
+<button class="w-7 h-7 rounded hover:bg-surface-container flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[16px]">more_horiz</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 5: Iyengar Bakery -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="px-space-md py-space-sm">
+<div class="flex items-center gap-space-sm pl-3">
+<div class="w-7 h-7 rounded bg-tertiary-container text-on-tertiary-container font-code-sm text-code-sm flex items-center justify-center font-bold">
+                      IB
+                    </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Iyengar Bakery Label</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant truncate">Iyengar Bakery · #PRJ-1018</span>
+</div>
+</div>
+</td>
+<td class="px-space-sm py-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-code-xs text-code-xs font-semibold">
+                      SL
+                    </div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Shalin</span>
+<span class="font-code-xs text-code-xs text-tertiary font-semibold">Lead · Packaging</span>
+</div>
+</div>
+</td>
+<td class="px-space-sm py-space-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-code-xs text-code-xs font-medium">V3</span>
+</td>
+<td class="px-space-sm py-space-sm">
+<div class="flex flex-col">
+<span class="text-on-surface">12 Sep</span>
+<span class="text-on-surface-variant">Due 16 Sep</span>
+</div>
+</td>
+<td class="px-space-sm py-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">NORMAL</span>
+</td>
+<td class="px-space-sm py-space-sm">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    Final Review
+                  </span>
+</td>
+<td class="px-space-md py-space-sm text-right">
+<div class="inline-flex items-center gap-1">
+<button class="px-2.5 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold transition-colors">
+                      Review
+                    </button>
+<button class="w-7 h-7 rounded hover:bg-surface-container flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-[16px]">more_horiz</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="px-space-md py-space-sm bg-surface-container-low/40 flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Showing 5 of 5 tasks awaiting internal sign-off</span>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface font-code-xs text-code-xs opacity-50 cursor-not-allowed">PREV</button>
+<span class="px-2 font-code-xs text-code-xs font-semibold text-primary">PAGE 1/1</span>
+<button class="px-2 py-1 rounded bg-surface-container-lowest text-on-surface font-code-xs text-code-xs opacity-50 cursor-not-allowed">NEXT</button>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT PANE: Active Focused Review Drawer / Panel (5 cols / ~40%) -->
+<div class="xl:col-span-5 bg-surface-container-lowest rounded-xl shadow-md flex flex-col overflow-hidden">
+<!-- Panel Header & Metadata -->
+<div class="p-space-md bg-surface-container-low/50 flex flex-col gap-space-xs">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">ABC Brand Identity — Review V3</h2>
+<span class="px-2 py-0.5 rounded bg-primary text-on-primary font-code-xs text-code-xs font-bold">V3 ACTIVE</span>
+</div>
+<p class="font-code-xs text-code-xs text-on-surface-variant mt-0.5 tracking-wide">
+              BRD-1024 · ABC Foods Ltd · Logo Team
+            </p>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center transition-colors" title="Full Artboard Preview">
+<span class="material-symbols-outlined text-[18px]">open_in_full</span>
+</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container flex items-center justify-center transition-colors" title="Close panel">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Chips & Status Banner -->
+<div class="flex flex-wrap items-center gap-space-xs pt-1">
+<div class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-primary">person</span>
+<span>Shihaf</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-outline">schedule</span>
+<span>Today 10:30 AM</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed font-body-sm text-body-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span>Due 4:00 PM (2h left)</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2 py-1 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-bold">
+            HIGH PRIORITY
+          </div>
+</div>
+</div>
+<!-- Main Visual Artwork Preview Container -->
+<div class="p-space-md flex flex-col gap-space-sm bg-surface-container-lowest">
+<!-- Artboard Tabs -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1 p-0.5 rounded-lg bg-surface-container">
+<button class="px-2.5 py-1 rounded-md bg-surface-container-lowest font-label-sm text-label-sm text-on-surface font-semibold shadow-xs">
+              Artboard 1: Primary Lockup
+            </button>
+<button class="px-2.5 py-1 rounded-md font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">
+              Artboard 2: Monogram
+            </button>
+<button class="px-2.5 py-1 rounded-md font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">
+              Artboard 3: Mockup
+            </button>
+</div>
+<span class="font-code-xs text-code-xs text-outline tracking-wider font-semibold">300 DPI VECTOR</span>
+</div>
+<!-- High-Fidelity Artwork Mock Canvas -->
+<div class="relative w-full rounded-xl overflow-hidden bg-[#FBF9F4] p-6 flex flex-col items-center justify-center min-h-[260px] shadow-inner">
+<!-- Top Tag on canvas -->
+<div class="absolute top-3 left-3 flex items-center gap-1.5 px-2 py-0.5 rounded bg-on-surface/80 backdrop-blur-sm text-inverse-on-surface font-code-xs text-code-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>
+<span>Route 3A: Refined Geometric Wheat &amp; Wordmark</span>
+</div>
+<div class="absolute top-3 right-3 px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface font-code-xs text-code-xs shadow-xs">
+            100% Vector Fit
+          </div>
+<!-- Brand vector SVG presentation -->
+<div class="flex flex-col items-center text-center my-4">
+<!-- Custom Interlocking Brand Monogram Icon -->
+<svg class="w-20 h-20 mb-3 text-[#2E5A44]" fill="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<circle cx="50" cy="50" r="46" stroke="#2E5A44" stroke-dasharray="4 2" stroke-width="3"></circle>
+<!-- Interlocking geometric Wheat / Grain Monogram -->
+<path d="M50 18C44 28 38 34 38 46C38 58 48 64 50 82C52 64 62 58 62 46C62 34 56 28 50 18Z" fill="#2E5A44" fill-opacity="0.12" stroke="#2E5A44" stroke-width="3"></path>
+<path d="M50 24V76" stroke="#D97706" stroke-linecap="round" stroke-width="2.5"></path>
+<path d="M50 36C45 32 40 33 36 38C43 40 47 38 50 36Z" fill="#2E5A44"></path>
+<path d="M50 36C55 32 60 33 64 38C57 40 53 38 50 36Z" fill="#2E5A44"></path>
+<path d="M50 48C45 44 40 45 36 50C43 52 47 50 50 48Z" fill="#2E5A44"></path>
+<path d="M50 48C55 44 60 45 64 50C57 52 53 50 50 48Z" fill="#2E5A44"></path>
+<path d="M50 60C45 56 40 57 37 62C44 64 47 62 50 60Z" fill="#D97706"></path>
+<path d="M50 60C55 56 60 57 63 62C56 64 53 62 50 60Z" fill="#D97706"></path>
+</svg>
+<!-- Brand Typography -->
+<div class="flex flex-col items-center">
+<span class="font-display-lg text-display-lg font-bold text-[#193226] tracking-tight uppercase" style="letter-spacing: 0.18em;">
+                ABC FOODS
+              </span>
+<div class="flex items-center gap-2 mt-1">
+<span class="w-6 h-px bg-[#D97706]"></span>
+<span class="font-code-xs text-code-xs uppercase tracking-widest text-[#7C6342] font-semibold">
+                  Artisan Staples · Est. 1984
+                </span>
+<span class="w-6 h-px bg-[#D97706]"></span>
+</div>
+</div>
+</div>
+<!-- Color Swatches & Spec Indicators -->
+<div class="mt-3 flex items-center gap-space-sm bg-surface-container-lowest/90 backdrop-blur-sm px-3 py-1.5 rounded-lg shadow-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded-full bg-[#2E5A44] shadow-xs"></span>
+<span class="font-code-xs text-code-xs text-on-surface font-medium">#2E5A44 Forest</span>
+</div>
+<span class="text-outline-variant">|</span>
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded-full bg-[#D97706] shadow-xs"></span>
+<span class="font-code-xs text-code-xs text-on-surface font-medium">#D97706 Ochre</span>
+</div>
+<span class="text-outline-variant">|</span>
+<div class="flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded-full bg-[#F5F3EF] shadow-xs"></span>
+<span class="font-code-xs text-code-xs text-on-surface font-medium">#F5F3EF Cream</span>
+</div>
+</div>
+</div>
+<!-- Inline Audit Diff Strip (Old V2 vs New V3) -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase text-outline font-semibold">Evolution:</span>
+<!-- Old Value Pill -->
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-code-xs text-code-xs line-through">
+              V2: Organic leaf complex (Over-detailed)
+            </span>
+<span class="font-code-xs text-code-xs text-outline font-bold">→</span>
+<!-- New Value Pill -->
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-code-xs text-code-xs font-semibold">
+              V3: Balanced geometric wheat (16px Favicon ready)
+            </span>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:underline font-semibold">Side-by-side</button>
+</div>
+<!-- Designer Submission Note Card -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest shadow-xs flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">chat</span>
+              Designer Handover Note (Shihaf)
+            </span>
+<span class="font-code-xs text-code-xs text-outline">10:30 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic pl-5">
+            “Updated symbol proportions and refined typography based on Akhil's feedback. Warm ochre tone softened for grocery shelf contrast. Scaled down to 16px favicon with clear legibility.”
+          </p>
+</div>
+<!-- Review Checklist (Micro QA Tasks) -->
+<div class="p-space-sm rounded-lg bg-surface-container-low/60 flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-outline font-semibold tracking-wider">
+            Executive Verification Checklist
+          </span>
+<div class="grid grid-cols-2 gap-1.5 pt-1">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary-container focus:ring-primary accent-primary-container" type="checkbox">
+<span class="font-body-sm text-body-sm text-on-surface">Client Brief Respected</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary-container focus:ring-primary accent-primary-container" type="checkbox">
+<span class="font-body-sm text-body-sm text-on-surface">Vector &amp; Color Specs OK</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary-container focus:ring-primary accent-primary-container" type="checkbox">
+<span class="font-body-sm text-body-sm text-on-surface">Typography Kerning Verified</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="w-4 h-4 rounded text-primary-container focus:ring-primary accent-primary-container" type="checkbox">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold text-primary">Final Sign-off Ready</span>
+</label>
+</div>
+</div>
+<!-- Audit Timeline / Version History -->
+<div class="pt-1 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase text-outline font-semibold tracking-wider">Audit Timeline</span>
+<div class="flex flex-col gap-1 text-body-sm font-body-sm pl-2">
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-code-xs text-code-xs font-bold text-on-surface">V3 (Current)</span>
+<span class="text-on-surface-variant">Pending Creative Head Approval</span>
+</div>
+<span class="font-code-xs text-code-xs text-outline">Today</span>
+</div>
+<div class="flex items-center justify-between py-1 opacity-70">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">V2</span>
+<span class="text-on-surface-variant">Internal feedback applied by Shihaf</span>
+</div>
+<span class="font-code-xs text-code-xs text-outline">13 Sep</span>
+</div>
+<div class="flex items-center justify-between py-1 opacity-50">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">V1</span>
+<span class="text-on-surface-variant">Initial route conceptualized</span>
+</div>
+<span class="font-code-xs text-code-xs text-outline">12 Sep</span>
+</div>
+</div>
+</div>
+<!-- Annotation / Internal Head Feedback Input -->
+<div class="mt-1">
+<div class="relative">
+<textarea class="w-full p-2.5 rounded-lg bg-surface-container-low text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/20 resize-none" placeholder="Add internal feedback note or correction reason for Shihaf..." rows="2"></textarea>
+<div class="absolute right-2 bottom-2 flex items-center gap-1 text-outline">
+<button class="hover:text-on-surface p-1"><span class="material-symbols-outlined text-[16px]">attach_file</span></button>
+<button class="hover:text-on-surface p-1"><span class="material-symbols-outlined text-[16px]">mic</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- BOTTOM FIXED ACTION BAR -->
+<div class="p-space-md bg-surface-container-low/90 backdrop-blur-md flex items-center justify-between gap-space-sm shadow-lg">
+<div class="flex items-center gap-space-xs">
+<!-- Secondary: Send Back to Designer -->
+<button class="h-9 px-space-md rounded-lg bg-surface-container-lowest hover:bg-error-container/40 text-error font-label-md text-label-md font-semibold transition-colors flex items-center gap-1 shadow-xs" onclick="alert('Prompting Revision Modal: Specify revision notes for Shihaf')" type="button">
+<span class="material-symbols-outlined text-[16px]">replay</span>
+<span>Request Revision</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs">
+<!-- Primary CTA: Sign-Off & Client Dispatch -->
+<button class="h-9 px-space-lg rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-all font-label-md text-label-md font-semibold shadow-md flex items-center gap-1.5" onclick="alert('Approved! Artwork V3 promoted to Client Review Queue.')" type="button">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Approve &amp; Send to Client</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div></div></main></div></body></html>

@@ -1,0 +1,742 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary": "#684000", "secondary-fixed": "#dae2fd", "surface-container-low": "#eff4ff", "primary-fixed": "#e2dfff", "surface-variant": "#d3e4fe", "error": "#ba1a1a", "on-primary-container": "#dad7ff", "on-tertiary-fixed-variant": "#653e00", "error-container": "#ffdad6", "surface-container-lowest": "#ffffff", "on-tertiary-fixed": "#2a1700", "tertiary-fixed": "#ffddb8", "secondary-container": "#dae2fd", "on-error": "#ffffff", "surface-container-high": "#dce9ff", "on-secondary-container": "#5c647a", "background": "#f8f9ff", "on-secondary": "#ffffff", "surface": "#f8f9ff", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#3323cc", "secondary": "#565e74", "surface-container-highest": "#d3e4fe", "on-background": "#0b1c30", "outline": "#777587", "primary": "#3525cd", "on-secondary-fixed-variant": "#3f465c", "primary-container": "#4f46e5", "on-secondary-fixed": "#131b2e", "surface-tint": "#4d44e3", "on-primary": "#ffffff", "on-error-container": "#93000a", "on-surface-variant": "#464555", "inverse-primary": "#c3c0ff", "tertiary-container": "#885500", "inverse-on-surface": "#eaf1ff", "outline-variant": "#c7c4d8", "primary-fixed-dim": "#c3c0ff", "on-tertiary-container": "#ffd4a4", "on-surface": "#0b1c30", "secondary-fixed-dim": "#bec6e0", "surface-bright": "#f8f9ff", "surface-dim": "#cbdbf5", "surface-container": "#e5eeff", "tertiary-fixed-dim": "#ffb95f", "inverse-surface": "#213145", "on-primary-fixed": "#0f0069" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "1.5rem", "space-sm": "0.5rem", "space-md": "0.75rem", "space-xs": "0.25rem", "margin-desktop": "2rem", "gutter-desktop": "1.5rem", "gutter": "1rem", "space-lg": "1rem", "margin": "1rem" }, "fontFamily": { "headline-md": ["Inter"], "body-sm": ["Inter"], "code-sm": ["JetBrains Mono"], "headline-lg": ["Inter"], "display-lg": ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"], "code-xs": ["JetBrains Mono"], "headline-sm": ["Inter"], "label-md": ["Inter"], "label-sm": ["Inter"] }, "fontSize": { "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "code-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "code-xs": ["10px", { "lineHeight": "12px", "fontWeight": "400" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-screen w-60 bg-inverse-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col w-full"><div class="h-16 px-space-md flex items-center gap-space-sm bg-inverse-surface"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary font-headline-sm text-headline-sm">B</div><div class="flex flex-col"><span class="text-inverse-on-surface font-headline-sm text-headline-sm leading-tight tracking-tight">BRANDSTRO</span><span class="text-outline-variant font-code-xs text-code-xs tracking-wider uppercase">CRM &amp; ERP CORE</span></div></div><div class="px-space-md pt-space-md pb-space-xs"><span class="text-outline-variant font-label-sm text-label-sm uppercase tracking-wider">Team</span></div><nav class="flex flex-col gap-space-xs px-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-md"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-container-highest hover:text-on-surface transition-colors font-body-md text-body-md" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-container-highest hover:text-on-surface transition-colors font-body-md text-body-md" data-path="my-team" href="#"><span class="material-symbols-outlined text-[18px]">groups</span><span>My Team</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary font-label-md" data-path="team-workload" href="#"><span class="material-symbols-outlined text-[18px]">stacked_bar_chart</span><span>Team Workload</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-container-highest hover:text-on-surface transition-colors font-body-md text-body-md" data-path="team-projects" href="#"><span class="material-symbols-outlined text-[18px]">folder_managed</span><span>Team Projects</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-outline-variant hover:bg-surface-container-highest hover:text-on-surface transition-colors font-body-md text-body-md" data-path="review-queue" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">rate_review</span><span>Review Queue</span></div><span class="px-space-xs py-[2px] bg-secondary-container text-on-secondary-fixed rounded font-code-xs text-code-xs font-semibold">3</span></a></nav><div class="mt-space-md px-space-xs"><div class="mx-space-xs p-space-sm rounded-lg bg-surface-container-highest flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span><div class="flex flex-col"><span class="text-on-surface font-label-sm text-label-sm font-semibold uppercase tracking-wider">Squad</span><span class="text-on-surface font-body-sm text-body-sm">LOGO TEAM</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div></div><div class="flex flex-col p-space-sm gap-space-xs"><div class="flex items-center justify-between px-space-sm py-space-xs rounded-lg bg-surface-container-low"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-on-surface-variant text-[16px]">notifications_active</span><span class="font-label-sm text-label-sm text-on-surface-variant">System Alerts</span></div><span class="font-code-xs text-code-xs font-semibold text-on-surface-variant">Normal</span></div><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="text-on-surface font-label-md text-label-md leading-tight">Akhil</span><span class="text-on-surface-variant font-code-xs text-code-xs">Logo Team Leader</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[16px]">more_vert</span></div></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-xl flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm"><span class="text-on-surface-variant">Logo Team</span><span class="text-outline">/</span><span class="text-on-surface font-medium">Team Workload</span></div><div class="hidden xl:flex items-center bg-surface-container-lowest px-space-sm py-space-xs rounded-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)] w-64"><span class="material-symbols-outlined text-outline text-[18px] mr-space-xs">search</span><input class="bg-transparent text-on-surface placeholder:text-outline text-body-sm font-body-sm focus:outline-none w-full" placeholder="Search tasks, members..." type="text"></div></div><div class="flex items-center gap-space-sm"><button class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-lowest rounded-lg text-on-surface font-label-md text-label-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">calendar_today</span><span>This Week</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_drop_down</span></button><button class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-lowest rounded-lg text-on-surface font-label-md text-label-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">tune</span><span>Filter</span></button><button class="flex items-center gap-space-xs px-space-md py-space-xs bg-primary-container rounded-lg text-on-primary font-label-md text-label-md hover:bg-primary transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">add</span><span>Assign Task</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface-container-low min-h-screen"><div class="w-full max-w-[1680px] mx-auto p-space-xl"><div class="mb-space-xl flex flex-col gap-space-xs"><h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Team Workload</h1><p class="font-body-md text-body-md text-on-surface-variant">Balance your team's workload and keep deadlines on track.</p></div><div class="flex flex-col w-full">
+<!-- Top Level Alert Notice Strip -->
+<div class="mb-space-lg p-space-sm px-space-md rounded-lg bg-error-container text-on-error-container flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-[18px] text-error shrink-0">crisis_alert</span>
+<p class="font-body-md text-body-md truncate">
+<span class="font-semibold text-on-surface">Bottleneck Detected:</span> Rasith S. is at 100% capacity with 2 critical overdue deliverables on <em>Orange Surgicals</em>.
+      </p>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="px-space-sm py-[3px] bg-error text-on-error rounded font-label-sm text-label-sm shadow-sm hover:opacity-95 transition-opacity flex items-center gap-1" onclick="document.getElementById('reassign-modal').classList.remove('hidden')" type="button">
+<span>Resolve Bottleneck</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- 1. TOP KPI SUMMARY CARDS -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Card 1: Team Members -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow cursor-pointer flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Squad Roster</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">groups</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">5</span>
+<span class="font-code-xs text-code-xs text-secondary">FTE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+          All active · Logo Squad
+        </p>
+</div>
+</div>
+<!-- Card 2: Active Tasks -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow cursor-pointer flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active Queue</span>
+<div class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">format_list_bulleted</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">18</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Allocated</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-space-xs">
+<span class="font-semibold text-on-surface">11</span> in progress · <span class="font-semibold text-on-surface">3</span> in review
+        </p>
+</div>
+</div>
+<!-- Card 3: Due This Week -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow cursor-pointer flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Commitments</span>
+<div class="w-8 h-8 rounded-lg bg-surface-variant flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">calendar_clock</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">7</span>
+<span class="font-code-xs text-code-xs text-secondary">This Wk</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-space-xs">
+<span class="font-semibold text-tertiary-container">2 due today</span> · 5 upcoming
+        </p>
+</div>
+</div>
+<!-- Card 4: Overdue Attention -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow cursor-pointer flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-error uppercase tracking-wider font-semibold">Overdue Breaches</span>
+<div class="w-8 h-8 rounded-lg bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</div>
+</div>
+<div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-error font-bold">2</span>
+<span class="px-space-xs py-[1px] bg-error-container text-on-error-container font-code-xs text-code-xs rounded font-semibold">Critical</span>
+</div>
+<p class="font-body-sm text-body-sm text-error flex items-center gap-1 mt-space-xs">
+<span>Action required · Orange Surgicals</span>
+</p>
+</div>
+</div>
+</div>
+<!-- 2. FILTER & ACTION BAR -->
+<div class="mb-space-lg p-space-sm bg-surface-container-lowest rounded-xl shadow-sm flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-space-xs flex-1">
+<!-- Search -->
+<div class="flex items-center bg-surface-container-low px-space-sm py-[7px] rounded-lg min-w-[280px] text-on-surface">
+<span class="material-symbols-outlined text-outline text-[18px] mr-space-xs">search</span>
+<input class="bg-transparent text-on-surface placeholder:text-outline text-body-sm font-body-sm focus:outline-none w-full" placeholder="Search team member or project... (⌘K)" type="text">
+</div>
+<!-- Filters -->
+<button class="flex items-center gap-space-xs px-space-sm py-[6px] rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span>Task Status</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">keyboard_arrow_down</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-sm py-[6px] rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span>Priority</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">keyboard_arrow_down</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-sm py-[6px] rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span>Deadline</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">keyboard_arrow_down</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-sm py-[6px] rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span>Project</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">keyboard_arrow_down</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-sm py-[6px] rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span>Workload</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">keyboard_arrow_down</span>
+</button>
+<button class="px-space-xs py-1 text-outline hover:text-on-surface font-label-sm text-label-sm underline decoration-dotted transition-colors" type="button">
+        Clear Filters
+      </button>
+</div>
+<!-- Operational Triggers -->
+<div class="flex items-center gap-space-xs shrink-0 self-end xl:self-auto">
+<button class="flex items-center gap-space-xs px-space-sm py-[7px] bg-secondary-container text-on-secondary-fixed font-label-md text-label-md rounded-lg hover:bg-secondary-fixed transition-colors" onclick="document.getElementById('reassign-modal').classList.remove('hidden')" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">bolt</span>
+<span>Auto-Level Suggestion</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-[7px] bg-primary-container text-on-primary font-label-md text-label-md rounded-lg hover:bg-primary transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Assign Task</span>
+</button>
+</div>
+</div>
+<!-- 3. TWO-COLUMN OPERATIONAL LAYOUT -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT OPERATIONAL WORKSPACE (8 cols ~ 68%) -->
+<div class="xl:col-span-8 flex flex-col gap-space-lg min-w-0">
+<!-- SECTION: ATTENTION REQUIRED -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[18px]">error</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Attention Required</h2>
+<span class="px-space-xs py-[1px] bg-error-container text-on-error-container rounded-full font-code-xs text-code-xs font-semibold">2 Actions</span>
+</div>
+<span class="font-code-xs text-code-xs text-outline">Real-time Squad Telemetry</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Exception Card 1: Rasith -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-error"></div>
+<div>
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Rasith S.</span>
+<span class="px-1.5 py-0.5 bg-error-container text-error rounded font-code-xs text-code-xs font-semibold">100% OVERLOADED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Packaging Designer (Cross-support) · 2 Overdue</p>
+</div>
+<div class="w-7 h-7 rounded-full bg-error-container flex items-center justify-center text-error shrink-0">
+<span class="material-symbols-outlined text-[16px]">hourglass_bottom</span>
+</div>
+</div>
+<!-- Task detail snapshot -->
+<div class="mt-space-sm p-space-xs px-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between text-body-sm">
+<span class="font-medium text-on-surface truncate">Orange Surgicals Packaging</span>
+<span class="font-code-xs text-code-xs text-error font-semibold shrink-0">Due 13 Sep (1d ago)</span>
+</div>
+<div class="flex items-center justify-between font-code-xs text-code-xs text-on-surface-variant">
+<span>Task: Packaging Revision V4</span>
+<span class="text-tertiary font-medium">Blocked: dieline kerning</span>
+</div>
+</div>
+<!-- Executive Audit Diff Pill -->
+<div class="mt-space-xs flex items-center gap-1.5 font-code-xs text-code-xs">
+<span class="text-outline-variant">Workload delta:</span>
+<span class="px-1 bg-surface-container text-secondary line-through">4 tasks/wk</span>
+<span class="text-outline">→</span>
+<span class="px-1 bg-error-container text-error font-semibold">6 tasks (+50%)</span>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-xs mt-space-md pt-space-xs">
+<button class="px-space-sm py-[5px] rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">
+                View Details
+              </button>
+<button class="px-space-sm py-[5px] rounded-lg bg-error text-on-error font-label-md text-label-md shadow-sm hover:opacity-90 transition-opacity flex items-center gap-1" onclick="document.getElementById('reassign-modal').classList.remove('hidden')" type="button">
+<span class="material-symbols-outlined text-[14px]">swap_horiz</span>
+<span>Reassign Task</span>
+</button>
+</div>
+</div>
+<!-- Exception Card 2: Shihaf -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-tertiary-fixed-dim"></div>
+<div>
+<div class="flex items-start justify-between gap-space-xs mb-space-xs">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Shihaf K.</span>
+<span class="px-1.5 py-0.5 bg-tertiary-fixed text-on-tertiary-fixed font-code-xs text-code-xs font-semibold">85% BUSY</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Senior Logo Designer · 2 Tasks Due Today</p>
+</div>
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed shrink-0">
+<span class="material-symbols-outlined text-[16px]">alarm</span>
+</div>
+</div>
+<!-- Task detail snapshot -->
+<div class="mt-space-sm p-space-xs px-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between text-body-sm">
+<span class="font-medium text-on-surface truncate">ABC Brand Identity</span>
+<span class="font-code-xs text-code-xs text-tertiary font-semibold shrink-0">Due 4:00 PM Today</span>
+</div>
+<div class="flex items-center justify-between font-code-xs text-code-xs text-on-surface-variant">
+<span>Concept V3 Vector Lockups</span>
+<span class="text-primary font-medium">Gate: Client Demo (18 Sep)</span>
+</div>
+</div>
+<!-- Executive Audit Diff Pill -->
+<div class="mt-space-xs flex items-center gap-1.5 font-code-xs text-code-xs">
+<span class="text-outline-variant">Queue:</span>
+<span class="px-1 bg-surface-container text-secondary">Monogram Favicon Check</span>
+<span class="text-outline">pending</span>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-xs mt-space-md pt-space-xs">
+<button class="px-space-sm py-[5px] rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">
+                Recheck Workload
+              </button>
+<button class="px-space-sm py-[5px] rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+<span>View Tasks</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION: TEAM CAPACITY (High Density Operational Table) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-md flex items-center justify-between bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Team Capacity &amp; Allocation</h3>
+<span class="font-code-xs text-code-xs text-outline-variant uppercase">Updated 4m ago</span>
+</div>
+<div class="flex items-center gap-space-xs text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary-container"></span>Normal</span>
+<span class="flex items-center gap-1 ml-2"><span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>High</span>
+<span class="flex items-center gap-1 ml-2"><span class="w-2 h-2 rounded-full bg-error"></span>Breached</span>
+</div>
+</div>
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-space-sm px-space-md">Team Member</th>
+<th class="py-space-sm px-space-sm text-center">Active</th>
+<th class="py-space-sm px-space-sm text-center">Due Today</th>
+<th class="py-space-sm px-space-sm text-center">This Wk</th>
+<th class="py-space-sm px-space-sm text-center text-error">Overdue</th>
+<th class="py-space-sm px-space-md w-52">Workload (Load %)</th>
+<th class="py-space-sm px-space-sm">Status</th>
+<th class="py-space-sm px-space-md text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface">
+<!-- Row 1: Akhil (TL) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm shrink-0">
+                      A
+                    </div>
+<div>
+<div class="font-headline-sm text-headline-sm leading-tight text-on-surface font-medium">Akhil</div>
+<div class="font-code-xs text-code-xs text-on-surface-variant">Team Leader · Logo Squad</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm text-center font-code-sm text-code-sm font-semibold">2</td>
+<td class="py-space-sm px-space-sm text-center font-code-sm text-code-sm text-on-surface-variant">0</td>
+<td class="py-space-sm px-space-sm text-center font-code-sm text-code-sm">2</td>
+<td class="py-space-sm px-space-sm text-center font-code-sm text-code-sm text-on-surface-variant">0</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 40%"></div>
+</div>
+<span class="font-code-xs text-code-xs font-semibold w-8 text-right">40%</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-code-xs text-code-xs font-medium">Available</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm" type="button">View</button>
+</td>
+</tr>
+<!-- Row 2: Shihaf -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-headline-sm text-headline-sm shrink-0">
+                      S
+                    </div>
+<div>
+<div class="font-headline-sm text-headline-sm leading-tight text-on-surface font-medium">Shihaf</div>
+<div class="font-code-xs text-code-xs text-on-surface-variant">Senior Logo Designer</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm text-center font-code-sm text-code-sm font-semibold">5</td>
+<td class="py-space-sm px-space-sm text-center font-code-sm text-code-sm font-semibold text-tertiary-container">2</td>
+<td class="py-space-sm px-space-sm text-center font-code-sm text-code-sm">4</td>
+<td class="py-space-sm px-space-sm text-center font-code-sm text-code-sm text-on-surface-variant">0</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 85%"></div>
+</div>
+<span class="font-code-xs text-code-xs font-semibold w-8 text-right text-tertiary">85%</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-code-xs text-code-xs font-semibold">Busy</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm" type="button">View</button>
+</td>
+</tr>
+<!-- Row 3: Prabha -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-headline-sm text-headline-sm shrink-0">
+                      P
+                    </div>
+<div>
+<div class="font-headline-sm text-headline-sm leading-tight text-on-surface font-medium">Prabha</div>
+<div class="font-code-xs text-code-xs text-on-surface-variant">Logo Designer</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm text-center font-code-sm text-code-sm font-semibold">3</td>
+<td class="py-space-sm px-space-sm text-center font-code-sm text-code-sm">1</td>
+<td class="py-space-sm px-space-sm text-center font-code-sm text-code-sm">2</td>
+<td class="py-space-sm px-space-sm text-center font-code-sm text-code-sm text-on-surface-variant">0</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 60%"></div>
+</div>
+<span class="font-code-xs text-code-xs font-semibold w-8 text-right">60%</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-code-xs text-code-xs font-medium">Normal</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm" type="button">View</button>
+</td>
+</tr>
+<!-- Row 4: Rasith (Overloaded Highlight) -->
+<tr class="bg-error-container/20 hover:bg-error-container/30 transition-colors">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-error text-on-error flex items-center justify-center font-headline-sm text-headline-sm shrink-0">
+                      R
+                    </div>
+<div>
+<div class="font-headline-sm text-headline-sm leading-tight text-on-surface font-semibold flex items-center gap-1">
+<span>Rasith</span>
+<span class="material-symbols-outlined text-[14px] text-error">priority_high</span>
+</div>
+<div class="font-code-xs text-code-xs text-error font-medium">Packaging Designer</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm text-center font-code-sm text-code-sm font-bold text-error">6</td>
+<td class="py-space-sm px-space-sm text-center font-code-sm text-code-sm">1</td>
+<td class="py-space-sm px-space-sm text-center font-code-sm text-code-sm">3</td>
+<td class="py-space-sm px-space-sm text-center font-code-sm text-code-sm font-bold text-error">2</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-full bg-error-container rounded-full h-2 overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 100%"></div>
+</div>
+<span class="font-code-xs text-code-xs font-bold text-error w-8 text-right">100%</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-error text-on-error font-code-xs text-code-xs font-semibold">Overloaded</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-error text-on-error font-label-sm text-label-sm font-medium shadow-sm hover:opacity-90" onclick="document.getElementById('reassign-modal').classList.remove('hidden')" type="button">
+                    Reassign
+                  </button>
+</td>
+</tr>
+<!-- Row 5: Fathima -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-headline-sm text-headline-sm shrink-0">
+                      F
+                    </div>
+<div>
+<div class="font-headline-sm text-headline-sm leading-tight text-on-surface font-medium">Fathima</div>
+<div class="font-code-xs text-code-xs text-on-surface-variant">Designer / 3D Graphics</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm text-center font-code-sm text-code-sm font-semibold">2</td>
+<td class="py-space-sm px-space-sm text-center font-code-sm text-code-sm text-on-surface-variant">0</td>
+<td class="py-space-sm px-space-sm text-center font-code-sm text-code-sm">1</td>
+<td class="py-space-sm px-space-sm text-center font-code-sm text-code-sm text-on-surface-variant">0</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 35%"></div>
+</div>
+<span class="font-code-xs text-code-xs font-semibold w-8 text-right">35%</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-code-xs text-code-xs font-medium">Available</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm hover:bg-primary transition-colors" type="button">
+                    Assign
+                  </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- SECTION: TASK DISTRIBUTION STRIP -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider">Overall Squad Task Distribution</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">34 Total Task Tokens Tracked</span>
+</div>
+<!-- Segmented bar -->
+<div class="w-full h-3 rounded-full bg-surface-container-low overflow-hidden flex">
+<div class="h-full bg-primary-container" style="width: 48%" title="In Progress (11)"></div>
+<div class="h-full bg-secondary-fixed-dim" style="width: 15%" title="Review (3)"></div>
+<div class="h-full bg-error" style="width: 10%" title="Overdue (2)"></div>
+<div class="h-full bg-surface-container-highest" style="width: 27%" title="Completed This Week (16)"></div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-sm text-code-xs font-code-xs text-on-surface-variant pt-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded bg-primary"></span>
+<span>Assigned: <strong class="text-on-surface">18</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded bg-primary-container"></span>
+<span>In Progress: <strong class="text-on-surface">11</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded bg-secondary-fixed-dim"></span>
+<span>Review: <strong class="text-on-surface">3</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded bg-error"></span>
+<span>Overdue: <strong class="text-error font-bold">2</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded bg-surface-container-highest"></span>
+<span>Completed (7d): <strong class="text-on-surface">16</strong></span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT OPERATIONAL WORKSPACE (4 cols ~ 32%) -->
+<div class="xl:col-span-4 flex flex-col gap-space-lg min-w-0">
+<!-- WIDGET 1: MEMBER DETAIL QUICK VIEW (Focus: Rasith) -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<!-- Header -->
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<div class="w-12 h-12 rounded-xl bg-error text-on-error flex items-center justify-center font-display-lg text-display-lg font-bold">
+                R
+              </div>
+<span class="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-error border-2 border-surface-container-lowest"></span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Rasith S.</h3>
+<span class="material-symbols-outlined text-[16px] text-error">lock</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Packaging Designer (Logo Cross)</p>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-error-container text-error font-code-xs text-code-xs font-bold">
+            100% Load
+          </span>
+</div>
+<!-- 4-Box Metrics Grid -->
+<div class="grid grid-cols-4 gap-space-xs text-center">
+<div class="p-space-xs bg-surface-container-low rounded-lg">
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">6</div>
+<div class="font-code-xs text-code-xs text-on-surface-variant">Active</div>
+</div>
+<div class="p-space-xs bg-surface-container-low rounded-lg">
+<div class="font-headline-sm text-headline-sm font-bold text-tertiary-container">1</div>
+<div class="font-code-xs text-code-xs text-on-surface-variant">Today</div>
+</div>
+<div class="p-space-xs bg-error-container/30 rounded-lg">
+<div class="font-headline-sm text-headline-sm font-bold text-error">2</div>
+<div class="font-code-xs text-code-xs text-error font-semibold">Overdue</div>
+</div>
+<div class="p-space-xs bg-surface-container-low rounded-lg">
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">3</div>
+<div class="font-code-xs text-code-xs text-on-surface-variant">This Wk</div>
+</div>
+</div>
+<!-- Current Projects & Tasks List -->
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider">Assigned Deliverables (6)</span>
+<span class="font-code-xs text-code-xs text-outline">Sorted by urgency</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Item 1: Overdue critical -->
+<div class="p-space-xs px-space-sm rounded-lg bg-error-container/20 flex items-center justify-between">
+<div class="min-w-0 pr-space-xs">
+<div class="flex items-center gap-1">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">Packaging Revision V4</span>
+<span class="px-1 py-[1px] bg-error text-on-error font-code-xs text-code-xs rounded text-[9px] font-bold">1d OVERDUE</span>
+</div>
+<div class="font-code-xs text-code-xs text-on-surface-variant truncate">Orange Surgicals Packaging</div>
+</div>
+<button class="px-2 py-1 rounded bg-error text-on-error font-code-xs text-code-xs hover:opacity-90 shrink-0 font-medium" onclick="document.getElementById('reassign-modal').classList.remove('hidden')" type="button">
+                Reassign
+              </button>
+</div>
+<!-- Item 2: Overdue item 2 -->
+<div class="p-space-xs px-space-sm rounded-lg bg-error-container/15 flex items-center justify-between">
+<div class="min-w-0 pr-space-xs">
+<div class="flex items-center gap-1">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">Dieline Spec Verification</span>
+<span class="px-1 py-[1px] bg-error-container text-error font-code-xs text-code-xs rounded text-[9px] font-bold">OVERDUE</span>
+</div>
+<div class="font-code-xs text-code-xs text-on-surface-variant truncate">Orange Surgicals Blister Pack</div>
+</div>
+<button class="px-2 py-1 rounded bg-surface-container-low text-on-surface hover:bg-surface-container font-code-xs text-code-xs shrink-0" onclick="document.getElementById('reassign-modal').classList.remove('hidden')" type="button">
+                Move
+              </button>
+</div>
+<!-- Item 3: Due tomorrow -->
+<div class="p-space-xs px-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="min-w-0 pr-space-xs">
+<span class="font-body-sm text-body-sm font-medium text-on-surface truncate block">Takeaway Box 3D Mockup</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant truncate block">KPN Restaurant Group · Due Tomorrow</span>
+</div>
+<span class="font-code-xs text-code-xs px-1.5 py-0.5 rounded bg-surface-container text-secondary shrink-0">In Progress</span>
+</div>
+<!-- Item 4: Queue -->
+<div class="p-space-xs px-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="min-w-0 pr-space-xs">
+<span class="font-body-sm text-body-sm font-medium text-on-surface truncate block">Retail Carton Alignment</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant truncate block">ABC Foods Identity Support</span>
+</div>
+<span class="font-code-xs text-code-xs px-1.5 py-0.5 rounded bg-surface-container text-secondary shrink-0">Queue</span>
+</div>
+</div>
+</div>
+<!-- Quick actions -->
+<div class="flex items-center gap-space-xs pt-space-xs">
+<button class="flex-1 py-[7px] bg-error text-on-error font-label-md text-label-md rounded-lg hover:opacity-90 transition-opacity text-center shadow-sm" onclick="document.getElementById('reassign-modal').classList.remove('hidden')" type="button">
+            Reassign Overdue (2)
+          </button>
+<button class="py-[7px] px-space-md bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md rounded-lg transition-colors" type="button">
+            Member 360
+          </button>
+</div>
+</div>
+<!-- WIDGET 2: UPCOMING DEADLINES CHRONOLOGICAL AUDIT -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">timelapse</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Upcoming Deadlines</h3>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-medium cursor-pointer hover:underline">All Gates</span>
+</div>
+<!-- Timeline Log (Executive Audit Format) -->
+<div class="relative pl-6 flex flex-col gap-space-md">
+<!-- Continuous Vertical Line -->
+<div class="absolute left-2.5 top-2 bottom-2 w-0.5 bg-surface-container"></div>
+<!-- Event 1: Today 4 PM -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-tertiary ring-4 ring-surface-container-lowest"></div>
+<div class="flex items-center justify-between">
+<span class="font-code-xs text-code-xs font-bold text-tertiary uppercase tracking-wider">Today · 4:00 PM</span>
+<span class="px-1.5 py-[1px] bg-error-container text-error rounded font-code-xs text-code-xs font-semibold">High Priority</span>
+</div>
+<div class="font-body-sm text-body-sm font-medium text-on-surface">ABC Brand Identity — Concept V3</div>
+<div class="flex items-center gap-1 font-code-xs text-code-xs text-on-surface-variant">
+<span>Assignee: Shihaf K.</span>
+<span>·</span>
+<span>Vector Lockups</span>
+</div>
+</div>
+<!-- Event 2: Tomorrow 11:30 AM -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-primary ring-4 ring-surface-container-lowest"></div>
+<div class="flex items-center justify-between">
+<span class="font-code-xs text-code-xs font-semibold text-on-surface-variant uppercase tracking-wider">Tomorrow · 11:30 AM</span>
+<span class="px-1.5 py-[1px] bg-surface-container text-secondary rounded font-code-xs text-code-xs font-medium">Normal</span>
+</div>
+<div class="font-body-sm text-body-sm font-medium text-on-surface">KPN Restaurant Identity — Logo Revision</div>
+<div class="flex items-center gap-1 font-code-xs text-code-xs text-on-surface-variant">
+<span>Assignee: Prabha</span>
+<span>·</span>
+<span>Menu Favicon Check</span>
+</div>
+</div>
+<!-- Event 3: 16 Sep 5 PM -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-primary ring-4 ring-surface-container-lowest"></div>
+<div class="flex items-center justify-between">
+<span class="font-code-xs text-code-xs font-semibold text-on-surface-variant uppercase tracking-wider">16 Sep · 5:00 PM</span>
+<span class="px-1.5 py-[1px] bg-error-container text-error rounded font-code-xs text-code-xs font-semibold">High</span>
+</div>
+<div class="font-body-sm text-body-sm font-medium text-on-surface">Mahalaxmi Builders — Logo Concept</div>
+<div class="flex items-center gap-1 font-code-xs text-code-xs text-on-surface-variant">
+<span>Assignee: Akhil</span>
+<span>·</span>
+<span>Elevation Vectors</span>
+</div>
+</div>
+<!-- Event 4: 18 Sep 2 PM Client Gate -->
+<div class="relative flex flex-col gap-1">
+<div class="absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-primary-container ring-4 ring-surface-container-lowest"></div>
+<div class="flex items-center justify-between">
+<span class="font-code-xs text-code-xs font-bold text-primary-container uppercase tracking-wider">18 Sep · 2:00 PM</span>
+<span class="px-1.5 py-[1px] bg-secondary-container text-on-secondary-fixed rounded font-code-xs text-code-xs font-semibold">Client Gate</span>
+</div>
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">ABC Brand Identity — Brand Mark Delivery</div>
+<div class="flex items-center gap-1 font-code-xs text-code-xs text-on-surface-variant">
+<span>Assignee: Shihaf K.</span>
+<span>·</span>
+<span>Formal Sign-off Deck</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. MODAL OVERLAY: REASSIGN TASK (Interactive operational state) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm flex items-center justify-center p-space-md hidden" id="reassign-modal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-xl shadow-xl overflow-hidden flex flex-col">
+<!-- Modal Header -->
+<div class="px-space-xl py-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-lg bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">swap_horiz</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Reassign Task</h3>
+</div>
+<button class="w-7 h-7 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" onclick="document.getElementById('reassign-modal').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<div class="p-space-xl flex flex-col gap-space-md">
+<!-- Target Task Card -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-code-xs text-code-xs text-outline-variant uppercase">Deliverable to Reassign</span>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold">Packaging Revision V4</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Project: Orange Surgicals Packaging</span>
+<span class="text-error font-semibold font-code-xs text-code-xs">Due 13 Sep (1d Overdue)</span>
+</div>
+</div>
+<!-- Current Assignee Pill -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-error-container/20">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Current Assignee:</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Rasith S.</span>
+</div>
+<span class="px-2 py-0.5 bg-error text-on-error rounded font-code-xs text-code-xs font-bold">100% - Overloaded</span>
+</div>
+<!-- Assign To Dropdown Selection -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider">
+            Reassign To (Squad Capacity Recommendation)
+          </label>
+<div class="relative">
+<select class="w-full h-10 px-space-sm bg-surface-container-lowest rounded-lg text-body-sm font-body-sm text-on-surface focus:outline-none shadow-sm cursor-pointer appearance-none">
+<option selected="" value="fathima">Fathima (35% Load - Available) ★ RECOMMENDED</option>
+<option value="akhil">Akhil (40% Load - Available)</option>
+<option value="prabha">Prabha (60% Load - Normal)</option>
+<option value="shihaf">Shihaf (85% Load - Busy / Approaching Limit)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant pointer-events-none text-[18px]">
+              unfold_more
+            </span>
+</div>
+<p class="font-code-xs text-code-xs text-primary font-medium mt-0.5">
+            ★ Fathima has matching packaging graphic skills and 65% uncommitted bandwidth this cycle.
+          </p>
+</div>
+<!-- Reason -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider">
+            Audit Reason (Optional)
+          </label>
+<input class="h-9 px-space-sm bg-surface-container-lowest rounded-lg text-body-sm font-body-sm text-on-surface focus:outline-none shadow-sm" type="text" value="Workload leveling to clear 1-day overdue bottleneck">
+</div>
+<!-- Inline Audit Snapshot Diff -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between font-code-xs text-code-xs">
+<span class="text-on-surface-variant">Capacity Impact:</span>
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-secondary">Fathima: 35%</span>
+<span class="text-outline">→</span>
+<span class="px-1.5 py-0.5 rounded bg-primary-container text-on-primary font-semibold">52% (Optimal)</span>
+</div>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="px-space-xl py-space-md bg-surface-container-low flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-[7px] bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded-lg hover:bg-surface-container transition-colors shadow-sm" onclick="document.getElementById('reassign-modal').classList.add('hidden')" type="button">
+          Cancel
+        </button>
+<button class="px-space-lg py-[7px] bg-primary-container text-on-primary font-label-md text-label-md rounded-lg hover:bg-primary transition-colors shadow-sm flex items-center gap-1" onclick="document.getElementById('reassign-modal').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>Confirm Reassignment &amp; Notify</span>
+</button>
+</div>
+</div>
+</div>
+</div></div></main></div></body></html>

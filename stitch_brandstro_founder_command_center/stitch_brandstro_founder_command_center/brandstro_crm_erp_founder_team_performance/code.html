@@ -1,0 +1,1184 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brandstro CRM + ERP - Founder Team Performance</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              900: '#1e1b4b',
+            },
+            sidebar: '#0d1117',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      color: #0f172a;
+      background-color: #f8fafc;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-[#f8fafc] text-slate-900 overflow-hidden flex h-screen w-screen">
+
+  <!-- LEFT SIDEBAR (240px fixed) -->
+  <aside class="w-[240px] bg-[#0d1117] text-slate-300 flex flex-col flex-shrink-0 justify-between border-r border-slate-800 select-none z-20">
+    <div>
+      <!-- Brand Header -->
+      <div class="h-16 flex items-center gap-3 px-5 border-b border-slate-800/80">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-600 to-indigo-400 flex items-center justify-center text-white font-extrabold text-lg shadow-md shadow-brand-500/20">
+          B
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-1.5">
+            <span class="text-white font-bold text-sm tracking-wide">BRANDSTRO</span>
+            <span class="text-[10px] font-semibold bg-brand-500/20 text-brand-300 px-1.5 py-0.5 rounded border border-brand-500/30">ERP</span>
+          </div>
+          <span class="text-[11px] text-slate-400">Agency Operating System</span>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="p-3 space-y-6">
+        <div>
+          <div class="px-3 pb-2 text-[10px] font-bold tracking-wider text-slate-400 uppercase">Main</div>
+          <nav class="space-y-1">
+            <!-- Command Center -->
+            <a href="#" class="flex items-center justify-between px-3 py-2 text-xs font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-lg transition-colors group">
+              <div class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-slate-400 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                <span>Command Center</span>
+              </div>
+            </a>
+
+            <!-- Leads -->
+            <a href="#" class="flex items-center justify-between px-3 py-2 text-xs font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-lg transition-colors group">
+              <div class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-slate-400 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                <span>Leads</span>
+              </div>
+              <span class="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-slate-800 text-slate-300">18</span>
+            </a>
+
+            <!-- Clients -->
+            <a href="#" class="flex items-center justify-between px-3 py-2 text-xs font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-lg transition-colors group">
+              <div class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-slate-400 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                <span>Clients</span>
+              </div>
+            </a>
+
+            <!-- Projects -->
+            <a href="#" class="flex items-center justify-between px-3 py-2 text-xs font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-lg transition-colors group">
+              <div class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-slate-400 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                <span>Projects</span>
+              </div>
+              <div class="flex items-center gap-1">
+                <span class="text-[10px] font-semibold px-1 py-0.2 rounded bg-rose-500/20 text-rose-300 border border-rose-500/30">5 late</span>
+                <span class="text-[10px] font-semibold px-1.5 py-0.2 rounded bg-slate-800 text-slate-300">38</span>
+              </div>
+            </a>
+
+            <!-- Payments -->
+            <a href="#" class="flex items-center justify-between px-3 py-2 text-xs font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-lg transition-colors group">
+              <div class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-slate-400 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>Payments</span>
+              </div>
+              <span class="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">₹3.42L</span>
+            </a>
+
+            <!-- Team & Workload -->
+            <div class="space-y-1">
+              <a href="#" class="flex items-center justify-between px-3 py-2 text-xs font-medium bg-brand-600 text-white rounded-lg shadow-sm">
+                <div class="flex items-center gap-3">
+                  <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                  <span>Team &amp; Workload</span>
+                </div>
+                <span class="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-brand-700 text-white">18/35</span>
+              </a>
+              <!-- Submenu -->
+              <div class="pl-7 pr-2 space-y-1 pt-1">
+                <a href="#" class="flex items-center justify-between px-2.5 py-1.5 text-[11px] text-slate-300 hover:text-white rounded transition-colors">
+                  <span>Overview</span>
+                </a>
+                <a href="#" class="flex items-center justify-between px-2.5 py-1.5 text-[11px] text-slate-300 hover:text-white rounded transition-colors">
+                  <span>Workload Balance</span>
+                </a>
+                <a href="#" class="flex items-center justify-between px-2.5 py-1.5 text-[11px] font-semibold text-white bg-white/10 rounded">
+                  <span class="flex items-center gap-1.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-400"></span>
+                    <span>Performance</span>
+                  </span>
+                  <span class="text-[9px] px-1 py-0.2 rounded bg-emerald-500/20 text-emerald-300 font-mono">89%</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Reports -->
+            <a href="#" class="flex items-center justify-between px-3 py-2 text-xs font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-lg transition-colors group">
+              <div class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-slate-400 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                <span>Reports</span>
+              </div>
+            </a>
+          </nav>
+        </div>
+
+        <!-- Management Section -->
+        <div>
+          <div class="px-3 pb-2 text-[10px] font-bold tracking-wider text-slate-400 uppercase">Management</div>
+          <nav class="space-y-1">
+            <a href="#" class="flex items-center justify-between px-3 py-2 text-xs font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-lg transition-colors group">
+              <div class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-slate-400 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path></svg>
+                <span>Incentives</span>
+              </div>
+            </a>
+            <a href="#" class="flex items-center justify-between px-3 py-2 text-xs font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-lg transition-colors group">
+              <div class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-slate-400 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+                <span>Alerts</span>
+              </div>
+              <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+            </a>
+            <a href="#" class="flex items-center justify-between px-3 py-2 text-xs font-medium text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-lg transition-colors group">
+              <div class="flex items-center gap-3">
+                <svg class="w-4 h-4 text-slate-400 group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>Activity</span>
+              </div>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Settings & Founder Profile -->
+    <div class="p-3 border-t border-slate-800/80 bg-slate-900/40">
+      <a href="#" class="flex items-center gap-3 px-3 py-2 text-xs text-slate-300 hover:text-white hover:bg-slate-800/60 rounded-lg transition-colors mb-2">
+        <svg class="w-4 h-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+        <span>Settings &amp; Config</span>
+      </a>
+      <div class="flex items-center justify-between p-2 rounded-lg bg-slate-800/70 border border-slate-700/60">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-indigo-500/20 border border-indigo-500/40 text-indigo-300 font-bold text-xs flex items-center justify-center">
+            FD
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xs font-semibold text-white leading-tight">Pranav S.</span>
+            <span class="text-[10px] text-slate-400">Founder &amp; CEO</span>
+          </div>
+        </div>
+        <svg class="w-4 h-4 text-slate-400 hover:text-white cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"></path></svg>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN VIEWPORT CONTAINER (1200px flex-1 scrollable) -->
+  <main class="flex-1 flex flex-col min-w-0 h-full overflow-hidden bg-[#f8fafc]">
+
+    <!-- TOP HEADER BAR -->
+    <header class="h-16 border-b border-slate-200 bg-white px-8 flex items-center justify-between flex-shrink-0 z-10">
+      <div class="flex items-center gap-3">
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="text-lg font-bold text-slate-900 tracking-tight">Performance</h1>
+            <span class="text-[11px] font-semibold bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded-full border border-emerald-200 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              Operational Delivery
+            </span>
+          </div>
+          <p class="text-xs text-slate-500">Track practical delivery, deadline adherence and quality indicators across Brandstro.</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <!-- Global Search -->
+        <div class="relative">
+          <input type="text" placeholder="Search specialist, team, metric..." class="w-64 pl-8 pr-8 py-1.5 text-xs bg-slate-100 border border-slate-200 rounded-lg text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-brand-500 focus:bg-white transition-all">
+          <svg class="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          <span class="text-[10px] text-slate-400 font-mono absolute right-2.5 top-2 border border-slate-200 px-1 rounded bg-white">⌘K</span>
+        </div>
+
+        <!-- Date Range Filter Dropdown -->
+        <div class="flex items-center bg-white border border-slate-200 rounded-lg shadow-sm p-0.5">
+          <button class="px-2.5 py-1 text-xs font-semibold bg-slate-100 text-slate-800 rounded-md shadow-xs flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+            <span>This Month</span>
+            <svg class="w-3 h-3 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+        </div>
+
+        <!-- Notification Bell -->
+        <button class="relative p-2 text-slate-500 hover:text-slate-800 hover:bg-slate-100 rounded-lg transition-colors">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+          <span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-rose-500"></span>
+        </button>
+
+        <!-- Export Action -->
+        <button class="px-3 py-1.5 text-xs font-semibold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 rounded-lg shadow-sm flex items-center gap-1.5 transition-colors">
+          <svg class="w-3.5 h-3.5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+          <span>Export CSV</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- CONTENT SCROLL AREA WITH RIGHT SLIDE-OVER DRAWER -->
+    <div class="flex-1 flex overflow-hidden relative">
+
+      <!-- SCROLLABLE CANVAS CONTENT -->
+      <div class="flex-1 overflow-y-auto custom-scrollbar p-8 space-y-6">
+
+        <!-- 5 COMPACT TOP KPI CARDS -->
+        <div class="grid grid-cols-5 gap-4">
+          <!-- KPI 1: Tasks Completed -->
+          <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs hover:border-slate-300 transition-all">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[11px] font-semibold tracking-wider text-slate-500 uppercase">Tasks Completed</span>
+              <span class="w-2 h-2 rounded-full bg-brand-500"></span>
+            </div>
+            <div class="flex items-baseline gap-2">
+              <span class="text-2xl font-extrabold text-slate-900 tracking-tight">128</span>
+              <span class="text-[11px] font-bold text-emerald-600 flex items-center">
+                ↑ 12%
+              </span>
+            </div>
+            <p class="text-[11px] text-slate-500 mt-1">vs last month (114)</p>
+          </div>
+
+          <!-- KPI 2: On-Time Completion -->
+          <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs hover:border-slate-300 transition-all">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[11px] font-semibold tracking-wider text-slate-500 uppercase">On-Time Completion</span>
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            </div>
+            <div class="flex items-baseline gap-2">
+              <span class="text-2xl font-extrabold text-slate-900 tracking-tight">89%</span>
+              <span class="text-[11px] font-medium text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-100">Healthy</span>
+            </div>
+            <p class="text-[11px] text-slate-500 mt-1">Across 18 active specialists</p>
+          </div>
+
+          <!-- KPI 3: Overdue Tasks -->
+          <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs hover:border-slate-300 transition-all">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[11px] font-semibold tracking-wider text-slate-500 uppercase">Overdue Tasks</span>
+              <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+            </div>
+            <div class="flex items-baseline gap-2">
+              <span class="text-2xl font-extrabold text-rose-600 tracking-tight">9</span>
+              <span class="text-[11px] font-semibold text-rose-700 bg-rose-50 px-1.5 py-0.5 rounded border border-rose-200">Needs attention</span>
+            </div>
+            <p class="text-[11px] text-slate-500 mt-1">Concentrated in 2 members</p>
+          </div>
+
+          <!-- KPI 4: Revision-Heavy Work -->
+          <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs hover:border-slate-300 transition-all">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[11px] font-semibold tracking-wider text-slate-500 uppercase">Revision-Heavy</span>
+              <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+            </div>
+            <div class="flex items-baseline gap-2">
+              <span class="text-2xl font-extrabold text-slate-900 tracking-tight">7 <span class="text-sm font-semibold text-slate-500">Projects</span></span>
+              <span class="text-[11px] font-semibold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200">&gt;2 rounds</span>
+            </div>
+            <p class="text-[11px] text-slate-500 mt-1">Client scope change &amp; reviews</p>
+          </div>
+
+          <!-- KPI 5: Projects Completed -->
+          <div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs hover:border-slate-300 transition-all">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-[11px] font-semibold tracking-wider text-slate-500 uppercase">Projects Delivered</span>
+              <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+            </div>
+            <div class="flex items-baseline gap-2">
+              <span class="text-2xl font-extrabold text-slate-900 tracking-tight">24</span>
+              <span class="text-[11px] font-medium text-slate-600 bg-slate-100 px-1.5 py-0.5 rounded">This month</span>
+            </div>
+            <p class="text-[11px] text-slate-500 mt-1">₹4.85L billings cleared</p>
+          </div>
+        </div>
+
+        <!-- PERFORMANCE SUMMARY & ATTENTION REQUIRED (Two-column layout with 6-week Trend) -->
+        <div class="grid grid-cols-12 gap-5">
+
+          <!-- LEFT: TEAM DELIVERY BREAKDOWN (7 Cols) -->
+          <div class="col-span-7 bg-white p-5 rounded-xl border border-slate-200 shadow-xs">
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-100">
+              <div>
+                <h2 class="text-xs font-bold text-slate-900 uppercase tracking-wider">Team Performance &amp; Delivery Rate</h2>
+                <p class="text-[11px] text-slate-500">Practical on-time completion across studio creative departments</p>
+              </div>
+              <span class="text-[11px] font-mono text-slate-500 font-medium">18 Active Specialists</span>
+            </div>
+
+            <!-- Team Squad Rows -->
+            <div class="space-y-3.5 pt-1">
+              <!-- Logo Team -->
+              <div>
+                <div class="flex items-center justify-between text-xs mb-1">
+                  <div class="flex items-center gap-2">
+                    <span class="font-semibold text-slate-800">Logo &amp; Brand Identity Team</span>
+                    <span class="text-[10px] text-slate-400 font-mono">(5 members)</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="text-[11px] text-slate-500">18 projects delivered</span>
+                    <span class="font-bold text-slate-900 font-mono text-xs">92% on-time</span>
+                  </div>
+                </div>
+                <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden flex">
+                  <div class="bg-indigo-600 h-full rounded-full transition-all" style="width: 92%"></div>
+                </div>
+              </div>
+
+              <!-- Packaging Team -->
+              <div>
+                <div class="flex items-center justify-between text-xs mb-1">
+                  <div class="flex items-center gap-2">
+                    <span class="font-semibold text-slate-800">Packaging Design Team</span>
+                    <span class="text-[10px] text-slate-400 font-mono">(4 members)</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="text-[11px] text-amber-600 font-semibold bg-amber-50 px-1.5 py-0.2 rounded border border-amber-200">14 projects · Bottleneck alert</span>
+                    <span class="font-bold text-amber-700 font-mono text-xs">86% on-time</span>
+                  </div>
+                </div>
+                <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden flex">
+                  <div class="bg-amber-500 h-full rounded-full transition-all" style="width: 86%"></div>
+                </div>
+              </div>
+
+              <!-- R&D Team -->
+              <div>
+                <div class="flex items-center justify-between text-xs mb-1">
+                  <div class="flex items-center gap-2">
+                    <span class="font-semibold text-slate-800">R&amp;D &amp; Material Research</span>
+                    <span class="text-[10px] text-slate-400 font-mono">(1 specialist)</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="text-[11px] text-slate-500">8 research briefs completed</span>
+                    <span class="font-bold text-slate-900 font-mono text-xs">94% on-time</span>
+                  </div>
+                </div>
+                <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden flex">
+                  <div class="bg-indigo-600 h-full rounded-full transition-all" style="width: 94%"></div>
+                </div>
+              </div>
+
+              <!-- Sketch Team -->
+              <div>
+                <div class="flex items-center justify-between text-xs mb-1">
+                  <div class="flex items-center gap-2">
+                    <span class="font-semibold text-slate-800">Sketch &amp; Concept Squad</span>
+                    <span class="text-[10px] text-slate-400 font-mono">(1 specialist)</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="text-[11px] text-slate-500">6 concept decks completed</span>
+                    <span class="font-bold text-emerald-700 font-mono text-xs">100% on-time</span>
+                  </div>
+                </div>
+                <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden flex">
+                  <div class="bg-emerald-500 h-full rounded-full transition-all" style="width: 100%"></div>
+                </div>
+              </div>
+
+              <!-- Content & Copy -->
+              <div>
+                <div class="flex items-center justify-between text-xs mb-1">
+                  <div class="flex items-center gap-2">
+                    <span class="font-semibold text-slate-800">Brand Content &amp; Strategy</span>
+                    <span class="text-[10px] text-slate-400 font-mono">(1 specialist)</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <span class="text-[11px] text-slate-500">10 brand guides delivered</span>
+                    <span class="font-bold text-slate-900 font-mono text-xs">88% on-time</span>
+                  </div>
+                </div>
+                <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden flex">
+                  <div class="bg-indigo-600 h-full rounded-full transition-all" style="width: 88%"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Single Secondary Line Chart: On-Time Delivery Trend (6 Weeks) -->
+            <div class="mt-4 pt-3 border-t border-slate-100">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[11px] font-bold text-slate-700 uppercase tracking-wide">6-Week Agency Delivery Trend</span>
+                <span class="text-[10px] text-slate-500">Target: ≥88% SLA</span>
+              </div>
+              <div class="h-16 flex items-end justify-between gap-3 px-2 pt-2 bg-slate-50/70 rounded-lg border border-slate-100">
+                <!-- Week 1 -->
+                <div class="flex-1 flex flex-col items-center gap-1 group">
+                  <span class="text-[10px] font-mono text-slate-600 group-hover:font-bold">84%</span>
+                  <div class="w-full bg-indigo-200 rounded-t h-8 group-hover:bg-indigo-400 transition-colors"></div>
+                  <span class="text-[9px] text-slate-400">W1</span>
+                </div>
+                <!-- Week 2 -->
+                <div class="flex-1 flex flex-col items-center gap-1 group">
+                  <span class="text-[10px] font-mono text-slate-600 group-hover:font-bold">87%</span>
+                  <div class="w-full bg-indigo-200 rounded-t h-10 group-hover:bg-indigo-400 transition-colors"></div>
+                  <span class="text-[9px] text-slate-400">W2</span>
+                </div>
+                <!-- Week 3 -->
+                <div class="flex-1 flex flex-col items-center gap-1 group">
+                  <span class="text-[10px] font-mono text-slate-600 group-hover:font-bold">86%</span>
+                  <div class="w-full bg-indigo-200 rounded-t h-9 group-hover:bg-indigo-400 transition-colors"></div>
+                  <span class="text-[9px] text-slate-400">W3</span>
+                </div>
+                <!-- Week 4 -->
+                <div class="flex-1 flex flex-col items-center gap-1 group">
+                  <span class="text-[10px] font-mono text-slate-600 group-hover:font-bold">91%</span>
+                  <div class="w-full bg-indigo-300 rounded-t h-12 group-hover:bg-indigo-500 transition-colors"></div>
+                  <span class="text-[9px] text-slate-400">W4</span>
+                </div>
+                <!-- Week 5 -->
+                <div class="flex-1 flex flex-col items-center gap-1 group">
+                  <span class="text-[10px] font-mono text-slate-600 group-hover:font-bold">89%</span>
+                  <div class="w-full bg-indigo-300 rounded-t h-11 group-hover:bg-indigo-500 transition-colors"></div>
+                  <span class="text-[9px] text-slate-400">W5</span>
+                </div>
+                <!-- Week 6 (Current) -->
+                <div class="flex-1 flex flex-col items-center gap-1 group">
+                  <span class="text-[10px] font-mono text-emerald-700 font-bold">92%</span>
+                  <div class="w-full bg-emerald-500 rounded-t h-14 transition-colors"></div>
+                  <span class="text-[9px] font-semibold text-emerald-700">W6</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: ATTENTION REQUIRED (Operational Exceptions Only) (5 Cols) -->
+          <div class="col-span-5 bg-white p-5 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-100">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                  <h2 class="text-xs font-bold text-slate-900 uppercase tracking-wider">Attention Required</h2>
+                </div>
+                <span class="text-[11px] font-semibold bg-amber-50 text-amber-700 px-2 py-0.5 rounded border border-amber-200">3 Exceptions</span>
+              </div>
+              <p class="text-xs text-slate-500 mb-3">Operational indicators flagged for Founder review and squad leader rebalancing.</p>
+
+              <!-- Exception 1: Shihaf -->
+              <div class="p-3 bg-amber-50/50 rounded-lg border border-amber-200/80 mb-2.5 hover:bg-amber-50 transition-all">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <div class="w-6 h-6 rounded bg-amber-100 text-amber-800 font-bold text-[10px] flex items-center justify-center">SH</div>
+                    <div>
+                      <span class="text-xs font-bold text-slate-900">Shihaf</span>
+                      <span class="text-[10px] text-slate-500 ml-1">· Logo Designer</span>
+                    </div>
+                  </div>
+                  <button class="px-2 py-0.5 text-[11px] font-semibold bg-white text-slate-700 hover:text-slate-900 border border-slate-200 rounded shadow-2xs hover:bg-slate-50 transition-colors">
+                    View Employee
+                  </button>
+                </div>
+                <div class="mt-2 text-xs text-slate-700 flex items-center gap-2">
+                  <span class="text-rose-600 font-semibold font-mono">3 overdue tasks</span> this month · 96% active workload
+                </div>
+              </div>
+
+              <!-- Exception 2: Rasith -->
+              <div class="p-3 bg-amber-50/50 rounded-lg border border-amber-200/80 mb-2.5 hover:bg-amber-50 transition-all">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <div class="w-6 h-6 rounded bg-amber-100 text-amber-800 font-bold text-[10px] flex items-center justify-center">RS</div>
+                    <div>
+                      <span class="text-xs font-bold text-slate-900">Rasith</span>
+                      <span class="text-[10px] text-slate-500 ml-1">· Packaging Designer</span>
+                    </div>
+                  </div>
+                  <button class="px-2 py-0.5 text-[11px] font-semibold bg-white text-slate-700 hover:text-slate-900 border border-slate-200 rounded shadow-2xs hover:bg-slate-50 transition-colors">
+                    View Work
+                  </button>
+                </div>
+                <div class="mt-2 text-xs text-slate-700 flex items-center gap-2">
+                  <span class="text-amber-700 font-semibold font-mono">4 revision requests</span> across 3 FMCG packaging projects
+                </div>
+              </div>
+
+              <!-- Exception 3: Packaging Team -->
+              <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 hover:bg-slate-100/70 transition-all">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <div class="w-6 h-6 rounded bg-slate-200 text-slate-700 font-bold text-[10px] flex items-center justify-center">PK</div>
+                    <div>
+                      <span class="text-xs font-bold text-slate-900">Packaging Team</span>
+                      <span class="text-[10px] text-slate-500 ml-1">· Squad Bottleneck</span>
+                    </div>
+                  </div>
+                  <button class="px-2 py-0.5 text-[11px] font-semibold bg-white text-slate-700 hover:text-slate-900 border border-slate-200 rounded shadow-2xs hover:bg-slate-50 transition-colors">
+                    View Team
+                  </button>
+                </div>
+                <div class="mt-2 text-xs text-slate-700 flex items-center gap-2">
+                  <span class="font-bold text-amber-700 font-mono">86% on-time</span> completion vs 92% agency standard
+                </div>
+              </div>
+            </div>
+
+            <!-- Fairness Rule Banner -->
+            <div class="mt-4 p-2.5 bg-slate-50 border border-slate-200/80 rounded-lg text-[11px] text-slate-500 flex items-start gap-2">
+              <svg class="w-4 h-4 text-slate-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span><strong>Operational Principle:</strong> High revision counts reflect client scope shifts or creative iterations, not designer ability. Always correlate with workload.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FILTER BAR & SEARCH ROW -->
+        <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between gap-4">
+          <div class="flex items-center gap-2.5 flex-1">
+            <!-- Search Employee -->
+            <div class="relative w-56">
+              <input type="text" placeholder="Search team member..." class="w-full pl-8 pr-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-lg text-slate-700 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-brand-500 focus:bg-white transition-all">
+              <svg class="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            </div>
+
+            <!-- Team Filter -->
+            <div class="relative">
+              <select class="text-xs bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 text-slate-700 font-medium hover:bg-slate-100 transition-colors appearance-none pr-7">
+                <option>Team: All Squads</option>
+                <option>Logo Team</option>
+                <option>Packaging Team</option>
+                <option>R&amp;D Squad</option>
+                <option>Sketch Squad</option>
+                <option>Content &amp; Copy</option>
+              </select>
+              <svg class="w-3 h-3 text-slate-400 absolute right-2.5 top-3 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+
+            <!-- Performance Status Filter -->
+            <div class="relative">
+              <select class="text-xs bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 text-slate-700 font-medium hover:bg-slate-100 transition-colors appearance-none pr-7">
+                <option>Status: All (Strong, Stable, Attention)</option>
+                <option>Strong</option>
+                <option>Stable</option>
+                <option>Needs Attention</option>
+              </select>
+              <svg class="w-3 h-3 text-slate-400 absolute right-2.5 top-3 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+
+            <!-- Date Range -->
+            <div class="relative">
+              <select class="text-xs bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 text-slate-700 font-medium hover:bg-slate-100 transition-colors appearance-none pr-7">
+                <option>Range: This Month</option>
+                <option>This Week</option>
+                <option>Last Month</option>
+                <option>Custom Range</option>
+              </select>
+              <svg class="w-3 h-3 text-slate-400 absolute right-2.5 top-3 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+          </div>
+
+          <!-- Sort Options -->
+          <div class="flex items-center gap-2">
+            <span class="text-[11px] text-slate-400 font-medium">Sort by:</span>
+            <div class="relative">
+              <select class="text-xs bg-white border border-slate-200 rounded-lg px-2.5 py-1.5 text-slate-800 font-semibold shadow-2xs hover:bg-slate-50 transition-colors appearance-none pr-7">
+                <option>On-Time %</option>
+                <option>Overdue Tasks</option>
+                <option>Tasks Completed</option>
+                <option>Revision Requests</option>
+              </select>
+              <svg class="w-3 h-3 text-slate-400 absolute right-2.5 top-3 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- MAIN TEAM MEMBER PERFORMANCE TABLE -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-xs overflow-hidden">
+          <div class="px-5 py-3.5 border-b border-slate-100 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <h2 class="text-xs font-bold text-slate-900 uppercase tracking-wider">Team Member Performance Matrix</h2>
+              <span class="text-[10px] bg-slate-100 text-slate-600 font-semibold px-2 py-0.5 rounded-full">Operational Metrics Only</span>
+            </div>
+            <div class="flex items-center gap-3 text-[11px] text-slate-500">
+              <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> Strong (≥90% on-time)</span>
+              <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-indigo-500"></span> Stable (85-89%)</span>
+              <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-amber-500"></span> Needs Attention (&lt;85% or high overdue)</span>
+            </div>
+          </div>
+
+          <table class="w-full text-left border-collapse text-xs">
+            <thead>
+              <tr class="bg-slate-50/80 border-b border-slate-200/80 text-[11px] font-bold text-slate-500 uppercase tracking-wider">
+                <th class="py-3 px-5">Team Member</th>
+                <th class="py-3 px-4">Squad</th>
+                <th class="py-3 px-4 text-center">Tasks Completed</th>
+                <th class="py-3 px-4 text-center">On-Time %</th>
+                <th class="py-3 px-4 text-center">Overdue</th>
+                <th class="py-3 px-4 text-center">Revision Requests</th>
+                <th class="py-3 px-4 text-center">Projects Delivered</th>
+                <th class="py-3 px-4 text-center">Operational Status</th>
+                <th class="py-3 px-5 text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-slate-700">
+
+              <!-- Row 1: Akhil -->
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="py-3.5 px-5">
+                  <div class="flex items-center gap-3">
+                    <div class="w-7 h-7 rounded-lg bg-indigo-100 text-indigo-700 font-bold text-xs flex items-center justify-center border border-indigo-200">
+                      AK
+                    </div>
+                    <div>
+                      <div class="font-bold text-slate-900 text-xs">Akhil</div>
+                      <div class="text-[10px] text-slate-400">Creative Lead &amp; Team Leader</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-3.5 px-4">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200">Logo Team</span>
+                </td>
+                <td class="py-3.5 px-4 text-center font-mono font-semibold text-slate-900">24</td>
+                <td class="py-3.5 px-4 text-center">
+                  <div class="flex items-center justify-center gap-1.5">
+                    <div class="w-16 bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                      <div class="bg-emerald-500 h-full rounded-full" style="width: 92%"></div>
+                    </div>
+                    <span class="font-mono font-bold text-slate-900 text-xs">92%</span>
+                    <span class="text-[10px] text-slate-400">(22/24)</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-4 text-center">
+                  <span class="font-mono text-slate-600 font-semibold">2</span>
+                </td>
+                <td class="py-3.5 px-4 text-center">
+                  <span class="font-mono text-slate-700 font-medium">4</span>
+                </td>
+                <td class="py-3.5 px-4 text-center font-mono font-semibold text-slate-900">8</td>
+                <td class="py-3.5 px-4 text-center">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                    STRONG
+                  </span>
+                </td>
+                <td class="py-3.5 px-5 text-right">
+                  <button class="text-slate-400 hover:text-slate-800 p-1 rounded hover:bg-slate-100">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 2: Shihaf (ACTIVE INSPECTED ROW - Needs Attention) -->
+              <tr class="bg-brand-50/40 hover:bg-brand-50/70 transition-colors border-l-4 border-l-brand-600">
+                <td class="py-3.5 px-5">
+                  <div class="flex items-center gap-3">
+                    <div class="w-7 h-7 rounded-lg bg-amber-100 text-amber-800 font-bold text-xs flex items-center justify-center border border-amber-200">
+                      SH
+                    </div>
+                    <div>
+                      <div class="font-bold text-slate-900 text-xs flex items-center gap-1.5">
+                        <span>Shihaf</span>
+                        <span class="w-1.5 h-1.5 rounded-full bg-brand-600" title="Currently Selected in Quick View"></span>
+                      </div>
+                      <div class="text-[10px] text-slate-500">Senior Brand Designer</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-3.5 px-4">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200">Logo Team</span>
+                </td>
+                <td class="py-3.5 px-4 text-center font-mono font-semibold text-slate-900">21</td>
+                <td class="py-3.5 px-4 text-center">
+                  <div class="flex items-center justify-center gap-1.5">
+                    <div class="w-16 bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                      <div class="bg-amber-500 h-full rounded-full" style="width: 81%"></div>
+                    </div>
+                    <span class="font-mono font-bold text-amber-700 text-xs">81%</span>
+                    <span class="text-[10px] text-slate-400">(17/21)</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-4 text-center">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-rose-50 text-rose-700 border border-rose-200">4 overdue</span>
+                </td>
+                <td class="py-3.5 px-4 text-center">
+                  <span class="font-mono text-slate-800 font-semibold">6</span>
+                </td>
+                <td class="py-3.5 px-4 text-center font-mono font-semibold text-slate-900">7</td>
+                <td class="py-3.5 px-4 text-center">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200">
+                    NEEDS ATTENTION
+                  </span>
+                </td>
+                <td class="py-3.5 px-5 text-right">
+                  <button class="text-brand-600 hover:text-brand-800 font-semibold text-xs px-2 py-1 rounded bg-brand-50 border border-brand-200 hover:bg-brand-100 transition-colors">
+                    Active Quick View
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 3: Prabha -->
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="py-3.5 px-5">
+                  <div class="flex items-center gap-3">
+                    <div class="w-7 h-7 rounded-lg bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center border border-slate-200">
+                      PR
+                    </div>
+                    <div>
+                      <div class="font-bold text-slate-900 text-xs">Prabha</div>
+                      <div class="text-[10px] text-slate-400">Logo &amp; Identity Designer</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-3.5 px-4">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200">Logo Team</span>
+                </td>
+                <td class="py-3.5 px-4 text-center font-mono font-semibold text-slate-900">19</td>
+                <td class="py-3.5 px-4 text-center">
+                  <div class="flex items-center justify-center gap-1.5">
+                    <div class="w-16 bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                      <div class="bg-emerald-500 h-full rounded-full" style="width: 95%"></div>
+                    </div>
+                    <span class="font-mono font-bold text-slate-900 text-xs">95%</span>
+                    <span class="text-[10px] text-slate-400">(18/19)</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-4 text-center">
+                  <span class="font-mono text-slate-600 font-semibold">1</span>
+                </td>
+                <td class="py-3.5 px-4 text-center">
+                  <span class="font-mono text-slate-700 font-medium">2</span>
+                </td>
+                <td class="py-3.5 px-4 text-center font-mono font-semibold text-slate-900">6</td>
+                <td class="py-3.5 px-4 text-center">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                    STRONG
+                  </span>
+                </td>
+                <td class="py-3.5 px-5 text-right">
+                  <button class="text-slate-400 hover:text-slate-800 p-1 rounded hover:bg-slate-100">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 4: Shalin -->
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="py-3.5 px-5">
+                  <div class="flex items-center gap-3">
+                    <div class="w-7 h-7 rounded-lg bg-indigo-100 text-indigo-700 font-bold text-xs flex items-center justify-center border border-indigo-200">
+                      SL
+                    </div>
+                    <div>
+                      <div class="font-bold text-slate-900 text-xs">Shalin</div>
+                      <div class="text-[10px] text-slate-400">Packaging Team Leader</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-3.5 px-4">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-purple-50 text-purple-700 border border-purple-200">Packaging Team</span>
+                </td>
+                <td class="py-3.5 px-4 text-center font-mono font-semibold text-slate-900">22</td>
+                <td class="py-3.5 px-4 text-center">
+                  <div class="flex items-center justify-center gap-1.5">
+                    <div class="w-16 bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                      <div class="bg-emerald-500 h-full rounded-full" style="width: 91%"></div>
+                    </div>
+                    <span class="font-mono font-bold text-slate-900 text-xs">91%</span>
+                    <span class="text-[10px] text-slate-400">(20/22)</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-4 text-center">
+                  <span class="font-mono text-slate-600 font-semibold">2</span>
+                </td>
+                <td class="py-3.5 px-4 text-center">
+                  <span class="font-mono text-slate-700 font-medium">3</span>
+                </td>
+                <td class="py-3.5 px-4 text-center font-mono font-semibold text-slate-900">7</td>
+                <td class="py-3.5 px-4 text-center">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                    STRONG
+                  </span>
+                </td>
+                <td class="py-3.5 px-5 text-right">
+                  <button class="text-slate-400 hover:text-slate-800 p-1 rounded hover:bg-slate-100">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 5: Rasith -->
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="py-3.5 px-5">
+                  <div class="flex items-center gap-3">
+                    <div class="w-7 h-7 rounded-lg bg-amber-100 text-amber-800 font-bold text-xs flex items-center justify-center border border-amber-200">
+                      RS
+                    </div>
+                    <div>
+                      <div class="font-bold text-slate-900 text-xs">Rasith</div>
+                      <div class="text-[10px] text-slate-400">Packaging Structural Designer</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-3.5 px-4">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-purple-50 text-purple-700 border border-purple-200">Packaging Team</span>
+                </td>
+                <td class="py-3.5 px-4 text-center font-mono font-semibold text-slate-900">18</td>
+                <td class="py-3.5 px-4 text-center">
+                  <div class="flex items-center justify-center gap-1.5">
+                    <div class="w-16 bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                      <div class="bg-amber-500 h-full rounded-full" style="width: 78%"></div>
+                    </div>
+                    <span class="font-mono font-bold text-amber-700 text-xs">78%</span>
+                    <span class="text-[10px] text-slate-400">(14/18)</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-4 text-center">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-rose-50 text-rose-700 border border-rose-200">4 overdue</span>
+                </td>
+                <td class="py-3.5 px-4 text-center">
+                  <span class="font-mono font-bold text-amber-700">7 rounds</span>
+                </td>
+                <td class="py-3.5 px-4 text-center font-mono font-semibold text-slate-900">5</td>
+                <td class="py-3.5 px-4 text-center">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200">
+                    NEEDS ATTENTION
+                  </span>
+                </td>
+                <td class="py-3.5 px-5 text-right">
+                  <button class="text-slate-400 hover:text-slate-800 p-1 rounded hover:bg-slate-100">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 6: Fathima -->
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="py-3.5 px-5">
+                  <div class="flex items-center gap-3">
+                    <div class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-800 font-bold text-xs flex items-center justify-center border border-emerald-200">
+                      FA
+                    </div>
+                    <div>
+                      <div class="font-bold text-slate-900 text-xs">Fathima</div>
+                      <div class="text-[10px] text-slate-400">Sketch &amp; Concept Specialist</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-3.5 px-4">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">Sketch Squad</span>
+                </td>
+                <td class="py-3.5 px-4 text-center font-mono font-semibold text-slate-900">10</td>
+                <td class="py-3.5 px-4 text-center">
+                  <div class="flex items-center justify-center gap-1.5">
+                    <div class="w-16 bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                      <div class="bg-emerald-500 h-full rounded-full" style="width: 100%"></div>
+                    </div>
+                    <span class="font-mono font-bold text-emerald-700 text-xs">100%</span>
+                    <span class="text-[10px] text-slate-400">(10/10)</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-4 text-center">
+                  <span class="font-mono text-emerald-600 font-semibold">0</span>
+                </td>
+                <td class="py-3.5 px-4 text-center">
+                  <span class="font-mono text-slate-700 font-medium">1</span>
+                </td>
+                <td class="py-3.5 px-4 text-center font-mono font-semibold text-slate-900">4</td>
+                <td class="py-3.5 px-4 text-center">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                    STRONG
+                  </span>
+                </td>
+                <td class="py-3.5 px-5 text-right">
+                  <button class="text-slate-400 hover:text-slate-800 p-1 rounded hover:bg-slate-100">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
+                  </button>
+                </td>
+              </tr>
+
+              <!-- Row 7: Gautam V. (R&D) -->
+              <tr class="hover:bg-slate-50/70 transition-colors">
+                <td class="py-3.5 px-5">
+                  <div class="flex items-center gap-3">
+                    <div class="w-7 h-7 rounded-lg bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center border border-slate-200">
+                      GV
+                    </div>
+                    <div>
+                      <div class="font-bold text-slate-900 text-xs">Gautam V.</div>
+                      <div class="text-[10px] text-slate-400">R&amp;D &amp; Substrate Specialist</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="py-3.5 px-4">
+                  <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-sky-50 text-sky-700 border border-sky-200">R&amp;D Squad</span>
+                </td>
+                <td class="py-3.5 px-4 text-center font-mono font-semibold text-slate-900">12</td>
+                <td class="py-3.5 px-4 text-center">
+                  <div class="flex items-center justify-center gap-1.5">
+                    <div class="w-16 bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                      <div class="bg-indigo-600 h-full rounded-full" style="width: 92%"></div>
+                    </div>
+                    <span class="font-mono font-bold text-slate-900 text-xs">92%</span>
+                    <span class="text-[10px] text-slate-400">(11/12)</span>
+                  </div>
+                </td>
+                <td class="py-3.5 px-4 text-center">
+                  <span class="font-mono text-slate-600 font-semibold">1</span>
+                </td>
+                <td class="py-3.5 px-4 text-center">
+                  <span class="font-mono text-slate-700 font-medium">2</span>
+                </td>
+                <td class="py-3.5 px-4 text-center font-mono font-semibold text-slate-900">5</td>
+                <td class="py-3.5 px-4 text-center">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-indigo-50 text-indigo-700 border border-indigo-200">
+                    STABLE
+                  </span>
+                </td>
+                <td class="py-3.5 px-5 text-right">
+                  <button class="text-slate-400 hover:text-slate-800 p-1 rounded hover:bg-slate-100">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Table Footer / Pagination -->
+          <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <span>Showing <strong>1–7</strong> of 18 specialists</span>
+            <div class="flex items-center gap-2">
+              <button class="px-2 py-1 text-slate-400 border border-slate-200 rounded bg-white" disabled="">Previous</button>
+              <button class="px-2 py-1 text-slate-700 border border-slate-200 rounded bg-white hover:bg-slate-50">Next</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- TEAM COMPARISON SECTION (TEAM DELIVERY) -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-xs p-5">
+          <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-100">
+            <div>
+              <h2 class="text-xs font-bold text-slate-900 uppercase tracking-wider">Team Delivery Comparison</h2>
+              <p class="text-[11px] text-slate-500">Aggregate delivery volume, adherence rates and revision counts across departments</p>
+            </div>
+            <span class="text-[11px] font-semibold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">All Squads Active</span>
+          </div>
+
+          <table class="w-full text-left border-collapse text-xs">
+            <thead>
+              <tr class="bg-slate-50/50 text-[11px] font-semibold text-slate-500 uppercase tracking-wider border-b border-slate-200/70">
+                <th class="py-2.5 px-4">Team</th>
+                <th class="py-2.5 px-4 text-center">Members</th>
+                <th class="py-2.5 px-4 text-center">Projects Completed</th>
+                <th class="py-2.5 px-4 text-center">Tasks Completed</th>
+                <th class="py-2.5 px-4 text-center">On-Time %</th>
+                <th class="py-2.5 px-4 text-center">Overdue</th>
+                <th class="py-2.5 px-4 text-center">Revisions</th>
+                <th class="py-2.5 px-4 text-right">Team SLA Status</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr class="hover:bg-slate-50/50">
+                <td class="py-2.5 px-4 font-bold text-slate-900">Logo Team</td>
+                <td class="py-2.5 px-4 text-center font-mono">5</td>
+                <td class="py-2.5 px-4 text-center font-mono font-semibold">18</td>
+                <td class="py-2.5 px-4 text-center font-mono">64</td>
+                <td class="py-2.5 px-4 text-center font-mono font-bold text-emerald-700">92%</td>
+                <td class="py-2.5 px-4 text-center font-mono text-slate-700">3</td>
+                <td class="py-2.5 px-4 text-center font-mono text-slate-700">8</td>
+                <td class="py-2.5 px-4 text-right">
+                  <span class="text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Optimal</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="py-2.5 px-4 font-bold text-slate-900">Packaging Team</td>
+                <td class="py-2.5 px-4 text-center font-mono">4</td>
+                <td class="py-2.5 px-4 text-center font-mono font-semibold">14</td>
+                <td class="py-2.5 px-4 text-center font-mono">52</td>
+                <td class="py-2.5 px-4 text-center font-mono font-bold text-amber-700">86%</td>
+                <td class="py-2.5 px-4 text-center font-mono text-rose-600 font-semibold">5</td>
+                <td class="py-2.5 px-4 text-center font-mono text-amber-700 font-semibold">11</td>
+                <td class="py-2.5 px-4 text-right">
+                  <span class="text-[10px] font-semibold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">Bottleneck / Attention</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="py-2.5 px-4 font-bold text-slate-900">R&amp;D Team</td>
+                <td class="py-2.5 px-4 text-center font-mono">1</td>
+                <td class="py-2.5 px-4 text-center font-mono font-semibold">5</td>
+                <td class="py-2.5 px-4 text-center font-mono">12</td>
+                <td class="py-2.5 px-4 text-center font-mono font-bold text-emerald-700">94%</td>
+                <td class="py-2.5 px-4 text-center font-mono text-slate-700">1</td>
+                <td class="py-2.5 px-4 text-center font-mono text-slate-700">2</td>
+                <td class="py-2.5 px-4 text-right">
+                  <span class="text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Optimal</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-slate-50/50">
+                <td class="py-2.5 px-4 font-bold text-slate-900">Sketch Squad</td>
+                <td class="py-2.5 px-4 text-center font-mono">1</td>
+                <td class="py-2.5 px-4 text-center font-mono font-semibold">4</td>
+                <td class="py-2.5 px-4 text-center font-mono">10</td>
+                <td class="py-2.5 px-4 text-center font-mono font-bold text-emerald-700">100%</td>
+                <td class="py-2.5 px-4 text-center font-mono text-emerald-600 font-semibold">0</td>
+                <td class="py-2.5 px-4 text-center font-mono text-slate-700">1</td>
+                <td class="py-2.5 px-4 text-right">
+                  <span class="text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Exemplary</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <!-- COMPACT RIGHT-SIDE DRAWER: EMPLOYEE QUICK VIEW (Shihaf Inspected) -->
+      <aside class="w-[340px] bg-white border-l border-slate-200 flex-shrink-0 flex flex-col justify-between shadow-lg z-10">
+        <div class="overflow-y-auto custom-scrollbar p-5 space-y-4">
+
+          <!-- Drawer Header -->
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div class="flex items-center gap-2">
+              <span class="text-[10px] font-bold text-slate-400 tracking-wider uppercase">Operational Quick View</span>
+            </div>
+            <button class="text-slate-400 hover:text-slate-700 p-1 rounded hover:bg-slate-100 transition-colors">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+          </div>
+
+          <!-- Employee Profile Snapshot -->
+          <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-200/80">
+            <div class="w-11 h-11 rounded-xl bg-amber-100 border border-amber-300 text-amber-800 font-bold text-base flex items-center justify-center flex-shrink-0 shadow-2xs">
+              SH
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center justify-between">
+                <h3 class="text-sm font-bold text-slate-900 truncate">Shihaf</h3>
+                <span class="px-2 py-0.5 rounded-full text-[9px] font-extrabold bg-amber-50 text-amber-700 border border-amber-200">
+                  NEEDS ATTENTION
+                </span>
+              </div>
+              <p class="text-xs text-slate-500">Senior Brand Designer</p>
+              <div class="flex items-center gap-2 mt-1">
+                <span class="text-[10px] font-semibold px-1.5 py-0.2 rounded bg-indigo-50 text-indigo-700 border border-indigo-200">Logo Team</span>
+                <span class="text-[10px] text-slate-400">Reports to Akhil</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Current Workload Correlation Warning -->
+          <div class="p-3 bg-rose-50/70 border border-rose-200 rounded-xl text-xs text-slate-700 space-y-1">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-rose-800 text-[11px] uppercase tracking-wide flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-rose-600 animate-pulse"></span>
+                96% Workload Overload
+              </span>
+              <span class="text-[10px] font-mono text-rose-700 font-semibold">6 active tasks</span>
+            </div>
+            <p class="text-[11px] text-rose-700 leading-relaxed">
+              Recent overdue tasks correlate directly with sustained 96% peak workload over the past 14 days. Rebalancing recommended.
+            </p>
+          </div>
+
+          <!-- Operational Key Metrics Grid -->
+          <div class="grid grid-cols-2 gap-2.5">
+            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200/70">
+              <span class="text-[10px] uppercase font-bold text-slate-400">Tasks Completed</span>
+              <div class="text-lg font-bold text-slate-900 font-mono mt-0.5">21</div>
+              <span class="text-[10px] text-slate-500">This billing month</span>
+            </div>
+            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200/70">
+              <span class="text-[10px] uppercase font-bold text-slate-400">On-Time Completion</span>
+              <div class="text-lg font-bold text-amber-700 font-mono mt-0.5">81%</div>
+              <span class="text-[10px] text-slate-500">17 of 21 on time</span>
+            </div>
+            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200/70">
+              <span class="text-[10px] uppercase font-bold text-slate-400">Overdue Tasks</span>
+              <div class="text-lg font-bold text-rose-600 font-mono mt-0.5">4</div>
+              <span class="text-[10px] text-rose-600 font-medium">2 pending today</span>
+            </div>
+            <div class="p-3 bg-slate-50 rounded-lg border border-slate-200/70">
+              <span class="text-[10px] uppercase font-bold text-slate-400">Revision Requests</span>
+              <div class="text-lg font-bold text-slate-900 font-mono mt-0.5">6</div>
+              <span class="text-[10px] text-slate-500">Across 3 active projects</span>
+            </div>
+          </div>
+
+          <!-- Projects Delivered Summary -->
+          <div class="p-3 bg-slate-50 rounded-lg border border-slate-200/70">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[11px] font-bold text-slate-700">Projects Delivered This Month</span>
+              <span class="text-xs font-bold text-slate-900 font-mono">7 Projects</span>
+            </div>
+            <div class="text-[11px] text-slate-500 space-y-1">
+              <div class="flex items-center justify-between">
+                <span>• ABC Foods (Logo &amp; Identity)</span>
+                <span class="text-emerald-700 font-semibold">Client Review</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>• Novel X Technologies (Vector Monogram)</span>
+                <span class="text-indigo-700 font-semibold">In Progress</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>• Mahalaxmi Builders (Logo Refresh)</span>
+                <span class="text-slate-600 font-semibold">Completed</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Root Cause Context (No Unfair Ranking) -->
+          <div class="p-3 bg-slate-50 border border-slate-200/80 rounded-lg text-xs space-y-1.5">
+            <span class="font-bold text-slate-800 text-[11px] uppercase tracking-wide">Delivery Context</span>
+            <p class="text-[11px] text-slate-600 leading-relaxed">
+              3 of 6 revision requests stemmed from ABC Foods' unexpected board-level scope revision on 13 Sep. Designer delivery quality remains high.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Drawer Action Footer (Founder Operational Actions) -->
+        <div class="p-4 border-t border-slate-200 bg-slate-50 space-y-2">
+          <button class="w-full py-2 px-3 text-xs font-bold text-white bg-brand-600 hover:bg-brand-700 rounded-lg shadow-sm transition-colors flex items-center justify-center gap-2">
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+            <span>Rebalance Tasks in Workload Board</span>
+          </button>
+          <div class="grid grid-cols-2 gap-2">
+            <button class="py-1.5 px-2 text-xs font-semibold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 rounded-lg transition-colors text-center">
+              View Active Tasks (6)
+            </button>
+            <button class="py-1.5 px-2 text-xs font-semibold text-slate-700 bg-white border border-slate-200 hover:bg-slate-50 rounded-lg transition-colors text-center">
+              View Projects (7)
+            </button>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+
+  </main>
+
+
+
+</body></html>

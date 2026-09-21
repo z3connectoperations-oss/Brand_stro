@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary": "#684000", "background": "#f8f9ff", "on-secondary-container": "#5c647a", "primary": "#3525cd", "surface-container-high": "#dce9ff", "primary-fixed-dim": "#c3c0ff", "surface-dim": "#cbdbf5", "inverse-primary": "#c3c0ff", "outline": "#777587", "inverse-surface": "#213145", "tertiary-fixed": "#ffddb8", "on-secondary-fixed-variant": "#3f465c", "surface-container-highest": "#d3e4fe", "surface": "#f8f9ff", "primary-container": "#4f46e5", "inverse-on-surface": "#eaf1ff", "on-primary-container": "#dad7ff", "error-container": "#ffdad6", "on-primary": "#ffffff", "surface-container": "#e5eeff", "on-tertiary-container": "#ffd4a4", "primary-fixed": "#e2dfff", "surface-variant": "#d3e4fe", "tertiary-container": "#885500", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#3323cc", "on-primary-fixed": "#0f0069", "surface-container-low": "#eff4ff", "on-secondary": "#ffffff", "secondary-fixed-dim": "#bec6e0", "error": "#ba1a1a", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "surface-bright": "#f8f9ff", "on-surface": "#0b1c30", "on-tertiary-fixed": "#2a1700", "on-error-container": "#93000a", "on-background": "#0b1c30", "surface-tint": "#4d44e3", "secondary-fixed": "#dae2fd", "secondary": "#565e74", "outline-variant": "#c7c4d8", "on-surface-variant": "#464555", "secondary-container": "#dae2fd", "tertiary-fixed-dim": "#ffb95f", "on-secondary-fixed": "#131b2e", "on-tertiary-fixed-variant": "#653e00" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1rem", "space-xl": "1.5rem", "space-md": "0.75rem", "margin": "1rem", "gutter-desktop": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "margin-desktop": "2rem", "space-lg": "1rem" }, "fontFamily": { "body-lg": ["Inter"], "label-md": ["Inter"], "headline-lg": ["Inter"], "headline-sm": ["Inter"], "label-sm": ["Inter"], "headline-md": ["Inter"], "body-sm": ["Inter"], "code-sm": ["JetBrains Mono"], "body-md": ["Inter"], "display-lg": ["Inter"], "code-xs": ["JetBrains Mono"] }, "fontSize": { "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "code-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }], "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "code-xs": ["10px", { "lineHeight": "12px", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 bottom-0 w-60 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">corporate_fare</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none font-bold">BRANDSTRO</span><span class="font-code-xs text-code-xs text-primary font-medium tracking-wide uppercase mt-0.5">CRM &amp; ERP CORE</span></div></div></div><div class="px-space-lg mt-space-md mb-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase tracking-wider">My Work</span></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-all group bg-primary-container text-on-primary font-semibold shadow-sm" data-path="my-dashboard" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-label-md text-label-md">My Dashboard</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="my-tasks" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">task_alt</span><span class="font-label-md text-label-md">My Tasks</span></div><span class="font-code-xs text-code-xs bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded-full font-semibold">4</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="my-projects" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">folder</span><span class="font-label-md text-label-md">My Projects</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all group" data-path="review-feedback" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">rate_review</span><span class="font-label-md text-label-md">Review Feedback</span></div><span class="font-code-xs text-code-xs bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded-full font-semibold">2</span></a></nav><div class="px-space-lg mt-space-xl"><div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg"><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-primary"></span><span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-wide">LOGO TEAM</span></div><span class="material-symbols-outlined text-on-surface-variant text-[16px]">unfold_more</span></div></div></div><div class="flex flex-col"><div class="flex items-center justify-between px-space-lg py-space-sm bg-surface-container-lowest"><div class="flex items-center gap-space-md"><button class="p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><button class="p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help</span></button></div><span class="font-code-xs text-code-xs text-on-surface-variant">v2.4.1</span></div><div class="p-space-md m-space-sm bg-surface-container-low rounded-xl flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><div class="relative flex-shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-primary ring-2 ring-surface-container-lowest"></span></div><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-surface truncate font-semibold">Shihaf K.</span><span class="font-code-xs text-code-xs text-on-surface-variant truncate">Sr. Logo Designer</span></div></div><button class="text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[18px]">more_vert</span></button></div></div></aside><div class="pl-60 min-h-screen flex flex-col"><header class="fixed top-0 left-60 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-gutter-desktop"><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-on-surface-variant font-medium">My Work</span><span class="material-symbols-outlined text-outline-variant text-[16px]">chevron_right</span><span class="font-label-md text-label-md text-on-surface font-semibold">Dashboard</span></div><div class="flex items-center gap-space-lg"><div class="flex items-center bg-surface-container-low rounded-lg px-space-md py-1.5 w-72 justify-between focus-within:bg-surface-container"><div class="flex items-center gap-space-sm w-full"><span class="material-symbols-outlined text-on-surface-variant text-[18px]">search</span><input class="bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant w-full" placeholder="Search tasks, projects..." type="text"/></div><kbd class="font-code-xs text-code-xs bg-surface-container-lowest text-on-surface-variant px-1.5 py-0.5 rounded shadow-sm font-medium">⌘K</kbd></div><div class="flex items-center gap-space-sm"><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface px-space-gutter-desktop pb-space-margin-desktop flex-1"><div class="flex flex-col w-full gap-space-lg">
+<!-- 1. GREETING & FOCUS HEADER -->
+<section class="flex flex-col md:flex-row md:items-center md:justify-between gap-space-md pt-space-xs">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">Good morning, Shihaf 👋</h1>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          Status: Working • On Track
+        </span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+        Here's what you need to focus on today. You have <span class="font-semibold text-error">1 overdue item</span> requiring attention.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<div class="flex items-center gap-2 px-space-md py-1.5 rounded-lg bg-surface-container-lowest shadow-sm text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-primary">calendar_today</span>
+<span>Monday, 14 Sep 2026 • Current Sprint</span>
+</div>
+<button class="p-2 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container shadow-sm transition-colors" title="Sync Status" type="button">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+</button>
+</div>
+</section>
+<!-- 2. TOP 4 KPI SUMMARY CARDS -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1: Today's Tasks -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Today's Tasks</span>
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">checklist</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">4</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">items queued</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">2 high priority • 1 urgent</p>
+</div>
+</div>
+<!-- Card 2: Overdue (Critical Alert) -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-error"></div>
+<div class="flex items-center justify-between pl-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-error font-semibold">Overdue Task</span>
+<div class="w-8 h-8 rounded-lg bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</div>
+</div>
+<div class="mt-space-md pl-1">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-error font-bold">1</span>
+<span class="font-code-xs text-code-xs text-error font-semibold">1d past SLA</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 truncate" title="Orange Surgicals Packaging">Orange Surgicals Packaging</p>
+</div>
+</div>
+<!-- Card 3: Due This Week -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Due This Week</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[18px]">date_range</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">6</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">deliverables</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Across 3 brand projects</p>
+</div>
+</div>
+<!-- Card 4: Waiting for Review -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Waiting Review</span>
+<div class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[18px]">pending_actions</span>
+</div>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">2</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">with leads</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Submitted to Akhil (TL)</p>
+</div>
+</div>
+</section>
+<!-- 3. MAIN CONTENT - TWO COLUMN BALANCED GRID -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN (approx 65% / 8 cols) - CORE TASKS -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg min-w-0">
+<!-- A. PROMINENT OVERDUE ACTION BANNER -->
+<div class="relative overflow-hidden rounded-xl bg-error-container/40 p-space-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-start gap-space-md min-w-0">
+<div class="w-10 h-10 rounded-lg bg-error text-on-error flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">notification_important</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-sm text-label-sm bg-error text-on-error px-2 py-0.5 rounded font-bold uppercase tracking-wider">Overdue Action</span>
+<span class="font-code-xs text-code-xs text-error font-semibold">Due 13 Sep (1d late)</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1 font-semibold truncate">
+              Orange Surgicals Packaging — Packaging Logo Placement &amp; Dieline Alignment
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Status: <span class="font-medium text-error">Changes Requested / Revision</span> • Action needed: Address Akhil's kerning notes.
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0 w-full sm:w-auto justify-end">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container text-label-md font-label-md shadow-sm transition-all" type="button">
+            View Revision Notes
+          </button>
+<button class="px-space-md py-2 rounded-lg bg-error text-on-error hover:opacity-90 text-label-md font-label-md font-medium shadow-sm transition-all" type="button">
+            Open Task Details
+          </button>
+</div>
+</div>
+<!-- B. PRIMARY SECTION: "MY TASKS TODAY" -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest shadow-sm p-space-lg gap-space-md">
+<!-- Section Header & Filter Pills -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface">My Tasks Today</h2>
+<span class="font-code-xs text-code-xs bg-surface-container-high px-2 py-0.5 rounded-full font-semibold text-primary">4 Items</span>
+</div>
+<!-- Filter Buttons -->
+<div class="flex items-center gap-1.5 overflow-x-auto py-1 scrollbar-none">
+<button class="px-space-sm py-1 rounded-md bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold shadow-sm whitespace-nowrap" type="button">
+              All (4)
+            </button>
+<button class="px-space-sm py-1 rounded-md bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm transition-colors whitespace-nowrap" type="button">
+              In Progress (1)
+            </button>
+<button class="px-space-sm py-1 rounded-md bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm transition-colors whitespace-nowrap" type="button">
+              Not Started (1)
+            </button>
+<button class="px-space-sm py-1 rounded-md bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm transition-colors whitespace-nowrap" type="button">
+              Revisions (1)
+            </button>
+<button class="px-space-sm py-1 rounded-md bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm transition-colors whitespace-nowrap" type="button">
+              Pending Review (1)
+            </button>
+</div>
+</div>
+<!-- Task 1: Urgent / Overdue Revision -->
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col gap-space-sm hover:bg-surface-container transition-colors">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-code-xs text-code-xs px-2 py-0.5 rounded bg-error text-on-error font-bold">URGENT</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant font-medium">Orange Surgicals Packaging • #PRJ-1008</span>
+<span class="font-code-xs text-code-xs text-error font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 13 Sep (1d late)
+                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1 font-semibold">Packaging Logo Placement</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+<span class="font-medium text-tertiary">Revision requested:</span> "Blister pack dieline kerning adjustments needed on top seal segment."
+              </p>
+</div>
+<span class="px-2 py-1 rounded bg-error-container text-error font-label-sm text-label-sm font-semibold flex-shrink-0">
+              Changes Requested
+            </span>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-1 gap-space-md">
+<div class="flex items-center gap-space-sm text-on-surface-variant font-code-xs text-code-xs">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">attach_file</span> 3 Assets</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">chat_bubble_outline</span> 2 Notes</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface text-label-md font-label-md shadow-sm" type="button">
+                Open Task
+              </button>
+<button class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary text-label-md font-label-md font-medium shadow-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">upload_file</span>
+                Submit Work
+              </button>
+</div>
+</div>
+</div>
+<!-- Task 2: High / In Progress -->
+<div class="rounded-lg bg-surface-container-lowest p-space-md flex flex-col gap-space-sm hover:bg-surface-container-low transition-colors shadow-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-code-xs text-code-xs px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-bold">HIGH</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant font-medium">ABC Brand Identity • #PRJ-1024</span>
+<span class="font-code-xs text-code-xs text-primary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">timer</span> Today, 4:00 PM (SLA gate)
+                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1 font-semibold">Develop Logo Concept 03</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Refining geometric layout and vector lockups based on modern minimal organic food aesthetic.
+              </p>
+</div>
+<span class="px-2 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold flex-shrink-0">
+              In Progress
+            </span>
+</div>
+<!-- Progress Bar Indicator -->
+<div class="flex flex-col gap-1.5 mt-1">
+<div class="flex justify-between items-center font-code-xs text-code-xs">
+<span class="text-on-surface-variant">Active progress</span>
+<span class="text-primary font-semibold">70% completed</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 70%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-1 gap-space-md">
+<div class="flex items-center gap-space-sm text-on-surface-variant font-code-xs text-code-xs">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">layers</span> SVG Vector Board</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container text-label-md font-label-md" type="button">
+                View Brief
+              </button>
+<button class="px-space-md py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container text-label-md font-label-md font-medium shadow-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+                Continue Work
+              </button>
+</div>
+</div>
+</div>
+<!-- Task 3: Normal / Not Started -->
+<div class="rounded-lg bg-surface-container-lowest p-space-md flex flex-col gap-space-sm hover:bg-surface-container-low transition-colors shadow-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-code-xs text-code-xs px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-medium">NORMAL</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant font-medium">KPN Restaurant Identity • #PRJ-1021</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Today, 6:00 PM
+                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1 font-semibold">Refine Typography Direction</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Explore custom ligature glyphs for secondary South-Indian fine dining wordmark.
+              </p>
+</div>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium flex-shrink-0">
+              Not Started
+            </span>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-1 gap-space-md">
+<span class="text-on-surface-variant font-code-xs text-code-xs">Assigned by Vikram S.</span>
+<div class="flex items-center gap-2">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container text-label-md font-label-md shadow-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">play_circle</span>
+                Start Task
+              </button>
+</div>
+</div>
+</div>
+<!-- Task 4: Normal / Pending Review -->
+<div class="rounded-lg bg-surface-container-lowest p-space-md flex flex-col gap-space-sm hover:bg-surface-container-low transition-colors shadow-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-code-xs text-code-xs px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-medium">NORMAL</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant font-medium">Mahalaxmi Builders • #PRJ-1012</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Today, 7:00 PM
+                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1 font-semibold">Prepare Final Logo Variations</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Monochrome, inverted dark mode, and minimal architectural icon layouts submitted for team approval.
+              </p>
+</div>
+<span class="px-2 py-1 rounded bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm font-semibold flex-shrink-0">
+              Pending Review
+            </span>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt-1 gap-space-md">
+<span class="text-on-surface-variant font-code-xs text-code-xs">Submitted to TL Akhil 1h ago</span>
+<div class="flex items-center gap-2">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high text-label-md font-label-md" type="button">
+                View Submission V2
+              </button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-primary hover:bg-surface text-label-md font-label-md shadow-sm" type="button">
+                View Feedback
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- C. "UP NEXT (UPCOMING WORK)" SECTION -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">next_plan</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Up Next (Upcoming Work)</h2>
+</div>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Scheduled for this sprint</span>
+</div>
+<div class="divide-y-0 flex flex-col gap-2">
+<!-- Item 1 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-semibold truncate">Brand Research References &amp; Visual Moodboard</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">ABC Foods • #PRJ-1024</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md flex-shrink-0">
+<span class="font-code-xs text-code-xs text-on-surface-variant font-medium">Tomorrow, 11:00 AM</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-medium">Normal</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-2 h-2 rounded-full bg-tertiary"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-semibold truncate">Logo Refinement &amp; Vector Geometry</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">KPN Restaurant Identity • #PRJ-1021</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md flex-shrink-0">
+<span class="font-code-xs text-code-xs text-on-surface-variant font-medium">18 Sep, 2:00 PM</span>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">High</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-semibold truncate">Packaging Adaptation for Box Sizing</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Orange Surgicals • #PRJ-1008</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md flex-shrink-0">
+<span class="font-code-xs text-code-xs text-on-surface-variant font-medium">19 Sep, 5:00 PM</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-medium">Normal</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (approx 35% / 4 cols) - ASSISTANCE, FEEDBACK & CONTEXT -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- A. "TODAY'S PROGRESS" CARD -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Daily Execution</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-code-xs text-code-xs font-semibold">75% Done</span>
+</div>
+<div class="flex items-center gap-space-lg">
+<!-- Inline Circular SVG Chart -->
+<div class="relative w-20 h-20 flex-shrink-0 flex items-center justify-center">
+<svg class="w-20 h-20 transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3.5"></path>
+<path class="text-primary stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="75, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-headline-sm text-headline-sm font-bold text-on-surface">3/4</span>
+</div>
+<div class="flex flex-col min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Today's Progress</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">3 of 4 tasks completed or submitted for review.</p>
+<span class="font-code-xs text-code-xs text-error font-medium mt-1">1 task remaining for SLA</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Great pace! You're on track for Logo Squad sprint milestone.</span>
+</div>
+</div>
+<!-- B. "RECENT FEEDBACK" CARD -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">rate_review</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Recent Feedback</h2>
+</div>
+<span class="font-code-xs text-code-xs bg-surface-container-high px-1.5 py-0.5 rounded text-primary font-semibold">2 New</span>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Feedback 1 -->
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col gap-space-xs hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-on-primary font-code-xs text-code-xs font-bold">AK</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Akhil (Logo TL)</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">ABC Brand Identity</span>
+</div>
+</div>
+<span class="font-code-xs text-code-xs text-on-surface-variant flex-shrink-0">2h ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-1 italic pl-1 border-l-2 border-primary">
+              "Please refine the spacing between symbol &amp; wordmark in Concept 03. Saffron tone looks great on the organic badge."
+            </p>
+<div class="flex justify-end mt-1">
+<button class="font-label-sm text-label-sm text-primary hover:underline font-semibold flex items-center gap-0.5" type="button">
+                View Task &amp; Notes <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Feedback 2 -->
+<div class="rounded-lg bg-surface-container-low p-space-md flex flex-col gap-space-xs hover:bg-surface-container transition-colors">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-7 h-7 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary font-code-xs text-code-xs font-bold">VS</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Vikram S. (Creative Head)</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">KPN Restaurant Identity</span>
+</div>
+</div>
+<span class="font-code-xs text-code-xs text-on-surface-variant flex-shrink-0">Yesterday</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-1 italic pl-1 border-l-2 border-surface-container-high">
+              "Typography direction approved. Continue with concept development."
+            </p>
+<div class="flex justify-end mt-1">
+<button class="font-label-sm text-label-sm text-primary hover:underline font-semibold flex items-center gap-0.5" type="button">
+                View Brief <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- C. "MY ACTIVE PROJECTS" CARD -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Active Projects</h2>
+<span class="font-code-xs text-code-xs text-on-surface-variant">3 Allocated</span>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Project 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-semibold truncate">ABC Brand Identity</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Delivery: 18 Sep 2026</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-code-xs text-code-xs font-medium">In Progress</span>
+</div>
+<!-- Project 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-semibold truncate">KPN Restaurant Identity</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Due: 17 Sep 2026</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-fixed font-code-xs text-code-xs font-medium">Client Review</span>
+</div>
+<!-- Project 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col min-w-0">
+<span class="font-body-md text-body-md text-on-surface font-semibold truncate">Mahalaxmi Builders</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">Due: 16 Sep 2026</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-code-xs text-code-xs font-medium">Internal Review</span>
+</div>
+</div>
+<a class="font-label-md text-label-md text-primary font-semibold hover:underline flex items-center gap-1 pt-1 justify-center" href="#">
+          View All My Projects <span class="material-symbols-outlined text-[16px]">trending_flat</span>
+</a>
+</div>
+<!-- D. "QUICK ACTIONS" CARD -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm p-space-lg flex flex-col gap-space-md">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Quick Actions</h2>
+<div class="grid grid-cols-2 gap-2">
+<button class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface flex flex-col items-center justify-center gap-1.5 transition-colors text-center" type="button">
+<span class="material-symbols-outlined text-primary text-[20px]">edit_note</span>
+<span class="font-label-sm text-label-sm font-medium">Add Scratchpad</span>
+</button>
+<button class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface flex flex-col items-center justify-center gap-1.5 transition-colors text-center" type="button">
+<span class="material-symbols-outlined text-primary text-[20px]">cloud_upload</span>
+<span class="font-label-sm text-label-sm font-medium">Upload Assets</span>
+</button>
+<button class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface flex flex-col items-center justify-center gap-1.5 transition-colors text-center" type="button">
+<span class="material-symbols-outlined text-tertiary text-[20px]">support_agent</span>
+<span class="font-label-sm text-label-sm font-medium">Request Help</span>
+</button>
+<button class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface flex flex-col items-center justify-center gap-1.5 transition-colors text-center" type="button">
+<span class="material-symbols-outlined text-secondary text-[20px]">event_note</span>
+<span class="font-label-sm text-label-sm font-medium">Squad Schedule</span>
+</button>
+</div>
+</div>
+<!-- E. "MY WORKLOAD" COMPACT INDICATOR -->
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col gap-2 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Squad Workload</span>
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">6 Active Tasks</span>
+<span class="font-code-xs text-code-xs text-on-surface-variant">4 Due This Week</span>
+</div>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span>Capacity: <span class="font-medium text-on-surface">Normal</span></span>
+<span class="font-code-xs text-code-xs">Next sync: 5:30 PM</span>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

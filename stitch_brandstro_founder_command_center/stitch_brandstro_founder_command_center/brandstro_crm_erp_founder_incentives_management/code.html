@@ -1,0 +1,1018 @@
+<!DOCTYPE html><html lang="en" class="h-full"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brandstro CRM + ERP - Founder Incentives Management</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              900: '#1e1b4b',
+              dark: '#0B0F19',
+              sidebar: '#0E131F',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+      -webkit-font-smoothing: antialiased;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 h-full flex overflow-hidden font-sans text-[13px]">
+
+  <!-- ==================== LEFT SIDEBAR (240px Fixed) ==================== -->
+  <aside class="w-[240px] bg-brand-sidebar text-slate-300 flex flex-col flex-shrink-0 border-r border-slate-800 select-none z-20">
+    <!-- Brand Header -->
+    <div class="h-16 flex items-center px-5 border-b border-slate-800/80 gap-3">
+      <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-indigo-700 flex items-center justify-center text-white font-black text-base shadow-sm shadow-indigo-500/30">
+        B
+      </div>
+      <div class="leading-none">
+        <div class="flex items-center gap-1.5">
+          <span class="font-extrabold text-white text-sm tracking-tight">BRANDSTRO</span>
+          <span class="text-[9px] font-bold px-1.5 py-0.5 rounded bg-indigo-950 text-indigo-300 border border-indigo-700/50">ERP</span>
+        </div>
+        <span class="text-[10px] text-slate-400 font-medium">Agency Operating System</span>
+      </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="flex-1 overflow-y-auto px-3 py-4 space-y-6 custom-scrollbar text-[12.5px]">
+      <div>
+        <div class="px-3 pb-2 text-[10px] font-bold tracking-wider text-slate-400 uppercase">Main</div>
+        <nav class="space-y-0.5 font-medium">
+          <a href="#" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors">
+            <svg class="w-4 h-4 opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+            <span>Command Center</span>
+          </a>
+          <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+              <span>Leads</span>
+            </div>
+            <span class="px-1.5 py-0.5 text-[10px] font-semibold bg-slate-800 text-slate-300 rounded">18</span>
+          </a>
+          <a href="#" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors">
+            <svg class="w-4 h-4 opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+            <span>Clients</span>
+          </a>
+          <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+              <span>Projects</span>
+            </div>
+            <div class="flex items-center gap-1">
+              <span class="px-1.5 py-0.5 text-[9px] font-bold bg-rose-950/80 text-rose-300 rounded border border-rose-800/50">5 late</span>
+              <span class="px-1.5 py-0.5 text-[10px] font-semibold bg-slate-800 text-slate-300 rounded">38</span>
+            </div>
+          </a>
+          <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>Payments</span>
+            </div>
+            <span class="px-1.5 py-0.5 text-[10px] font-semibold bg-amber-950/80 text-amber-300 rounded border border-amber-700/50">₹3.42L</span>
+          </a>
+          <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+              <span>Team &amp; Workload</span>
+            </div>
+            <span class="px-1.5 py-0.5 text-[10px] font-semibold bg-slate-800 text-slate-300 rounded">18/35</span>
+          </a>
+          <a href="#" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors">
+            <svg class="w-4 h-4 opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+            <span>Reports</span>
+          </a>
+        </nav>
+      </div>
+
+      <div>
+        <div class="px-3 pb-2 text-[10px] font-bold tracking-wider text-slate-400 uppercase">Management</div>
+        <nav class="space-y-0.5 font-medium">
+          <!-- Active Highlight: Incentives -->
+          <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg bg-indigo-600 text-white font-semibold shadow-sm shadow-indigo-600/30">
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path></svg>
+              <span>Incentives</span>
+            </div>
+            <span class="px-1.5 py-0.5 text-[10px] font-bold bg-white/20 text-white rounded">6 Pending</span>
+          </a>
+          <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+              <span>Alerts</span>
+            </div>
+            <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+          </a>
+          <a href="#" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors">
+            <svg class="w-4 h-4 opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <span>Activity</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Bottom Settings & Profile -->
+    <div class="p-3 border-t border-slate-800/80 space-y-2">
+      <a href="#" class="flex items-center gap-2 px-3 py-1.5 text-xs text-slate-400 hover:text-white rounded-lg hover:bg-slate-800/50 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+        <span>Settings &amp; Config</span>
+      </a>
+      <div class="flex items-center justify-between p-2 rounded-xl bg-slate-900/90 border border-slate-800">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-indigo-950 text-indigo-300 font-bold flex items-center justify-center text-xs border border-indigo-700/60">
+            FD
+          </div>
+          <div class="leading-tight">
+            <div class="font-bold text-white text-xs">Pranav S.</div>
+            <div class="text-[10px] text-slate-400">Founder &amp; CEO</div>
+          </div>
+        </div>
+        <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4"></path></svg>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN CONTENT AREA ==================== -->
+  <main class="flex-1 flex flex-col min-w-0 bg-slate-50 overflow-hidden">
+
+    <!-- Top Header Bar -->
+    <header class="h-16 bg-white border-b border-slate-200 px-6 flex items-center justify-between flex-shrink-0 z-10">
+      <div>
+        <div class="flex items-center gap-2">
+          <h1 class="text-xl font-extrabold text-slate-900 tracking-tight">Incentives</h1>
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            Operational Performance Model
+          </span>
+        </div>
+        <p class="text-xs text-slate-500 mt-0.5">Track, review and approve employee performance incentives based on verified operational delivery.</p>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <!-- Search -->
+        <div class="relative w-64">
+          <svg class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          <input type="text" placeholder="Search employee, team, rule..." class="w-full bg-slate-50 border border-slate-200 rounded-lg pl-9 pr-7 py-1.5 text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all">
+          <kbd class="absolute right-2 top-1/2 -translate-y-1/2 text-[9px] font-mono text-slate-400 bg-white border border-slate-200 px-1 py-0.5 rounded">⌘K</kbd>
+        </div>
+
+        <!-- Period Selector -->
+        <div class="flex items-center bg-white border border-slate-200 rounded-lg px-2.5 py-1.5 text-xs font-medium text-slate-700 hover:border-slate-300 cursor-pointer shadow-sm gap-2">
+          <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+          <span>September 2026</span>
+          <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </div>
+
+        <!-- Notification Bell -->
+        <button class="relative p-2 rounded-lg border border-slate-200 hover:bg-slate-50 text-slate-600 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+          <span class="absolute 1 top-1.5 right-1.5 w-2 h-2 rounded-full bg-rose-500 ring-2 ring-white"></span>
+        </button>
+
+        <!-- Primary Review Pending Action -->
+        <button class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-xs shadow-sm shadow-indigo-600/30 transition-all">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <span>Review Pending (6)</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Scrollable Workspace Body -->
+    <div class="flex-1 flex overflow-hidden">
+
+      <!-- Center & Primary Dashboard Content -->
+      <div class="flex-1 overflow-y-auto p-6 space-y-6 custom-scrollbar">
+
+        <!-- ==================== 5 COMPACT KPI CARDS ==================== -->
+        <section class="grid grid-cols-5 gap-4">
+          <!-- KPI 1 -->
+          <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm relative overflow-hidden">
+            <div class="flex items-center justify-between text-slate-500 mb-1.5">
+              <span class="text-[11px] font-bold tracking-wider uppercase text-slate-400">Incentive Eligible</span>
+              <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+            </div>
+            <div class="text-2xl font-black text-slate-900 tracking-tight font-mono">₹42,000</div>
+            <div class="text-xs text-slate-500 mt-1 flex items-center gap-1">
+              <span>This month</span>
+              <span class="text-[10px] text-indigo-600 font-semibold bg-indigo-50 px-1.5 py-0.2 rounded border border-indigo-100">100% Calculated</span>
+            </div>
+          </div>
+
+          <!-- KPI 2: Pending Review (Attention) -->
+          <div class="bg-white p-4 rounded-xl border border-amber-200/80 bg-amber-50/20 shadow-sm relative overflow-hidden">
+            <div class="flex items-center justify-between text-slate-500 mb-1.5">
+              <span class="text-[11px] font-bold tracking-wider uppercase text-amber-700">Pending Review</span>
+              <span class="w-2 h-2 rounded-full bg-amber-500 animate-ping"></span>
+            </div>
+            <div class="text-2xl font-black text-amber-700 tracking-tight font-mono">₹18,500</div>
+            <div class="text-xs text-amber-800/80 mt-1 flex items-center justify-between">
+              <span>6 employees awaiting signoff</span>
+              <span class="text-[10px] font-bold bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">Action Req</span>
+            </div>
+          </div>
+
+          <!-- KPI 3: Approved -->
+          <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm relative overflow-hidden">
+            <div class="flex items-center justify-between text-slate-500 mb-1.5">
+              <span class="text-[11px] font-bold tracking-wider uppercase text-slate-400">Approved</span>
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            </div>
+            <div class="text-2xl font-black text-emerald-700 tracking-tight font-mono">₹15,000</div>
+            <div class="text-xs text-slate-500 mt-1 flex items-center justify-between">
+              <span>3 signed off</span>
+              <span class="text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-1.5 py-0.2 rounded border border-emerald-100">Ready for HR</span>
+            </div>
+          </div>
+
+          <!-- KPI 4: Paid -->
+          <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm relative overflow-hidden">
+            <div class="flex items-center justify-between text-slate-500 mb-1.5">
+              <span class="text-[11px] font-bold tracking-wider uppercase text-slate-400">Paid</span>
+              <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+            </div>
+            <div class="text-2xl font-black text-blue-700 tracking-tight font-mono">₹8,500</div>
+            <div class="text-xs text-slate-500 mt-1 flex items-center justify-between">
+              <span>2 disbursements</span>
+              <span class="text-[10px] font-semibold text-blue-700 bg-blue-50 px-1.5 py-0.2 rounded border border-blue-100">Disbursed</span>
+            </div>
+          </div>
+
+          <!-- KPI 5: Employees Eligible -->
+          <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm relative overflow-hidden">
+            <div class="flex items-center justify-between text-slate-500 mb-1.5">
+              <span class="text-[11px] font-bold tracking-wider uppercase text-slate-400">Employees Eligible</span>
+              <span class="w-2 h-2 rounded-full bg-purple-500"></span>
+            </div>
+            <div class="text-2xl font-black text-slate-900 tracking-tight font-mono">9 <span class="text-xs font-normal text-slate-400">/ 18</span></div>
+            <div class="text-xs text-slate-500 mt-1 flex items-center justify-between">
+              <span>Across all squads</span>
+              <span class="text-[10px] font-semibold text-purple-700 bg-purple-50 px-1.5 py-0.2 rounded">50% Qualifying</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== HORIZONTAL INCENTIVE STATUS SUMMARY ==================== -->
+        <section class="bg-white p-3.5 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between">
+          <div class="flex items-center gap-6 divide-x divide-slate-100">
+            <div class="flex items-center gap-3">
+              <span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">Incentive Status</span>
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 font-bold text-xs">Eligible (9)</span>
+                <span class="text-slate-300">→</span>
+                <span class="px-2 py-0.5 rounded-md bg-amber-100 text-amber-800 font-bold text-xs border border-amber-200">Pending Review (6)</span>
+                <span class="text-slate-300">→</span>
+                <span class="px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 font-bold text-xs border border-emerald-200">Approved (3)</span>
+                <span class="text-slate-300">→</span>
+                <span class="px-2 py-0.5 rounded-md bg-blue-100 text-blue-800 font-bold text-xs border border-blue-200">Paid (2)</span>
+              </div>
+            </div>
+
+            <div class="pl-6 flex items-center gap-2 text-xs text-slate-500">
+              <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>Operational Rule: <strong class="text-slate-700">Calculated directly from ERP delivery logs</strong>. No subjective scoring or arbitrary ranks.</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button class="px-2.5 py-1 text-xs font-semibold text-slate-600 hover:text-indigo-600 bg-slate-50 hover:bg-indigo-50 border border-slate-200 rounded-lg transition-colors flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span>View Incentive History</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- ==================== FILTER BAR ==================== -->
+        <section class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm flex items-center justify-between gap-3">
+          <div class="flex items-center gap-2.5 flex-1">
+            <!-- Search Employee -->
+            <div class="relative w-56">
+              <svg class="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              <input type="text" placeholder="Search employee..." class="w-full bg-slate-50 border border-slate-200 rounded-lg pl-8 pr-3 py-1.5 text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-indigo-500">
+            </div>
+
+            <!-- Team Filter -->
+            <select class="bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 text-xs text-slate-700 font-medium focus:outline-none">
+              <option>All Teams (5)</option>
+              <option>Logo Team</option>
+              <option>Packaging Team</option>
+              <option>R&amp;D Squad</option>
+              <option>Sketch Squad</option>
+              <option>Content Team</option>
+            </select>
+
+            <!-- Incentive Rule Filter -->
+            <select class="bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 text-xs text-slate-700 font-medium focus:outline-none">
+              <option>All Incentive Rules</option>
+              <option>On-Time Delivery (≥90%)</option>
+              <option>Project Completion (≥5 PRJs)</option>
+              <option>Revision Performance (≤3/PRJ)</option>
+              <option>Deadline Performance (≥95%)</option>
+            </select>
+
+            <!-- Status Filter -->
+            <select class="bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 text-xs text-slate-700 font-medium focus:outline-none">
+              <option>Status: Pending Review (6)</option>
+              <option>Approved</option>
+              <option>Paid</option>
+              <option>Rejected</option>
+              <option>Not Eligible</option>
+            </select>
+
+            <button class="text-xs text-indigo-600 hover:text-indigo-800 font-medium px-2 py-1">Reset</button>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-slate-400">Sort:</span>
+            <select class="bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5 text-xs text-slate-700 font-semibold focus:outline-none">
+              <option>Eligible Amount (High to Low)</option>
+              <option>Target Achievement %</option>
+              <option>Employee Name</option>
+              <option>Team</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- ==================== PENDING INCENTIVES TABLE (PRIMARY SECTION) ==================== -->
+        <section class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+          <div class="px-5 py-3.5 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+            <div class="flex items-center gap-2.5">
+              <h2 class="text-sm font-bold text-slate-900 uppercase tracking-tight">Pending Review</h2>
+              <span class="px-2 py-0.5 text-[10px] font-bold rounded-full bg-amber-100 text-amber-800 border border-amber-200">
+                6 Awaiting Founder Signoff
+              </span>
+            </div>
+            <div class="text-xs text-slate-500">
+              Total Pending Value: <span class="font-mono font-bold text-slate-900">₹18,500</span>
+            </div>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs text-slate-600">
+              <thead class="bg-slate-50 text-[11px] font-bold text-slate-400 uppercase tracking-wider border-b border-slate-200/80">
+                <tr>
+                  <th class="px-5 py-3">Employee</th>
+                  <th class="px-4 py-3">Team</th>
+                  <th class="px-4 py-3">Incentive Rule</th>
+                  <th class="px-3 py-3">Period</th>
+                  <th class="px-3 py-3">Target</th>
+                  <th class="px-3 py-3">Achieved</th>
+                  <th class="px-4 py-3 text-right">Incentive</th>
+                  <th class="px-4 py-3 text-center">Status</th>
+                  <th class="px-5 py-3 text-right">Action</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 font-medium">
+                
+                <!-- Row 1: Shihaf (Highlighted / Inspected) -->
+                <tr class="bg-indigo-50/40 hover:bg-indigo-50/60 transition-colors border-l-4 border-l-indigo-600">
+                  <td class="px-5 py-3.5 whitespace-nowrap">
+                    <div class="flex items-center gap-2.5">
+                      <div class="w-7 h-7 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center text-[11px] border border-amber-200">
+                        SH
+                      </div>
+                      <div>
+                        <div class="font-bold text-slate-900">Shihaf</div>
+                        <div class="text-[10px] text-slate-400">Senior Brand Designer</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap">
+                    <span class="px-2 py-0.5 rounded bg-indigo-50 text-indigo-700 font-semibold text-[11px] border border-indigo-100">Logo Team</span>
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap">
+                    <div class="font-semibold text-slate-800">On-Time Delivery</div>
+                    <div class="text-[10px] text-slate-400">≥90% prompt sprint SLA</div>
+                  </td>
+                  <td class="px-3 py-3.5 whitespace-nowrap text-slate-500 font-mono text-[11px]">Sep 2026</td>
+                  <td class="px-3 py-3.5 whitespace-nowrap font-mono text-slate-600">90%</td>
+                  <td class="px-3 py-3.5 whitespace-nowrap">
+                    <span class="font-mono font-bold text-emerald-600">92%</span>
+                    <span class="text-[10px] text-emerald-600 font-semibold bg-emerald-50 px-1 py-0.2 rounded ml-1">+2%</span>
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap text-right font-mono font-extrabold text-slate-900 text-sm">
+                    ₹3,000
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap text-center">
+                    <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 border border-amber-200">
+                      <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                      Pending Review
+                    </span>
+                  </td>
+                  <td class="px-5 py-3.5 whitespace-nowrap text-right">
+                    <div class="flex items-center justify-end gap-1.5">
+                      <button class="px-2.5 py-1 text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow-sm transition-all flex items-center gap-1">
+                        <span>Review</span>
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                      </button>
+                      <button title="Quick Approve" class="p-1 text-emerald-600 hover:bg-emerald-50 rounded border border-slate-200 hover:border-emerald-200">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 2: Prabha -->
+                <tr class="hover:bg-slate-50/80 transition-colors">
+                  <td class="px-5 py-3.5 whitespace-nowrap">
+                    <div class="flex items-center gap-2.5">
+                      <div class="w-7 h-7 rounded-full bg-indigo-100 text-indigo-800 font-bold flex items-center justify-center text-[11px] border border-indigo-200">
+                        PR
+                      </div>
+                      <div>
+                        <div class="font-bold text-slate-900">Prabha</div>
+                        <div class="text-[10px] text-slate-400">Logo &amp; Brand Identity Designer</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap">
+                    <span class="px-2 py-0.5 rounded bg-indigo-50 text-indigo-700 font-semibold text-[11px] border border-indigo-100">Logo Team</span>
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap">
+                    <div class="font-semibold text-slate-800">Project Completion</div>
+                    <div class="text-[10px] text-slate-400">Monthly design signoffs</div>
+                  </td>
+                  <td class="px-3 py-3.5 whitespace-nowrap text-slate-500 font-mono text-[11px]">Sep 2026</td>
+                  <td class="px-3 py-3.5 whitespace-nowrap font-mono text-slate-600">5 projects</td>
+                  <td class="px-3 py-3.5 whitespace-nowrap">
+                    <span class="font-mono font-bold text-emerald-600">6 projects</span>
+                    <span class="text-[10px] text-emerald-600 font-semibold bg-emerald-50 px-1 py-0.2 rounded ml-1">+1</span>
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap text-right font-mono font-extrabold text-slate-900 text-sm">
+                    ₹2,500
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap text-center">
+                    <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 border border-amber-200">
+                      <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                      Pending Review
+                    </span>
+                  </td>
+                  <td class="px-5 py-3.5 whitespace-nowrap text-right">
+                    <div class="flex items-center justify-end gap-1.5">
+                      <button class="px-2.5 py-1 text-xs font-semibold text-slate-700 hover:text-indigo-600 bg-slate-100 hover:bg-slate-200 rounded-md transition-colors">
+                        Review
+                      </button>
+                      <button title="Quick Approve" class="p-1 text-emerald-600 hover:bg-emerald-50 rounded border border-slate-200 hover:border-emerald-200">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 3: Rasith -->
+                <tr class="hover:bg-slate-50/80 transition-colors">
+                  <td class="px-5 py-3.5 whitespace-nowrap">
+                    <div class="flex items-center gap-2.5">
+                      <div class="w-7 h-7 rounded-full bg-purple-100 text-purple-800 font-bold flex items-center justify-center text-[11px] border border-purple-200">
+                        RS
+                      </div>
+                      <div>
+                        <div class="font-bold text-slate-900">Rasith</div>
+                        <div class="text-[10px] text-slate-400">Packaging Structural Designer</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap">
+                    <span class="px-2 py-0.5 rounded bg-purple-50 text-purple-700 font-semibold text-[11px] border border-purple-100">Packaging</span>
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap">
+                    <div class="font-semibold text-slate-800">Revision Performance</div>
+                    <div class="text-[10px] text-slate-400">FMCG dieline quality control</div>
+                  </td>
+                  <td class="px-3 py-3.5 whitespace-nowrap text-slate-500 font-mono text-[11px]">Sep 2026</td>
+                  <td class="px-3 py-3.5 whitespace-nowrap font-mono text-slate-600">≤ 3.0/prj</td>
+                  <td class="px-3 py-3.5 whitespace-nowrap">
+                    <span class="font-mono font-bold text-emerald-600">2.4/prj</span>
+                    <span class="text-[10px] text-emerald-600 font-semibold bg-emerald-50 px-1 py-0.2 rounded ml-1">Healthy</span>
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap text-right font-mono font-extrabold text-slate-900 text-sm">
+                    ₹2,000
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap text-center">
+                    <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 border border-amber-200">
+                      <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                      Pending Review
+                    </span>
+                  </td>
+                  <td class="px-5 py-3.5 whitespace-nowrap text-right">
+                    <div class="flex items-center justify-end gap-1.5">
+                      <button class="px-2.5 py-1 text-xs font-semibold text-slate-700 hover:text-indigo-600 bg-slate-100 hover:bg-slate-200 rounded-md transition-colors">
+                        Review
+                      </button>
+                      <button title="Quick Approve" class="p-1 text-emerald-600 hover:bg-emerald-50 rounded border border-slate-200 hover:border-emerald-200">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 4: Fathima -->
+                <tr class="hover:bg-slate-50/80 transition-colors">
+                  <td class="px-5 py-3.5 whitespace-nowrap">
+                    <div class="flex items-center gap-2.5">
+                      <div class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-800 font-bold flex items-center justify-center text-[11px] border border-emerald-200">
+                        FA
+                      </div>
+                      <div>
+                        <div class="font-bold text-slate-900">Fathima</div>
+                        <div class="text-[10px] text-slate-400">Sketch &amp; Concept Artist</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap">
+                    <span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 font-semibold text-[11px] border border-emerald-100">Sketch Squad</span>
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap">
+                    <div class="font-semibold text-slate-800">Deadline Performance</div>
+                    <div class="text-[10px] text-slate-400">Initial concept turnaround</div>
+                  </td>
+                  <td class="px-3 py-3.5 whitespace-nowrap text-slate-500 font-mono text-[11px]">Sep 2026</td>
+                  <td class="px-3 py-3.5 whitespace-nowrap font-mono text-slate-600">95%</td>
+                  <td class="px-3 py-3.5 whitespace-nowrap">
+                    <span class="font-mono font-bold text-emerald-600">100%</span>
+                    <span class="text-[10px] text-emerald-600 font-semibold bg-emerald-50 px-1 py-0.2 rounded ml-1">Flawless</span>
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap text-right font-mono font-extrabold text-slate-900 text-sm">
+                    ₹2,000
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap text-center">
+                    <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 border border-amber-200">
+                      <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                      Pending Review
+                    </span>
+                  </td>
+                  <td class="px-5 py-3.5 whitespace-nowrap text-right">
+                    <div class="flex items-center justify-end gap-1.5">
+                      <button class="px-2.5 py-1 text-xs font-semibold text-slate-700 hover:text-indigo-600 bg-slate-100 hover:bg-slate-200 rounded-md transition-colors">
+                        Review
+                      </button>
+                      <button title="Quick Approve" class="p-1 text-emerald-600 hover:bg-emerald-50 rounded border border-slate-200 hover:border-emerald-200">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 5: Gautam V. -->
+                <tr class="hover:bg-slate-50/80 transition-colors">
+                  <td class="px-5 py-3.5 whitespace-nowrap">
+                    <div class="flex items-center gap-2.5">
+                      <div class="w-7 h-7 rounded-full bg-cyan-100 text-cyan-800 font-bold flex items-center justify-center text-[11px] border border-cyan-200">
+                        GV
+                      </div>
+                      <div>
+                        <div class="font-bold text-slate-900">Gautam V.</div>
+                        <div class="text-[10px] text-slate-400">R&amp;D &amp; Material Specialist</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap">
+                    <span class="px-2 py-0.5 rounded bg-cyan-50 text-cyan-700 font-semibold text-[11px] border border-cyan-100">R&amp;D Team</span>
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap">
+                    <div class="font-semibold text-slate-800">On-Time Delivery</div>
+                    <div class="text-[10px] text-slate-400">Material spec briefs SLA</div>
+                  </td>
+                  <td class="px-3 py-3.5 whitespace-nowrap text-slate-500 font-mono text-[11px]">Sep 2026</td>
+                  <td class="px-3 py-3.5 whitespace-nowrap font-mono text-slate-600">90%</td>
+                  <td class="px-3 py-3.5 whitespace-nowrap">
+                    <span class="font-mono font-bold text-emerald-600">94%</span>
+                    <span class="text-[10px] text-emerald-600 font-semibold bg-emerald-50 px-1 py-0.2 rounded ml-1">+4%</span>
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap text-right font-mono font-extrabold text-slate-900 text-sm">
+                    ₹3,000
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap text-center">
+                    <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 border border-amber-200">
+                      <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                      Pending Review
+                    </span>
+                  </td>
+                  <td class="px-5 py-3.5 whitespace-nowrap text-right">
+                    <div class="flex items-center justify-end gap-1.5">
+                      <button class="px-2.5 py-1 text-xs font-semibold text-slate-700 hover:text-indigo-600 bg-slate-100 hover:bg-slate-200 rounded-md transition-colors">
+                        Review
+                      </button>
+                      <button title="Quick Approve" class="p-1 text-emerald-600 hover:bg-emerald-50 rounded border border-slate-200 hover:border-emerald-200">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+                <!-- Row 6: Akhil -->
+                <tr class="hover:bg-slate-50/80 transition-colors">
+                  <td class="px-5 py-3.5 whitespace-nowrap">
+                    <div class="flex items-center gap-2.5">
+                      <div class="w-7 h-7 rounded-full bg-blue-100 text-blue-800 font-bold flex items-center justify-center text-[11px] border border-blue-200">
+                        AK
+                      </div>
+                      <div>
+                        <div class="font-bold text-slate-900">Akhil</div>
+                        <div class="text-[10px] text-slate-400">Creative Lead · Logo Squad</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap">
+                    <span class="px-2 py-0.5 rounded bg-indigo-50 text-indigo-700 font-semibold text-[11px] border border-indigo-100">Logo Team</span>
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap">
+                    <div class="font-semibold text-slate-800">Project Completion</div>
+                    <div class="text-[10px] text-slate-400">Creative head stage approvals</div>
+                  </td>
+                  <td class="px-3 py-3.5 whitespace-nowrap text-slate-500 font-mono text-[11px]">Sep 2026</td>
+                  <td class="px-3 py-3.5 whitespace-nowrap font-mono text-slate-600">6 projects</td>
+                  <td class="px-3 py-3.5 whitespace-nowrap">
+                    <span class="font-mono font-bold text-emerald-600">8 projects</span>
+                    <span class="text-[10px] text-emerald-600 font-semibold bg-emerald-50 px-1 py-0.2 rounded ml-1">+2</span>
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap text-right font-mono font-extrabold text-slate-900 text-sm">
+                    ₹6,000
+                  </td>
+                  <td class="px-4 py-3.5 whitespace-nowrap text-center">
+                    <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 border border-amber-200">
+                      <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                      Pending Review
+                    </span>
+                  </td>
+                  <td class="px-5 py-3.5 whitespace-nowrap text-right">
+                    <div class="flex items-center justify-end gap-1.5">
+                      <button class="px-2.5 py-1 text-xs font-semibold text-slate-700 hover:text-indigo-600 bg-slate-100 hover:bg-slate-200 rounded-md transition-colors">
+                        Review
+                      </button>
+                      <button title="Quick Approve" class="p-1 text-emerald-600 hover:bg-emerald-50 rounded border border-slate-200 hover:border-emerald-200">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ==================== TWO-COLUMN SECTION: INCENTIVE OVERVIEW & ACTIVE RULES ==================== -->
+        <div class="grid grid-cols-12 gap-6">
+
+          <!-- Left: Incentive Overview Table (Complete Ledger) -->
+          <div class="col-span-7 bg-white rounded-xl border border-slate-200 shadow-sm p-4">
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-100">
+              <div>
+                <h3 class="text-xs font-bold text-slate-900 uppercase tracking-tight">Incentive Overview (Monthly Ledger)</h3>
+                <p class="text-[11px] text-slate-500">Complete position across eligible agency specialists for September 2026.</p>
+              </div>
+              <span class="text-[10px] font-bold px-2 py-0.5 bg-slate-100 text-slate-600 rounded">5 Key Members</span>
+            </div>
+
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs">
+                <thead class="bg-slate-50 text-[10px] font-bold text-slate-400 uppercase tracking-wider border-y border-slate-200/80">
+                  <tr>
+                    <th class="py-2 px-3">Employee</th>
+                    <th class="py-2 px-2 text-right">Eligible</th>
+                    <th class="py-2 px-2 text-right">Pending</th>
+                    <th class="py-2 px-2 text-right">Approved</th>
+                    <th class="py-2 px-3 text-right">Paid</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 font-mono text-[11.5px]">
+                  <tr class="hover:bg-slate-50">
+                    <td class="py-2.5 px-3 font-sans font-semibold text-slate-900 flex items-center gap-1.5">
+                      <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                      <span>Shihaf</span>
+                      <span class="text-[10px] text-slate-400 font-normal">(Logo)</span>
+                    </td>
+                    <td class="py-2.5 px-2 text-right font-bold text-slate-900">₹3,000</td>
+                    <td class="py-2.5 px-2 text-right font-bold text-amber-600">₹3,000</td>
+                    <td class="py-2.5 px-2 text-right text-slate-400">₹0</td>
+                    <td class="py-2.5 px-3 text-right text-slate-400">₹0</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="py-2.5 px-3 font-sans font-semibold text-slate-900 flex items-center gap-1.5">
+                      <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                      <span>Prabha</span>
+                      <span class="text-[10px] text-slate-400 font-normal">(Logo)</span>
+                    </td>
+                    <td class="py-2.5 px-2 text-right font-bold text-slate-900">₹2,500</td>
+                    <td class="py-2.5 px-2 text-right text-slate-400">₹0</td>
+                    <td class="py-2.5 px-2 text-right font-bold text-emerald-600">₹2,500</td>
+                    <td class="py-2.5 px-3 text-right text-slate-400">₹0</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="py-2.5 px-3 font-sans font-semibold text-slate-900 flex items-center gap-1.5">
+                      <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                      <span>Fathima</span>
+                      <span class="text-[10px] text-slate-400 font-normal">(Sketch)</span>
+                    </td>
+                    <td class="py-2.5 px-2 text-right font-bold text-slate-900">₹2,000</td>
+                    <td class="py-2.5 px-2 text-right text-slate-400">₹0</td>
+                    <td class="py-2.5 px-2 text-right text-slate-400">₹0</td>
+                    <td class="py-2.5 px-3 text-right font-bold text-blue-600">₹2,000</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="py-2.5 px-3 font-sans font-semibold text-slate-900 flex items-center gap-1.5">
+                      <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                      <span>Shalin</span>
+                      <span class="text-[10px] text-slate-400 font-normal">(Packaging)</span>
+                    </td>
+                    <td class="py-2.5 px-2 text-right font-bold text-slate-900">₹4,500</td>
+                    <td class="py-2.5 px-2 text-right text-slate-400">₹0</td>
+                    <td class="py-2.5 px-2 text-right font-bold text-emerald-600">₹4,500</td>
+                    <td class="py-2.5 px-3 text-right text-slate-400">₹0</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="py-2.5 px-3 font-sans font-semibold text-slate-900 flex items-center gap-1.5">
+                      <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                      <span>Ayesha</span>
+                      <span class="text-[10px] text-slate-400 font-normal">(CRM &amp; Ops)</span>
+                    </td>
+                    <td class="py-2.5 px-2 text-right font-bold text-slate-900">₹6,500</td>
+                    <td class="py-2.5 px-2 text-right text-slate-400">₹0</td>
+                    <td class="py-2.5 px-2 text-right text-slate-400">₹0</td>
+                    <td class="py-2.5 px-3 text-right font-bold text-blue-600">₹6,500</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+              <span class="flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                Disbursements handled directly via UPI / NEFT with transaction hash audit.
+              </span>
+              <a href="#" class="text-indigo-600 hover:text-indigo-800 font-semibold">View Full Breakdown →</a>
+            </div>
+          </div>
+
+          <!-- Right: Active Incentive Rules (Configured Operational Policies) -->
+          <div class="col-span-5 bg-white rounded-xl border border-slate-200 shadow-sm p-4 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-100">
+                <div>
+                  <h3 class="text-xs font-bold text-slate-900 uppercase tracking-tight">Active Incentive Rules</h3>
+                  <p class="text-[11px] text-slate-500">System rules dynamically evaluating ERP task &amp; project delivery.</p>
+                </div>
+                <button class="px-2 py-1 text-[11px] font-bold text-indigo-700 bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 rounded-md transition-colors">
+                  Manage Rules
+                </button>
+              </div>
+
+              <div class="space-y-2.5">
+                <!-- Rule 1 -->
+                <div class="p-2.5 rounded-lg border border-slate-200 bg-slate-50/60 hover:bg-white transition-colors">
+                  <div class="flex items-center justify-between">
+                    <div class="font-bold text-slate-900 text-xs flex items-center gap-1.5">
+                      <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                      1. On-Time Delivery
+                    </div>
+                    <span class="px-1.5 py-0.2 text-[9px] font-bold bg-emerald-100 text-emerald-800 rounded">Active</span>
+                  </div>
+                  <div class="text-[11px] text-slate-600 mt-1">
+                    Trigger: <span class="font-medium text-slate-800">On-time sprint completion ≥ 90%</span>
+                  </div>
+                  <div class="flex items-center justify-between mt-1.5 text-[11px] text-slate-500 font-mono">
+                    <span>Reward: <strong class="text-slate-900 font-bold">₹3,000 / mo</strong></span>
+                    <span class="text-[10px] text-slate-400 font-sans">Evaluated Monthly</span>
+                  </div>
+                </div>
+
+                <!-- Rule 2 -->
+                <div class="p-2.5 rounded-lg border border-slate-200 bg-slate-50/60 hover:bg-white transition-colors">
+                  <div class="flex items-center justify-between">
+                    <div class="font-bold text-slate-900 text-xs flex items-center gap-1.5">
+                      <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                      2. Project Completion
+                    </div>
+                    <span class="px-1.5 py-0.2 text-[9px] font-bold bg-emerald-100 text-emerald-800 rounded">Active</span>
+                  </div>
+                  <div class="text-[11px] text-slate-600 mt-1">
+                    Trigger: <span class="font-medium text-slate-800">≥ 5 projects delivered &amp; client approved</span>
+                  </div>
+                  <div class="flex items-center justify-between mt-1.5 text-[11px] text-slate-500 font-mono">
+                    <span>Reward: <strong class="text-slate-900 font-bold">₹2,500 / mo</strong></span>
+                    <span class="text-[10px] text-slate-400 font-sans">Evaluated Monthly</span>
+                  </div>
+                </div>
+
+                <!-- Rule 3 -->
+                <div class="p-2.5 rounded-lg border border-slate-200 bg-slate-50/60 hover:bg-white transition-colors">
+                  <div class="flex items-center justify-between">
+                    <div class="font-bold text-slate-900 text-xs flex items-center gap-1.5">
+                      <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                      3. Revision Performance
+                    </div>
+                    <span class="px-1.5 py-0.2 text-[9px] font-bold bg-emerald-100 text-emerald-800 rounded">Active</span>
+                  </div>
+                  <div class="text-[11px] text-slate-600 mt-1">
+                    Trigger: <span class="font-medium text-slate-800">Average revision rate ≤ 3 rounds per project</span>
+                  </div>
+                  <div class="flex items-center justify-between mt-1.5 text-[11px] text-slate-500 font-mono">
+                    <span>Reward: <strong class="text-slate-900 font-bold">₹2,000 / mo</strong></span>
+                    <span class="text-[10px] text-slate-400 font-sans">Evaluated Monthly</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fairness Rule Notice -->
+            <div class="mt-3 pt-2 border-t border-slate-100 text-[10.5px] text-slate-500 flex items-start gap-1.5 leading-tight">
+              <svg class="w-3.5 h-3.5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+              <span><strong>Fairness Shield:</strong> If a project deadline was shifted by the client or Founder, the system evaluates against the updated milestone to prevent penalizing designers.</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ==================== RIGHT-SIDE INCENTIVE REVIEW DRAWER (INSPECTION DRAWER) ==================== -->
+      <aside class="w-[360px] bg-white border-l border-slate-200 flex flex-col flex-shrink-0 shadow-lg z-20">
+        
+        <!-- Drawer Header -->
+        <div class="p-4 border-b border-slate-200 flex items-center justify-between bg-slate-50/50">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+            <h2 class="text-xs font-black uppercase tracking-wider text-slate-900">Incentive Review</h2>
+          </div>
+          <button class="p-1 rounded-md text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+        <!-- Drawer Content (Shihaf Selected) -->
+        <div class="flex-1 overflow-y-auto p-5 space-y-4 custom-scrollbar text-xs">
+
+          <!-- Employee Card Header -->
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-900 font-black flex items-center justify-center text-sm border border-amber-200 shadow-sm">
+                SH
+              </div>
+              <div>
+                <div class="font-extrabold text-slate-900 text-sm">Shihaf</div>
+                <div class="text-[11px] text-slate-500">Senior Brand Designer</div>
+                <div class="flex items-center gap-1.5 mt-0.5">
+                  <span class="text-[10px] font-bold text-indigo-700 bg-indigo-50 px-1.5 py-0.2 rounded border border-indigo-100">Logo Team</span>
+                  <span class="text-[10px] text-slate-400">Reports to Akhil</span>
+                </div>
+              </div>
+            </div>
+            <span class="px-2 py-0.5 text-[10px] font-bold bg-amber-100 text-amber-800 rounded border border-amber-200">
+              Pending Signoff
+            </span>
+          </div>
+
+          <!-- Incentive Target vs Actual Metric Strip -->
+          <div class="p-3.5 rounded-xl border border-indigo-100 bg-indigo-50/30 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-indigo-900">Incentive Rule</span>
+              <span class="font-mono text-[10px] font-semibold text-slate-500">Sep 2026</span>
+            </div>
+            <div class="text-xs font-bold text-slate-900">On-Time Delivery (≥ 90%)</div>
+
+            <div class="grid grid-cols-2 gap-3 pt-2 border-t border-indigo-100/80">
+              <div class="bg-white p-2 rounded-lg border border-slate-200">
+                <span class="text-[10px] text-slate-400 uppercase font-bold">Target</span>
+                <div class="text-base font-black text-slate-700 font-mono">90.0%</div>
+              </div>
+              <div class="bg-white p-2 rounded-lg border border-emerald-200 bg-emerald-50/30">
+                <span class="text-[10px] text-emerald-700 uppercase font-bold">Achieved</span>
+                <div class="text-base font-black text-emerald-700 font-mono">92.0% <span class="text-[10px] font-normal text-emerald-600">✓ Qualifies</span></div>
+              </div>
+            </div>
+
+            <div class="pt-2 text-[11px] text-slate-600 leading-relaxed bg-white/70 p-2 rounded-lg border border-indigo-50">
+              <strong class="text-slate-800">Operational Reason:</strong> 92% of assigned tasks (22 of 24) completed strictly on or before client milestone deadline.
+            </div>
+          </div>
+
+          <!-- Supporting Operational Data -->
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-bold text-slate-700 uppercase tracking-wider">Supporting Performance Data</span>
+              <span class="text-[10px] text-indigo-600 font-semibold cursor-pointer hover:underline">View in Tasks →</span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2 text-[11px]">
+              <div class="p-2 bg-slate-50 rounded-lg border border-slate-200 flex justify-between items-center">
+                <span class="text-slate-500">Tasks Assigned:</span>
+                <span class="font-mono font-bold text-slate-800">24</span>
+              </div>
+              <div class="p-2 bg-slate-50 rounded-lg border border-slate-200 flex justify-between items-center">
+                <span class="text-slate-500">Completed:</span>
+                <span class="font-mono font-bold text-slate-800">24</span>
+              </div>
+              <div class="p-2 bg-emerald-50 rounded-lg border border-emerald-200 flex justify-between items-center">
+                <span class="text-emerald-700 font-semibold">On-Time:</span>
+                <span class="font-mono font-black text-emerald-700">22</span>
+              </div>
+              <div class="p-2 bg-rose-50 rounded-lg border border-rose-200 flex justify-between items-center">
+                <span class="text-rose-700 font-semibold">Overdue:</span>
+                <span class="font-mono font-black text-rose-700">2</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Eligible Incentive Amount Box -->
+          <div class="p-3.5 rounded-xl bg-slate-900 text-white flex items-center justify-between shadow-md">
+            <div>
+              <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Eligible Incentive</span>
+              <div class="text-2xl font-black font-mono text-emerald-400 tracking-tight">₹3,000</div>
+              <span class="text-[10px] text-slate-400">Monthly On-Time Benchmark</span>
+            </div>
+            <div class="text-right">
+              <div class="text-[10px] text-slate-300 font-semibold">State</div>
+              <span class="inline-block mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-amber-400/20 text-amber-300 border border-amber-400/30">
+                Awaiting Founder
+              </span>
+            </div>
+          </div>
+
+          <!-- Founder Action Buttons -->
+          <div class="space-y-2 pt-1">
+            <button class="w-full py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-sm shadow-emerald-600/30 transition-all flex items-center justify-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Approve ₹3,000 Incentive</span>
+            </button>
+
+            <button class="w-full py-2 px-4 rounded-xl border border-rose-200 text-rose-700 hover:bg-rose-50 font-semibold text-xs transition-colors flex items-center justify-center gap-1.5">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+              <span>Reject (Reason Required)</span>
+            </button>
+          </div>
+
+          <!-- Audit Activity Trail -->
+          <div class="pt-3 border-t border-slate-100 space-y-2">
+            <div class="flex items-center justify-between text-[10px] text-slate-400 uppercase font-bold tracking-wider">
+              <span>Audit Trail</span>
+              <span>Automated ERP</span>
+            </div>
+
+            <div class="space-y-2 text-[11px]">
+              <div class="flex items-start gap-2 text-slate-600">
+                <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-1.5 flex-shrink-0"></span>
+                <div>
+                  <span class="font-medium text-slate-800">ERP System:</span> Calculated eligibility on 28 Sep 2026 based on 22/24 on-time sprints.
+                </div>
+              </div>
+              <div class="flex items-start gap-2 text-slate-500 text-[10px]">
+                <span class="w-1.5 h-1.5 rounded-full bg-slate-300 mt-1 flex-shrink-0"></span>
+                <div>
+                  Previous: Aug 2026 incentive ₹3,000 was approved &amp; marked paid via UPI on 05 Sep.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Drawer Footer -->
+        <div class="p-3 border-t border-slate-200 bg-slate-50 flex items-center justify-between text-xs">
+          <button class="text-slate-500 hover:text-slate-800 font-medium">Close</button>
+          <button class="text-indigo-600 hover:text-indigo-800 font-bold flex items-center gap-1">
+            <span>Next Specialist (Prabha)</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+          </button>
+        </div>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+
+
+</body></html>
