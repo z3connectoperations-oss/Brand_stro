@@ -10,6 +10,7 @@ Source material and designs for the Brandstro ERP.
 | `Brandstro - Creative Head Leadership Handbook.pdf` | 70-page leadership curriculum for the Creative Head |
 | `Brandstro_Incentive_Plan.pdf` | Monthly targets, bonus rules and company economics |
 | `Brandstro_*_Brief.pdf` | Role briefs: CRM, HR, R&D, Sketch Artist, Logo TL, Logo Designer, Packaging TL, Packaging Designer |
+| `erp/` | **The ERP frontend** (Next.js). See `erp/README.md` to run it. |
 | `stitch_brandstro_founder_command_center/` | Google Stitch UI export: one folder per screen with `code.html` and `screen.png` |
 | `tools/master-guide/` | Python scripts that regenerate `Brandstro_Master_Guide.pdf` |
 

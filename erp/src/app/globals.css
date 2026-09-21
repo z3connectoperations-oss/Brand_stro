@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+
+  --color-canvas: #f8fafc;
+  --color-rail: #0f172a;
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-900: #1e1b4b;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--color-canvas);
+  color: #0f172a;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+@layer components {
+/* Small reusable primitives */
+.card {
+  @apply rounded-xl border border-slate-200 bg-white shadow-[0_1px_3px_0_rgba(15,23,42,0.04),0_1px_2px_-1px_rgba(15,23,42,0.02)];
+}
+.label-sm {
+  @apply text-[11px] font-semibold uppercase tracking-[0.04em] text-slate-500;
+}
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-danger {
+  @apply inline-flex h-9 items-center gap-1.5 rounded-lg border px-3 text-[13px] font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+}
+.btn-primary {
+  @apply border-brand-600 bg-brand-600 text-white hover:bg-brand-700;
+}
+.btn-secondary {
+  @apply border-slate-200 bg-white text-slate-800 hover:border-slate-300 hover:bg-slate-50;
+}
+.btn-danger {
+  @apply border-red-100 bg-red-50 text-red-600 hover:bg-red-100;
+}
+.btn-sm {
+  @apply h-8 px-2.5 text-[12px];
+}
+.input {
+  @apply h-9 w-full rounded-md border border-slate-300 bg-white px-3 text-[13px] text-slate-800 placeholder:text-slate-400 focus:border-brand-600 focus:outline-none focus:ring-[3px] focus:ring-brand-600/15;
+}
+.table-head {
+  @apply border-b border-slate-200 bg-slate-50 text-left text-[11px] font-semibold uppercase tracking-[0.04em] text-slate-500;
+}
+.table-head th {
+  @apply px-3 py-2.5 font-semibold;
+}
+.table-row {
+  @apply border-b border-slate-100 last:border-0 hover:bg-slate-50;
+}
+.table-row td {
+  @apply px-3 py-2.5 align-top;
+}
+}
