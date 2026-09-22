@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { ChevronsUpDown, Check } from "lucide-react";
@@ -25,15 +26,9 @@ export function Sidebar() {
   return (
     <aside className="hidden w-[248px] shrink-0 flex-col justify-between border-r border-slate-200 bg-white md:flex">
       <div>
-        <div className="flex h-16 items-center gap-3 border-b border-slate-100 px-5">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-900 text-base font-bold text-amber-400 ring-2 ring-brand-700/20">B</div>
-          <div className="flex flex-col">
-            <div className="flex items-center gap-1.5">
-              <span className="text-[15px] font-bold tracking-tight text-slate-900">BRANDSTRO</span>
-              <span className="rounded border border-brand-200/60 bg-brand-50 px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-widest text-brand-700">ERP</span>
-            </div>
-            <span className="text-[10px] font-medium text-slate-400">Agency Operating System</span>
-          </div>
+        <div className="flex h-16 items-center justify-between bg-brand-600 px-4">
+          <Image src="/brand-logo.png" alt="Brandstro — Build. Brand. Beyond." width={150} height={43} priority className="h-[42px] w-auto" />
+          <span className="rounded border border-white/20 bg-white/10 px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-widest text-brand-yellow">ERP</span>
         </div>
 
         <div className="px-3 pt-4">

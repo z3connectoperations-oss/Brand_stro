@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Bell, Search, Calendar } from "lucide-react";
 import { useMe } from "@/lib/role-context";
 import { useDb } from "@/lib/use-db";
@@ -14,8 +15,8 @@ export function Topbar() {
   return (
     <header className="flex h-14 shrink-0 items-center gap-3 border-b border-slate-200 bg-white px-4 md:px-6">
       <div className="flex items-center gap-2 md:hidden">
-        <div className="flex h-7 w-7 items-center justify-center rounded-md bg-brand-900 text-sm font-bold text-amber-400">B</div>
-        <span className="text-sm font-bold">BRANDSTRO</span>
+        <Image src="/brand-mark.png" alt="Brandstro" width={28} height={28} className="h-7 w-7 rounded-md" />
+        <span className="text-sm font-bold text-brand-600">Brandstro</span>
       </div>
       <div className="relative ml-auto hidden w-80 md:block">
         <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
