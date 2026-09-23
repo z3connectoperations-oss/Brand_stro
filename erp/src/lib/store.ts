@@ -54,9 +54,12 @@ export const seedDb: Db = {
   audit: seedAudit,
 };
 
-/* ---------- external store plumbing (useSyncExternalStore) ---------- */
+import { getIdb, setIdb, deleteIdb } from "@/lib/idb";
+
+/* ---------- external store plumbing (useSyncExternalStore + IndexedDB) ---------- */
 let db: Db | null = null;
 const listeners = new Set<() => void>();
+let isHydratedFromIdb = false;
 
 function load(): Db {
   try {
@@ -71,14 +74,40 @@ function load(): Db {
   return seedDb;
 }
 
+async function initIdbHydration() {
+  if (typeof window === "undefined" || isHydratedFromIdb) return;
+  isHydratedFromIdb = true;
+  try {
+    const idbData = await getIdb<Partial<Db>>(STORAGE_KEY);
+    if (idbData && Array.isArray(idbData.projects)) {
+      db = { ...seedDb, ...idbData };
+      listeners.forEach((l) => l());
+    } else {
+      // Migrate initial/existing data to IndexedDB
+      const current = db || load();
+      await setIdb(STORAGE_KEY, current);
+    }
+  } catch (err) {
+    console.warn("Error hydrating from IndexedDB:", err);
+  }
+}
+
 export function getDb(): Db {
-  if (!db) db = typeof window === "undefined" ? seedDb : load();
+  if (!db) {
+    db = typeof window === "undefined" ? seedDb : load();
+    if (typeof window !== "undefined") {
+      initIdbHydration();
+    }
+  }
   return db;
 }
 export const getServerDb = () => seedDb;
 
 export function subscribe(cb: () => void) {
   listeners.add(cb);
+  if (typeof window !== "undefined" && !isHydratedFromIdb) {
+    initIdbHydration();
+  }
   return () => listeners.delete(cb);
 }
 
@@ -89,6 +118,7 @@ function commit(next: Db) {
   } catch {
     /* storage full or blocked: state still updates in memory */
   }
+  setIdb(STORAGE_KEY, next);
   listeners.forEach((l) => l());
 }
 
@@ -98,6 +128,7 @@ export function resetDb() {
   } catch {
     /* ignore */
   }
+  deleteIdb(STORAGE_KEY);
   commit(seedDb);
 }
 
